@@ -1,0 +1,11 @@
+author: Saq Imtiaz
+core-version: >=5.2.0
+dependents: 
+description: Context menu for tiddler links
+list: readme settings
+name: Links Context Menu
+plugin-priority: 0
+plugin-type: plugin
+title: $:/plugins/sq/links-context-menu
+type: application/json
+version: 0.0.1

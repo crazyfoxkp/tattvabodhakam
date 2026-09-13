@@ -1,0 +1,26 @@
+created: 20250729143320834
+creator: KeshavP
+modified: 20260910165017283
+modifier: केशवकृपा
+tags: $:/tags/ViewTemplate
+title: kp navigation template
+
+<<simple-navigation tag:"SR" class:"kpnavlinks">>
+<<simple-navigation tag:"TS" class:"kpnavlinks">>
+<<simple-navigation tag:"SMV" class:"kpnavlinks">>
+<<simple-navigation tag:"SMV » § 01" class:"kpnavlinks">>
+<<simple-navigation tag:"SMV » § 02" class:"kpnavlinks">>
+<<simple-navigation tag:"SMV » § 03" class:"kpnavlinks">>
+<<simple-navigation tag:"SMV » § 04" class:"kpnavlinks">>
+<<simple-navigation tag:"SMV » § 05" class:"kpnavlinks">>
+<<simple-navigation tag:"SMV » § 06" class:"kpnavlinks">>
+<<simple-navigation tag:"SMV » § 07" class:"kpnavlinks">>
+<<simple-navigation tag:"SMV » § 08" class:"kpnavlinks">>
+<<simple-navigation tag:"SMV » § 09" class:"kpnavlinks">>
+<<simple-navigation tag:"SMV » § 10" class:"kpnavlinks">>
+<<simple-navigation tag:"SMV » § 11" class:"kpnavlinks">>
+<<simple-navigation tag:"SMV » § 12" class:"kpnavlinks">>
+<<simple-navigation tag:"SMV » § 13" class:"kpnavlinks">>
+<<simple-navigation tag:"SMV » § 14" class:"kpnavlinks">>
+<<simple-navigation tag:"SMV » § 15" class:"kpnavlinks">>
+<<simple-navigation tag:"SMV » § 16" class:"kpnavlinks">>

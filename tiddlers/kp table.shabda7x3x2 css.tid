@@ -1,0 +1,62 @@
+created: 20241018164221444
+creator: KeshavP
+modified: 20241018165315417
+modifier: KeshavP
+tags: 
+title: kp table.shabda7x3x2 css
+
+table.shabda7x3 {
+  width: 100%; /* Table takes up the full width of the viewport */
+  /* border: 1px solid gray; */
+  padding: 10px;
+  border-collapse: collapse; /* Ensure there are no gaps between cells */
+  table-layout: auto; /* Allow auto layout to handle complex columns */
+}
+
+table.shabda7x3 th,
+table.shabda7x3 td {
+  /* border: 1px solid gray; /* Add a border for better visibility */
+  text-align: center;
+}
+
+table.shabda7x3 tr:nth-child(odd) {
+  background-color: #d6fbff;
+}
+
+table.shabda7x3 tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+table.shabda7x3 th:first-child,
+table.shabda7x3 td:first-child {
+  width: 10%; /* Fix the first column width to 10% */
+  color: gray;
+  white-space: nowrap; /* Prevent content from expanding the column */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Show ellipsis if content overflows */
+}
+
+table.shabda7x3 th:nth-child(5),
+table.shabda7x3 td:nth-child(5) {
+  width: 5%; /* Fix the 5th column width to 5% */
+}
+
+table.shabda7x3 th:nth-child(6),
+table.shabda7x3 td:nth-child(6) {
+  width: 10%; /* Fix the 6th column width to 10% */
+}
+
+/* Give remaining columns a proportional share of the remaining space */
+table.shabda7x3 th:not(:first-child):not(:nth-child(5)):not(:nth-child(6)),
+table.shabda7x3 td:not(:first-child):not(:nth-child(5)):not(:nth-child(6)) {
+  width: calc(75% / 6); /* Equally distribute the remaining 75% among 6 columns */
+}
+
+td:empty {
+  background-color: white;
+}
+
+table.shabda7x3 tr:last-child td {
+  color: black;
+  border-bottom: 2px solid #2b494d; /* Add bottom border to the last row */
+}

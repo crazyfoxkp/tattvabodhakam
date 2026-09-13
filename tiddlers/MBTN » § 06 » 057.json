@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "057",
+        "tags": "[[MBTN » § 06]]",
+        "text": "अयं हि गध्रः शतयोजनं गिरिं त्रिकटमाहेत उतात्र विघ्नाः ।<br> भवेयुरन्येऽपि ततो हनूमानेक: समर्थो न परोऽस्ति कश्चित् ॥६.५७ ॥",
+        "title": "MBTN » § 06 » 057"
+    }
+]

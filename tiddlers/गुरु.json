@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "उ",
+        "variety": "",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "",
+        "sutra": "[[गुरु·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.गुरु\nउ-कारान्तः<br>पुल्लिङ्गः<br>गुरु¦एक¦द्वि¦बहु\n१¦गुरुः¦गुरू¦गुरवः\n२¦गुरुम्¦गुरू¦गुरून्\n३¦गुरुणा¦गुरुभ्याम्¦गुरुभिः\n४¦गुरवे¦गुरुभ्याम्¦गुरुभ्यः\n५¦गुरोः¦गुरुभ्याम्¦गुरुभ्यः\n६¦गुरोः¦गुर्वोः¦गुरूणाम्\n७¦गुरौ¦गुर्वोः¦गुरुषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see गुरु·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"गुरु\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "गुरु",
+        "modified": "20250131164746158",
+        "modifier": "KeshavP"
+    }
+]

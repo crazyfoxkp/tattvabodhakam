@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "ऊ",
+        "variety": "",
+        "notes": "",
+        "linga": "स्त्री॰",
+        "group": "",
+        "sutra": "[[वधू·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.वधू\nऊ-कारान्तः<br>स्त्रीलिङ्गः<br>वधू¦एक¦द्वि¦बहु\n१¦वधूः¦वध्वौ¦वध्वः\n२¦वधूम्¦वध्वौ¦वधूः\n३¦वध्वा¦वधूभ्याम्¦वधूभिः\n४¦वध्वै¦वधूभ्याम्¦वधूभ्यः\n५¦वध्वाः¦वधूभ्याम्¦वधूभ्यः\n६¦वध्वाः¦वध्वोः¦वधूनाम्\n७¦वध्वाम्¦वध्वोः¦वधूषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see वधू·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"वधू\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "वधू",
+        "modified": "20250131164746420",
+        "modifier": "KeshavP"
+    }
+]

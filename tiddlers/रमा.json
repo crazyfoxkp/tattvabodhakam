@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "आ",
+        "variety": "",
+        "notes": "",
+        "linga": "स्त्री॰",
+        "group": "",
+        "sutra": "[[रमा·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.रमा\nआ-कारान्तः<br>स्त्रीलिङ्गः<br>रमा¦एक¦द्वि¦बहु\n१¦रमा¦रमे¦रमाः\n२¦रमाम्¦रमे¦रमाः\n३¦रमया¦रमाभ्याम्¦रमाभिः\n४¦रमायै¦रमाभ्याम्¦रमाभ्यः\n५¦रमायाः¦रमाभ्याम्¦रमाभ्यः\n६¦रमायाः¦रमयोः¦रमाणाम्\n७¦रमायाम्¦रमयोः¦रमासु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see रमा·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"रमा\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "रमा",
+        "modified": "20250131164746384",
+        "modifier": "KeshavP"
+    }
+]

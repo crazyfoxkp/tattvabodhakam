@@ -1,0 +1,30 @@
+created: 20260220152451092
+creator: केशवकृपा
+modified: 20260220152621354
+modifier: केशवकृपा
+tags: 
+title: kp test upgrade health check
+
+\whitespace trim
+<table style="width:100%; border-collapse: collapse;">
+  <tr style="background-color: #f4f4f4;">
+    <th style="padding: 8px; border: 1px solid #ddd;">Plugin Name</th>
+    <th style="padding: 8px; border: 1px solid #ddd;">Status</th>
+    <th style="padding: 8px; border: 1px solid #ddd;">Legacy Macros Found</th>
+  </tr>
+  <$list filter="[plugin-type[plugin]]">
+    <tr>
+      <td style="padding: 8px; border: 1px solid #ddd;">
+        <$link><$view field="caption"><$view field="title"/></$view></$link>
+      </td>
+      <td style="padding: 8px; border: 1px solid #ddd;">
+        <$list filter="[all[current]search:text[\define]]" emptyMessage="✅ Modern/Safe">
+          ⚠️ Legacy detected
+        </$list>
+      </td>
+      <td style="padding: 8px; border: 1px solid #ddd;">
+        <$count filter="[all[current]search:text[\define]]"/> instances of `\define`
+      </td>
+    </tr>
+  </$list>
+</table>

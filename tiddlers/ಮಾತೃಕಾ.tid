@@ -1,0 +1,10 @@
+aliases: 
+caption: 8 - ಮಾತೃಕಾ ಸಂಧಿ
+created: 20200901000000000
+creator: KeshavP
+modified: 20200906200935687
+modifier: KeshavP
+tags: HKS ಹರಿಕಥಾಮೃತಸಾರ
+title: ಮಾತೃಕಾ
+
+<table><$list filter="[tag[HKS8 ಮಾತೃಕಾ]sortan[title]]"><tr><th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>notes</$link></th><td/><td><$transclude mode="block"/></td></tr></$list></table>

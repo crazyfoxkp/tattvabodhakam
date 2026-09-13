@@ -1,0 +1,16 @@
+aliases: 
+created: 20260802140219482
+creator: केशवकृपा
+modified: 20260802140303453
+modifier: केशवकृपा
+tags: Contents
+title: तीथप्रबन्धः
+
+<table>
+<$list filter="[tag[TP]sortan[title]]">
+<tr>
+<th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>notes</$link></th><td/>
+<td><$transclude mode="block"/></td>
+</tr>
+</$list>
+</table>

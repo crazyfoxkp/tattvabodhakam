@@ -1,0 +1,15 @@
+[
+    {
+        "text": "इति श्रीमत्कवि-कुल-तिलक-त्रिविक्रम-पण्डिताचार्य-सुत <br>श्री नारायण-पण्डिताचार्य-विरचिते <br>श्री-मध्व-विजये महा-काव्ये-आनन्दाङ्कितेचथुर्थः सर्गः",
+        "sarga": "04",
+        "shloka#": "999",
+        "audio": "./TW_Audio_files/SMV/sarga4/shloka4.999.mp3",
+        "title": "SMV » § 04 » 999",
+        "grantha": "श्रीसुमध्वविजयः",
+        "tags": "[[SMV » § 04]] SMV-book",
+        "caption": "<span>{{!!shloka#}} <$list filter=\"[<currentTiddler>get[Proofreading_Done]match[Yes]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "Proofreading_Done": "",
+        "modified": "20260227165621064",
+        "modifier": "केशवकृपा"
+    }
+]

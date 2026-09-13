@@ -1,0 +1,13 @@
+aliases: 
+caption: 1 - ಮಂಗಳಾಚರಣ ಸಂಧಿ
+created: 20200901000000000
+creator: KeshavP
+modified: 20200906200936847
+modifier: KeshavP
+tags: HKS ಹರಿಕಥಾಮೃತಸಾರ
+title: ಮಂಗಳಾಚರಣ
+
+! ಶ್ರೀ ಹರಿಕಥಾಮೃತಸಾರ
+!! ಸಂಧಿ – <$view field='caption'/><br/>
+<table><$list filter="HKS-Intro"><tr><th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>notes</$link></th><td/><td><$transclude mode="block"/></td></tr></$list></table>
+<table><$list filter="[tag[HKS1]sortan[title]]"><tr><th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>notes</$link></th><td/><td><$transclude mode="block"/></td></tr></$list></table>

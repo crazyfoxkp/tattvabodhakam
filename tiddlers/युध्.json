@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "ध",
+        "variety": "",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "",
+        "sutra": "[[युध्·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.युध्\nध-कारान्तः<br>पुल्लिङ्गः<br>युध्¦एक¦द्वि¦बहु\n१¦युत् / युद्¦युधौ¦युधः\n२¦युधम्¦युधौ¦युधः\n३¦युधा¦युद्भ्याम्¦युद्भिः\n४¦युधे¦युद्भ्याम्¦युद्भ्यः\n५¦युधः¦युद्भ्याम्¦युद्भ्यः\n६¦युधः¦युधोः¦युधाम्\n७¦युधि¦युधोः¦युत्सु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see युध्·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"युध्\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "युध्",
+        "modified": "20250131164746371",
+        "modifier": "KeshavP"
+    }
+]

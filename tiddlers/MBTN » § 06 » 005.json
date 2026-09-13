@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "005",
+        "tags": "[[MBTN » § 06]]",
+        "text": "शर्वप्रसादजबलाद दितिजानवध्यान् सर्वान निहत्य कृणपेन पुनश्च सख्या ।<br> भीतेन वालिबलत: कथित : स्म सप्त सालान् प्रदर्घ्य दितिजान् सुदृढांच वनात् ॥६.५॥",
+        "title": "MBTN » § 06 » 005"
+    }
+]

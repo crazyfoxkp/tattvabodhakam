@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "007",
+        "tags": "[[MBTN » § 06]]",
+        "text": "जेतुं चतुर्गुणबलो हि पुमान् प्रभुः स्याद्धन्तुं शताधिकबलोऽतिबलं सुशक्तः ।<br> तस्मादिमान् हरिहयात्मजबाहलोप्यपत्रान् विभिद्य मम संशयमाशु भिन्धि ॥६.७ ॥",
+        "title": "MBTN » § 06 » 007"
+    }
+]

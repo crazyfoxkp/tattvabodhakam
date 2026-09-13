@@ -1,0 +1,19 @@
+created: 20200901031649745
+creator: KeshavP
+modified: 20260301161545208
+modifier: केशवकृपा
+tags: $:/tags/SideBar
+title: Contents
+
+<div class="tc-table-of-contents">
+<<toc-selective-expandable "Contents" "sortan[caption]">>
+</div>
+
+---
+
+>,,Proofreading complete: ,,
+<ul>
+<$list filter="[all[tiddlers]field:Proofreading_Done[Yes]]">
+   <div>,,<$link/>,,<br/></div>
+</$list>
+</ul>

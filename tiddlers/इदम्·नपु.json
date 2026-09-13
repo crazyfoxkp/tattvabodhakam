@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "म",
+        "variety": "",
+        "notes": "",
+        "linga": "नपुं॰",
+        "group": "सर्वनाम",
+        "sutra": "[[इदम्·नपु·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.इदम्·नपु\nम-कारान्तः<br>नपुंसकलिङ्गः ║सर्वनाम<br>इदम्·नपु¦एक¦द्वि¦बहु\n१¦इदम्¦इमे¦इमानि\n२¦इदम् ¦इमे ¦इमानि \n३¦अनेन ¦आभ्याम्¦एभिः\n४¦अस्मै¦आभ्याम्¦एभ्यः\n५¦अस्मात्¦आभ्याम्¦एभ्यः\n६¦अस्य¦अनयोः ¦एषाम्\n७¦अस्मिन्¦अनयोः ¦एषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see इदम्·नपु·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"इदम्·नपु\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "इदम्·नपु",
+        "modified": "20250131164746063",
+        "modifier": "KeshavP"
+    }
+]

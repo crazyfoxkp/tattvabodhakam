@@ -1,0 +1,15 @@
+[
+    {
+        "anta": "अ",
+        "variety": "",
+        "notes": "",
+        "linga": "नपुं॰",
+        "group": "",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.ज्ञान·सूत्र\nअ-कारान्तः<br>नपुंसकलिङ्गः<br>ज्ञान·सूत्र¦एक¦द्वि¦बहु\n१¦अम्¦ए¦आनि\n२¦अम्¦ए¦आनि\n३¦एन¦अ-कारान्त=दीर्घ + भ्याम् / Others भ्याम्¦अ-कारान्त= ऐः / Others भिः\n४¦आय¦अ-कारान्त=दीर्घ + भ्याम् / Others भ्याम्¦अ-कारान्त= एभ्यः / Others भ्यः\n५¦आत्¦अ-कारान्त=दीर्घ + भ्याम् / Others भ्याम्¦अ-कारान्त= एभ्यः / Others भ्यः\n६¦स्य¦अजन्त= योः / हलन्त= ओः¦अजन्त= दीर्घ + नाम् / हलन्त= आम्\n७¦ए¦अजन्त= योः / हलन्त= ओः¦अ-कारान्त= एसु / Others सु\n@@\n@@.dblock.notes\nनपुंसकलिङ्गः १˚ = २˚. Rest same as पु¦\n¦\n¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"ज्ञान·सूत्र\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि सूत्र v2",
+        "title": "ज्ञान·सूत्र",
+        "modified": "20250131164746194",
+        "modifier": "KeshavP"
+    }
+]

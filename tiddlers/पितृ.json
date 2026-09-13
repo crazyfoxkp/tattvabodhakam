@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "ऋ",
+        "variety": " २",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "",
+        "sutra": "[[पितृ·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.पितृ\nऋ-कारान्तः २<br>पुल्लिङ्गः<br>पितृ¦एक¦द्वि¦बहु\n१¦पिता¦पितरौ¦पितरः\n२¦पितरम्¦पितरौ¦पितॄन्\n३¦पित्रा¦पितृभ्याम्¦पितृभिः\n४¦पित्रे¦पितृभ्याम्¦पितृभ्यः\n५¦पितुः¦पितृभ्याम्¦पितृभ्यः\n६¦पितुः¦पित्रोः¦पितॄणाम्\n७¦पितरि¦पित्रोः¦पितृषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see पितृ·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"पितृ\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "पितृ",
+        "modified": "20250131164746273",
+        "modifier": "KeshavP"
+    }
+]

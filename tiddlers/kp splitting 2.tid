@@ -1,0 +1,36 @@
+created: 20250126012227064
+creator: KeshavP
+modified: 20250129235336636
+modifier: KeshavP
+tags: [[test tag here]]
+title: kp splitting 2
+
+\define splitAndCreateTiddlers()
+<$list filter="[[MasterTiddler]get[text]trim[]splitregexp[\n]!is[blank]!prefix[☑︎ ]]" variable="newentry">
+<$let term={{{ [<newentry>splitregexp[➝]first[]trim[]] }}} definition={{{ [<newentry>splitregexp[➝]rest[]trim[]] }}} >
+<$action-createtiddler $basetitle=<<term>> text=<<definition>> tags="vocab"/>
+</$let>
+</$list>
+\end
+
+\define updatePage()
+<$let newText="" >
+<$list filter="[[MasterTiddler]get[text]trim[]splitregexp[\n]!is[blank]prefix[☑︎ ]]" variable="oldentry">
+</$list>
+<$list filter="[[MasterTiddler]get[text]trim[]splitregexp[\n]!is[blank]!prefix[☑︎ ]]" variable="newentry">
+<$let makenewentry={{{ [<newentry>addprefix][☑︎ ] }}} newText={{{ [<newText>addsuffix<makenewentry>] }}} >
+
+</$let>
+</$list>
+<$action-setfield $tiddler="MasterTiddler" text={{{ [<oldText>addsuffix<newText>] }}} />
+</$let>
+\end
+
+<$button actions=<<splitAndCreateTiddlers>> >
+  Split and Create Vocab Tiddlers
+</$button>
+
+<$button actions=<<updatePage>> >
+  Update Vocab text in progress)
+</$button>
+

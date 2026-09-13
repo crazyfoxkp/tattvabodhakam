@@ -1,0 +1,37 @@
+created: 20250221185522403
+creator: KeshavP
+modified: 20250706150004477
+modifier: KeshavP
+tags: $:/tags/PageControls
+title: kp dropzone vocab clippings
+
+\define droppable-text-actions()
+  /* use vocabSplitPattern()  [¦|\/] to split at ¦ or /  */
+  <$wikify name=import-text text=<<actionTiddler>>>
+    <$let  newTitle={{{ [<import-text>splitregexp<vocabSplitPattern>first[]] }}} 
+      newDefn={{{ [<import-text>splitregexp<vocabSplitPattern>last[]] }}}  
+      lf="""
+    <hr/>
+    """>
+      
+    <!-- If tiddler exists, append new definition -->
+    <% if [<newTitle>is[tiddler]] %>
+      <$let oldText={{{ [<newTitle>get[text]] }}}   >
+        <$action-setfield $tiddler=<<newTitle>>    text={{{ [<oldText>addsuffix<lf>addsuffix<newDefn>] }}}  />
+          <$action-navigate $to=<<newTitle>>/>
+        </$action-setfield>
+      </$let>
+    <%else%>
+      <$action-createtiddler $basetitle=<<newTitle>> $template=<<actionTiddler>> text=<<newDefn>> tags="vocab" $overwrite=yes >
+        <$action-navigate $to=<<createTiddler-title>>/>
+      </$action-createtiddler>
+    <%endif%>
+
+    </$let>
+  </$wikify>
+\end
+
+
+<$droppable actions=<<droppable-text-actions>>>
+  <$button style="width:5em;height:1.8em;">+ vocab</$button>
+</$droppable>

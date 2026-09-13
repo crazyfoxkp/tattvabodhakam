@@ -1,0 +1,18 @@
+caption: {{$:/language/Buttons/Quote/Caption}} (Markdown)
+condition: [<targetTiddler>type[text/x-markdown]] [<targetTiddler>type[text/markdown]]
+created: 20260828173133643
+creator: केशवकृपा
+description: {{$:/language/Buttons/Quote/Hint}}
+icon: $:/core/images/quote
+modified: 20260828173133643
+modifier: केशवकृपा
+shortcuts: ((quote))
+tags: $:/tags/EditorToolbar
+title: $:/plugins/tiddlywiki/markdown/EditorToolbar/quote
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="prefix-lines"
+	character=">"
+	count="1"
+/>

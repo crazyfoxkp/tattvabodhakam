@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "न",
+        "variety": " १",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "",
+        "sutra": "[[आत्मन्·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.आत्मन्\nन-कारान्तः १<br>पुल्लिङ्गः<br>आत्मन्¦एक¦द्वि¦बहु\n१¦आत्मा¦आत्मानौ¦आत्मानः\n२¦आत्मानम्¦आत्मानौ¦आत्मनः\n३¦आत्मना¦आत्मभ्याम्¦आत्मभिः\n४¦आत्मने¦आत्मभ्याम्¦आत्मभ्यः\n५¦आत्मनः¦आत्मभ्याम्¦आत्मभ्यः\n६¦आत्मनः¦आत्मनोः¦आत्मनाम्\n७¦आत्मनि¦आत्मनोः¦आत्मसु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see आत्मन्·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"आत्मन्\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "आत्मन्",
+        "modified": "20250131164746054",
+        "modifier": "KeshavP"
+    }
+]

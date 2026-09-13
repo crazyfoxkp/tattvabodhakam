@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "052",
+        "tags": "[[MBTN » § 06]]",
+        "text": "ततस्तु ते ब्रह्मसुतेन पृष्टा न्यवेदयन्नात्मबलं पृथक् पृथक् ।<br> दशैव चाऽरभ्य दशोत्तरस्य क्रमात् पथो योजनतोऽ तियाने ॥६.५२॥",
+        "title": "MBTN » § 06 » 052"
+    }
+]

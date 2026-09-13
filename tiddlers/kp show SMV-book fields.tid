@@ -1,0 +1,17 @@
+created: 20251005193803701
+creator: KeshavP
+modified: 20260226170938145
+modifier: केशवकृपा
+tags: $:/tags/ViewTemplate
+title: kp show SMV-book fields
+
+<%if [all[current]tag[SMV-book]]%>
+ <table class = "showfields"> 
+<$list filter="[<currentTiddler>fields:exclude[created creator प्रस्तावना sarga audio applicationtype title grantha tags caption shloka# text modified modifier]]" variable=field-name>
+        <$list filter="[<currentTiddler>get<field-name>]" variable=field-value>
+      <tr><td class=dots><<field-name>></td>
+      <td class=data><<field-value>></td></tr>
+
+</$list>
+</$list></table>
+<%endif%>

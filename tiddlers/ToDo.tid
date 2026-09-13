@@ -1,0 +1,42 @@
+caption: ToDo @@color:red;,,<$text text={{{ [{!!text}split[*]count[]subtract[1]] }}}/>,,@@
+created: 20241016163004682
+creator: KeshavP
+modified: 20250724163029696
+modifier: KeshavP
+tags: $:/tags/SideBar
+title: ToDo
+
+[[open ToDo|ToDo]]
+
+* ✅ fix table width between शब्द / धातु सूत्र
+** भू , भू सूत्र missing
+* ✅ upasarga list and common completions
+* ✅ [[Formatting rules|kp format rules]]
+* ✅ krudanta notes
+* ✅ complete [[dhatu sutra|धातु सूत्र]]
+* taddita with usage
+* samasa with vi|va usage
+*  hightlight search items
+* ✅ न - ण rule
+* ✅ make anvaya.html part of the TW
+* श्लेष पदच्छेद setup
+* ✅ kp stamp test <$button message="tm-modal" param="kp stamp test">[_]</$button>
+* णिच्-प्रत्यय
+* ✅ च्विप्रयोगः
+* ✅ सति-सप्तमी
+* add mahat to sutrani tab
+* संख्या
+---
+The following tiddlers are tagged with @@color:yellow;unfinished work: @@
+
+<$list filter="[tag[ToDo]]">
+
+</$list>
+
+
+---
+Tasks @@color:red;^^<$text text={{{ [tag[task]count[]] }}}/>^^@@
+
+<$text text={{{ [{!!text}split[*]count[]subtract[1]] }}}/>
+
+<$text text={{{ [{!!text}split[ ]count[]subtract[1]] }}}/>

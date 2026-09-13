@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "उ",
+        "variety": "",
+        "notes": "",
+        "linga": "स्त्री॰",
+        "group": "",
+        "sutra": "[[धेनु·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.धेनु\nउ-कारान्तः<br>स्त्रीलिङ्गः<br>धेनु¦एक¦द्वि¦बहु\n१¦धेनुः¦धेनू¦धेनवः\n२¦धेनुम्¦धेनू¦धेनूः\n३¦धेन्वा¦धेनुभ्याम्¦धेनुभिः\n४¦धेन्वै / धेनवे¦धेनुभ्याम्¦धेनुभ्यः\n५¦धेन्वाः / धेनोः¦धेनुभ्याम्¦धेनुभ्यः\n६¦धेन्वाः / धेनोः¦धेन्वोः¦धेनूनाम्\n७¦धेन्वाम् / धेनौ¦धेन्वोः¦धेनुषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see धेनु·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"धेनु\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "धेनु",
+        "modified": "20250131164746250",
+        "modifier": "KeshavP"
+    }
+]

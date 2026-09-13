@@ -1,0 +1,10 @@
+aliases: 
+caption: 21 - ಶ್ರೀ ಕರ್ಮ ವಿಮೋಚನ ಸಂಧಿ
+created: 20200901000000000
+creator: KeshavP
+modified: 20200906200958014
+modifier: KeshavP
+tags: HKS ಹರಿಕಥಾಮೃತಸಾರ
+title: ಕರ್ಮ ವಿಮೋಚನ
+
+<table><$list filter="[tag[HKS21 [[ಕರ್ಮ ವಿಮೋಚನ]]]sortan[title]]"><tr><th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>notes</$link></th><td/><td><$transclude mode="block"/></td></tr></$list></table>

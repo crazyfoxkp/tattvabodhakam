@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "033",
+        "tags": "[[MBTN » § 06]]",
+        "text": "समस्त दिक्ष प्रहितेष तेन प्रभहनमन्तमिदं बभाषे ।<br> न कश्चिदीशस्त्वद्रतेऽस्ति साधने समस्तकार्यप्रवरस्य मेऽस्य ॥६.३३ ॥",
+        "title": "MBTN » § 06 » 033"
+    }
+]

@@ -1,0 +1,36 @@
+created: 20241104160854891
+creator: KeshavP
+modified: 20260226222320755
+modifier: केशवकृपा
+tags: $:/tags/EditTemplate
+title: kp editTemplate addfields
+
+<$edit-text tiddler="$:/temp/my-text" class="tc-edit-texteditor" placeholder="paste पदार्थ raw data here..."/>
+
+<$button actions="""
+    <$list filter="[{$:/temp/my-text}splitregexp[#]]" variable="line">
+        <$set name="fieldName" value={{{ [<line>splitregexp[=]first[]trim[]addprefix[kp_]] }}}>
+            <$set name="fieldValue" value={{{ [<line>splitregexp[=]rest[]join[= ]trim[]] }}}>
+                <$action-setfield $field=<<fieldName>> $value={{{ [<fieldValue>search-replace:gim:regexp[(.*)EQ],[$1= ]] }}} />
+        </$set>
+    </$list>
+    <$action-setfield $tiddler="$:/temp/my-text" text=""/>
+""">Create पदार्थ Fields</$button>
+<$button actions="""
+    <$list filter="[{$:/temp/my-text}splitregexp[#]]" variable="line">
+        <$set name="fieldName" value={{{ [<line>splitregexp[=]first[]trim[]addprefix[kp2_]] }}}>
+            <$set name="fieldValue" value={{{ [<line>splitregexp[=]rest[]join[= ]trim[]] }}}>
+                <$action-setfield $field=<<fieldName>> $value={{{ [<fieldValue>search-replace:gim:regexp[(.*)EQ],[$1= ]] }}} />
+        </$set>
+    </$list>
+    <$action-setfield $tiddler="$:/temp/my-text" text=""/>
+""">Create 2nd SET</$button>
+<$button actions="""
+    <$list filter="[{$:/temp/my-text}splitregexp[#]]" variable="line">
+        <$set name="fieldName" value={{{ [<line>splitregexp[=]first[]trim[]addprefix[kp3_]] }}}>
+            <$set name="fieldValue" value={{{ [<line>splitregexp[=]rest[]join[= ]trim[]] }}}>
+                <$action-setfield $field=<<fieldName>> $value={{{ [<fieldValue>search-replace:gim:regexp[(.*)EQ],[$1= ]] }}} />
+        </$set>
+    </$list>
+    <$action-setfield $tiddler="$:/temp/my-text" text=""/>
+""">Create 3rd SET</$button>

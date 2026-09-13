@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "न",
+        "variety": " ५-१",
+        "notes": "",
+        "linga": "नपुं॰",
+        "group": "",
+        "sutra": "[[नामन्·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.नामन्\nन-कारान्तः ५-१<br>नपुंसकलिङ्गः<br>नामन्¦एक¦द्वि¦बहु\n१¦नाम¦नाम्नी / नामनी¦नामानि\n२¦नाम¦नाम्नी / नामनी¦नामानि\n३¦नाम्ना¦नामभ्याम्¦नामभिः\n४¦नाम्ने¦नामभ्याम्¦नामभ्यः\n५¦नाम्नः¦नामभ्याम्¦नामभ्यः\n६¦नाम्नः¦नाम्नोः¦नाम्नाम्\n७¦नाम्नि / नामनि¦नाम्नोः¦नामसु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see नामन्·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"नामन्\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "नामन्",
+        "modified": "20250131164746259",
+        "modifier": "KeshavP"
+    }
+]

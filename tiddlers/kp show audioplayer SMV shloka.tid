@@ -1,0 +1,12 @@
+created: 20250805182049455
+creator: KeshavP
+modified: 20250809183513869
+modifier: KeshavP
+tags: $:/tags/ViewTemplate
+title: kp show audioplayer SMV shloka
+
+<%if [all[current]search:tags:[SMV » §]]%>
+
+<audio src={{!!audio}}  controls preload="none" style="width:25%; object-fit: contain"></audio>
+
+<%endif%>

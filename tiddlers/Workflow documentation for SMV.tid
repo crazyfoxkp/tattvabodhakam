@@ -1,0 +1,33 @@
+created: 20240614164152971
+creator: KeshavP
+modified: 20251005200741780
+modifier: KeshavP
+tags: 
+title: Workflow documentation for SMV
+
+!!! Titles:
+* Sarga(#).(shloka#)
+**``example: Sarga1.15``
+
+!!! Tags:
+*shloka(#) tiddlers are tagged with sarga(#) ie. belong to category
+* sarga(#) tiddlers are tagged with SMV  ie. belong to category
+
+!!! Views:
+*SMV is list filter of all sargas (links only / transclusion : undecided)
+*sarga(#) is transclusion of all shlokas with corresponding tag; in detail/summary. Shloka is presented as summary. Artha with transclusion of fields in a table is 'detail' view.
+
+!!! Operation:
+*if artha tiddler doesn't exist:
+** copy shloka, r-click > services > ``open shloka URL`` and ``copy to Clipboard`` the result. 
+** open link to create artha tiddler, paste into ``create padartha fields`` and save
+** add additional grammar notes to ``kp_व्याकर्ण_विशेषः`` field
+
+!!! Backend:
+``kp editTemplate addfields``
+contains code assigning names/fields to each shloka-artha. [[link|$:/core/ui/EditTemplate/fields]]
+
+``show-kpfields-template``
+contains code to display field content in body of tiddler (formatted). [[link|kp show SKS fields template]] 
+
+same code should be used in sarga tiddlers to show interactive meaning. 

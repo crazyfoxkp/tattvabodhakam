@@ -1,0 +1,15 @@
+[
+    {
+        "anta": "इ",
+        "variety": "",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.हरि·सूत्र\nइ-कारान्तः<br>पुल्लिङ्गः<br>हरि·सूत्र¦एक¦द्वि¦बहु\n१¦अ,इ,उ विसर्ग ः¦ई¦-इ + अयः\n२¦अ,इ,उ अनुस्वरं म्¦ई¦ईन्\n३¦ना¦ भ्याम्¦ भिः\n४¦-इ + अये¦ भ्याम्¦भ्यः\n५¦-इ + एः¦ भ्याम्¦भ्यः\n६¦-इ + एः¦-इ + योः ¦दीर्घ + नाम् \n७¦-इ + औ¦-इ + योः ¦सु (स → ष)\n@@\n@@.dblock.notes\n३˚/१➝७˚/१ ना अये एः एः औ<br>४˚/१➝७˚/१, ६˚/२, १˚/३ इ लोप<br>✓ न → ण¦\n¦\n¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"हरि·सूत्र\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि सूत्र v2",
+        "title": "हरि·सूत्र",
+        "modified": "20250131164746524",
+        "modifier": "KeshavP"
+    }
+]

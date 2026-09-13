@@ -1,0 +1,10 @@
+aliases: 
+caption: 26 - ಶ್ರೀ ಅವರೋಹಣ ತಾರತಮ್ಯ ಸಂಧಿ
+created: 20200901000000000
+creator: KeshavP
+modified: 20200906201002246
+modifier: KeshavP
+tags: HKS ಹರಿಕಥಾಮೃತಸಾರ
+title: ಅವರೋಹಣ ತಾರತಮ್ಯ
+
+<table><$list filter="[tag[HKS26 [[ಅವರೋಹಣ ತಾರತಮ್ಯ]]]sortan[title]]"><tr><th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>notes</$link></th><td/><td><$transclude mode="block"/></td></tr></$list></table>

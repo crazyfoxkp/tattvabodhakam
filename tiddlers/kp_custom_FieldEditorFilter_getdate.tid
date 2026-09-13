@@ -1,0 +1,10 @@
+created: 20260820165332015
+creator: केशवकृपा
+list-before: 
+modified: 20260820170150834
+modifier: केशवकृपा
+tags: $:/tags/FieldEditorFilter
+title: kp/custom/FieldEditorFilter/getdate
+
+[<currentField>match[presented]then[kp/editTemplate/fieldEditor/getdate]]
+~[<currentFieldName>match[presented]then[kp/editTemplate/fieldEditor/getdate]]

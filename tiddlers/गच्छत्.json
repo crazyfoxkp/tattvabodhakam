@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "त",
+        "variety": " ३",
+        "notes": "पुल्लिङ्गः / त्रिलिङ्गेषु / व्यक्ति (पु) च वस्तु (नपु) विशेष्य पदाः",
+        "linga": "पु॰  त्रि॰",
+        "group": "",
+        "sutra": "[[गच्छत्·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.गच्छत्\nत-कारान्तः ३<br>पुल्लिङ्गः / त्रिलिङ्गेषु <br>गच्छत्¦एक¦द्वि¦बहु\n१¦गच्छन्¦गच्छन्तौ¦गच्छन्तः\n२¦गच्छन्तम्¦गच्छन्तौ¦गच्छतः\n३¦गच्छता¦गच्छद्भ्याम्¦गच्छद्भिः\n४¦गच्छते¦गच्छद्भ्याम्¦गच्छद्भ्यः\n५¦गच्छतः¦गच्छद्भ्याम्¦गच्छद्भ्यः\n६¦गच्छतः¦गच्छतोः¦गच्छताम्\n७¦गच्छति¦गच्छतोः¦गच्छत्सु\n@@\n@@.dblock.notes\nहलन्त=¦mostly स्त्री and पु same <br>general rule: if 3/3 variation exists, apply same + sutra to 4-5/3 and 3-4-5/2 <br>३˚/१➝७˚/१  आ ए ः ः इ <br>२˚/३ from ५˚/१, ६˚/१ except in नपुं\nत-कारान्त¦१˚/१  ∆ -त् +अन्<br>२˚/१ add म्  <br>३˚/३ त ∆➝द + सूत्र; follow ३˚/३ variation general rule\n\n[see गच्छत्·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"गच्छत्\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "गच्छत्",
+        "modified": "20250131164746149",
+        "modifier": "KeshavP"
+    }
+]

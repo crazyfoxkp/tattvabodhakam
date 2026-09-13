@@ -1,0 +1,11 @@
+created: 20250716181827957
+creator: KeshavP
+modified: 20250716183016298
+modifier: KeshavP
+tags: maintenance
+title: kp-list all HKS tids
+
+<$list filter ="[tag[HKS]]" variable="sandhi">
+<$list filter ="[<sandhi>tagging[]]">
+
+</$list></$list>

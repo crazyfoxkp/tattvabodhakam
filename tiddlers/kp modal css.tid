@@ -1,0 +1,11 @@
+created: 20241106170019030
+creator: KeshavP
+modified: 20241106172456384
+modifier: KeshavP
+tags: 
+title: kp modal css
+
+.tc-modal {width:94vw;left:3vw;height:94vh;top:3vh;resize:both;}
+.tc-modal-header {border-bottom:3px double blue;height:4em;}
+.tc-modal-body {height:calc(94vh - 4em);max-height:calc(94vh - 4em);}
+/* .tc-modal-footer {position:absolute; top:0px;right:0px;width:10em;height:4em;background-color:transparent; border:none;} */

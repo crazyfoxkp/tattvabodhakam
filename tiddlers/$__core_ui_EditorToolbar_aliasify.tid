@@ -1,0 +1,19 @@
+caption: {{$:/language/Buttons/Aliasify/Caption}}
+condition: [<targetTiddler>!has[type]] [<targetTiddler>type[text/vnd.tiddlywiki]]
+created: 20180909082308073
+creator: KeshavP
+description: {{$:/language/Buttons/Aliasify/Hint}}
+icon: $:/core/images/aliasify
+modified: 20241122032801246
+modifier: KeshavP
+shortcuts: ((aliasify))
+tags: $:/tags/EditorToolbar
+title: $:/core/ui/EditorToolbar/aliasify
+type: text/vnd.tiddlywiki
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="wrap-selection"
+	prefix="[["
+	suffix="|?]]"
+/>

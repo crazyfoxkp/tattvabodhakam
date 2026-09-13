@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "स",
+        "variety": " ३a",
+        "notes": "नपुंसकलिङ्गः / इ,उ before स् ",
+        "linga": "नपुं॰",
+        "group": "",
+        "sutra": "[[हविस्·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.हविस्\nस-कारान्तः ३a<br>नपुंसकलिङ्गः <br>हविस्¦एक¦द्वि¦बहु\n१¦हविः¦हविषी¦हवींषि\n२¦हविः¦हविषी¦हवींषि\n३¦हविषा¦हविर्भ्याम्¦हविर्भिः\n४¦हविषे¦हविर्भ्याम्¦हविर्भ्यः\n५¦हविषः¦हविर्भ्याम्¦हविर्भ्यः\n६¦हविषः¦हविषोः¦हविषाम्\n७¦हविषि¦हविषोः¦हविःषु / हविष्षु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see हविस्·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"हविस्\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "हविस्",
+        "modified": "20250131164746529",
+        "modifier": "KeshavP"
+    }
+]

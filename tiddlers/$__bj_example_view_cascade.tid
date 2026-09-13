@@ -1,0 +1,9 @@
+created: 20240918062948531
+creator: KeshavP
+modified: 20250713171743381
+modifier: KeshavP
+tags: $:/tags/ViewTemplateBodyFilter
+title: $:/bj/example/view/cascade
+type: text/vnd.tiddlywiki
+
+[applicationtype[ex1contextmenu]then[$:/bj/ex1contextmenu/ViewTemplate]]

@@ -1,0 +1,18 @@
+created: 20260304153516174
+creator: केशवकृपा
+modified: 20260304184522178
+modifier: केशवकृपा
+tags: Journal Contents
+title: वादिराजस्तोत्रम्
+
+॥ अथ श्री वादिराज स्तोत्रं ॥
+<table>
+<$list filter="[all[current]tagging[]]" >
+<tr>
+<th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>notes</$link></th><td/>
+<td><$transclude mode="block"/></td>
+</tr>
+</$list>
+</table>
+
+॥इति श्री वेदवेद्यतीर्थविरचितं श्रीवादिराजस्तोत्रं ॥

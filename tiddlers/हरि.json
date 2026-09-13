@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "इ",
+        "variety": "",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "",
+        "sutra": "[[हरि·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.हरि\nइ-कारान्तः<br>पुल्लिङ्गः<br>हरि¦एक¦द्वि¦बहु\n१¦हरिः¦हरी¦हरयः\n२¦हरिम्¦हरी¦हरीन्\n३¦हरिणा¦हरिभ्याम्¦हरिभिः\n४¦हरये¦हरिभ्याम्¦हरिभ्यः\n५¦हरेः¦हरिभ्याम्¦हरिभ्यः\n६¦हरेः¦हर्योः¦हरीणाम्\n७¦हरौ¦हर्योः¦हरिषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see हरि·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"हरि\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "हरि",
+        "modified": "20250131164746520",
+        "modifier": "KeshavP"
+    }
+]

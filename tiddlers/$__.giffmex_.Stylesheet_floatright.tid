@@ -1,0 +1,9 @@
+created: 20240613224635604
+creator: KeshavP
+modified: 20240613224838303
+modifier: KeshavP
+tags: 
+title: $:/.giffmex/.Stylesheet/floatright
+
+html body.tc-body .floatright {display:inline;float:right;padding:10px;padding-top:0px;top:5%;left:92%;}
+html body.tc-body .floatright a.tc-tiddlylink {color:#eee;}

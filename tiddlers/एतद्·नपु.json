@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "द",
+        "variety": "",
+        "notes": "",
+        "linga": "नपुं॰",
+        "group": "सर्वनाम",
+        "sutra": "[[एतद्·नपु·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.एतद्·नपु\nद-कारान्तः<br>नपुंसकलीङ्गः ║सर्वनाम<br>एतद्·नपु¦एक¦द्वि¦बहु\n१¦एतत्¦एते¦एतानि\n२¦एतत् ¦एते ¦एतानि \n३¦एतेन ¦एताभ्याम्¦एतैः\n४¦एतस्मै¦एताभ्याम्¦एतेभ्यः\n५¦एतस्मात्¦एताभ्याम्¦एतेभ्यः\n६¦एतस्य¦एतयोः ¦एतेषाम्\n७¦एतस्मिन्¦एतयोः ¦एतेषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see एतद्·नपु·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"एतद्·नपु\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "एतद्·नपु",
+        "modified": "20250131164746088",
+        "modifier": "KeshavP"
+    }
+]

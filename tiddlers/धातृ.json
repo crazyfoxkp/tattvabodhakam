@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "ऋ",
+        "variety": " १",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "",
+        "sutra": "[[धातृ·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.धातृ\nऋ-कारान्तः १<br>पुल्लिङ्गः<br>धातृ¦एक¦द्वि¦बहु\n१¦धाता¦धातारौ¦धातारः\n२¦धातारम्¦धातारौ¦धातॄन्\n३¦धात्रा¦धातृभ्याम्¦धातृभिः\n४¦धात्रे¦धातृभ्याम्¦धातृभ्यः\n५¦धातुः¦धातृभ्याम्¦धातृभ्यः\n६¦धातुः¦धात्रोः¦धातॄणाम्\n७¦धातरि¦धात्रोः¦धातृषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see धातृ·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"धातृ\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "धातृ",
+        "modified": "20250131164746241",
+        "modifier": "KeshavP"
+    }
+]

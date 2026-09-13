@@ -1,0 +1,10 @@
+aliases: 
+caption: 10 - ಸರ್ವಪ್ರತೀಕ ಸಂಧಿ
+created: 20200901000000000
+creator: KeshavP
+modified: 20200906200931023
+modifier: KeshavP
+tags: HKS ಹರಿಕಥಾಮೃತಸಾರ
+title: ಸರ್ವಪ್ರತೀಕ
+
+<table><$list filter="[tag[HKS10 ಸರ್ವಪ್ರತೀಕ]sortan[title]]"><tr><th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>notes</$link></th><td/><td><$transclude mode="block"/></td></tr></$list></table>

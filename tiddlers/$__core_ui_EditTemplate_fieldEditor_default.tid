@@ -1,0 +1,7 @@
+created: 20240614162617266
+creator: KeshavP
+modified: 20240614162644594
+modifier: KeshavP
+title: $:/core/ui/EditTemplate/fieldEditor/default
+
+<$edit-text tiddler=<<currentTiddler>> field=<<currentField>> tag="textarea" default="" class="wideedit" placeholder={{$:/language/EditTemplate/Fields/Add/Value/Placeholder}} tabindex={{$:/config/EditTabIndex}} cancelPopups="yes"/>

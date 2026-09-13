@@ -1,0 +1,9 @@
+.tc-editor-toolbar button[title^="Apply"] { background-color: bisque; color: black; } /* title starts with */
+.tc-editor-toolbar button[title*="Cheatsheet"] { background-color: gold; color: black; }  /* title contains */
+.tc-editor-toolbar button[title*="Send"] { background-color: skyblue; color: orange !important; }
+.tc-editor-toolbar button:hover  { background-color: deeppink; color: white; }
+
+
+/* tag pill colors */
+span[data-tag-title^="$:/"] span.tc-tag-label  {background-color:orange; color:black;}
+/ * [data-tag-title^="$:/"] .tc-tag-label, .tc-tag-label[data-tag-title^="$:/"] {background-color:orange; color:black;} */

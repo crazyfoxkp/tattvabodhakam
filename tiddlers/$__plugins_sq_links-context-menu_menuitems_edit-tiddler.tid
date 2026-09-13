@@ -1,0 +1,11 @@
+created: 20250716220318922
+creator: KeshavP
+icon: $:/core/images/edit-button
+modified: 20250716221358683
+modifier: KeshavP
+sq-contextmenu-name: Open for editing
+subtitle: $:/core/images/edit-button
+tags: $:/tags/links-context-menu/menuitems
+title: $:/plugins/sq/links-context-menu/menuitems/edit-tiddler
+
+<$action-sendmessage $message="tm-edit-tiddler" $param=<<currentTiddler>>/>

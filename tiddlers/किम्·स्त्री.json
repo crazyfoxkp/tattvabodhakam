@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "म",
+        "variety": "",
+        "notes": "",
+        "linga": "स्त्री॰",
+        "group": "सर्वनाम",
+        "sutra": "[[किम्·स्त्री·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.किम्·स्त्री\nम-कारान्तः<br>स्त्रीलिङ्गः ║सर्वनाम<br>किम्·स्त्री¦एक¦द्वि¦बहु\n१¦का¦के¦काः\n२¦काम्¦के¦काः\n३¦कया¦काभ्याम्¦काभिः\n४¦कस्यै¦काभ्याम्¦काभ्यः\n५¦कस्याः¦काभ्याम्¦काभ्यः\n६¦कस्याः¦कयोः¦कासाम्\n७¦कस्याम्¦कयोः¦कासु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see किम्·स्त्री·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"किम्·स्त्री\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "किम्·स्त्री",
+        "modified": "20250131164746140",
+        "modifier": "KeshavP"
+    }
+]

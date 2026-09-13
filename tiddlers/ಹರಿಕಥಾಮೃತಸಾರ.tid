@@ -1,0 +1,52 @@
+aliases: 
+created: 20200901184538623
+creator: KeshavP
+modified: 20200906200859825
+modifier: KeshavP
+tags: Contents
+title: ಹರಿಕಥಾಮೃತಸಾರ
+
+<table>
+<$list filter="[tag[HKS]sortan[caption]]">
+<tr>
+<th style="vertical-align: bottom; font-size:80%; padding:20px";>
+<$link><$view field ="caption"/></$link></th><td/>
+<td><$transclude mode="block"/></td>
+</tr>
+</$list>
+</table>
+
+|!No	|!ಸಂಧಿ |!Sandhi title |
+|01	|ಮಂಗಳಾಚರಣ ಸಂಧಿ |Mangala Charana sandhi|
+|02	|ಕರುಣಾ ಸಂಧಿ |Karuna sandhi|
+|03	|ವ್ಯಾಪ್ತಿ ಸಂಧಿ |Vyapthi sandhi|
+|04	|ಭೋಜನ ಸಂಧಿ |Bhojana sandhi|
+|05	|ವಿಭೂತಿ ಸಂಧಿ |Vibhooti sandhi|
+|06	|ಪಂಚಮಹಾಯಜ್ಞ ಸಂಧಿ |Panchamahayagna Sandhi|
+|07	|ಪಂಚತನ್ಮಾತ್ರ ಸಂಧಿ |Pancha tanmathra sandhi <br> Durita Nivaraana sandhi|
+|08	|ಮಾತೃಕಾ ಸಂಧಿ |Mathruka sandhi|
+|09	|ಶ್ರೀ ವರ್ಣಪ್ರಕ್ರಿಯ ಸಂಧಿ |Sri VarnaPrakriya sandhi <br>  Udaattaanudaatta Sandhi|
+|10	|ಸರ್ವಪ್ರತೀಕ ಸಂಧಿ |Sarva Pratheeka sandhi|
+|11	|ಶ್ರೀ ಸ್ಥಾವರಜಂಗಮ ಸಂಧಿ|Sthavarajangama sandhi<br> Dhyaana prakriyasandhi|
+|12	|ಶ್ರೀ ನಾಡೀಪ್ರಕರಣ ಸಂಧಿ |Nadeeprakarana Sandhi|
+|13	|ಶ್ರೀ ನಾಮಸ್ಮರಣ ಸಂಧಿ |Namasmarana sandhi|
+|14	|ಶ್ರೀ ಪಿತೃಗಣ ಸಂಧಿ |Pithruguna sandhi <br> Jeevanaprakriya sandhi|
+|15	|ಶ್ರೀ ಶ್ವಾಸ ಸಂಧಿ  |Shwaasa sandhi|
+|16	|ಶ್ರೀ ದತ್ತಸ್ವಾತಂತ್ರ್ಯ ಸಂಧಿ |Dhatthasvathanthriya sandhi <br> SwAtantrnya vibhajane Sandhi|
+|17	|ಶ್ರೀ ಸ್ವಗತಸ್ವಾತಂತ್ರ್ಯ ಸಂಧಿ |Swagathaswantrya sandhi|
+|18	|ಶ್ರೀ ಕ್ರೀಡಾವಿಲಾಸ ಸಂಧಿ |Kreedavilasa sandhi <br> sarvaswatantrya sandhi|
+|19	|ಶ್ರೀ ಬಿಂಬಾಪರೋಕ್ಷ ಸಂಧಿ |Bimbaparoksha sandhi<br> Bimbopasana sandhi <br> Bimba pratibimba sandhi|
+|20	|ಶ್ರೀ ಗುಣತಾರತಮ್ಯ ಸಂಧಿ |Guna Taratamya sandhi|
+|21	|ಶ್ರೀ ಕರ್ಮ ವಿಮೋಚನ ಸಂಧಿ |Karma vimochana sandhi|
+|22	|ಶ್ರೀ ಭಕ್ತಾಪರಾಧಸಹಿಷ್ಣು ಸಂಧಿ |Bhaktaradhasahishnu sandhi <br>SakaladuritanivaaraNa Sandhi|
+|23	|ಶ್ರೀ ಬೃಹತ್ತಾರತಮ್ಯ ಸಂಧಿ |Bruhat taratamya sandhi |
+|24	|ಶ್ರೀ ಕಲ್ಪಸಾಧನ ಸಂಧಿ<br>>ಶ್ರೀ ಅಪರೋಕ್ಷ ತಾರತಮ್ಯ ಸಂಧಿ |Kalpa sadhana sandhi<br>Aparoksha Taratamya sandhi|
+|25	|ಶ್ರೀ ಆರೋಹಣ ತಾರತಮ್ಯ ಸಂಧಿ |Aarohana taratamya sandhi|
+|26	|ಶ್ರೀ ಅವರೋಹಣ ತಾರತಮ್ಯ ಸಂಧಿ |Avarohana taratamya sandhi|
+|27	|ಶ್ರೀ ಅನುಕ್ರಮಣಿಕಾ ತಾರತಮ್ಯ ಸಂಧಿ |Anukramanika tharatamya sandhi|
+|28	|ಶ್ರೀ ವಿಘ್ನೇಶ್ವರ ಸ್ತೋತ್ರ ಸಂಧಿ<br>ಶ್ರೀ ಗಣಪತಿ ಸ್ತೋತ್ರ ಸಂಧಿ |Sri Vigneshwara stothra sandhi<br>Sri Ganapathy stothra sandhi|
+|29	|ಶ್ರೀ ಅಣುತಾರತಮ್ಯ ಸಂಧಿ |Anu taratamya sandhi|
+|30	|ಶ್ರೀ ದೈತ್ಯತಾರತಮ್ಯ ಸಂಧಿ |Dhaithya taratamya sandhi|
+|31	|ಶ್ರೀ ನೈವೇದ್ಯಪ್ರಕರಣ ಸಂಧಿ |Neivedhya prakarana sandhi|
+|32	|ಶ್ರೀ ಕಕ್ಷಾತಾರತಮ್ಯ ಸಂಧಿ |Kaksha taratamya sandhi|
+|33	|ಶ್ರೀ ಫಲಶ್ರುತಿ ಸಂಧಿ |Palashruthi sandhi|

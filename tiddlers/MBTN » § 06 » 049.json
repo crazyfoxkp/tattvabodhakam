@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "049",
+        "tags": "[[MBTN » § 06]]",
+        "text": "तस्याग्रजोऽसावरुणस्य सूनुः सूर्यस्य बिम्बं सह तेन यातः ।<br> जवं परीक्षन्नथ तं सुतप्तं गत्वा पतत्रक्षयमाप्य चापतत् ॥६.४९ ॥",
+        "title": "MBTN » § 06 » 049"
+    }
+]

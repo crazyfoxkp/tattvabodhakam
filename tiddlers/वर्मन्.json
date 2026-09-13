@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "न",
+        "variety": " ५-२",
+        "notes": "",
+        "linga": "नपुं॰",
+        "group": "",
+        "sutra": "[[वर्मन्·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.वर्मन्\nन-कारान्तः ५-२<br>नपुंसकलिङ्गः<br>वर्मन्¦एक¦द्वि¦बहु\n१¦वर्म¦वर्मणी¦वर्माणि\n२¦वर्म¦वर्मणी¦वर्माणि\n३¦वर्मणा¦वर्मभ्याम्¦वर्मभिः\n४¦वर्मणे¦वर्मभ्याम्¦वर्मभ्यः\n५¦वर्मणः¦वर्मभ्याम्¦वर्मभ्यः\n६¦वर्मणः¦वर्मणोः¦वर्मणाम्\n७¦वर्मणि¦वर्मणोः¦वर्मसु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see वर्मन्·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"वर्मन्\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "वर्मन्",
+        "modified": "20250131164746440",
+        "modifier": "KeshavP"
+    }
+]

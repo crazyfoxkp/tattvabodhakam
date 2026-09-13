@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "स",
+        "variety": " २",
+        "notes": "",
+        "linga": "नपुं॰",
+        "group": "",
+        "sutra": "[[मनस्·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.मनस्\nस-कारान्तः २<br>नपुंसकलिङ्गः<br>मनस्¦एक¦द्वि¦बहु\n१¦मनः¦मनसी¦मनांसि\n२¦मनः¦मनसी¦मनांसि\n३¦मनसा¦मनोभ्याम्¦मनोभिः\n४¦मनसे¦मनोभ्याम्¦मनोभ्यः\n५¦मनसः¦मनोभ्याम्¦मनोभ्यः\n६¦मनसः¦मनसोः¦मनसाम्\n७¦मनसि¦मनसोः¦मनःसु / मनस्सु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see मनस्·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"मनस्\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "मनस्",
+        "modified": "20250131164746317",
+        "modifier": "KeshavP"
+    }
+]

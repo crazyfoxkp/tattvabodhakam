@@ -1,0 +1,9 @@
+dependents: 
+description: Threaded tiddler comments
+list: readme config
+name: Comments
+plugin-type: plugin
+stability: STABILITY_2_STABLE
+title: $:/plugins/tiddlywiki/comments
+type: application/json
+version: 5.3.6

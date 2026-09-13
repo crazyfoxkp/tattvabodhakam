@@ -1,0 +1,26 @@
+created: 20250220213607425
+creator: KeshavP
+list-before: $:/core/ui/SideBarSegments/tabs
+modified: 20250706145757252
+modifier: KeshavP
+tags: deleteMe
+title: kp test dropzone
+
+
+\define dropdefinition()
+<$wikify name="source" text=<<actionTiddler>>>
+<$set name="source" filter="[<source>]" >
+   <$list filter="[<source>split[¦]first[]trim[]]" variable="title">
+      <$list filter="[<source>split[¦]rest[]]" variable="definition">
+
+<$action-sendmessage $message="tm-perform-import" $param=<<importTitle>>/>
+<$action-setfield $tiddler=<<title>> tags="vocab" text=<<definition>> />
+
+      </$list>
+   </$list>
+</$set>
+</$wikify>
+\end
+<$droppable actions=<<dropdefinition>>>
+<$button style="width:10em;height:3em;">drop vocab here</$button>
+</$droppable>

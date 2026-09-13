@@ -1,0 +1,79 @@
+created: 20241031141718897
+creator: KeshavP
+modified: 20241031150053580
+modifier: KeshavP
+tags: 
+title: kp table test
+
+<table class="table-test">
+  <tr>
+    <th></th>
+    <th>एक</th>
+    <th>द्वि</th>
+    <th>बहु</th>
+    <td></td>
+    <th></th>
+    <th>एक</th>
+    <th>द्वि</th>
+    <th>बहु</th>
+  </tr>
+  <tr>
+    <td>प्र.पु</td>
+    <td>अयाञ्चकार अयामास अयाम्बभूव</td>
+    <td>अयाञ्चक्रतुः अयामासतुः अयाम्बभूवतुः</td>
+    <td>अयाञ्चक्रुः अयामासुः अयाम्बभूवुः</td>
+    <td></td>
+    <td>प्र.पु</td>
+    <td>अयाञ्चक्रे</td>
+    <td>अयाञ्चक्राते</td>
+    <td>अयाञ्चक्रिरे</td>
+  </tr>
+  <tr>
+    <td>म.पु</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td></td>
+    <td>प्र.पु</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>उ.पु</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td></td>
+    <td>प्र.पु</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
+
+
+<table>
+  <tr>
+    <th></th>
+    <th>एक</th>
+    <th>द्वि</th>
+    <th>बहु</th>
+    <td></td>
+    <th></th>
+    <th>एक</th>
+    <th>द्वि</th>
+    <th>बहु</th>
+  </tr>
+  <tr>
+    <td>प्र.पु</td>
+    <td>अयाञ्चकार अयामास अयाम्बभूव</td>
+    <td>अयाञ्चक्रतुः अयामासतुः अयाम्बभूवतुः</td>
+    <td>अयाञ्चक्रुः अयामासुः अयाम्बभूवुः</td>
+    <td></td>
+    <td>प्र.पु</td>
+    <td>अयाञ्चक्रे</td>
+    <td>अयाञ्चक्राते</td>
+    <td>अयाञ्चक्रिरे</td>
+  </tr>
+</table>

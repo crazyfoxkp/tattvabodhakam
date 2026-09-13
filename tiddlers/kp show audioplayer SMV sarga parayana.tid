@@ -1,0 +1,21 @@
+created: 20250809181836911
+creator: KeshavP
+modified: 20250831004740450
+modifier: KeshavP
+tags: $:/tags/ViewTemplate
+title: kp show audioplayer SMV sarga parayana
+
+<%if [all[current]tag[SMV]]%>
+<table style="border:1px hidden black;"><tr><td style="width: 75%; vertical-align:top;padding-top:5px;">
+<audio src={{!!audio}}  controls preload="none" style="width:100%; object-fit: contain"></audio>
+</td><td><h1>पारायण</h1></td></tr></table>
+
+<hr>
+
+<table>
+<$list filter="[tag<currentTiddler>]" ><tr><td style="width: 5%; vertical-align:top;padding-top:35px;padding-bottom:35px;">
+<$link>⧉</$link></td><td>
+<$transclude /><br></td></tr>
+</$list>
+</table>
+<%endif%>

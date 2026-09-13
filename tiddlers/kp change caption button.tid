@@ -1,0 +1,22 @@
+created: 20251125162712319
+creator: KeshavP
+modified: 20251125164818649
+modifier: KeshavP
+tags: 
+title: kp change caption button
+
+<$button> go
+<$list filter="[tag[SR]]">
+<$let 
+   newcaption= """<$transclude $tiddler="kp toc color marker"/>""" >
+<$action-setfield $timestamp=no  caption=<<newcaption>>/>
+
+</$let>
+</$list>
+</$button>
+
+<table>
+<$list filter="[tag[SR]]">
+<tr><td><$link/></td><td>{{!!caption}}</td></tr>
+</$list>
+</table>

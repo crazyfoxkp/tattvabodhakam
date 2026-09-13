@@ -1,0 +1,141 @@
+created: 20241018151531660
+creator: KeshavP
+modified: 20260802144406616
+modifier: केशवकृपा
+tags: $:/tags/Stylesheet
+title: kp table.shabda7x3 css
+
+ \rules except dash
+.shabda7x3 { 
+  /* CSS HEX --bk-colored: --light-cyan: #d6fbffff; --muted-headers: --chinese-violet: #766c7fff; --melon: --melon: #fcb5b5ff; --text-color: --black: #000000ff; --tab-border: --blue-munsell: #448fa3ff; --bk-light: --white: #ffffff; */ --bk-colored: #d6fbffff;
+  --muted-headers: #766c7fff;
+  --melon: #fcb5b5ff;
+  --text-color: #000;
+  --tab-border: #fcb5b5ff; /* blue munsell #448fa3ff; */
+  --bk-light: #ffffff; 
+  width: 80%; /* Table takes up 50% of the viewport */ 
+  border: 1px solid var(--tab-border); 
+  padding: 10px; /* table-layout: fixed; /* Fixed layout to enforce column widths */ 
+  }
+.shabda7x3   tr:nth-child(odd) { background-color: var(--bk-colored); }
+.shabda7x3   tr:nth-child(even) { background-color: var(--bk-light); }
+.shabda7x3   th:first-child, .shabda7x3 td:first-child { width: 10%; /* Fix the first column width to 15% */ 
+  color: var(--muted-headers); 
+  white-space: nowrap; /* Prevent content from expanding the column */ 
+  overflow: hidden; /* Hide overflow content */ 
+  text-overflow: ellipsis; /* Show ellipsis if content overflows */ } 
+.shabda7x3 th { width: auto; /* Allow remaining columns to adjust automatically */ color: var(--muted-headers); }
+.shabda7x3  th:nth-child(6), .shabda7x3 td:nth-child(6) { width: 10%; /* Set a fixed width for the 6th column */ 
+  background-color: var(--bk-light); } 
+.shabda7x3 td { padding-left: 20px; }
+.shabda7x3 tr td:nth-child(5) { background: var(--bk-light); }
+.shabda7x3 td:empty { background-color: var(--bk-light); }
+.shabda7x3 tr:last-child td { color: var(--text-color); 
+  border-bottom: 2px solid var(--tab-border); /* Add bottom border to the last row */ }
+
+/* from jagat shabda table: 
+  table.shabda7x3 {
+    border: 1px;
+    padding: 10px;
+    border-color: gray;
+    table-layout: fixed;
+
+    th {
+      width: 30%;
+      color: gray;
+    }
+
+    tr:nth-child(even) {
+      background-color: #d6fbff;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #ffffff;
+    }
+
+    th:first-child,
+    td:first-child {
+      width: 10%;
+      color: gray;
+    }
+
+    th:first-child {
+      color: black;
+    }
+
+    td {
+      padding-left: 20px;
+    }
+  }
+*/
+
+
+
+/* use for displaying field values within view templates ; used in show-kpfields-template */
+
+.showfields {
+   --bk85: #080e08;
+   --bk76: #191a0f;
+   font-size: 18px;
+}
+.showfields .dots { 
+   padding-right: 15px;
+   padding-left: 10px;
+   margin: 0;
+   border-bottom: 1px dotted gray;
+   color: #d2dd7d;
+   width: 5%;
+   font-size: 24px;
+   line-height: 1.4;
+   text-align: right;
+   vertical-align: top;
+   padding-top: 10px;
+}
+.showfields .data { 
+   font-size: 18px;
+   padding: 10px;
+   line-height: 1.5;
+   text-align: left;
+   color: #bfbfc2;
+   vertical-align: top;
+}
+
+/* Reset margins on block elements inside the table cell */
+.showfields .data p,
+.showfields .data h1,
+.showfields .data h2,
+.showfields .data h3,
+.showfields .data h4 {
+   margin-top: 0.4em;
+   margin-bottom: 0.4em;
+}
+
+.showfields .data p:first-child,
+.showfields .data h1:first-child,
+.showfields .data h2:first-child,
+.showfields .data h3:first-child {
+   margin-top: 0;
+}
+
+.showfields .data ul,
+.showfields .data ol {
+   margin-top: 0.4em;
+   margin-bottom: 0.4em;
+   padding-left: 1.5em;
+}
+.showfields tr:nth-child(even) {
+   background: var(--bk85); 
+}
+.showfields tr:nth-child(odd) {
+   background: var(--bk76); 
+}
+
+
+
+
+/*
+for showing chapter/children tiddlers 
+*/
+.mydetail {background-color: rgb(44, 52, 0) ; color: white;}
+.mysummary {background-color:rgb(25, 27, 10) ; color: rgb(160,	160,	160	) ; font-size: 1.2em; line-height: 1.4em; padding-top: 15px; padding-bottom: 15px;}
+.sargalist {color: red; width: 95%; border-collapse: collapse;}

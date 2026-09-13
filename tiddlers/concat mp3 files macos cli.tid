@@ -1,0 +1,81 @@
+created: 20240623142403240
+creator: KeshavP
+modified: 20240623162541249
+modifier: KeshavP
+tags: internet
+title: concat mp3 files macos cli
+
+!!I've got a load of mp3 files in a folder, and I want to merge each pair (Part 1 and Part 2) into a single mp3 file. All of the files are in the same format.
+<br>
+
+
+[[link here|https://superuser.com/questions/1696538/join-mp3-file-pairs-in-folder-with-ffmpeg]]
+
+
+!!!!Method 1
+
+
+```
+Assuming you're using bash on Linux, and assuming all file pairs are numbered as you had listed, I would iterate through the numbers with a for loop.
+
+for c in {1..10}; do
+  c=$(printf '%02.f' "$i")
+  fnames=$(find . -maxdepth 1 -name "${i}*" | sort)
+  parts=$(wc -l <<< "$fnames")
+  if [ "$parts" -gt 1 ]; then 
+    fnameout="${fnames%% Part 1*}.mp3"
+    ffmpeg -i "concat: $f" -acodec copy "$fnameout"
+  fi
+done
+If there are any files not paired up, they will be ignored. For testing purposes, I would add echo before ffmpeg, then make the last line done > test.txt so I could check for either mistakes or brilliance.
+
+```
+
+!!!!Method 2
+
+```
+PART1FILES=( )
+for f in *1.mp3; do 
+  PART1FILES+=($f)
+done
+PART2FILES=( )
+for f in *2.mp3; do 
+  PART2FILES+=($f)
+done
+
+
+INDEX=0
+for i in $PART1FILES; do 
+    FILE1=$i
+    FILE2=$PART2FILES[INDEX+1]
+    NEWFILE="${FILE1:0:-11}.mp3"
+    ffmpeg -i "concat:$FILE1|$FILE2" -acodec copy "$NEWFILE"
+    let INDEX=${INDEX}+1
+done
+```
+
+!!!Same using python
+
+[[link here|https://superuser.com/questions/1332169/ffmpeg-batch-merge-videos-within-a-folder]]
+
+
+```
+#!/usr/bin/env python3
+import os
+import glob
+
+# Create list of all .mp4 files in current working directory.
+files = list(filter(os.path.isfile, glob.glob(os.path.join(os.getcwd(), '*.mp4'))))
+files.sort(key=lambda x: os.path.getctime(x))
+
+# Write list to text file that ffmpeg reads next.
+with open('files.txt', 'w') as output:
+    for file in files:
+        output.write("file '" + file + "'\n")
+
+# Run ffmpeg to concatenate the .mp4 files.
+os.system('ffmpeg -f concat -safe 0 -i files.txt merged.mp4')
+
+# Delete the text file.
+os.remove('files.txt')
+```

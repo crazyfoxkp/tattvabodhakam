@@ -1,0 +1,16 @@
+aliases: 
+created: 20200901053728217
+creator: KeshavP
+modified: 20200906200924783
+modifier: KeshavP
+tags: Contents
+title: ವಿಷ್ಣುಸಹಸ್ರನಾಮ
+
+<table>
+<$list filter="[tag[VS]sortan[title]]">
+<tr>
+<th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>notes</$link></th><td/>
+<td><$transclude mode="block"/></td>
+</tr>
+</$list>
+</table>

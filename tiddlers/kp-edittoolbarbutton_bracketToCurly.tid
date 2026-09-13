@@ -1,0 +1,32 @@
+caption: {{kp-edittoolbarbutton/bracketToCurly/Caption}}
+condition: [<targetTiddler>!has[type]] [<targetTiddler>get[type]prefix[text/vnd.tiddlywiki]]
+created: 20250714174217214
+creator: KeshavP
+description: {{kp-edittoolbarbutton/bracketToCurly/Hint}}
+icon: $:/images/svg-icon/brackets
+modified: 20250722204019995
+modifier: KeshavP
+shortcuts: 
+tags: $:/tags/EditorToolbar kp-bracketToCurly
+title: kp-edittoolbarbutton/bracketToCurly
+
+\define temp() $:/temp/make-key
+\define openBr() \[
+\define closeBr() \]
+
+<$let
+	lbr="
+">
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="save-selection"
+	tiddler=<<temp>>
+/>
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="replace-selection"
+    	text={{{ [<temp>get[text]search-replace:gim:regexp<dbl-L-BracketToCurlyPatternSearch>,<dbl-L-BracketToCurlyTempReplace>search-replace:gim:regexp<dbl-R-BracketToCurlyPatternSearch>,<dbl-R-BracketToCurlyTempReplace>search-replace:gim:regexp<bracketToCurlySearchPattern>,[{$1}]search-replace:gim:regexp<dbl-L-BracketToCurlyTempReplace>,<tempReplaceToDbl-L-Bracket>search-replace:gim:regexp<dbl-R-BracketToCurlyTempReplace>,<tempReplaceToDbl-R-Bracket>] +[join<lbr>] }}}
+/>
+<$action-sendmessage $message="tm-add-tag" $param="{ }"/>
+<$action-deletetiddler $tiddler=<<temp>> />
+</$let>

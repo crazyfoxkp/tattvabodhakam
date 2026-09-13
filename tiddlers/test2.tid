@@ -1,0 +1,24 @@
+created: 20240601221634737
+creator: KeshavP
+kp_2: second field with long line<br> and with hgjhgjh second line
+kp_blank: 
+kp_pada: test for kppada
+modified: 20240602190449863
+modifier: KeshavP
+tags: 
+title: test2
+
+<style>
+td.dots { 
+   padding: 0 2em 0 0;
+   margin: 0 0 0 0;
+   border-bottom: 1px dotted gray;
+}
+</style>
+
+
+
+<$list filter="[all[current]fields[]prefix[kp_]]" variable=fieldname>
+<$list filter="[all[current]get<fieldname>]" variable=field-value>
+    <tr><td class=dots><<fieldname>></td><td><<field-value>></td></tr>
+  </$list></$list>

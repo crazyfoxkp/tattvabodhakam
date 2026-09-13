@@ -1,0 +1,36 @@
+created: 20151203215640514
+modified: 20230513120740975
+tags: $:/tags/Macro
+title: TiddlyTools/Macros/more
+
+\define more-text()       <div><$text text=<<currentTiddler>>/></div>
+\define more-link()       <div><$link/></div>
+\define more-comma()      <$link/><$list filter="[<currentTiddler>!match<last>]">, </$list>
+\define more-bullet()     <li><$link/></li>
+\define more-transclude() <$link/><blockquote><$transclude/></blockquote>
+
+\define more-body(list,level:"+")
+<$let temp="$:/temp/TiddlyTools/more" pid=<<qualify "$(id)$/$level$">>>
+<$list filter="[enlist<__list__>limit<size>]"><<$(template)$>>{{||$(template)$}}</$list>
+<$set name="rest" filter="[enlist<__list__>rest<size>]">
+<$list filter="[<rest>!match[]]">
+<$list filter="[<temp>!has:index<pid>]">
+   <$button class="tc-btn-invisible" tooltip="show next $(size)$ items"> +<$count filter=<<rest>>/> more{{$:/core/images/right-arrow}}
+      <$action-setfield $index=<<pid>> $value="show"/>
+   </$button>
+</$list>
+<$list filter="[<temp>has:index<pid>]">
+   <$button class="tc-btn-invisible" tooltip="hide additional items"> {{$:/core/images/left-arrow}}less
+      <$list filter="[<temp>indexes[]prefix[$(id)$/$level$]suffix<qualify>]" variable="pid"><$action-setfield $index=<<pid>>/></$list>
+   </$button>
+   <$macrocall $name="more-body" list=<<rest>> level="$level$+"/>
+</$list>
+\end
+
+\define more(filter,size:"10",template,id:"0")
+<$set name="list" filter=<<__filter__>>>
+<$let template={{{ [<__template__>has[title]] ~[<__template__>is[variable]] ~[[more-bullet]] }}} id=<<__id__>> size=<<__size__>> last={{{ [enlist<list>last[]] }}}>
+<$macrocall $name="more-body" list=<<list>>/>
+\end
+
+{{TiddlyTools/Macros/more/Info}}

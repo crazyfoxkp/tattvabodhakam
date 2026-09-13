@@ -1,0 +1,747 @@
+created: 20240612211434472
+creator: KeshavP
+modified: 20260908175150545
+modifier: केशवकृपा
+tags: internet
+title: collect all internet junk in here
+
+!! @@ adapt a CSS Stylesheet for WikiText blockquote @@
+
+https://talk.tiddlywiki.org/t/i-need-help-to-adapt-a-css-stylesheet-for-wikitext-blockquote/14287/2?u=kptko
+
+---
+
+
+
+
+
+
+!! @@ Sharing wikis without allowing others to edit? @@
+
+https://talk.tiddlywiki.org/t/sharing-wikis-without-allowing-others-to-edit/7502/10
+
+---
+
+
+!! @@ Order of Fields in Edit Mode @@
+
+https://talk.tiddlywiki.org/t/the-order-of-fields-in-edit-mode/5856/2
+
+---
+
+
+!! @@ Continue order list numbering after code block? @@
+
+A general solution has long ago been documented here:
+    https://tiddlywiki.com/#Lists%20in%20WikiText 
+Scroll down to the end of the tiddler and you will see a heading
+labeled "Paragraphs in Lists", which describes enclosing the
+desired content within a <div>...</div>, like this:
+
+
+
+https://groups.google.com/g/tiddlywiki/c/JnASh-miSQU/m/cKrzYelJBQAJ
+
+---
+
+
+!! @@ multiline-field-editor-plugin @@
+
+https://talk.tiddlywiki.org/t/intro-multiline-field-editor-plugin/1580
+
+---
+
+
+!! @@ Create a EditorToolbar button that copies the full “text” field to the clipboard
+ @@
+
+https://talk.tiddlywiki.org/t/create-a-editortoolbar-button-that-copies-the-full-text-field-to-the-clipboard/6030/11
+
+
+use to copy vyakarna+tatparya to clipboard in 1 button
+
+---
+
+
+!! @@ change created-modified fields for a tiddler  @@
+
+change created-modified fields for a tiddler
+
+
+<<<
+To change a created date:
+
+
+ <<<
+*Edit the desired tiddler
+*In the “add new field, field name” input, enter “created” (even though that field clearly already exists!)
+*In the “add new field, field value” input, enter the new datetime stamp using a UTC value with format YYYYMMDDhhmmssXXX
+*Press “done” to complete the tiddler changes
+<<<
+
+To change a modified date:
+
+
+ <<<
+*From the Sidebar Tools tab, turn off “Timestamps” (This is needed so that modifying the tiddler’s modification date doesn’t get overwritten when the tiddler edit is completed!)
+*Edit the desired tiddler
+*In the “add new field, field name” input, enter “modified” (even though that field clearly already exists!)
+*In the “add new field, field value” input, enter the new datetime stamp using a UTC value with format YYYYMMDDhhmmssXXX
+*Press “done” to complete the tiddler changes
+<<<
+
+<<<
+
+
+https://talk.tiddlywiki.org/t/editing-a-tiddlers-created-field/5041/4
+
+
+batch-change -- use tiddler commander
+
+---
+
+
+
+
+!! @@ change tiddler subtitle @@
+
+change tiddler subtitle to look like this
+
+
+```
+KeshavP Created 9-Feb-2026 / Updated 10-Feb-2026
+```
+
+
+```
+@@display:inline-block;
+Created <$view field="created" format="date" template="DD-mmm-YYYY"/> / 
+Updated <$view field="modified" format="date" template="DD-mmm-YYYY"/>
+@@
+```
+
+
+
+https://talk.tiddlywiki.org/t/how-to-add-a-created-and-modified-dates-on-tiddlers/8312/2
+
+---
+
+
+
+
+!! @@ macro that enables inline javascript in tiddlers @@
+
+http://tobibeer.github.io/tw/enable-js/#script
+
+---
+
+
+
+!! @@ edit-toolbar btn to search-replace in selection @@
+
+* I started out by cloning `$:/core/ui/EditorToolbar/list-bullet`, which I found via the `$:/tags/EditorToolbar` tag.
+* The editor toolbar buttons use variants on `<$action-sendmessage $message="tm-edit-text-operation" ...`, as laid out [[here|https://tiddlywiki.com/#WidgetMessage%3A%20tm-edit-text-operation]] 
+** The list-bullet button uses `$param="prefix-lines"`. It’d be ideal if we had a corresponding `suffix-lines`… but we don’t seem to.
+** Instead, we’ll need to use a combination:
+*** `save-selection`, to save to a temporary tiddler), and
+*** `replace-selection`, to perform some filter operations on the text we just saved, and then replace the selected text with the modified version. (This is where `get[text]splitregexp[\n]` comes in again.)
+*** Here’s what the bulk of our new button looks like:
+
+```
+\define temp() $:/temp/make-key
+
+<$let
+	lbr="
+">
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="save-selection"
+	tiddler=<<temp>>
+/>
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="replace-selection"
+	text={{{ [<temp>get[text]splitregexp[\n]] +[addsuffix[: ]] +[join<lbr>] }}}
+/>
+<$action-deletetiddler $tiddler=<<temp>> />
+</$let>
+```
+
+*You’ll also want to edit the caption, condition, description, icon, and shortcuts fields.
+**make sure to add `[<targetTiddler>type[application/x-tiddler-dictionary]]` to the `condition` field, so it will show up in a dictionary tiddler
+** note down the name you used in the `shortcuts` field: mine is `((dictionary-key))`
+*Last, make the corresponding shortcut config tiddler to set up your chosen hotkey.
+**The title needs to be `$:/config/shortcuts/` + the shortcuts value you just chose, so mine is `$:/config/shortcuts/dictionary-key`.
+**The text field has the key combo you want to use. Feel free to reconfigure to suit your usage.
+
+
+https://talk.tiddlywiki.org/t/is-there-a-way-to-make-an-append-to-line-text-operation/9307/7?u=kptko
+
+
+---
+
+
+!! @@ Action on 'text-selection'  @@
+
+
+I dont know if it helps but what I did to avoid issues when manipulating text like this is to use filtered transclusion on the attributes of the tm-edit-text-operation widgets, e.g to comment some code :
+
+
+```
+\define delimiter-type() [tag[$:/tags/Stylesheet]] [type[text/css]] [type[application/javascript]]
+<$action-sendmessage
+ $message="tm-edit-text-operation"
+ $param="save-selection"
+ tiddler=<<qualify "$:/temp/text">>
+/>
+<$action-sendmessage
+ $message="tm-edit-text-operation"
+ $param={{{[<qualify "$:/temp/text">has[text]then[wrap-selection]else[wrap-lines]]}}}
+ prefix={{{ [<targetTiddler>filter<delimiter-type>then[/*]else[<!--]] }}}
+ suffix={{{ [<targetTiddler>filter<delimiter-type>then[*/]else[-->]] }}}
+/>
+```
+
+But I agree, it would be nice to have a built-in variable instead of a temporary tiddler.
+
+
+https://talk.tiddlywiki.org/t/can-we-access-the-selection-in-the-widgetmessage-tm-edit-text-operation/4558/8?u=kptko
+
+---
+
+
+!! @@ change text of filtered tiddlers @@
+
+
+```
+<$button> add contact info to "contact" tiddlers
+<$list filter="[tag[Contact]]">
+<$vars oldtext={{{ [<currentTiddler>get[text]] }}} newtext="{{||ContactInformation}}
+
+">
+<$action-setfield $tiddler=<<currentTiddler>> text={{{ [<newtext>addsuffix<oldtext>] }}}/>
+</$vars>
+</$list>
+</$button>
+```
+
+* oldtext=... fetches the current contents of the target tiddler
+* newtext=... defines the stuff to add
+* Note the blank line at the end of the definition of “newtext”… this is important, since you want to make sure that a blank line is added between the newtext and the oldtext in order to preserve any “block mode” formatting of the oldtext (e.g., if the old text started with a bullet item, etc.)
+
+
+https://talk.tiddlywiki.org/t/change-text-of-filtered-tiddlers/565/2?u=kptko
+
+---
+
+
+!! @@ showHideBrackets toggle @@
+
+toggles state tiddler which changes viewtemplate with a filter to remove bracket contents, and toggles icons.
+
+Regex search pattern here: kp regex patterns
+Regex replace: nothing
+
+see group of tids under tag kp-showHideBrackets
+
+
+
+---
+
+@@How to create a Switchable view-template and edit-template for History-Monthly-View  @@
+
+
+```
+\define switch-template()
+<$action-listops $tiddler="$:/state/History-Monthly-View-Table/view" $field="text" $subfilter="+[toggle[edit],[view]]" />
+\end
+
+<$button actions=<<switch-template>> >
+Switch template
+</$button>
+
+<$transclude mode="block" tiddler={{{ [[$:/state/History-Monthly-View-Table/view]text[edit]then[Alternate editor-Editor]] ~[[Alternate viewtemplate]] }}} />
+```
+
+Here, we’re using a button to set the text field of a state tiddler, instead of editing one of your core templates.
+
+*`toggle` lets us switch between two (or more) values (though note that you’ll have to click it once to set the initial value.)
+*We can use filtered transclusion to choose the `$transclude` template based on the value of the state tiddler. In this case, `~[[Alternate viewtemplate]]` is the “fallback” value, which will be used if the state tiddler doesn’t exist.
+*Using a state tiddler like this means that you won’t “dirty” your wiki every time you switch views, and it should be slightly more efficient than running a search-and-replace.
+
+
+
+https://talk.tiddlywiki.org/t/how-to-create-a-switchable-view-template-and-edit-template-for-history-monthly-view/7136/2?u=kptko
+
+---
+
+
+!! @@ Toggle Button example @@
+
+https://talk.tiddlywiki.org/t/togglebutton-example/6166/5?u=kptko
+
+---
+
+
+!! @@ Additional notes about using CSS to style your content:@@
+
+
+With ``@@`` syntax, you can specify direct CSS attributes, like this:
+
+
+```
+@@font-size:200%;background-color:#dfffbf; test@@
+```
+
+➝ @@font-size:200%;background-color:#dfffbf; test@@
+
+
+or even a combination of CSS attributes and classes:
+
+
+```
+@@font-size:200%;.hlg test@@
+```
+➝ @@font-size:200%;.hlg test@@
+
+
+where the CSS name:value; pairs come first, followed by .classname. Also note that there must be at least one whitespace character (space, tab, or newline) following the classname to separate it from the actual text to display.
+
+https://talk.tiddlywiki.org/t/tiddler-template-applied-via-tag/10369/17?u=kptko
+
+---
+
+
+
+
+
+!! @@ function - define - differencess @@
+
+<img src="https://talk.tiddlywiki.org/uploads/default/original/2X/d/d174fca9ee28e8ed490a25303b657a8bdd5fc0c3.png" />
+
+
+<img src="https://talk.tiddlywiki.org/uploads/default/original/2X/d/d7d8bbbf1d347631ce44793d0265742b29d75463.png" />
+
+
+https://talk.tiddlywiki.org/t/what-is-the-best-way-to-take-the-fields-of-a-tiddler-and-display-them-as-a-table/9305/19?u=kptko
+
+---
+
+ @@ dropdown list in tiddler field @@
+
+https://talk.tiddlywiki.org/t/how-to-have-a-dropdown-list-in-tiddler-field/4913/11?u=kptko
+
+---
+
+
+!! @@ iterate on dictionary from json data tiddler multi-level @@
+
+https://talk.tiddlywiki.org/t/how-to-iterate-on-a-dictionary-and-an-array-from-a-json-data-tiddler/5662/4?u=kptko
+
+---
+
+
+
+
+!! @@ append to line text operation @@
+
+create temp tid
+
+get selection
+
+preprend text to selection
+
+replace selection
+
+delete temp
+
+
+
+https://talk.tiddlywiki.org/t/is-there-a-way-to-make-an-append-to-line-text-operation/9307/7?u=kptko
+
+---
+
+
+
+
+!! @@ Brackets @@
+
+The brackets in filter syntax are not just syntactic delimiters around filter operands… they indicate how each filter operand should be processed.
+
+
+```
+square brackets surround literal values; e.g., operator[sometext]
+
+angle brackets surround variable references; e.g., operator<someVariable>
+
+curly brackets surround tiddler references; e.g., operator{SomeTitle} or operator{!!somefield}
+
+When used outside filter syntax (i.e., rendered within regular wikitext), these brackets are doubled. This is needed so content that is enclosed in single brackets (e.g., [arglebargle], <gronk>, {frotz}) can be rendered as simple text content, rather than being processed as links, variables, or tiddler field references (e.g., [[TiddlerTitle]], <<someVariable>>, {{!!somefield}})
+
+
+```
+
+Hope this helps clear things up for you
+
+
+https://talk.tiddlywiki.org/t/could-you-please-stop-joking-around-on-the-setwidget-page-regarding-examples-for-the-currenttiddler-variable/7624/5?u=kptko
+
+
+---
+
+!! @@ Parsing plain text @@
+
+
+```
+\define patternHeading() \n[A-Z ]+\n
+\define csv()
+<$list filter="[[spirodata]get[text]split[SPIROMETRY]last[]trim[]]" variable=results><$list filter="[<results>splitregexp<patternHeading>trim[]]" variable=block><$list filter="[<block>splitregexp[\n]]" variable=line>{{{[<line>splitregexp[ {4,}]trim[]join[,]trim[,]]}}}
+</$list></$list></$list>
+\end
+
+<$wikify name=c text="""<<csv>>""">
+<$button>Create
+<$action-createtiddler $basetitle="data" text=<<c>>/>
+</$button>
+</$wikify>
+```
+
+https://talk.tiddlywiki.org/t/parsing-plain-text/5878/8?u=kptko
+
+---
+
+
+!! @@ Displaying within search results not just tiddlers titles, but snippets of relevant text @@
+
+https://talk.tiddlywiki.org/t/displaying-within-search-results-not-just-tiddlers-titles-but-snippets-of-relevant-text/8336/3?u=kptko
+
+---
+
+
+!! @@  search:* syntax to search across multiple fields @@
+
+https://talk.tiddlywiki.org/t/quering-for-information-inside-a-plugin-data-tiddler/1769/7?u=kptko
+
+
+```
+Search: <$edit-text tiddler="temp/search" tag=input/>
+
+<table><tbody>
+<tr><th>Agent</th><th>Location</th><th>Service ID</th><th>Terminal ID</th></tr>
+<$list filter="[all[shadows+tiddlers]prefix[Data/Terminals/]search:*{temp/search}]">
+<tr><td>{{!!Agent}}</td><td>{{!!Location}}</td><td>{{!!Service-ID}}</td><td>{{!!Terminal-ID}}</td></tr>
+</$list>
+</tbody></table>
+```
+
+* temp/search can be renamed to $:/temp/search so it will be a system tiddler and it will not be listed. But it’s easier for testing to use a standard tiddler.
+
+* [all[shadows+tiddlers] … lists all shadow tiddlers and all tiddlers
+
+* prefix[Data/Terminals/] … limits the output to tiddlers with your prefix 
+* search:*{temp/search}] … search in all fields and use the content of temp/search tiddler as search string.
+
+---
+
+
+!! @@ Edit-text widget popup text area question @@
+
+https://talk.tiddlywiki.org/t/edit-text-widget-popup-text-area-question/5363/14
+---
+
+
+
+
+!! @@ create DETAILS html tag with dynamic open parameter @@
+
+https://talk.tiddlywiki.org/t/the-genesiswidget-and-html5-input-tag/5503/12?u=kptko
+
+---
+
+
+!! @@ pass value of field or text into a macro @@
+
+https://talk.tiddlywiki.org/t/how-can-i-pass-the-value-of-the-a-field-or-text-into-a-macro/3027/10?u=kptko
+
+```
+The solution is elsewhere in this thread thanks to eric, I just wanted to share a general rule, triggered by this example (which is now not relevant), but can provide a narrative way to consider tiddlywiki syntax.
+
+[</td><td>]
+Filters as with wiki text make use of various symbols to indicate different things. Such as {transcludethis} {!!currentfield} and <variable> . Like Einstein imagined sitting on a light beam, it can be helpful to imagine you are tiddlywiki trying to respond to your code.
+
+When I do this I expect tiddlywiki to ask when seeing [</td><td>] are you referring to two variables inside an operand?
+Thus to keep it simple it is better to “abstract” this so the filter remains clear;
+
+\define td-to-td() </td><td>`
+...
+filter="... <td-to-td> ..."
+That is any "strings that may confuse the syntax are saved in a macro/variable, and that macro variable is used instead.
+
+The as a result tiddlywiki is much less likely to get confused and simply do as asked.
+
+In a similar vein I think it important to consider that tiddlywiki already handles in wiki text html, such as <br> <hr> or even <details> so the idea of using macros and variables tiddlywiki “needs” double symbols <<macro>>to tell them apart from html, however since filters do not need to honor html then only one open and close symbol is needed eg; <td-to-td>. In the same rule in wiki text, but not filters, we need to use double symbols eg: {{tiddlername}} {{!!currentFieldname}} and with filtered transclusions we need another depth to set them apart {{{ filter }}}.
+```
+---
+
+
+!! @@ button directly on toc using tiddlytools @@
+
+https://talk.tiddlywiki.org/t/button-directly-on-toc/7993/7
+
+---
+
+
+!! @@ tables @@
+
+https://www.tablesgenerator.com/html_tables
+
+
+---
+
+
+!! @@ Variables @@
+
+
+
+```
+<<currentTiddler>> display the value in the variable currentTiddler
+
+<$text text=<<currentTiddler>>/> display the value in the variable currentTiddler but convert to plan text. Nop camel case seen, not a link etc
+
+<$text text={{{ [<currentTiddler>] }}} /> just another way to do the last example using the triple curly braces “filtered transclusion” to evaluate a filter
+```
+
+---
+
+
+!! @@ personal knowledge manager @@
+
+https://talk.tiddlywiki.org/t/mehregan-edition-first-public-beta-release/1597/57
+
+*todo
+*toc with navigation
+
+---
+
+
+!! @@ dynamic background tid color change @@
+
+/* change background of tid with mouse hover. 50 is alpha transparency */
+
+```
+ .tc-tiddler-frame:hover { background: <<colour sidebar-tab-background>>50; } 
+```
+
+
+https://talk.tiddlywiki.org/t/use-color-macro-to-change-dynamically-the-background-color-of-tiddler-under-focus/10233?u=kptko
+
+---
+
+!! @@ DetailsWidget / Styling tiddlers @@
+
+http://tid.li/tw5/plugins.html#DetailsWidget
+
+---
+
+!! @@ Pastel Colors @@
+
+image with pastel colors
+
+[img height=256 [image with pastel colors|https://i.etsystatic.com/27701696/r/il/7bc069/3154762903/il_fullxfull.3154762903_64nl.jpg]]
+
+https://i.etsystatic.com/27701696/r/il/7bc069/3154762903/il_fullxfull.3154762903_64nl.jpg
+
+---
+!! @@Wizard navigation plugin@@
+
+modified: 
+
+https://talk.tiddlywiki.org/t/wizard-navigation-plugin/5231/13?u=kptko
+
+---
+
+
+!! @@Hover effect to TOC items: build your own@@
+
+https://talk.tiddlywiki.org/t/hover-effect-to-toc-items/3659/13?u=kptko
+
+---
+
+
+!! @@Change background color on one single cell easily@@
+
+```
+<style>
+.no-more-content {
+}
+
+.mytable td:has(.no-more-content) { 
+	background-color: yellow;
+} 
+</style>
+
+|mytable |k
+|a1|a2|a3|
+|b1| <div class="no-more-content">b2</div> |b3|
+|c1|c2|c3|
+```
+https://talk.tiddlywiki.org/t/change-the-background-color-of-one-single-cell-easily/9751/19?u=kptko
+
+<hr>
+
+!!Audio control/ playback
+<audio controls>
+    <source src="filename.path" type="audio/mpeg">
+</audio>
+
+can add prelo
+<hr>
+
+<audio src={{!!_canonical_uri}} autoplay loop controls style="width:80%; object-fit: contain"></audio>
+
+<audio src={{!!audio}}  controls style="width:80%; object-fit: contain"></audio>
+
+```
+<audio controls>
+    <source src="filename.path"  type="audio/mpeg">
+</audio>
+
+```
+See this topic: Transclusion of filter expressions in filtered transclusions
+https://talk.tiddlywiki.org/t/transclusion-of-filter-expressions-in-filtered-transclusions/8372
+
+
+<hr/>
+
+!!!Show fields in tiddler view
+
+Create a tiddler, tagged with ``$:/tags/ViewTemplate``, containing:
+
+``<$list filter="[<currentTiddler>has[sourceUrl]]">source: {{!!sourceUrl}}</$list>``
+
+
+<hr/>
+
+!!!Investigating use of emptyMessage ... 
+
+[[  title case for citing references in papers |https://talk.tiddlywiki.org/t/more-precise-titlecase/7319/8?u=kptko]]
+
+```
+<$list filter="[[this is a set of words extravagant IBM]sentencecase[]split[ ]]" variable=word>
+   <$list filter="[<word>] -[subfilter<english-stop-words>]" emptyMessage=<<word>> variable=word>
+           <$text text={{{ [<word>titlecase[]] }}}/>^^1^^
+   </$list>
+</$list>
+```
+
+
+<hr/>
+
+!!!List filter for tags containing string
+[[link here | https://talk.tiddlywiki.org/t/create-a-list-filter-using-tags-that-begin-with-end-with-contain-a-certain-string/6369/3?u=kptko]]
+
+```
+Filter operators work on whatever input you give them: frequently this will be lists of titles, but it could just as easily be lists of tags, or field values, or indexes, or arbitrary strings you’ve just made up on the spot. This means that your initial intuition was correct, and the prefix/suffix/search operators will be part of your solution.
+
+Try this, which should give you all tiddlers tagged with a tag beginning with “opt”
+
+<$list filter="[all[tags]!is[system]prefix:caseinsensitive[opt]tagging[]]">
+
+</$list>
+What’s happening here:
+
+all[tags] sets the initial filter domain to tags (the default is all[tiddlers]. Many (but not all) tags are also tiddlers, but we want to catch the ones that aren’t, and we don’t care about non-tag tiddlers that start with “opt”.
+!is[system] will remove anything beginning with $:/, the system prefix; these tags/tiddlers are mostly used for layout and other UI structure. You can omit this if you do want to include system tags (and if you’re filtering by prefix, system tags will be removed by the next step anyway, but I’ve included it for potential filters using suffix / search instead.)
+Next, we add the prefix step (or suffix, or search to find the string anywhere in the tag). prefix and suffix are case-sensitive by default, so prefix[opt] would find “option” but not “Option”. search 1 is case-insensitive by default, so you can use search:title[opt] to find “option” or “Option”, or search:title:casesensitive[op] to find “option” only. (Note that “title” refers to the unmodified output of the previous step; even though we’re looking for tags, it’s the title (name) of the tag that we’re concerned with, not, for example, its text or list field.)
+You could stop at this point if you only wanted a list of the tags themselves, but if what you’re looking for is the tiddlers that have these tags, you’ll want to add tagging[], which finds all tiddlers tagged with any its input values - in this case, any tag beginning with “opt”.
+You should be able to switch out the prefix operator for suffix or search depending on your needs; the general principal will be the same.
+
+Space characters in the string aren’t a problem at all for prefix and suffix.
+For search, you’ll want to use search:title:literal,casesensitive to capture literal strings including a space; otherwise, the search operator will treat space-separated strings as separate tokens to be searched for and will ignore the space itself. (This may be useful to you in other cases, but is probably not what you want here.)
+
+
+Are you looking for tiddlers that have the “KBA” tag and any tag beginning with “c”? If so, try this:
+
+<$list filter="[all[tags]!is[system]prefix:caseinsensitive[c ]tagging[]tag[KBA]]">
+Assuming I’ve understood the goal correctly, you’ll want to use the same first part of the filter run ([all[tags]!is[system]prefix:caseinsensitive[c ]tagging[]) to get an initial list of titles, then add tag[KBA] to cut it down to down to those with the “KBA” tag.
+
+As a general rule, you’ll never see two sets of bracketed items in a row within a filter; they must be separated by a filter operator, or the filter will treat whatever is in the second pair of brackets only as the new context for the rest of the filter, ignoring whatever came before it.
+```
+
+
+
+!!!When referencing tiddler contents within filter syntax:
+
+```
+The delimiters surround the filter operand indicate how the operand is to be processed:
+square brackets – [text]– surround literal text
+angle brackets – <variablename> – surround variable references
+curly braces – {tiddlername}, {!!fieldname}, or {tiddlername!!fieldname} – surround tiddler field references
+Note that, while doubled delimiters – [[tiddlerlink]], <<variablename>>, or {{fieldreference}}– are used within regular wikitext, single delimiters – [text], <variablename>, or {fieldreference} – are used within filter syntax.
+
+Thus, for your purposes, you could write: [tag{$:/config/NewJournal/Tags}]. However, as you have noted, the tag filter operator only works with single tag values. To filter for multiple tag values, you can use a combination of enlist and tagging filter operators, like this:
+
+<$list filter="[enlist{$:/config/NewJournal/Tags}tagging[]]" />
+The enlist{$:/config/NewJournal/Tags} operator retrieves the text field value contained in $:/config/NewJournal/Tags and processes it to convert a space-separated, bracketed list into multiple individual items.
+The tagging[] operator then processes each individual item in turn to find all tiddler titles that are tagged with each of the listed items. The resulting titles are automatically “de-duplicated” so that each title is listed only once in the final result.
+enjoy,
+-e
+```
+
+
+!!!to have multiline editing for fields
+```
+use plugins :
+field search
+field editor
+from p mario
+
+```
+
+
+
+```
+<$list filter="[tag[sarga]]" emptyMessage="none found">
+<$details summary={{{ [{!!title}split[/]last[]sentencecase[]] }}}>
+<summary>
+sdfasdf asdfasdf
+</summary>
+</$details>
+</$list>
+```
+
+```
+<$list filter="[tag[sarga2]get[text]]">
+<<currentTiddler>>
+
+</$list>
+```
+
+
+```
+When using a variable in a filter, use <> in place of []
+
+<<list-links filter:"[tag<currentTiddler>]">>
+
+Or use {} when using a field:
+
+<<list-links filter:"[tag{!!title}]">>
+
+These type of things are honestly still my most frequent error when something isn’t working. Some of it is explained here 8
+```
+
+
+```
+<$list filter="[<currentTiddler>tags[]prefix[Comp]]">
+  <h3><$link/></h3>
+  <$transclude/>
+</$list>
+Notes:
+
+The $list filter gets all tags from the current tiddler, and then only includes those that start with “Comp”
+Note that within the body of the $list widget, the current tiddler is set to each matching tag name
+<$link/> is an abbreviated syntax that uses the current tiddler value as the link target (the to=... param) as well as the text to display. Thus, it is exactly equivalent to the more verbose <$link to=<<currentTiddler>>><$text text={{!!title}}/></$link> syntax you had used.
+When the $transclude widget does not contain a tiddler=... param, it defaults to transcluding the current tiddler. Thus, <$transclude/> is exactly equivalent to <$transclude tiddler={{!!title}}/> or <$transclude tiddler=<<currentTiddler>>/>
+In addition, the $transclude syntax doesn’t use a tags=... param. As a result, the parameter will be used to automatically define a variable named tags with a literal text value of “{{!!tags}}” that can be referenced within the contents of the transcluded tiddler.
+enjoy,
+```

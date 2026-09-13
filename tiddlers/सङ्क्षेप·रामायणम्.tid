@@ -1,0 +1,17 @@
+caption: @@color:yellow;{{!!title}}@@
+color: #feacad
+created: 20241005034352377
+creator: KeshavP
+modified: 20250724163637826
+modifier: KeshavP
+tags: Contents
+title: सङ्क्षेप·रामायणम्
+
+<table>
+<$list filter="[tag[SR]sortan[title]]">
+<tr>
+<th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>notes</$link></th><td/>
+<td><$transclude mode="block"/></td>
+</tr>
+</$list>
+</table>

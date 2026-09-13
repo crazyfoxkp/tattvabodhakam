@@ -1,0 +1,13 @@
+caption: कोशः
+created: 20241024153710828
+creator: KeshavP
+list-after: ToDo
+modified: 20250622022145571
+modifier: KeshavP
+tags: 
+title: KoshaSearchModal
+
+[[open| KoshaSearchModal]]
+
+
+<iframe  width="725" height="600" src=`file:///Volumes/External_SSD/swiperfox-ext/Documents/Sanskara/Bookshelf/kosha-scrape/searchpage.html?text=$(text)$`/>

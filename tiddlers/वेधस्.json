@@ -1,0 +1,18 @@
+[
+    {
+        "created": "20241031165255134",
+        "creator": "KeshavP",
+        "anta": "स",
+        "variety": " १",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "",
+        "sutra": "[[वेघस्·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.वेघस्\nस-कारान्तः १<br>पुल्लिङ्गः<br>वेघस्¦एक¦द्वि¦बहु\n१¦वेधाः¦वेधसौ¦वेधसः\n२¦वेधसम्¦वेधसौ¦वेधसः\n३¦वेधसा¦वेधोभ्याम्¦वेधोभिः\n४¦वेधसे¦वेधोभ्याम्¦वेधोभ्यः\n५¦वेधसः¦वेधोभ्याम्¦वेधोभ्यः\n६¦वेधसः¦वेधसोः¦वेधसाम्\n७¦वेधसि¦वेधसोः¦वेधःसु / वेधस्सु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see वेधस्·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"वेघस्\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "वेधस्",
+        "modified": "20250131164746489",
+        "modifier": "KeshavP"
+    }
+]

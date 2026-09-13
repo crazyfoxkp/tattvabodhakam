@@ -1,0 +1,18 @@
+[
+    {
+        "created": "20250627160813111",
+        "creator": "KeshavP",
+        "text": "@@.dblock.द्विष्\nष-कारान्तः<br>पुल्लिङ्गः<br>द्विष्¦एक¦द्वि¦बहु\n१¦द्विट् / द्विड् ¦द्विषौ ¦द्विषः\n२¦द्विषम् ¦द्विषौ ¦द्विषः\n३¦द्विषा ¦द्विड्भ्याम् ¦द्विड्भिः\n४¦द्विषे ¦द्विड्भ्याम् ¦द्विड्भ्यः\n५¦द्विषः ¦द्विड्भ्याम् ¦द्विड्भ्यः\n६¦द्विषः ¦द्विषोः ¦द्विषाम्\n७¦द्विषि ¦द्विषोः ¦द्विट्त्सु / द्विट्सु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see द्विष्·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"द्विष्\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "anta": "ष",
+        "variety": "",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "⟣",
+        "sutra": "[[द्विष्·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "द्विष्",
+        "modified": "20250627160843557",
+        "modifier": "KeshavP"
+    }
+]

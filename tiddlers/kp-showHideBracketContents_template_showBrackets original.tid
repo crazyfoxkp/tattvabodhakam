@@ -1,0 +1,38 @@
+created: 20260622175305354
+creator: केशवकृपा
+modified: 20260901160412836
+modifier: केशवकृपा
+tags: kp-showHideBrackets
+title: kp-showHideBracketContents/template/showBrackets original
+
+
+```
+<$let filteredText={{{ [{!!text}search-replace:gim:regexp<findBracketsPattern>,<showBracketsWithTicksPattern>] }}}>
+<$transclude $variable="filteredText" $mode="block" />
+</$let>
+
+```
+
+
+*** version 2
+
+
+```
+\whitespace trim
+<$let prenl="
+
+<<<
+"
+postnl="
+<<<
+
+"
+replacePattern={{{ [<showBracketsWithTicksPattern>addprefix<prenl>addsuffix<postnl>] }}}>
+<$let filteredText={{{ [{!!text}search-replace:gim:regexp<findBracketsPattern>,<replacePattern>] }}}>
+
+<$transclude $variable="filteredText" $mode="block" />
+
+</$let>
+</$let>
+
+```

@@ -1,0 +1,25 @@
+created: 20250126011116722
+creator: KeshavP
+modified: 20250126012222173
+modifier: KeshavP
+tags: [[test tag here]]
+title: kp start process for splitting
+
+
+```
+\define splitAndCreateTiddlers()
+<$list filter="[<MasterTiddler>get[text]splitregexp[\n]]">
+  <$vars line=<<currentTiddler>>>
+    <$vars term={{!!line!!split[➝]first}} definition={{!!line!!split[➝]last}}>
+      <$action-createtiddler $title=<<term>> $text=<<definition>> $tags="from-MasterTiddler"/>
+    </$vars>
+  </$vars>
+</$list>
+\end
+
+<$button>
+  Split and Create Tiddlers
+  <$macrocall $name="splitAndCreateTiddlers"/>
+</$button>
+```
+

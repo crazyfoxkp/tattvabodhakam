@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "द",
+        "variety": "",
+        "notes": "",
+        "linga": "नपुं॰",
+        "group": "सर्वनाम",
+        "sutra": "[[तद्·नपु·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.तद्·नपु\nद-कारान्तः<br>नपुंसकलीङ्गः ║सर्वनाम<br>तद्·नपु¦एक¦द्वि¦बहु\n१¦तत्¦ते¦तानि\n२¦तत्¦ते¦तानि\n३¦तेन¦ताभ्याम्¦तैः\n४¦तस्मै¦ताभ्याम्¦तेभ्यः\n५¦तस्मात्¦ताभ्याम्¦तेभ्यः\n६¦तस्य¦तयोः¦तेषाम्\n७¦तस्मिन्¦तयोः¦तेषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see तद्·नपु·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"तद्·नपु\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "तद्·नपु",
+        "modified": "20250131164746198",
+        "modifier": "KeshavP"
+    }
+]

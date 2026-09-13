@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "014",
+        "tags": "[[MBTN » § 06]]",
+        "text": "सौभ्रात्रमेष यदि वाञ्छति वालिनैव नाहं निरागसमथाग्रजनिं हनिष्ये ।<br> दीर्घः सहोदरगतो न भवेद्धि कोपो दीर्घोऽपि कारणमृते विनिवर्तते च ॥६.१४ ॥",
+        "title": "MBTN » § 06 » 014"
+    }
+]

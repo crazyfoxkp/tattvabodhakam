@@ -1,0 +1,13 @@
+author: Jeffrey Wilkinson (aka BJ)
+core-version: >=5.3.5
+dependents: 
+description: include web content
+list: readme LICENSE
+name: tiddlyclip
+plugin-priority: 2
+plugin-type: plugin
+revision: 0
+source: https://github.com/buggyj/tiddlyclip-plugin
+title: $:/plugins/bj/tiddlyclip
+type: application/json
+version: 3.2.1

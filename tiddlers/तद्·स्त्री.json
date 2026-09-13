@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "द",
+        "variety": "",
+        "notes": "",
+        "linga": "स्त्री॰",
+        "group": "सर्वनाम",
+        "sutra": "[[तद्·स्त्री·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.तद्·स्त्री\nद-कारान्तः<br>स्त्रीलिङ्गः ║सर्वनाम<br>तद्·स्त्री¦एक¦द्वि¦बहु\n१¦सा¦ते¦ताः\n२¦ताम्¦ते¦ताः\n३¦तया¦ताभ्याम्¦ताभिः\n४¦तस्यै¦ताभ्याम्¦ताभ्यः\n५¦तस्याः¦ताभ्याम्¦ताभ्यः\n६¦तस्याः¦तयोः¦तासाम्\n७¦तस्याम्¦तयोः¦तासु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see तद्·स्त्री·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"तद्·स्त्री\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "तद्·स्त्री",
+        "modified": "20250131164746215",
+        "modifier": "KeshavP"
+    }
+]

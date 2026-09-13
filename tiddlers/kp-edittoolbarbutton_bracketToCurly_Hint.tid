@@ -1,0 +1,8 @@
+created: 20250714174734049
+creator: KeshavP
+modified: 20250714175125965
+modifier: KeshavP
+tags: kp-bracketToCurly
+title: kp-edittoolbarbutton/bracketToCurly/Hint
+
+Change '[ * ]' to '{ * }' in selected text

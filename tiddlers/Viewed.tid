@@ -1,0 +1,19 @@
+created: 20250920165025630
+creator: KeshavP
+modified: 20251008181500597
+modifier: KeshavP
+tags: $:/tags/SideBar
+title: Viewed
+
+\define history()
+[subfilter{$:/DefaultTiddlers}] [enlist{$:/StoryList!!list}]
+[{$:/HistoryList}splitregexp[\n]trim[]trim[,]removeprefix["title": "]removesuffix["]]
++[unique[]!prefix[Draft]search-replace:g[\"],["]!sort[modified]limit[30]]
+\end
+
+//Last viewed: showing <$count filter= <<history>>/>
+<br><br>
+
+	<$list filter=<<history>>>
+
+	</$list>

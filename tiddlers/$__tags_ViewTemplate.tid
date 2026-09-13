@@ -1,0 +1,9 @@
+created: 20200128153730498
+creator: KeshavP
+list: [[kp navigation template]] $:/.giffmex/ViewTemplate/title $:/core/ui/ViewTemplate/unfold $:/core/ui/ViewTemplate/subtitle $:/core/ui/ViewTemplate/tags $:/core/ui/ViewTemplate/classic $:/plugins/tiddlywiki/comments/header-view-template-segment $:/plugins/kookma/utility/viewtemplates/edit-fields $:/plugins/kookma/utility/viewtemplates/import-select [[kp show audioplayer SMV shloka]] [[kp show audioplayer SMV sarga parayana]] [[kp show SMV प्रस्तावना field]] $:/core/ui/ViewTemplate/body $:/plugins/kookma/utility/viewtemplates/source-toggle-button [[kp show TP fields template]] [[kp show TS fields template]] [[kp show SKS fields template]] [[kp show SKS-SMV fields multicolumn]] [[kp show SMV-book fields]] [[kp subset navigation]] $:/plugins/tiddlywiki/comments/footer-view-template-segment $:/.giffmex/ViewTemplate/refslinks $:/ak/plugins/TWCrossLinks/ui/footer.kwd $:/ak/plugins/TWCrossLinks/ui/footer $:/plugins/wikilabs/uni-link/aka-footer $:/core/ui/ViewTemplate/lazy-loading $:/plugins/kookma/commander/viewtemplate/import $:/plugins/kookma/shiraz/breadcrumbs/viewtemplate $:/plugins/kookma/shiraz/viewtemplates/sticky-footer
+modified: 20260820163309311
+modifier: केशवकृपा
+revision: 0
+tags: $:/giffmex/stroll
+title: $:/tags/ViewTemplate
+type: text/vnd.tiddlywiki

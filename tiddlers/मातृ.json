@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "ऋ",
+        "variety": " २",
+        "notes": "",
+        "linga": "स्त्री॰",
+        "group": "",
+        "sutra": "[[मातृ·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.मातृ\nऋ-कारान्तः २<br>स्त्रीलिङ्गः<br>मातृ¦एक¦द्वि¦बहु\n१¦माता¦मातरौ¦मातरः\n२¦मातरम्¦मातरौ¦मातॄः\n३¦मात्रा¦मातृभ्याम्¦मातृभिः\n४¦मात्रे¦मातृभ्याम्¦मातृभ्यः\n५¦मातुः¦मातृभ्याम्¦मातृभ्यः\n६¦मातुः¦मात्रोः¦मातॄणाम्\n७¦मातरि¦मात्रोः¦मातृषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see मातृ·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"मातृ\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "मातृ",
+        "modified": "20250131164746337",
+        "modifier": "KeshavP"
+    }
+]

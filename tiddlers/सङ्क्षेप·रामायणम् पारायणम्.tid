@@ -1,0 +1,15 @@
+caption: @@color:yellow;{{!!title}}@@
+color: #feacad
+created: 20251126183723680
+creator: KeshavP
+modified: 20251126233246855
+modifier: KeshavP
+tags: 
+title: सङ्क्षेप·रामायणम् पारायणम्
+
+<$list filter="[tag[SR]sortan[title]]">
+<$wikify name=content output="html" text={{{ [<currentTiddler>get[text]search-replace:gm:regexp[^!!!!.m.*],[ ]] }}}>
+
+<<content>>
+</$wikify>
+</$list>

@@ -1,0 +1,26 @@
+created: 20260226191049058
+creator: केशवकृपा
+modified: 20260226191236669
+modifier: केशवकृपा
+tags: 
+title: SKS-SMV_view_fieldOrderList_Manager
+
+\whitespace trim
+<div>
+  ''Reorder Fields for SKS-SMV View:''
+  
+  <<list-links-draggable tiddler:"SKS-SMV_view_fieldOrderList">>
+</div>
+
+
+
+<$edit-text tiddler="$:/temp/newField" tag="input" default="" placeholder="Enter field name..." class="tc-edit-texteditor"/>
+
+<$button>
+  <$action-listops 
+    $tiddler="SKS-SMV_view_fieldOrderList" 
+    $field="list" 
+    $subfilter="[{$:/temp/newField}] +[putlast[]]"/>
+  <$action-setfield $tiddler="$:/temp/newField" text=""/>
+Add Field
+</$button>

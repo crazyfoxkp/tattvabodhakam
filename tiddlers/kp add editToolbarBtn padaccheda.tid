@@ -1,0 +1,14 @@
+caption: पदच्छेदः
+condition: true
+condition-disabled: no
+created: 20241104224042405
+creator: KeshavP
+description: Send tid text to पदच्छेदः
+icon: $:/images/svg-icon/weather-sunny
+modified: 20241105164540401
+modifier: KeshavP
+tags: $:/tags/EditorToolbar
+title: kp add editToolbarBtn padaccheda
+
+<$action-sendmessage $message="tm-modal" $param="padacchedaModal" text={{{ [<targetTiddler>get[text]] }}}/>
+

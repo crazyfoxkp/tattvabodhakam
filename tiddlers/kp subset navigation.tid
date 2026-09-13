@@ -1,0 +1,10 @@
+created: 20250130182113013
+creator: KeshavP
+modified: 20250130183359082
+modifier: KeshavP
+tags: $:/tags/ViewTemplate
+title: kp subset navigation
+
+\import [all[tiddlers+shadows]tag[$:/tags/Macro/Toc]]
+
+<$macrocall $name=twolevel-toc-navigation tag="कृदन्तः" stateTiddler="कृदन्तःstate" class="kpNavClass" />

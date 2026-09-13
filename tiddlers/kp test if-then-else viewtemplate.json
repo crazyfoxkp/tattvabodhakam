@@ -1,0 +1,12 @@
+[
+    {
+        "created": "20250725182642813",
+        "creator": "KeshavP",
+        "text": "\n\n<table class = \"showfields\">\n    <$list filter=\"[<currentTiddler>fields[]prefix[kp_]]\" variable=fieldname>\n        <$list filter=\"[<currentTiddler>get<fieldname>]\" variable=field-value>\n            <tr><td class=dots><$text text={{{ [<fieldname>removeprefix[kp_]] }}} /></td>\n            <td class=data>\n                <$list filter=\"[<fieldname>match[kp_व्याकर्ण_विशेषः]] :then[<field-value>search-replace:gim:regexp[\\n⬩],[<br/>⬩]search-replace:gim:regexp[\\n],[<br/>⎯]search-replace:gim:regexp[<br/>⎯}],[<br/>}]]  \" variable=field_contents><<field_contents>></$list> \n                <$list filter=\"[<fieldname>match[kp_अर्थः]] :then[<field-value>search-replace:gim:regexp[\\n⟣],[<br/>⟣]]  \" variable=field_contents2>       \n                    <$list filter=\"[<fieldname>match[kp_अर्थः]] :then[<field-value>search-replace:gim:regexp[^.*?=(.*)\\n*],[$1,]search-replace:gim:regexp<squarebracketpattern>,[]] +[removesuffix[,]addsuffix[.]] +[search-replace:gim:regexp<viewTemplateDeDupCommas>,[, ]search-replace:gim:regexp[^\\s*,\\s*],[]]\"  variable=sentence>\n<% if [<sentence>search::regexp<viewTemplatePattern>] %>\n---\n<% else %>\n<<field_contents2>><br><br>\n<<sentence>><br>\n<% endif %>               \n                    </$list></$list>\n                <$list filter=\"[<fieldname>!search::regexp[kp_अर्थः|kp_व्याकर्ण_विशेषः]] :then[<field-value>]  \" variable=sentence2><<sentence2>><br/></$list> \n            </td></tr>\n        </$list>\n    </$list>\n</table>\n\n\n<% if [all[current]tag[Journal]] %>\nyes journal\n<% else %>\nnot journal\n<% endif %>   ",
+        "tags": "[[test tag here]]",
+        "title": "kp test if-then-else viewtemplate",
+        "modified": "20250822175439134",
+        "modifier": "KeshavP",
+        "kp_अर्थः": "⟣ भरते = asdfasf\n\n⟣ तु =\n\n⟣ गते = \n\n⟣ श्रीमान् = asdasdfsdfd\n\n⟣ सत्यसन्धः =  asfd\n\n⟣ जितेन्द्रियः =  qve"
+    }
+]

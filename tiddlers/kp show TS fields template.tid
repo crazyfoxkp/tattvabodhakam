@@ -1,0 +1,22 @@
+created: 20260820163224371
+creator: केशवकृपा
+modified: 20260820163238590
+modifier: केशवकृपा
+tags: $:/tags/ViewTemplate
+title: kp show TS fields template
+
+\whitespace trim
+<% if [all[current]tag[TS]] %>
+<table class="showfields">
+  <$list filter="[<currentTiddler>fields[]] -title -tags -text -created -modified -creator -modifier" variable="fieldname">
+    <$list filter="[<currentTiddler>get<fieldname>]" variable="field-value">
+      <tr>
+        <td class="dots"><$text text=<<fieldname>> /></td>
+        <td class="data">
+          <$transclude field=<<fieldname>> mode="block" />
+        </td>
+      </tr>
+    </$list>
+  </$list>
+</table>
+<% endif %>

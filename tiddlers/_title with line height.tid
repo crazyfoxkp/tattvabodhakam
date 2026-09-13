@@ -1,0 +1,9 @@
+aliases: 
+created: 20200901183423507
+creator: KeshavP
+modified: 20200906200852697
+modifier: KeshavP
+tags: $:/tags/Stylesheet
+title: _title with line height
+
+.tc-title {line-height: 2;}

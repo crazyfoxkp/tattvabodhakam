@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "म",
+        "variety": "",
+        "notes": "",
+        "linga": "नपुं॰",
+        "group": "सर्वनाम",
+        "sutra": "[[किम्·नपु·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.किम्·नपु\nम-कारान्तः<br>नपुंसकलिङ्गः ║सर्वनाम<br>किम्·नपु¦एक¦द्वि¦बहु\n१¦किम्¦के¦कानि\n२¦किम्¦के¦कानि\n३¦केन¦काभ्याम्¦कैः\n४¦कस्मै¦काभ्याम्¦केभ्यः\n५¦कस्मात्¦काभ्याम्¦केभ्यः\n६¦कस्य¦कयोः¦केषाम्\n७¦कस्मिन्¦कयोः¦केषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see किम्·नपु·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"किम्·नपु\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "किम्·नपु",
+        "modified": "20250131164746123",
+        "modifier": "KeshavP"
+    }
+]

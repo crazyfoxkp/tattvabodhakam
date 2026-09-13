@@ -1,0 +1,10 @@
+aliases: 
+caption: 15 - ಶ್ರೀ ಶ್ವಾಸ ಸಂಧಿ
+created: 20200901000000000
+creator: KeshavP
+modified: 20200906200923711
+modifier: KeshavP
+tags: HKS ಹರಿಕಥಾಮೃತಸಾರ
+title: ಶ್ವಾಸ
+
+<table><$list filter="[tag[HKS15 ಶ್ವಾಸ]sortan[title]]"><tr><th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>notes</$link></th><td/><td><$transclude mode="block"/></td></tr></$list></table>

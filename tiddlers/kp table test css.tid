@@ -1,0 +1,15 @@
+created: 20241031142625128
+creator: KeshavP
+modified: 20241210004320988
+modifier: KeshavP
+tags: $:/tags/Stylesheet
+title: kp table test css
+
+.table-test {
+  color: green;
+}
+.table-test  th { color: red; }
+/* table th { background: gold; } */
+
+
+

@@ -1,0 +1,15 @@
+[
+    {
+        "anta": "ऋ",
+        "variety": " १",
+        "notes": "",
+        "linga": "स्त्री॰",
+        "group": "",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.स्वसृ·सूत्र\nऋ-कारान्तः १<br>स्त्रीलिङ्गः<br>स्वसृ·सूत्र¦एक¦द्वि¦बहु\n१¦ऋ लोप + दिर्घ (follow 1-5)¦औ¦ः \n२¦म्¦औ¦ः (no दीर्घ )\n३¦आ¦ भ्याम्¦ भिः\n४¦ए¦ भ्याम्¦भ्यः\n५¦-ऋ + उः¦ भ्याम्¦भ्यः\n६¦-ऋ + उः¦ओः (हलन्त)¦दीर्घ + नाम् \n७¦इ¦ओः (हलन्त)¦सु (स → ष)\n@@\n@@.dblock.notes\nऋ-कारान्तः¦१˚/१ ऋ लोप + दीर्घ<br>Prev वर्ण दीर्घ  FOLLOW 1-5<br>२˚/३ ः b/c स्त्री<br>३˚/१➝७˚/१ (like हलन्त सूत्र) आ ए ः ः इ <br>५˚/१,६˚/१  ऋ लोप + सूत्र<br>६˚/२ हलन्त सूत्र<br>✓ स → ष, न → ण <br>\n¦\n¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"स्वसृ·सूत्र\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि सूत्र v2",
+        "title": "स्वसृ·सूत्र",
+        "modified": "20250131164746516",
+        "modifier": "KeshavP"
+    }
+]

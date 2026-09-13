@@ -1,0 +1,16 @@
+created: 20241202224332847
+creator: KeshavP
+modified: 20241203035319294
+modifier: KeshavP
+tags: 
+title: kp-test-popup2
+
+<$vars statetid="$:/state/popup/test">
+<$button class="tc-btn-invisible tc-tiddlylink" popup=<<statetid>> > जगत्</$button>
+<br>
+<br>
+statetid: <<statetid>>
+
+<$reveal type="popup" state=<<statetid>> positionAllowNegative="yes" position=left>
+जगत्
+</$reveal>

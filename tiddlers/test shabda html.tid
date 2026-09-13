@@ -1,0 +1,89 @@
+created: 20241012032520481
+creator: KeshavP
+modified: 20241013181504441
+modifier: KeshavP
+tags: [[test tag here]]
+title: test shabda html
+
+<meta charset="UTF-8">
+<style>
+    table.shabda7x3 {         border:1px; padding: 10px; border-color:gray;  table-layout: fixed;   }
+    table.shabda7x3  th {width: 30%; color: gray; }
+    table.shabda7x3 tr:nth-child(even) {         background-color: #D6FBFF;     }
+    table.shabda7x3 tr:nth-child(odd) {         background-color: #FFFFFF;     }
+/* Override width for the first column and apply gray text color */
+table.shabda7x3 th:first-child, 
+table.shabda7x3 td:first-child {
+    width: 10%; /* Set first column width to 10% */
+    color: gray; /* Set text color to gray for all first column cells */
+}
+/* Override the text color for the first row, first column */
+table.shabda7x3 th:first-child {
+    color: black; /* Set first row, first column text color to black */
+}
+    table.shabda7x3 td { padding-left: 0px;}
+</style>
+<span>
+  <table class ="shabda7x3">
+    <tr>
+      <th>अ-कारान्तः<br />पुल्लिङ्गः<br />राम</th> 
+      <th>एक</th>
+      <th>द्वि</th>
+      <th>बहु</th>
+    </tr>
+    <tr>
+      <td>१</td>
+      <td>रामः</td>
+      <td>रामौ</td>
+      <td>रामाः</td>
+    </tr>
+    <tr>
+      <td>२</td>
+      <td>रामम्</td>
+      <td>रामौ</td>
+      <td>रामान्</td>
+    </tr>
+    <tr>
+      <td>३</td>
+      <td>रामेण</td>
+      <td>रामाभ्याम्</td>
+      <td>रामैः</td>
+    </tr>
+    <tr>
+      <td>४</td>
+      <td>रामाय</td>
+      <td>रामाभ्याम्</td>
+      <td>रामेभ्यः</td>
+    </tr>
+    <tr>
+      <td>५</td>
+      <td>रामात्</td>
+      <td>रामाभ्याम्</td>
+      <td>रामेभ्यः</td>
+    </tr>
+    <tr>
+      <td>६</td>
+      <td>रामस्य</td>
+      <td>रामयोः</td>
+      <td>रामाणाम्</td>
+    </tr>
+    <tr>
+      <td>७</td>
+      <td>रामे</td>
+      <td>रामयोः</td>
+      <td>रामेषु</td>
+    </tr>
+    <tr style="font-size: 70%">
+      <td colspan="2">३˚/१➝७˚/१ एन आय आत् स्य ए</td>
+      <td colspan="2"></td>
+    </tr>
+    <tr style="font-size: 70%">
+      <td colspan="2"></td>
+      <td colspan="2"></td>
+    </tr>
+    <tr style="font-size: 70%">
+      <td colspan="2"></td>
+      <td colspan="2"></td>
+    </tr>
+  </table>
+  [see राम·सूत्र]</span>

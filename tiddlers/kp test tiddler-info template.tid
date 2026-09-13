@@ -1,0 +1,14 @@
+caption: Field Info
+created: 20241109213948795
+creator: KeshavP
+modified: 20241109214450575
+modifier: KeshavP
+tags: [[test tag here]]
+title: kp test tiddler-info template
+
+<$tiddler tiddler={{$:/HistoryList!!current-tiddler}}>
+{{||$:/core/ui/TiddlerInfo}}
+</$tiddler>
+
+@@ tag with SideBar when ready to show in sidebar @@
+

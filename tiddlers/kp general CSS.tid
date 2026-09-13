@@ -1,0 +1,84 @@
+created: 20250325144916722
+creator: KeshavP
+modified: 20251113174118395
+modifier: KeshavP
+tags: $:/tags/Stylesheet
+title: kp general CSS
+
+.tc-tiddler-body hr { border: 0; height: 2px; background-image: linear-gradient(to right, rgba(237, 241, 218, 0), rgba(237, 241, 218, 0.75), rgba(237, 241, 218, 0)); margin-top:2.0rem; margin-bottom:2.0rem;}
+
+code {
+  background-color: rgb(25, 27, 10);
+  border: 2 px solid rgb(25, 27, 10);
+  color: 	white;
+  border-color: transparent;
+} 
+
+
+
+
+.tc-quote {
+border-left:8px solid rgb(25, 27, 10);
+margin-left:15px;
+padding-left:4px;
+}
+
+
+/* for links-context-menu plugin style mods. For orig see plugin */
+.sq-contextmenu {
+	box-shadow: rgba(0, 0, 0, 0.70) 0px 2px 20px;
+	font-size: 1em;
+	border: 2px solid rgb(90,90,90) ;
+}
+.sq-contextmenu .tc-menu-list-item {
+	line-height: 1.5em;
+	color: rgb(160,160,160) ;
+}
+
+/*  For context search highlighting */
+.tc-block-dropdown {
+background-color:rgb(33, 35, 22) ;}
+.tw-context {
+background-color:rgb(15, 17, 0) ;
+  border:2px solid rgb(44, 52, 0);
+}
+.matched{
+padding:2px;}
+
+
+/* for muted color when shlokas are borrowed by another tiddler  */
+.m {
+  color: gray;
+}
+
+/* padaccheda box around words and subscripts   */
+.o-bx { outline: 1px solid orange; padding: 5px;} 
+
+
+/*  color for strikethrough line. In dark backround, setup for pink */
+ strike {
+            color: rgb(160,160,160);
+text-decoration-color: pink;
+background-color: black;
+            font-weight: 500;
+        }
+
+
+/* fill empty wikitable cells with this color #252716 */
+.table td:empty {background:#252716;
+}
+
+/* Target standard TiddlyWiki table cells */
+.tc-tiddler-body table th:empty,
+.tc-tiddler-body table td:empty {
+    /* For truly empty cells */
+    background: #252716;
+}
+
+/* 🎯 Crucial fix: Target cells that contain only whitespace or zero-width spaces. 
+   TiddlyWiki often renders 'empty' Markdown cells with a non-breaking space (&nbsp;). 
+   This rule prevents the cell from collapsing and sets the color. */
+.tc-tiddler-body table td:after {
+    content: "\a0"; /* Non-breaking space, ensures the cell has height/width */
+    visibility: hidden; /* Keep the content invisible */
+}

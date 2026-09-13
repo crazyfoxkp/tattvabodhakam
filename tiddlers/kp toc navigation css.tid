@@ -1,0 +1,11 @@
+created: 20250130182559437
+creator: KeshavP
+modified: 20250130182700014
+modifier: KeshavP
+tags: $:/tags/Stylesheet
+title: kp toc navigation css
+
+.kpNavClass{
+ font-weight: bold;
+ color:green;
+}

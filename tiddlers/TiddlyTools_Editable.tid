@@ -1,0 +1,188 @@
+created: 20230311115020885
+modified: 20240313081520798
+tags: 
+title: TiddlyTools/Editable
+
+\define config()	$:/temp/TiddlyTools/Editable
+\define popup()		$:/state/popup/TiddlyTools/Editable
+\define default()	[all[]]
+\define page()		25
+
+\define styles()
+<$let wrap={{{ [<config>wrap[no]then[white-space:pre]] }}} ro={{{ [<config>readonly[yes]then[0]else[2]] }}}>
+<style>
+.tt-editable-filt	{ width:calc(100% - 3.50em); }
+.tt-editable-find	{ width:calc(100% - 1.75em); }
+.tt-editable-list	{ width:100%; height:15em; display:block; clear:both; }
+.tt-editable-btn	{ width:1.5em; padding:1px; }
+.tt-editable-table	{ width:100%; margin:0; text-align:left; table-layout:fixed; background:<<colour tiddler-background>>; }
+.tt-editable-title	{ width:20em; position:relative; }
+.tt-editable-del	{ position:absolute; right:2px; top:2px; }
+.tt-editable-page	{ width:3em; text-align:center; }
+.tt-editable-label	{ width:calc(100% - <<ro>>em); display:inline-block; vertical-align:text-bottom; overflow:hidden; text-overflow:ellipsis; }
+.tt-editable-value	{ width:100%; max-height:10em; overflow:auto; font-family:monospace; word-break:break-all; resize:none; <<wrap>>; }
+.tt-editable-value img	{ max-height:10em; }
+</style>
+\end
+
+\define settings()
+@@display:inline-block;line-height:1.2;
+<<set_filter>><$let filt={{{ [<config>get[filter]] ~[<default>] }}}>
+<$let list="[subfilter<filt>] -[<config>] [enlist{!!tids}] +[search:title{!!find_tiddlers}sortan[]]"><<select tids tiddlers>>
+<$let list="[enlist{!!tids}fields[]] [enlist{!!fields}] -title created modified text +[search:title{!!find_fields}sortan[]]"><<select fields fields>>
+\end
+
+\define set_filter()
+\define clear()		<$action-deletetiddler $tiddler=<<config>>/>
+\define reset()		<$action-setfield tids="" fields="" find_tiddlers="" find_fields="" find_content="" order="" sortby="Title" start=0/>
+\define custom()	[tag[$:/tags/Filter]]
+\define shadow()	[all[shadows]tag[$:/tags/Filter]]
+\define group(which) <optgroup label={{{ [[$which$ filters]] [[ (]] [subfilter<$which$>count[]] [[):]] +[join[]] }}}><$list filter="[subfilter<$which$>sort[description]]"><<option>></$list></optgroup>
+\define option() <option value={{!!filter}}><$wikify name="desc" text={{!!description}}><<desc>></$wikify></option>
+<$let popid={{{ [<popup>addsuffix<qualify>] }}}>
+Filter tiddlers:<div><nobr>
+<$edit-text field="filter" default=<<default>> placeholder=<<default>> class="tt-editable-filt" inputActions=<<reset>>/>
+<$button popup=<<popid>> class="tc-button tt-button tt-editable-btn" tooltip="select filter">{{$:/core/images/down-arrow}}</$button>
+<$button class="tc-button tt-button tt-editable-btn" tooltip="reset all">{{$:/core/images/close-button}}<<clear>></$button>
+<$reveal state=<<popid>> type="popup" position="belowleft">
+<$select field="filter" size="10" focus="yes" actions=<<reset>>><$list filter="[subfilter<custom>limit[1]]"><<group custom>></$list><<group shadow>></$select>
+\end
+
+\define select(which,label)
+\define all()		<$action-setfield $which$={{{ [subfilter<list>format:titlelist[]join[ ]] }}}/>
+\define none()		<$action-setfield $which$="" fields="" order="" sortby="Title" start=0/>
+\define stats()		<$count filter={{!!$which$}}/> of <$count filter=<<list>>/> $label$
+\define header()	@@float:right;<<stats>>@@Select $label$: <<select>>&emsp;<<find $label$>>
+\define select()	<$button class="tc-btn-invisible" actions=<<all>>>''all''</$button> | <$button class="tc-btn-invisible" actions=<<none>>>''none''</$button>
+@@display:inline-block;<<header>>
+<$select field="$which$" multiple="yes" size="10" class="tt-editable-list" actions="<$action-setfield start=0/>">
+	<$list filter="[subfilter<list>]" variable="item"><option title=<<item>>><<item>></option></$list>
+</$select>
+\end
+
+\define find(label)
+\define reset() <$action-setfield $field="find_$label$"/><$action-setfield $field="replace"/><<none>>
+<div style="margin-bottom:0.125em;"><nobr><$keyboard key="escape" actions=<<reset>>><$keyboard key="enter" actions=<<all>>>
+<$edit-text class="tt-editable-find" field="find_$label$" placeholder="find matching $label$" inputActions=<<none>>/>
+<$button class="tc-button tt-button tt-editable-btn" tooltip="clear search">{{$:/core/images/close-button}}<<reset>></$button>
+\end
+
+\define sort()
+<$let order={{{ [<config>get[sortby]match<field>then<config>get[order]] ~[[none]] }}} neworder={{{ [<order>cycle[AtoZ ZtoA none]] }}}>
+<$button class="tc-btn-invisible" tooltip={{{ [<order>!match[none]then[sorted]else[sort]] [[by]] [<field>] [<order>!match[none]] +[join[ ]] }}}>
+	''<$text text=<<field>>/>''
+	<$transclude tiddler={{{ [<order>match[AtoZ]then[down]] ~[<order>match[ZtoA]then[up]] ~[[right]] +[addprefix[$:/core/images/chevron-]] }}}/>
+	<$action-setfield sortby={{{ [<neworder>match[none]then[Title]else<field>] }}} order=<<neworder>>/>
+</$button>
+\end
+
+\define options()
+<$let order={{{ [{!!order}match[ZtoA]] ~[[AtoZ]] }}}>
+show 
+<$select field="page" default=<<page>>>
+	<$list filter="5 10 15 20 25 50 100 all"><option><<currentTiddler>></option></$list>
+</$select>
+rows by
+<$select field="sortby" default="Title" actions="<$action-setfield order=<<order>>/>">
+	<option value="Title">title</option><$list filter="[enlist{!!tids}fields[]] [enlist{!!fields}] -title +[sortan[]]"><option><<currentTiddler>></option></$list>
+</$select>
+<$button class="tc-button tt-button" tooltip=<<order>>>
+	<$transclude tiddler={{{ [<order>match[ZtoA]then[up]] ~[[down]] +[addprefix[$:/core/images/chevron-]] }}}/>
+	<$action-setfield order={{{ [<order>toggle[AtoZ],[ZtoA]] }}}/>
+</$button>&emsp;
+<nobr>
+<$checkbox field="wrap" checked=yes unchecked=no default=yes> wrap text</$checkbox> &nbsp;
+<$checkbox field="omit" checked=yes> omit missing fields</$checkbox> &nbsp;
+<$checkbox field="readonly" checked=yes> read-only</$checkbox>
+\end
+
+\define pager()
+\define btn(img,start) <$button class="tc-button tt-button">{{$:/core/images/$img$}}<$action-setfield start=$start$/></$button>
+<$let count={{{ [enlist{!!tids}count[]] }}} max={{{ [<count>subtract<page>] }}}>
+<$list filter="[<count>compare:integer:gt<page>]" variable=none>
+<<btn chevron-left 0>>
+<<btn left-arrow "{{{ [<start>subtract<page>max[0]] }}}">>
+<$text text={{{ [<start>add[1]] }}}/>-<$text text={{{ [<start>add<page>min<count>] }}}/> of <<count>>
+<<btn right-arrow "{{{ [<start>add<page>min<max>] }}}">>
+<<btn chevron-right "<<max>>">>
+\end
+
+\define add()
+\define close()		<$action-deletetiddler $tiddler=<<popid>>/>
+\define addtids()	<$list filter={{!!tids}}><$action-setfield $field=<<f>> $value={{{ [<popid>get[keep]match[yes]then<currentTiddler>get<f>] ~[<popid>get[newvalue]] }}}/>
+\define addlist()	<$action-listops $field="fields" $subfilter="[<f>] +[sort[]]"/>
+\define done()		<$list filter="[<popid>get[newfield]!match[title]]" variable="f"><<addtids>><<addlist>><<close>>
+\define btn(act)	<$button class="tc-button tt-button" style="display:inline;width:auto;padding:0 0.5em;">{{$:/core/images/$act$-button}}<<$act$>></$button>
+<$let popid={{{ [<popup>addsuffix[/add]addsuffix<qualify>] }}}>
+<$button popup=<<popid>> class="tc-btn-invisible tt-editable-del" style="transform:translateX(-1.25em);" tooltip="add field">{{$:/core/images/new-button}}</$button>
+<$keyboard key="enter" actions="<<done>>"><$keyboard key="escape" actions="<<close>>">
+<$reveal state=<<popid>> type="popup" position="belowleft" class="tc-drop-down tc-popup-handle" style="padding:0.5em;font-weight:normal;">
+	''Add a field''@@float:right;<<btn close>> <<btn done>>@@<div style="clear:both;height:0.25em;"/>
+	<$let tid=<<popid>> field="newfield" prompt="field name" focus="yes"><<edit>></$let><br/>
+	<$let tid=<<popid>> field="newvalue" prompt="field value"><<edit>></$let><br/>
+	<$checkbox tiddler=<<popid>> field="keep" checked=yes default=no> keep existing values</$checkbox>
+</$reveal>
+\end
+
+\define clone()
+<$list filter="[<tid>has[title]then<config>!has[readonly]]">
+<$button class="tc-btn-invisible tt-editable-del" style="transform:translateX(-1.25em);" tooltip="clone tiddler">{{$:/core/images/clone-button}}
+	<$action-createtiddler $basetitle=<<tid>>>
+		<$action-setfield $tiddler=<<tid>> title=<<createTiddler-title>>/>
+		<$action-listops $field="tids" $subfilter="[<createTiddler-title>] +[sort[]]"/>
+	</$action-createtiddler>
+</$button>
+\end
+
+\define delete(what)
+\define del_field()		<$list filter="[subfilter{!!tids}is[tiddler]]"><$action-setfield $field=<<field>>/></$list><$action-listops $field="fields" $subfilter="-[<field>]"/>
+\define del_tiddler()	<$action-deletetiddler $tiddler=<<tid>>/><$action-listops $field="tids" $subfilter="-[<tid>]"/>
+\define del_tiddlers()	<$action-deletetiddler $filter={{!!tids}}/><$action-setfield $field="tids"/>
+<$list filter="[<config>!has[readonly]]">
+<$let  msg_field={{{ [[field]]  =[charcode[10]] [[    ]] [<field>] =[charcode[10]] [[from all selected tiddlers?]] +[join[]] }}}
+	 msg_tiddler={{{ [[tiddler]] [charcode[10]] [[    ]] [<tid>] +[join[]] }}}
+	msg_tiddlers="all selected tiddlers?">
+<$button class="tc-btn-invisible tt-editable-del" tooltip="delete $what$">{{$:/core/images/delete-button}}
+	<$action-confirm $message={{{ [[Are you sure you want to delete]] [<msg_$what$>] +[join[ ]] }}}><<del_$what$>></$action-confirm>
+</$button>
+\end
+
+\define replace()
+\define all() <$list filter={{$(config)$!!tids}}><$list filter={{$(config)$!!fields}} variable="f"><<set>>
+\define set() <$list filter="[<currentTiddler>get<f>search:title:some,casesensitive<c>]" variable="v"><$action-setfield $field=<<f>> $value={{{ [<v>search-replace:gm<c>,{$(config)$!!replace}] }}}/>
+<div style="margin-bottom:0.125em;"><nobr><$edit-text class="tt-editable-find" field="replace" placeholder="replace with"/>
+<$button class="tc-button tt-button tt-editable-btn" tooltip="replace">{{$:/core/images/done-button}}
+	<$list filter="[{$(config)$!!find_content}!match[]]" variable="c"><<all>></$list>
+</$button>
+\end
+
+\define table()
+\define pause()	<$let tv-config-toolbar-icons=yes tv-config-toolbar-text=no>{{$:/core/ui/Buttons/timestamp}}
+\define title()	<nobr><<delete tiddler>><<clone>><$checkbox listField="tids" checked=<<tid>> class=tt-editable-label> <$link to=<<tid>>/>
+\define name()	<nobr><<delete field>><$checkbox listField="fields" checked=<<field>> class=tt-editable-label> <<sort>>
+\define item()	<$list filter="[{!!omit}match[]] ~[<tid>has:field<field>]"><<match>>
+\define match()	<span style.opacity={{{ [<tid>get<field>else[]!search:title:some,casesensitive{$(config)$!!find_content}then[.5]] }}}><<show>>
+\define show()	<$list filter="[<field>match[text]then<tid>is[image]] ~[<field>match[text]then<tid>tag[$:/tags/Image]]" emptyMessage=<<edit>>><<img>>
+\define edit()	<$edit-text class="tt-editable-value" tag="textarea" tiddler=<<tid>> field=<<field>> rows=1 minHeight="1.4em" autoHeight=yes placeholder=<<prompt>> focus=<<focus>> disabled={{$(config)$!!readonly}}/>
+\define img()	<$list filter="[<config>get[readonly]]" emptyMessage=<<edit>>><div class="tt-editable-value"><$transclude tiddler=<<tid>>/>
+<$list filter="[<config>has[tids]]">
+<$let order={{{ [{!!order}match[ZtoA]then[reverse]] }}} start={{{ [{!!start}max[0]] }}} count={{{ [enlist{!!tids}count[]] }}} page={{{ [{!!page}match[all]then<count>] ~[{!!page}!match[]] ~[<page>] }}}>
+<div>@@float:right;<<pager>>@@<<options>></div>
+<nobr>@@display:inline-block;width:49.75%;<<find content>>@@ @@display:inline-block;width:49.75%;<<replace>>@@</nobr>
+<table class="tt-editable-table">
+	<tr>
+		<th class="tt-editable-title"><$list filter="[<config>!has[readonly]]"><<delete tiddlers>><<add>><<pause>></$list><$let field="Title"><<sort>></$let></th>
+		<$list filter={{!!fields}} variable="field"><th style="position:relative;" title=<<field>>><<name>></th></$list>
+	</tr>
+	<$list filter="[enlist{!!tids}sortan{!!sortby}order<order>rest<start>limit<page>]" variable="tid">
+		<tr style="vertical-align:top;">
+			<th class="tt-editable-title" title=<<tid>>><<title>></th>
+			<$list filter={{!!fields}} variable="field"><td style="padding:0;line-height:0;" title={{{ [<tid>] [<field>] +[join[!!]] }}}><<item>></td></$list>
+		</tr>
+	</$list>
+</table>
+\end
+
+<$list filter=<<config>>>
+<div style={{{ [<tv-window-id>!match[]then[padding:1em;]] }}}>
+@@font-size:90%;<<styles>><<settings>><<table>>@@

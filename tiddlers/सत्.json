@@ -1,0 +1,18 @@
+[
+    {
+        "created": "20250627155614930",
+        "creator": "KeshavP",
+        "text": "@@.dblock.सत्\nत-कारान्तः <br>पुल्लिङ्गः<br>सत्¦एक¦द्वि¦बहु\n१¦सन् ¦सन्तौ ¦सन्तः\n२¦सन्तम् ¦सन्तौ ¦सतः\n३¦सता ¦सद्भ्याम् ¦सद्भिः\n४¦सते ¦सद्भ्याम् ¦सद्भ्यः\n५¦सतः ¦सद्भ्याम् ¦सद्भ्यः\n६¦सतः ¦सतोः ¦सताम्\n७¦सति ¦सतोः ¦सत्सु\n@@\n@@.dblock.notes\n\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"सत्\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "anta": "त",
+        "variety": "",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "⟣",
+        "sutra": "",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "सत्",
+        "modified": "20250627155758104",
+        "modifier": "KeshavP"
+    }
+]

@@ -1,0 +1,18 @@
+caption: {{$:/language/Buttons/Linkify/Caption}} (Markdown)
+condition: [<targetTiddler>type[text/x-markdown]] [<targetTiddler>type[text/markdown]]
+created: 20260828173133643
+creator: केशवकृपा
+description: {{$:/language/Buttons/Linkify/Hint}}
+icon: $:/plugins/tiddlywiki/markdown/images/markdown-linkify
+modified: 20260828173133643
+modifier: केशवकृपा
+shortcuts: ((linkify))
+tags: $:/tags/EditorToolbar
+title: $:/plugins/tiddlywiki/markdown/EditorToolbar/linkify
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="wrap-selection"
+	prefix="["
+	suffix="]()"
+/>

@@ -1,0 +1,25 @@
+created: 20250705033008044
+creator: KeshavP
+modified: 20250706152134755
+modifier: KeshavP
+tags: SKS $:/tags/SideBar
+title: समासाः
+
+;Notes
+
+#समासः पूर्वपदं न-कारान्तः अस्ति चेत् न लोप समस्तपदे भवति। <br>
+#विशेषण-विशेष्य भावः अस्ति चेत् विशेष्य अनुसृत्य लि।व।वि विशेषण-शब्दरूपं रचनीयम्।
+
+<<tabs "[tag[समास]sort[section]]" "तत्पुरुषः" "$:/state/समास" "tc-vertical">>
+
+
+
+---
+<!--
+same information displayed using dynamic tables
+```
+<<table-dynamic filter:"[tag[समास]]" fields:"tbl-expand caption section" stateTiddler:"समास" class:"table-hover-olive" caption:"''समासाः''">>
+
+```
+
+-->

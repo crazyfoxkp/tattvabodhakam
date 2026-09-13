@@ -1,0 +1,10 @@
+aliases: 
+caption: 11 - ಶ್ರೀ ಸ್ಥಾವರಜಂಗಮ ಸಂಧಿ
+created: 20200901000000000
+creator: KeshavP
+modified: 20200906200921976
+modifier: KeshavP
+tags: HKS ಹರಿಕಥಾಮೃತಸಾರ
+title: ಸ್ಥಾವರಜಂಗಮ
+
+<table><$list filter="[tag[HKS11 ಸ್ಥಾವರಜಂಗಮ]sortan[title]]"><tr><th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>notes</$link></th><td/><td><$transclude mode="block"/></td></tr></$list></table>

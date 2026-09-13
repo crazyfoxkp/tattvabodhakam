@@ -1,0 +1,13 @@
+created: 20240602190947919
+creator: KeshavP
+modified: 20240602190947919
+modifier: KeshavP
+tags: $:/tags/ViewTemplate
+title: $:/plugins/tiddlywiki/comments/footer-view-template-segment
+
+<$list filter={{$:/config/Comments/EnableFilter}} variable="ignore">
+<div class="tc-comments-segment">
+<$transclude tiddler="$:/plugins/tiddlywiki/comments/add-comment-button" mode="inline"/>
+<$transclude tiddler="$:/plugins/tiddlywiki/comments/comments-template" mode="inline"/>
+</div>
+</$list>

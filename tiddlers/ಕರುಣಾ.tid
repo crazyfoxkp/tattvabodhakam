@@ -1,0 +1,11 @@
+aliases: 
+caption: 2 - ಕರುಣಾ ಸಂಧಿ
+created: 20200901000000000
+creator: KeshavP
+modified: 20251115152658870
+modifier: KeshavP
+tags: HKS ಹರಿಕಥಾಮೃತಸಾರ
+title: ಕರುಣಾ
+
+! ಶ್ರೀ ಹರಿಕಥಾಮೃತಸಾರ
+!! ಸಂಧಿ – <$view field='caption'/><br/><table><$list filter="[tag[HKS2 ಕರುಣಾ]sortan[title]]"><tr><th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>notes</$link></th><td/><td><$transclude mode="block"/></td></tr></$list></table>

@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "012",
+        "tags": "[[MBTN » § 06]]",
+        "text": "दृष्ट्वा बलं भगवतोऽथ हरीश्वरोऽ सावने निधाय तमयात् पुरमग्रजस्य ।<br> आश्रुत्य रावमनुजस्य बिलात् स चाडगादभ्येनमाशु दयिताप्रतिवारितोऽपि ॥६.१२ ॥",
+        "title": "MBTN » § 06 » 012"
+    }
+]

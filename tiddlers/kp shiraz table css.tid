@@ -1,0 +1,32 @@
+created: 20250203164530146
+creator: KeshavP
+modified: 20250325011519898
+modifier: KeshavP
+tags: $:/tags/Stylesheet
+title: kp shiraz table css
+
+/* changed values. defaults in $:/plugins/kookma/shiraz/styles/tables */
+/* Striped row table */
+.table-striped-row tr:nth-child(even) td{
+  background-color:#323b00; 
+}
+
+/* Table hover (olive background on mouse over)*/
+.table-hover-olive tbody tr:hover{
+color: #fff; 
+background-color: #323b00;
+}
+
+/* fill empty cells with this color #252716 */
+.table-hover-olive td:empty {background:#252716;
+}
+
+/* Striped row table */
+.table-back-striped-evenrow tr:nth-child(even) td{
+  background-color:#2A2A2A; 
+}
+
+/* Striped row table */
+.table-back-striped-oddrow tr:nth-child(odd) td{
+  background-color:#212316;
+}

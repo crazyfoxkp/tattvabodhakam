@@ -1,0 +1,15 @@
+[
+    {
+        "anta": "न",
+        "variety": " ३",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.राजन्·सूत्र\nन-कारान्तः ३<br>पुल्लिङ्गः<br>राजन्·सूत्र¦एक¦द्वि¦बहु\n१¦न् लोप + दीर्घ¦prev दीर्घ + औ¦prev दीर्घ + ः\n२¦prev दीर्घ + अम्¦prev दीर्घ + औ¦राज्ञ् + ः (no दीर्घ)\n३¦राज्ञ् + आ¦न् लोप + भ्याम्¦न् लोप + भिः\n४¦राज्ञ् + ए¦न् लोप + भ्याम्¦न् लोप + भ्यः\n५¦राज्ञ् + ः¦न् लोप + भ्याम्¦न् लोप + भ्यः\n६¦राज्ञ् + ः¦राज्ञ् + ओ:¦राज्ञ् + आम्\n७¦राज्ञ् + इ¦राज्ञ् + ओ:¦न् लोप + सु\n@@\n@@.dblock.notes\nहलन्त=¦mostly स्त्री and पु same <br>general rule: if 3/3 variation exists, apply same + sutra to 4-5/3 and 3-4-5/2 <br>३˚/१➝७˚/१  आ ए ः ः इ <br>२˚/३ from ५˚/१, ६˚/१ except in नपुं\nन-कारान्त¦१˚/१ न् लोप + दीर्घ <br>२˚/१ add म्  <br>३˚/३ ७˚/३ न् लोप + सूत्र; follow ३˚/३ variation general rule<br>न् ending is not obstacle for न ➝ ण rule\n¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"राजन्·सूत्र\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि सूत्र v2",
+        "title": "राजन्·सूत्र",
+        "modified": "20250131164746398",
+        "modifier": "KeshavP"
+    }
+]

@@ -1,0 +1,17 @@
+created: 20240918091512246
+modified: 20240918092358723
+tags: 
+title: ApplicationNotes
+
+The example tiddler  '''contextmenu example''' must have a field called `applicationtype` set to `ex1contextmenu` which is used in
+
+$:/bj/example/view/cascade 
+
+to select the template
+
+$:/bj/ex1contextmenu/ViewTemplate
+
+which contain the context menu widget
+
+----
+The context menu widget is configured to use the menu tiddler [[ex1MenuTable]] whose rule tid [[WordRefDo]] opens the modal tiddler [[WordRefModal]] with the selected text

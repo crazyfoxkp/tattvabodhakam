@@ -1,0 +1,47 @@
+created: 20240621173348102
+creator: KeshavP
+modified: 20241105050347545
+modifier: KeshavP
+tags: 
+title: main
+
+<style>
+  .audio-container {
+    display: flex;
+    align-items: center;
+  }
+  .audio-controls {
+    width: 80px; /* Adjust width as needed */
+    color: blue; /* Change foreground color to blue */
+    padding: 5px; /* Optional: Add padding for better visual appearance */
+    margin-right: 10px; /* Optional: Add margin for spacing */
+   background-tint: red;
+
+    height: 25px;
+}
+audio:hover {transform: scale(1.05);filter: drop-shadow(3px 4px 4px #FF7B19);}
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    vertical-align: top; /* Align content at the top of the cell */
+  }
+</style>
+
+<table>
+  <$list filter="[tag[main]]">
+    <tr>
+      <td class="audio-container">
+        <audio class="audio-controls" controls>
+          <source src='{{{ [<currentTiddler>get[audio]] }}}' type='audio/mpeg'>
+          Your browser does not support the audio element.
+        </audio>
+        <$transclude/>
+      </td>
+    </tr>
+  </$list>
+</table>

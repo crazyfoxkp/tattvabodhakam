@@ -1,0 +1,13 @@
+created: 20250714211934435
+creator: KeshavP
+modified: 20250714222608385
+modifier: KeshavP
+tags: maintenance
+title: kp-list of tids with [
+
+
+
+//<$list filter="[!is[system]!is[missing]!is[draft]!is[blank]sort[title]search:-caption:regexp[\[]] -[tag[{ }]] -[tag[v2]] -[tag[maintenance]] +[count[]]" /> tids contain search term//
+
+<<list-links "[!is[system]!is[missing]!is[draft]!is[blank]sort[title]search:-caption:regexp[\[]] -[tag[{ }]] -[tag[v2]] -[tag[maintenance]]">>
+

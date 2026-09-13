@@ -1,0 +1,8 @@
+created: 20251125161059194
+creator: KeshavP
+modified: 20251125171245825
+modifier: KeshavP
+tags: 
+title: kp toc color marker
+
+<span>{{!!title}} <$list filter="[<currentTiddler>has[kp_तात्पर्यः]] :or[<currentTiddler>has[kp_तात्पर्यम्]]"> <small style="color:#9fb52b;">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>

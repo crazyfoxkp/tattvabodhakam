@@ -1,0 +1,14 @@
+created: 20250626192641868
+creator: KeshavP
+modified: 20260227014824565
+modifier: केशवकृपा
+tags: $:/tags/Global
+title: kp procedures
+
+\procedure showWordsLikeThis(word) 
+<$list filter="[tag[Journal]] [tag[SKS]] [tag[vocab]] :filter[search:text:regexp[<word>]] ">
+
+
+</$list>
+\end
+

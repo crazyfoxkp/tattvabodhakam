@@ -1,0 +1,6 @@
+
+#null=((*@exit(@selectedtext)*))
+
+#action=<$action-sendmessage $message="tm-modal" $param="padacchedaModal" text="""((*@selectedtext*))"""/>
+
+#null=((*@doaction(#action)*))

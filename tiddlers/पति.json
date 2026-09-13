@@ -1,0 +1,18 @@
+[
+    {
+        "created": "20250627160935749",
+        "creator": "KeshavP",
+        "text": "@@.dblock.पति\nइ-कारान्तः <br>पुल्लिङ्गः<br>पति¦एक¦द्वि¦बहु\n१¦पतिः ¦पती ¦पतयः\n२¦पतिम् ¦पती ¦पतीन्\n३¦पत्या ¦पतिभ्याम् ¦पतिभिः\n४¦पत्ये ¦पतिभ्याम् ¦पतिभ्यः\n५¦पत्युः ¦पतिभ्याम् ¦पतिभ्यः\n६¦पत्युः ¦पत्योः ¦पतीनाम्\n७¦पत्यौ ¦पत्योः ¦पतिषु\n@@\n@@.dblock.notes\n\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"पति\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "anta": "इ",
+        "variety": "",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "⟣",
+        "sutra": "",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "पति",
+        "modified": "20250627161331921",
+        "modifier": "KeshavP"
+    }
+]

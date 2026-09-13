@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "न",
+        "variety": " ३",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "",
+        "sutra": "[[राजन्·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.राजन्\nन-कारान्तः ३<br>पुल्लिङ्गः<br>राजन्¦एक¦द्वि¦बहु\n१¦राजा¦राजानौ¦राजानः\n२¦राजानम्¦राजानौ¦राज्ञः\n३¦राज्ञा¦राजभ्याम्¦राजभिः\n४¦राज्ञे¦राजभ्याम्¦राजभ्यः\n५¦राज्ञः¦राजभ्याम्¦राजभ्यः\n६¦राज्ञः¦राज्ञोः¦राज्ञाम्\n७¦राज्ञि / राजनि¦राज्ञोः¦राजसु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see राजन्·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"राजन्\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "राजन्",
+        "modified": "20250131164746393",
+        "modifier": "KeshavP"
+    }
+]

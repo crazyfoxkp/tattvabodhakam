@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "न",
+        "variety": " २",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "",
+        "sutra": "[[करिन्·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.करिन्\nन-कारान्तः २<br>पुल्लिङ्गः<br>करिन्¦एक¦द्वि¦बहु\n१¦करी¦करिणौ¦करिणः\n२¦करिणम्¦करिणौ¦करिणः\n३¦करिणा¦करिभ्याम्¦करिभिः\n४¦करिणे¦करिभ्याम्¦करिभ्यः\n५¦करिणः¦करिभ्याम्¦करिभ्यः\n६¦करिणः¦करिणोः¦करिणाम्\n७¦करिणि¦करिणोः¦करिषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see करिन्·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"करिन्\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "करिन्",
+        "modified": "20250131164746114",
+        "modifier": "KeshavP"
+    }
+]

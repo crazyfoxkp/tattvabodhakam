@@ -1,0 +1,16 @@
+color: #feacad
+created: 20250427012920460
+creator: KeshavP
+modified: 20250427013001879
+modifier: KeshavP
+tags: Contents
+title: कृष्णामृतमहार्णवः
+
+<table>
+<$list filter="[tag[KM]sortan[title]]">
+<tr>
+<th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>notes</$link></th><td/>
+<td><$transclude mode="block"/></td>
+</tr>
+</$list>
+</table>

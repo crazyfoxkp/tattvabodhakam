@@ -1,0 +1,31 @@
+caption: xx-boyo-zz
+created: 20241111213158123
+creator: KeshavP
+modified: 20250623002406952
+modifier: KeshavP
+tags: [[test tag here]]
+title: kp test field transclusion
+
+<$let varname="captiontext" filter="[<currentTiddler>has[caption]">{{!!caption}} </$let>
+
+
+Shloka {{!!shloka}} <span> <$text text={{{ [tag[sarga1]count[]addprefix{caption}] }}}/> </span>
+
+<span class='tc-subtitle'><$view field="caption"/>&nbsp;<$list filter="[all[current]tags[]sort[title]]"/></span>
+
+<$vars thisSub="[{!!course}addsuffix{!!section}]">
+
+{{{ [enlist[a1 a2 a3]sortsub<thisSub>] }}}
+
+</$vars>
+
+---
+
+
+
+<$text text ={{{ [has[caption]{!!title}addsuffix[ sss]] }}}/>
+
+{{random word||$:/core/ui/TagTemplate}}
+
+---
+<span style="color:black;">Shloka {{!!shloka}} <$list filter="[<currentTiddler>has[caption]]"> <small>  ✅</small><br></$list></span>

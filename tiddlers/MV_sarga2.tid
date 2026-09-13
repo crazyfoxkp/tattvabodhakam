@@ -1,0 +1,44 @@
+created: 20240611001426714
+creator: KeshavP
+modified: 20250623002359227
+modifier: KeshavP
+tags: [[test tag here]]
+title: MV/sarga2
+
+<style>
+td.dots {  padding: 0 50px 0 0;  margin: 0 0 0 0;  border-bottom: 1px dotted gray;  color: solid blue;  width: 30%;}summary.hand {  cursor: pointer;}summary {  background-color: #f2f2fc;  padding: 10px;  padding-left: 10px;  border-radius: 3px;  width: 98%;  color: black;}summary:hover {  background: #e6FAE6;  width: 99%;  font-size: 110%;  color: black;}details[open] summary {  border-radius: 5px;  background-color: white;}details {  background-color: lavender;  border-radius: 5px;  transition: 0.2s background linear;  padding: 5px 0 0 20px;  color: black;box-shadow: 5px 5px 7px gray;} td.play { width: 10%;} 
+</style>
+
+
+<$let tagFromName={{{ [<currentTiddler>split[/]last[]] }}}>
+    <$list filter="[tag<tagFromName>]" emptyMessage="none found">
+<tr><td class=play> icon </td>
+<td>
+        <details>
+            <summary>
+            <$text text={{{ [{!!text}] }}} />
+            </summary>
+
+            <$let arthaTid={{{ [<currentTiddler>addsuffix[/artha]] }}}>
+                <span style="  display: inline;  float: right;  padding: 10px;  padding-top: 0;  top: 5%;  left: 92%;">
+                    <$button class="tc-btn-invisible" message="tm-edit-tiddler" param=<<arthaTid>> tooltip={{{ [[Create or Edit "]addsuffix<arthaTid>addsuffix["]] }}}>
+                    @@.donotprint {{$:/core/images/edit-button}}@@
+                    </$button>
+                </span>
+                <$list filter="[<currentTiddler>addsuffix[/artha]fields[]prefix[kp_]]" variable=fieldname>
+                    <$list filter="[<currentTiddler>addsuffix[/artha]get<fieldname>]" variable=field-value>
+                    <tr>                    
+                        <td class=dots>
+                            <$text text={{{ [<fieldname>removeprefix[kp_]] }}} />   </td>
+                        <td>
+                            <<field-value>>
+                        </td>
+                    </tr>
+                    </$list>
+                </$list>
+            </$let>
+
+        </details>
+</td></tr>
+    </$list>  
+</$let>

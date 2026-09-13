@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "इ",
+        "variety": "",
+        "notes": "",
+        "linga": "स्त्री॰",
+        "group": "",
+        "sutra": "[[मति·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.मति\nइ-कारान्तः<br>स्त्रीलिङ्गः<br>मति¦एक¦द्वि¦बहु\n१¦मतिः¦मती¦मतयः\n२¦मतिम्¦मती¦मतीः\n३¦मत्या¦मतिभ्याम्¦मतिभिः\n४¦मत्यै / मतये¦मतिभ्याम्¦मतिभ्यः\n५¦मत्याः / मतेः¦मतिभ्याम्¦मतिभ्यः\n६¦मत्याः / मतेः¦मत्योः¦मतीनाम्\n७¦मत्याम् / मतौ¦मत्योः¦मतिषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see मति·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"मति\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "मति",
+        "modified": "20250131164746300",
+        "modifier": "KeshavP"
+    }
+]

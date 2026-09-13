@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "010",
+        "tags": "[[MBTN » § 06]]",
+        "text": "भित्त्वा च तान् सगिरिकुं भगवत्प्रमुक्तः पाताळसप्तकमथात्र च ये त्ववध्या: ।<br> नाम्नाउ सुरा: कुमुदिनोऽब्जजवाक्यरक्षा: सर्वाश्च तानदहदाशु शर: स एकः ॥६.१०॥",
+        "title": "MBTN » § 06 » 010"
+    }
+]

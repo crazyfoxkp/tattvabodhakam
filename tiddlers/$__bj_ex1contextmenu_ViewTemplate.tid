@@ -1,0 +1,9 @@
+created: 20240918063046647
+modified: 20240918090554076
+tags: 
+title: $:/bj/ex1contextmenu/ViewTemplate
+
+
+<$tcmenu $contextconfig="ex1MenuTable"currentTid=<<currentTiddler>>>
+
+{{}}

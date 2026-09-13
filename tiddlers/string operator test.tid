@@ -1,0 +1,14 @@
+audio: sample/file.mp3
+created: 20240727033912008
+creator: KeshavP
+modified: 20240727170756703
+modifier: KeshavP
+title: string operator test
+
+<$list filter="[[john]match[jack] then[same]else[not same]]" variable=sayit>
+<<sayit>>
+</$list>
+
+
+[[1]compare:number:gt[2]then[yes]else[no]]
+

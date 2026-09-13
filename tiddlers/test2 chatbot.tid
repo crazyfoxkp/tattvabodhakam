@@ -1,0 +1,20 @@
+created: 20240601222300244
+creator: KeshavP
+modified: 20240606041443122
+modifier: KeshavP
+tags: 
+title: test2 chatbot
+
+linebreak in field values
+
+all using viewtemplate
+
+
+Example list:
+पदच्छछेदः = ${shlokaContent} #
+अन्वय: = ${sortedShlokaContent} #
+अर्थः = ${separatedShlokaContent} #
+तात्पपर्यः =  #
+व्याकर्ण विशेषः = #
+
+

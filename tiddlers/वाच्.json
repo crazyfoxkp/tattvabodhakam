@@ -1,0 +1,18 @@
+[
+    {
+        "created": "20250709235538163",
+        "creator": "KeshavP",
+        "text": "@@.dblock.वाच्\nच-कारान्तः<br>स्त्रीलिङ्गः<br>वाच्¦एक¦द्वि¦बहु\n१¦वाक् / वाग्¦वाचौ¦वाचः\n२¦वाचम्¦वाचौ¦वाचः\n३¦वाचा¦वाग्भ्याम्¦वाग्भिः\n४¦वाचे¦वाग्भ्याम्¦वाग्भ्यः\n५¦वाचः¦वाग्भ्याम्¦वाग्भ्यः\n६¦वाचः¦वाचोः¦वाचाम्\n७¦वाचि¦वाचोः¦वाक्षु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see वाच्·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"वाच्\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "anta": "च",
+        "variety": "",
+        "notes": "",
+        "linga": "स्त्री॰",
+        "group": "",
+        "sutra": "[[वाच्·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "वाच्",
+        "modified": "20250709235606456",
+        "modifier": "KeshavP"
+    }
+]

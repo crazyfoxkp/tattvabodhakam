@@ -1,0 +1,15 @@
+[
+    {
+        "created": "20250622213255635",
+        "creator": "KeshavP",
+        "text": "<$let tagFromName={{{ [<currentTiddler>] }}}>\n <$list filter=\"[tag<tagFromName>] +[sortan[]]\" emptyMessage=\"none found\">\n\n|<$link  tooltip=\"go to Shloka\">{{$:/core/images/open-window}}</$link>  |<$transclude>|\n\n</$list>\n</$let>\n\n",
+        "adhyaya": "06",
+        "adhyaya-name": "समुद्रतरणनिश्चयः",
+        "caption": "§ 06",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "tags": "MBTN",
+        "title": "MBTN » § 06",
+        "modified": "20250622213852773",
+        "modifier": "KeshavP"
+    }
+]

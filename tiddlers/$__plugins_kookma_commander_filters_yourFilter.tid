@@ -1,0 +1,8 @@
+created: 20250630181505127
+creator: KeshavP
+description: partial tiddler with field search
+filter: [all[tiddlers]search[§ SMV]has:field[shloka]]
+modified: 20250630181505127
+modifier: KeshavP
+tags: $:/tags/Commander/Filter
+title: $:/plugins/kookma/commander/filters/yourFilter

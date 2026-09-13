@@ -1,0 +1,13 @@
+created: 20250729152014319
+creator: KeshavP
+modified: 20250729152014319
+modifier: KeshavP
+tags: $:/tags/ViewTemplate
+title: $:/plugins/kookma/shiraz/viewtemplates/sticky-footer
+type: text/vnd.tiddlywiki
+
+<$list filter="[all[current]has[sticky-footer]]">
+<div class="sticky-footer">
+{{!!sticky-footer}}
+</div>
+</$list>

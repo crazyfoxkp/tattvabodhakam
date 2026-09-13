@@ -1,0 +1,20 @@
+button-classes: tc-text-editor-toolbar-item-start-group
+caption: {{$:/language/Buttons/MonoBlock/Caption}} (Markdown)
+condition: [<targetTiddler>type[text/x-markdown]] [<targetTiddler>type[text/markdown]]
+created: 20260828173133643
+creator: केशवकृपा
+description: {{$:/language/Buttons/MonoBlock/Hint}}
+icon: $:/core/images/mono-block
+modified: 20260828173133643
+modifier: केशवकृपा
+shortcuts: ((mono-block))
+tags: $:/tags/EditorToolbar
+title: $:/plugins/tiddlywiki/markdown/EditorToolbar/mono-block
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="wrap-lines"
+	prefix="
+```"
+	suffix="```"
+/>

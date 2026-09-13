@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "म",
+        "variety": "",
+        "notes": "",
+        "linga": "स्त्री॰",
+        "group": "सर्वनाम",
+        "sutra": "[[इदम्·स्त्री·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.इदम्·स्त्री\nम-कारान्तः<br>स्त्रीलिङ्गः ║सर्वनाम<br>इदम्·स्त्री¦एक¦द्वि¦बहु\n१¦इयम्¦इमे¦इमाः\n२¦इमाम् ¦इमे ¦इमाः \n३¦अनया ¦आभ्याम्¦आभिः\n४¦अस्यै¦आभ्याम्¦आभ्यः\n५¦अस्याः¦आभ्याम्¦आभ्यः\n६¦अस्याः¦अनयोः ¦आसाम्\n७¦अस्याम्¦अनयोः ¦आसु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see इदम्·स्त्री·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"इदम्·स्त्री\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "इदम्·स्त्री",
+        "modified": "20250131164746080",
+        "modifier": "KeshavP"
+    }
+]

@@ -1,0 +1,11 @@
+author: Mario Pietsch
+core-version: >=5.1.18
+dependents: 
+description: New tabs are added to search results
+list: readme license history
+name: Field Search
+plugin-type: plugin
+stability: STABILITY_2_STABLE
+title: $:/plugins/wikilabs/field-search
+type: application/json
+version: 1.0.1

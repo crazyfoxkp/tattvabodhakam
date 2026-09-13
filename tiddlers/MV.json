@@ -1,0 +1,12 @@
+[
+    {
+        "created": "20240611000724665",
+        "creator": "KeshavP",
+        "text": "\\define get-sarga1()\n<$list filter=\"[all[current]addsuffix[/sarga1]is[tiddler]]\" emptyMessage=\"none found\">\n<$link to=<<currentTiddler>>> show</$link>\n</$list>\n\\end\n\n<<get-sarga1>>\n\n<$list filter=\"[tag[sarga]]\" emptyMessage=\"none found\">\n<$details summary={{{ [{!!title}split[/]last[]sentencecase[]] }}}>\n<summary>\nsdfasdf asdfasdf\n</summary>\n</$details>\n</$list>\n\n<$list filter=\"[all[tags]prefix:caseinsensitive[sarg]tagging[]]\">\n\n<$link/>\n</$list>\n\n<hr>\n\n<$list filter=\"[tag[SMV]]\">\n\n<$link/>\n</$list>\n",
+        "tags": "",
+        "title": "MV",
+        "modified": "20250623002405676",
+        "modifier": "KeshavP",
+        "caption": "sdfasdf asdfsdf "
+    }
+]

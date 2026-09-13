@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "009",
+        "tags": "[[MBTN » § 06]]",
+        "text": "सन्धाय कार्मुकवरे निशिते तु बाणेऽथाऽऽकृष्य दक्षिणभुजेन तदा प्रमुक्ते ।<br> रामेण सत्वरमनन्तबलेन सर्वे चूर्णीकृता: सपदि ते तरवो रवेण ॥६.९ ॥",
+        "title": "MBTN » § 06 » 009"
+    }
+]

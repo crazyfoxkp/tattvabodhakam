@@ -1,0 +1,15 @@
+[
+    {
+        "anta": "ज",
+        "variety": " १",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.भिषज्·सूत्र\nज-कारान्तः १<br>पुल्लिङ्गः<br>भिषज्·सूत्र¦एक¦द्वि¦बहु\n१¦च् ∆→ क्¦औ¦ः\n२¦म्¦औ¦ः\n३¦आ¦१˚/१ √ + भ्याम्¦१˚/१ √ + भिः\n४¦ए¦१˚/१ √ + भ्याम्¦१˚/१ √ + भ्यः\n५¦ ः¦१˚/१ √ + भ्याम्¦१˚/१ √ + भ्यः\n६¦ ः¦ओ:¦आम्\n७¦इ¦ओ:¦१˚/१ √ + सु\n@@\n@@.dblock.notes\nहलन्त=¦mostly स्त्री and पु same <br>general rule: if 3/3 variation exists, apply same + sutra to 4-5/3 and 3-4-5/2 <br>३˚/१➝७˚/१  आ ए ः ः इ <br>२˚/३ from ५˚/१, ६˚/१ except in नपुं\nज-कारान्तः¦Same as च-कारान्त<br>१˚/१ च्-वर्गांत √∆ ➝ क्  <br>३˚/३ , ७˚/३  = १˚/१ √ + सूत्र (क्+भ=ग्भ जश्त्व संधि, क्+स∆ष → क्ष) \n¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"भिषज्·सूत्र\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि सूत्र v2",
+        "title": "भिषज्·सूत्र",
+        "modified": "20250131164746296",
+        "modifier": "KeshavP"
+    }
+]

@@ -1,0 +1,22 @@
+created: 20250729153843207
+creator: KeshavP
+modified: 20250729193415588
+modifier: KeshavP
+tags: $:/tags/Stylesheet
+title: kp navigation CSS
+
+/*  style for simple-navigation links -- viewtemplate */
+.kpnavlinks {
+font-weight: bold;
+color: rgb(148, 171, 38) ;
+}
+/*
+.kpnavlinks  { 
+position: absolute;
+top: 11.9em;
+right: 5em;
+width: 42%;
+max-height: calc(100% - 19.8em);
+overflow-y: scroll; 
+scrollbar-width: none;
+}*/

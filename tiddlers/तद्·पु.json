@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "द",
+        "variety": "",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "सर्वनाम",
+        "sutra": "[[तद्·पु·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.तद्·पु\nद-कारान्तः<br>पुल्लिङ्गः ║सर्वनाम<br>तद्·पु¦एक¦द्वि¦बहु\n१¦सः¦तौ¦ते\n२¦तम्¦तौ¦तान्\n३¦तेन¦ताभ्याम्¦तैः\n४¦तस्मै¦ताभ्याम्¦तेभ्यः\n५¦तस्मात्¦ताभ्याम्¦तेभ्यः\n६¦तस्य¦तयोः¦तेषाम्\n७¦तस्मिन्¦तयोः¦तेषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see तद्·पु·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"तद्·पु\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "तद्·पु",
+        "modified": "20250131164746206",
+        "modifier": "KeshavP"
+    }
+]

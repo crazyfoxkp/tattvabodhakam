@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "औ",
+        "variety": "",
+        "notes": "",
+        "linga": "स्त्री॰",
+        "group": "",
+        "sutra": "[[नौ·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.नौ\nऔ-कारान्तः<br>स्त्रीलिङ्गः<br>नौ¦एक¦द्वि¦बहु\n१¦नौः¦नावौ¦नावः\n२¦नावम्¦नावौ¦नावः\n३¦नावा¦नौभ्याम्¦नौभिः\n४¦नावे¦नौभ्याम्¦नौभ्यः\n५¦नावः¦नौभ्याम्¦नौभ्यः\n६¦नावः¦नावोः¦नावाम् (*)\n७¦नौः¦नावोः (*)¦नौषु\n@@\n@@.dblock.notes\n¦\n¦\n¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"नौ\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "नौ",
+        "modified": "20250131164746269",
+        "modifier": "KeshavP"
+    }
+]

@@ -1,0 +1,21 @@
+created: 20260817171152423
+creator: केशवकृपा
+modified: 20260817182418241
+modifier: केशवकृपा
+tags: Journal sectionsUI
+title: 2026 / 08 / 17 / test
+
+This is preamble text before any headings.
+
+<detail>!! Section 1: Grammatical Analysis
+
+<summary>Here is the content for **Section 1**.
+* Item A
+* Item B
+* </summary>
+* 
+</detail>
+//This section contains bold and italics formatting.//
+
+!! Section 2: Expository Analysis
+This is the content under **Section 2**.

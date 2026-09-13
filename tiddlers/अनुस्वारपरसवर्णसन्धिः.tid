@@ -1,0 +1,38 @@
+created: 20250314014153918
+creator: KeshavP
+modified: 20260108000323129
+modifier: KeshavP
+tags: 
+title: अनुस्वारपरसवर्णसन्धिः
+
+
+विवासनम् + च ➝ विवासनञ्च 
+
+---
+
+;गुरुरुवाच
+
+>यदि अनुस्वारः अस्ति तर्हि तस्य परे यदि गञ्जनवर्णः अस्ति तदा अनुस्वरस्य स्थाने परे विद्यमानस्य वञ्जनवर्णस्य पञ्चमर्णः भवति। 
+इदानीम् ' प्रतिज्ञातम् च ' अस्ति खलु प्रतिज्ञातम् इत्यत्र अनुस्वारः अस्ति। परे ' च ' अस्ति। अतः चकारस्य पञ्चमं किं अस्ति ' ञ ' तत् अनुस्वारस्य स्थाने भवति।  
+
+प्रतिज्ञातम् + च ➝ ( अनुस्वारपरसवर्णसन्धिः )  ➝ ञ् + च ➝ प्रतिज्ञाञ्च
+
+
+ಪ್ರತಿಜ್ಞಾತಮ್ ಎಂದು ಅನುಸ್ವಾರವಿದೆಯಲ್ಲವೇ? ಅದರ ಪಕ್ಕದಲ್ಲಿ 'ಚ' ಅಕ್ಷರವಿದೆಯಲ್ಲವೇ? ಹಾಗೆಯೇ ಅದರ ಪಕ್ಕದಲ್ಲಿ 'ಚ' ಇದ್ದಾಗ, ಅನುಸ್ವಾರದ ಸ್ಥಾನದಲ್ಲಿ 'ಚ' ವರ್ಗದ ಐದನೆಯ ಅಕ್ಷರವು (fifth letter) ಯಾವುದು? 'ಞ'! ಅದು ಬರುತ್ತದೆ. ಹೀಗೆ ಮಾಡಲೇಬೇಕೆಂಬ ನಿಯಮವೇನೂ ಇಲ್ಲ.
+
+---
+Any अनुस्वार, पदान्त वा अपदान्त  followed by a यय् letter will be replaced by a nasal of the row class of the following consonant. Or by the nasal semivowel if that is following. In case  repha is following, then अनुस्वार does not undergo any change since there is no nasal equivalent for repha.
+
+|यय् |any row class consonant or semivowel|
+|Replacement for anusvara |ङ् ञ् ण् न् म् य्ँ ल्ँ व्ँ |
+
+
+```
+परसवर्ण ≡ a letter that is similar to the following class consonant.
+```
+
+
+//ref: Sanskrit Sandhi Handbook Ashwini Kumar Aggarwal.pdf//
+
+---
+अनुस्वार is replaced by 5th letter of 1st letter of next word

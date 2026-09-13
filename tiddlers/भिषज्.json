@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "ज",
+        "variety": " १",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "",
+        "sutra": "[[भिषज्·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.भिषज्\nज-कारान्तः १<br>पुल्लिङ्गः<br>भिषज्¦एक¦द्वि¦बहु\n१¦भिषक् / भिषग्¦भिषजौ¦भिषजः\n२¦भिषजम्¦भिषजौ¦भिषजः\n३¦भिषजा¦भिषग्भ्याम्¦भिषग्भिः\n४¦भिषजे¦भिषग्भ्याम्¦भिषग्भ्यः\n५¦भिषजः¦भिषग्भ्याम्¦भिषग्भ्यः\n६¦भिषजः¦भिषजोः¦भिषजाम्\n७¦भिषजि¦भिषजोः¦भिषक्षु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see भिषज्·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"भिषज्\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "भिषज्",
+        "modified": "20250131164746291",
+        "modifier": "KeshavP"
+    }
+]

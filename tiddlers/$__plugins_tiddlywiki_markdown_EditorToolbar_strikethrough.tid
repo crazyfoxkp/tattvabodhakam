@@ -1,0 +1,18 @@
+caption: {{$:/language/Buttons/Strikethrough/Caption}} (Markdown)
+condition: [<targetTiddler>type[text/x-markdown]] [<targetTiddler>type[text/markdown]]
+created: 20260828173133642
+creator: केशवकृपा
+description: {{$:/language/Buttons/Strikethrough/Hint}}
+icon: $:/core/images/strikethrough
+modified: 20260828173133642
+modifier: केशवकृपा
+shortcuts: ((strikethrough))
+tags: $:/tags/EditorToolbar
+title: $:/plugins/tiddlywiki/markdown/EditorToolbar/strikethrough
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="wrap-selection"
+	prefix="~~"
+	suffix="~~"
+/>

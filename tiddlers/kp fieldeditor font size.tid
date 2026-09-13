@@ -1,0 +1,19 @@
+created: 20241008043522860
+creator: KeshavP
+modified: 20241008171503551
+modifier: KeshavP
+tags: $:/tags/Stylesheet
+title: kp fieldeditor font size
+
+html table.tc-edit-fields {
+    font-size: 1.2em;
+}
+html textarea.wideedit {
+    line-height: 1.8em;
+}
+html td.tc-edit-field-name {
+    width:15%;
+} 
+html td.tc-edit-field-remove {
+    width:5%;
+} 

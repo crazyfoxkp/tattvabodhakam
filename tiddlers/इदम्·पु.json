@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "म",
+        "variety": "",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "सर्वनाम",
+        "sutra": "[[इदम्·पु·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.इदम्·पु\nम-कारान्तः<br>पुल्लिङ्गः ║सर्वनाम<br>इदम्·पु¦एक¦द्वि¦बहु\n१¦अयम्¦इमौ¦इमे\n२¦इमम् ¦इमौ ¦इमान् \n३¦अनेन ¦आभ्याम्¦एभिः\n४¦अस्मै¦आभ्याम्¦एभ्यः\n५¦अस्मात्¦आभ्याम्¦एभ्यः\n६¦अस्य¦अनयोः ¦एषाम्\n७¦अस्मिन्¦अनयोः ¦एषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see इदम्·पु·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"इदम्·पु\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "इदम्·पु",
+        "modified": "20250131164746072",
+        "modifier": "KeshavP"
+    }
+]

@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "041",
+        "tags": "[[MBTN » § 06]]",
+        "text": "राज्यार्थिना येन हि घातितोऽग्रजो हृताच दारा: सुनृशंसकेन ।<br> स नः कथं रक्षति शासनातिगान् निराश्रयान दर्बलकान बले स्थितः ॥६.४१ ॥",
+        "title": "MBTN » § 06 » 041"
+    }
+]

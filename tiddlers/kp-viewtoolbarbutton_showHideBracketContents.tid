@@ -1,0 +1,24 @@
+caption: {{kp-icons/convert-shapes-hide.svg}} {{kp-viewtoolbarbutton/showHideBracketContents/Caption}}
+created: 20250712234343094
+creator: KeshavP
+description: {{kp-viewtoolbarbutton/showHideBracketContents/Hint}}
+modified: 20260227173831406
+modifier: केशवकृपा
+tags: $:/tags/ViewToolbar kp-showHideBrackets
+title: kp-viewtoolbarbutton/showHideBracketContents
+
+\define showHideBracketContents()
+<$button class=<<tv-config-toolbar-class>>>
+<$action-listops $tiddler="$:/state/kp-showHideBracketContents/view" $field="text" $subfilter="+[toggle[hide],[show]]" />
+<$list filter="[<tv-config-toolbar-icons>match[yes]] ">
+<$transclude tiddler={{{ [[$:/state/kp-showHideBracketContents/view]text[hide]then[kp-icons/convert-shapes-show.svg]else[kp-icons/convert-shapes-hide.svg]] ~[[kp-icons/convert-shapes-show.svg]] }}}/>
+</$list>
+<$list filter="[<tv-config-toolbar-text>match[yes]]">
+<span class="tc-btn-text"><$text text="Show/Hide [ ]"/></span>
+</$list>
+</$button>
+\end
+
+<%if [all[current]tag[Journal]] %>
+<<showHideBracketContents>>
+<%endif%>

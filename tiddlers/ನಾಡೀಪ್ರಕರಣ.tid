@@ -1,0 +1,10 @@
+aliases: 
+caption: 12 - ಶ್ರೀ ನಾಡೀಪ್ರಕರಣ ಸಂಧಿ
+created: 20200901000000000
+creator: KeshavP
+modified: 20200906200946510
+modifier: KeshavP
+tags: HKS ಹರಿಕಥಾಮೃತಸಾರ
+title: ನಾಡೀಪ್ರಕರಣ
+
+<table><$list filter="[tag[HKS12 ನಾಡೀಪ್ರಕರಣ]sortan[title]]"><tr><th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>notes</$link></th><td/><td><$transclude mode="block"/></td></tr></$list></table>

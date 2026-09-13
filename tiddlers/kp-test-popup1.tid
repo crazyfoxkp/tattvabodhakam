@@ -1,0 +1,39 @@
+created: 20241202223425609
+creator: KeshavP
+modified: 20241202224145510
+modifier: KeshavP
+tags: 
+title: kp-test-popup1
+
+\define flag-title()
+$(languagePluginTitle)$/icon
+\end
+
+\define make-popup(a)
+    <$let state={{{ [<qualify "$:/state/popup/language">] [<__a__>] +[join[/]] }}} >
+
+    <<state>>
+
+    <span class="tc-popup-keep">
+        <$button popup=<<state>> tooltip={{$:/language/Buttons/Language/Hint}} aria-label={{$:/language/Buttons/Language/Caption}} class=<<tv-config-toolbar-class>> selectedClass="tc-selected">
+            <$list filter="[<tv-config-toolbar-icons>match[yes]]">
+                <span class="tc-image-button">
+                    <$set name="languagePluginTitle" value={{$:/language}}>
+                        <$image source=<<flag-title>>/>
+                    </$set>
+                </span>
+            </$list>
+            <$list filter="[<tv-config-toolbar-text>match[yes]]">
+                <span class="tc-btn-text"><$text text={{$:/language/Buttons/Language/Caption}}/></span>
+            </$list>
+        </$button>
+    </span>
+        <$reveal state=<<state>> type="popup" position="below" animate="yes">
+        <div class="tc-drop-down">
+        {{$:/snippets/languageswitcher}}
+        </div>
+        </$reveal>
+    </$let>
+\end
+
+<<make-popup aa>>  --- <<make-popup bb>>

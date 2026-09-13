@@ -1,0 +1,72 @@
+caption: Format
+created: 20241016163758974
+creator: KeshavP
+modified: 20250714005304299
+modifier: KeshavP
+tags: $:/tags/SideBar
+title: kp format rules
+
+[[  edit|kp format rules]]
+
+Each ''श्लोकः'' is explained in the following format.
+
+;Section 1:
+:Original श्लोकः
+
+;Section 2:
+:पदच्छेदः (sandhi is taken away) with अन्वय  number, right subscript, in order of appearance
+
+;Section 3:
+:पदार्थथ and in sentence form
+
+;Section 4:
+:प्रतिपद व्याकर्ण विशेष 
+
+<<<
+;For nouns:
+
+The word without sandhi = 
+
+_-कारान्त (लिंग, पु=पुल्लिंग, स्त्री = स्त्रीलिंग, नपु = नपुंसकलिंग, त्रि = त्रिषु लिङ्गेषु)  + प्रातिपदिकम्  + the case (1 to 7)/number (1 to 3)]
+
+विग्रह वाक्यम् if present and additional information ≡ व्युत्तपत्ति
+
+For nouns, first digit represents the case (1 to 7) and the second digit represents
+the number (1 to 3, representing singular, dual, and plural, respectively).
+
+;For verbs:
+
+The word without sandhi  = धातुः (root, अर्थ, कर्मणि/कर्तरि प्रयोग, प्र=प्रथम पुरुष, म=मध्यम, उ=उत्तम/ वचन १-३ )  ≡ निष्पत्ति
+
+विग्रह वाक्यम् if present and additional information ≡ व्युत्तपत्ति
+
+
+Sandhi between words shown following '}' Sandhi name (description/sutra)
+<<<
+
+;Other
+(...) no special meaning | additional thought or alternative word/phrase| language translation 
+
+:[do not include grammar/dictionary terms here]
+
+{...} for personal use,  FUTURE: designated to be dynamically omitted 
+
+[...] reserve for TW use. 
+
+
+;Other abbreviations:
+
+<<<
+वि|वा = विग्रह वाक्यम्
+
+वि|वि = विशेषण-वेशेष्य भाव
+
+लि|व|वि = लिंग | वचन | विभक्ति 
+<<<
+
+
+
+
+---
+
+[[SMV Workflow||Workflow documentation for SMV]]

@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "013",
+        "tags": "[[MBTN » § 06]]",
+        "text": "तन्मुष्टिभिः प्रतिहत: प्रययावशक्तः सुग्रीव आशु रघुपोऽ पि हि धर्ममीक्षन् ।<br> नैनं जघान विदिताखिललोकचेष्टोऽप्येनं स आह यधि वा न मया विविक्ती ॥६.१३ ॥",
+        "title": "MBTN » § 06 » 013"
+    }
+]

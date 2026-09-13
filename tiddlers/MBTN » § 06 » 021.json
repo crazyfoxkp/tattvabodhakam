@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "021",
+        "tags": "[[MBTN » § 06]]",
+        "text": "यः प्रेरक: सकललोकबलस्य नित्यं पूर्णाव्ययोच्चबलवीर्यतनु: स्वतन्त्रः ।<br> किं तस्य दृष्टिपथगस्य च वानरोऽयं कर्तेशचापमपि येन पुरा विभग्नम् ॥६.२१ ॥",
+        "title": "MBTN » § 06 » 021"
+    }
+]

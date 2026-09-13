@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "ज",
+        "variety": " २",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "",
+        "sutra": "[[राज्·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.राज्\nज-कारान्तः २<br>पुल्लिङ्गः<br>राज्¦एक¦द्वि¦बहु\n१¦राट् / राड्¦राजौ¦राजः\n२¦राजम्¦राजौ¦राजः\n३¦राजा¦राड्भ्याम्¦राड्भिः\n४¦राजे¦राड्भ्याम्¦राड्भ्यः\n५¦राजः¦राड्भ्याम्¦राड्भ्यः\n६¦राजः¦राजोः¦राजाम्\n७¦राजि¦राजोः¦राट्त्सु / राट्सु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see राज्·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"राज्\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "राज्",
+        "modified": "20250131164746402",
+        "modifier": "KeshavP"
+    }
+]

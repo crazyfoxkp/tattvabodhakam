@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "ओ",
+        "variety": "",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "",
+        "sutra": "[[गो·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.गो\nओ-कारान्तः<br>पुल्लिङ्गः<br>गो¦एक¦द्वि¦बहु\n१¦गौः¦गावौ¦गावः\n२¦गाम्¦गावौ¦गाः\n३¦गवा¦गोभ्याम्¦गोभिः\n४¦गवे¦गोभ्याम्¦गोभ्यः\n५¦गोः¦गोभ्याम्¦गोभ्यः\n६¦गोः¦गवोः¦गवाम् (*)\n७¦गवि¦गवोः (*)¦गोषु\n@@\n@@.dblock.notes\n¦\n¦\n¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"गो\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "गो",
+        "modified": "20250131164746167",
+        "modifier": "KeshavP"
+    }
+]

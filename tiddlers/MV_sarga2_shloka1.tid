@@ -1,0 +1,22 @@
+created: 20240611001457091
+creator: KeshavP
+modified: 20250623002358327
+modifier: KeshavP
+tags: 
+title: MV/sarga2/shloka1
+
+shl 1 for S2
+
+
+<$text text={{{ [<currentTiddler>split[/]last[]] }}} />
+
+----
+<$let tagFromName={{{ [<currentTiddler>split[/]last[]] }}}>
+  <$list filter="[tag<tagFromName>]" emptyMessage="345 none found">
+<<currentTiddler>>
+  </$list>
+</$let>
+
+--
+
+

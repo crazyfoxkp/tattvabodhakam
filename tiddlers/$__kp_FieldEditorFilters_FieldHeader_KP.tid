@@ -1,0 +1,10 @@
+created: 20260302155911993
+creator: केशवकृपा
+modified: 20260302170529460
+modifier: केशवकृपा
+tags: $:/tags/FieldEditorFilter kp_fieldHeader_color
+title: $:/kp/FieldEditorFilters/FieldHeader/KP
+
+[regexp[kp2_.*]then[$:/kp/EditTemplateFields/Templates/FieldHeader/KP]] 
+[regexp[kp3_.*]then[$:/kp/EditTemplateFields/Templates/FieldHeader/KP]] 
+[regexp[kp_.*]then[$:/kp/EditTemplateFields/Templates/FieldHeader/KP]]

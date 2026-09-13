@@ -1,0 +1,77 @@
+created: 20241218232714506
+creator: KeshavP
+modified: 20241218232836280
+modifier: KeshavP
+tags: 
+title: kp data-table css
+
+@@add tag $:/tags/Stylesheet when ready @@
+
+
+/* 
+list of SKS shabdas and -karaant sutras with links
+ */
+
+
+/* .uni-link { color: black; } change unilink color to black for this table only 
+ - doesn't limit to this table */
+.data-table {
+  /* colors defn */
+ --beige : #FFEBCD; --gray : #DDD; --white : #FFF; --green : #C5FFC5; --teal : #00FFDD; --pink : #FFB6C1; --blue : #ADE6FB; -blue : #4C4F50; --clay : #F0C1C1; -table : #F4F4F4; --purple : #E8C1F0; margin: 1px;
+    font-size: 1em;
+    width: 100px;
+    height: 200px;
+    border-collapse: collapse;
+    display: inline-table;
+    table-layout:auto; /* Let the width adjust automatically based on content */
+
+}
+.data-table td:has(.green-background) { 	background-color: green;} 
+.data-table td:has(.yellow-background) { 	background-color: yellow;}
+.data-table th, .data-table td {
+    text-align: center;
+    padding: 1px;
+    border: 1px solid var( --gray);
+    border-radius: 10px;
+    position: relative;
+    vertical-align: middle;
+    max-width:150px;
+}
+.data-table th {
+    background-color: var( --bk-table);
+    font-weight: bold;
+}
+.data-table td {
+    color: black;
+}
+.data-table .pill {
+    display: inline-block;
+    padding: 1px 8px ;
+    border-radius: 5px;
+    width:4em;
+    font-weight: normal;
+    text-shadow: 1px 1px 0px #000000; 
+    text-shadow: -1px -1px 0px #000000; position: relative;
+}
+.data-table   .top-third {
+            height: 50%; /* Fill top 1/2 */
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+z-index: 88;
+        }
+.data-table .pill-content {
+    position: relative; /* Position relative to allow z-index to work */
+    z-index: 99; /* Bring text to the front */
+.data-table .pu-text { color: var(--lt-blue);     font-weight:normal; }   /* Light Blue */
+.data-table .wwg {  background-image: linear-gradient(to right, var( --white) 33%, var( --white) 33%, var( --white) 66%, var( --green)  66%);  }
+.data-table .bpg {  background-image: linear-gradient(to right, var( --blue)  33%, var( --pink)  33%, var( --pink)  66%, var( --green)  66%);  }
+.data-table .bww {  background-image: linear-gradient(to right, var( --blue)  33%, var( --white) 33%, var( --white) 66%, var( --white) 66%);  }
+.data-table .bwg {  background-image: linear-gradient(to right, var( --blue)  33%, var( --white) 33%, var( --white) 66%, var( --green)  66%);  }
+.data-table .wpw {  background-image: linear-gradient(to right, var( --white) 33%, var( --pink)  33%, var( --pink)  66%, var( --white) 66%);  }
+.data-table .bpw {  background-image: linear-gradient(to right, var( --blue)  33%, var( --pink)  33%, var( --pink)  66%, var( --white) 66%);  }
+.data-table .color-a {  background-color: var( --clay); width:30px;}
+.data-table .color-b {  background-color: var( --purple) ; }
+.data-table .color-c {  background-color: var( --teal) ; }
+.data-table .color-d {  background-color: var( --beige) ; color: black;}

@@ -1,0 +1,8 @@
+created: 20250830233935134
+creator: KeshavP
+modified: 20251005221507165
+modifier: KeshavP
+tags: $:/tags/FieldEditorFilter kp_done_dropdown
+title: $:/config/FieldEditorFilters/Proofreading_Done_dropdown
+
+[regexp[_Done$]then[$:/config/EditTemplateFields/Templates/Proofreading_Done_dropdown]]

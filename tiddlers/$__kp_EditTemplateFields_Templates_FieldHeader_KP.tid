@@ -1,0 +1,23 @@
+created: 20260302155102809
+creator: केशवकृपा
+modified: 20260302171443885
+modifier: केशवकृपा
+tags: kp_fieldHeader_color
+title: $:/kp/EditTemplateFields/Templates/FieldHeader/KP
+
+\whitespace trim
+<$let 
+    bgColor={{{ [<currentField>regexp[kp2_.*]then[rgb(33,35,22)]] ~[<currentField>regexp[kp3_.*]then[rgb(22,33,35)]] ~[[rgb(45,30,30)]] }}}
+    borderColor={{{ [<currentField>regexp[kp2_.*]then[rgb(138,159,50)]] ~[<currentField>regexp[kp3_.*]then[rgb(50,138,159)]] ~[[rgb(159,50,50)]] }}}
+>
+
+<div style={{{ [<bgColor>addprefix[background-color: ]addsuffix[;]] [<borderColor>addprefix[border-left: 5px solid ]addsuffix[;]] +[join[ ]] }}}>
+  <$edit-text 
+      field=<<currentField>> 
+      class="tc-edit-texteditor tc-edit-fieldeditor" 
+      tag="textarea"
+      style={{{ [<bgColor>addprefix[background-color: ]addsuffix[ !important; color: white !important; border: none !important; width: 100%; min-height: 1.2em;]] }}}
+  />
+</div>
+
+</$let>

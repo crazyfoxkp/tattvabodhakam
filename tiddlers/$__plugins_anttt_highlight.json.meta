@@ -1,0 +1,12 @@
+author: Jan Weytjens
+core-version: >=5.3.6
+dependents: 
+description: Find and highlight text in the tiddlers in the story river
+list: readme license settings
+name: Highlight
+plugin-type: plugin
+revision: 0
+source: https://github.com/janttt/tiddlywiki.highlight
+title: $:/plugins/anttt/highlight
+type: application/json
+version: 1.0.5-beta

@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "म",
+        "variety": "",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "सर्वनाम",
+        "sutra": "[[किम्·पु·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.किम्·पु\nम-कारान्तः<br>पुल्लिङ्गः ║सर्वनाम<br>किम्·पु¦एक¦द्वि¦बहु\n१¦कः¦कौ¦के\n२¦कम्¦कौ¦कान्\n३¦केन¦काभ्याम्¦कैः\n४¦कस्मै¦काभ्याम्¦केभ्यः\n५¦कस्मात्¦काभ्याम्¦केभ्यः\n६¦कस्य¦कयोः¦केषाम्\n७¦कस्मिन्¦कयोः¦केषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see किम्·पु·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"किम्·पु\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "किम्·पु",
+        "modified": "20250131164746132",
+        "modifier": "KeshavP"
+    }
+]

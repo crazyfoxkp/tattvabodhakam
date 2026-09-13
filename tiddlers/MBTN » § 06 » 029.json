@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "029",
+        "tags": "[[MBTN » § 06]]",
+        "text": "यदि प्रमत्तोऽसि मदीयकार्ये नयाम्यहं त्वेन्द्र सुतस्य मार्गम् ।<br> प्रायः स्वकार्ये प्रतिपादिते हि मदोद्धता न प्रतिकर्तुमीशते ॥६.२९ ॥",
+        "title": "MBTN » § 06 » 029"
+    }
+]

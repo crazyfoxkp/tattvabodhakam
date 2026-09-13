@@ -1,0 +1,15 @@
+[
+    {
+        "anta": "ष",
+        "variety": "",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.द्विष्·सूत्र\nष-कारान्तः<br>पुल्लिङ्गः<br>द्विष्·सूत्र¦एक¦द्वि¦बहु\n१¦ष् ∆→ ट्¦औ¦ः\n२¦म्¦औ¦ः\n३¦आ¦१˚/१ √ ट् ➝ ड् + भ्याम्¦१˚/१ √ ट् ➝ ड् + भिः\n४¦ए¦१˚/१ √ ट् ➝ ड् + भ्याम्¦१˚/१ √ ट् ➝ ड् + भ्यः\n५¦ ः¦१˚/१ √ ट् ➝ ड् + भ्याम्¦१˚/१ √ ट् ➝ ड् + भ्यः\n६¦ ः¦ओ:¦आम्\n७¦इ¦ओ:¦१˚/१ √ ट् ➝ ड् + सु\n@@\n@@.dblock.notes\nहलन्त=¦mostly स्त्री and पु same <br>general rule: if 3/3 variation exists, apply same + sutra to 4-5/3 and 3-4-5/2 <br>३˚/१➝७˚/१  आ ए ः ः इ <br>२˚/३ from ५˚/१, ६˚/१ except in नपुं\nष-कारान्तः¦१˚/१ ष् √∆ ➝ ट्  <br>३˚/३ , ७˚/३  = १˚/१ ∆ ट् ➝ ड्  + सूत्र (ट्+भ=ड्भ जश्त्व संधि, ड्+सु → ड्सु) \n¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"द्विष्·सूत्र\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि सूत्र v2",
+        "title": "द्विष्·सूत्र",
+        "modified": "20250131164746237",
+        "modifier": "KeshavP"
+    }
+]

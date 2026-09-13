@@ -1,0 +1,12 @@
+created: 20250712234918146
+creator: KeshavP
+list-before: $:/config/ViewTemplateBodyFilters/default
+modified: 20251112182428350
+modifier: KeshavP
+tags: $:/tags/ViewTemplateBodyFilter kp-showHideBrackets
+title: kp-showHideBracketContents/filter
+
+[[$:/state/kp-showHideBracketContents/view]text[show]] 
+:then[[kp-showHideBracketContents/template/hideBrackets]] 
+:else[[kp-showHideBracketContents/template/showBrackets]]
+:filter[<..currentTiddler>tag[Journal]]

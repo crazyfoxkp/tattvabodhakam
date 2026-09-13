@@ -1,0 +1,15 @@
+[
+    {
+        "anta": "न",
+        "variety": " ५-१",
+        "notes": "",
+        "linga": "नपुं॰",
+        "group": "",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.नामन्·सूत्र\nन-कारान्तः ५-१<br>नपुंसकलिङ्गः<br>नामन्·सूत्र¦एक¦द्वि¦बहु\n१¦न् लोप ONLY¦ई¦prev दिर्घ + इ\n२¦न् लोप ONLY¦ई¦prev दिर्घ + इ\n३¦-मन् + म्न + आ¦न् लोप + भ्याम्¦न् लोप + भिः\n४¦-मन् + म्न + ए¦न् लोप + भ्याम्¦न् लोप + भ्यः\n५¦-मन् + म्न + ः¦न् लोप + भ्याम्¦न् लोप + भ्यः\n६¦-मन् + म्न + ः¦-मन् + म्न + ओ:¦-मन् + म्न + आम्\n७¦-मन् + म्न + इ¦-मन् + म्न + ओ:¦न् लोप + सु\n@@\n@@.dblock.notes\nहलन्त=¦mostly स्त्री and पु same <br>general rule: if 3/3 variation exists, apply same + sutra to 4-5/3 and 3-4-5/2 <br>३˚/१➝७˚/१  आ ए ः ः इ <br>२˚/३ from ५˚/१, ६˚/१ except in नपुं\nन-कारान्त¦१˚/१ न् लोप + दीर्घ <br>३˚/३ ७˚/३ न् लोप + सूत्र; follow ३˚/३ variation general rule<br>न् ending is not obstacle for न ➝ ण rule\n¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"नामन्·सूत्र\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि सूत्र v2",
+        "title": "नामन्·सूत्र",
+        "modified": "20250131164746264",
+        "modifier": "KeshavP"
+    }
+]

@@ -1,0 +1,13 @@
+created: 20250629210845509
+creator: KeshavP
+modified: 20250629211324503
+modifier: KeshavP
+tags: 
+title: kp smv audio float test
+
+
+<span style="  display: inline;  float: right;  padding: 10px;  padding-top: 0;  top: 5%;  left: 92%;">
+<table class="sargalist"><tr>
+<td style="width: 5%; vertical-align:top;padding-top:15px;"><audio src={{!!audio}}  controls preload="none" style="width:100%; object-fit: contain"></audio></td>
+</tr></table>
+</span>

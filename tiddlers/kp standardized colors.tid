@@ -1,0 +1,26 @@
+created: 20250621191441549
+creator: KeshavP
+modified: 20260227163442120
+modifier: केशवकृपा
+tags: 
+title: kp standardized colors
+
+
+|darkbackground: |rgb(15,	17,	0)	;|@@background:rgb(15, 17, 0);color:white ; .... bk-sample --@@|
+|medium_dark_bk: |rgb(25, 27, 10);|@@background:rgb(25, 27, 10);color:white ; .... bk-sample --@@|
+|lighterbackground: |rgb(33,	35,	22)	;|@@background:rgb(33,	35,	22);color:white ; .... bk-sample -- @@|
+|sidebar_links: |rgb(148,	171,	38)	;|@@background:rgb(25, 27, 10);color:rgb(148,	171,	38) ; link color@@|
+|link_color2: |rgb(123,	166,	52)	;|@@background:rgb(25, 27, 10);color:rgb(123,	166,	52) ; link color@@|
+|foregroundtextcolor_slightlyoff_white: |rgb(191,	191,	191)	;|@@background:rgb(25, 27, 10);color:rgb(191,	191,	191) ; text color@@|
+|foregroundtextcolor_moreoff_white: |rgb(160,160,160);|@@background:rgb(25, 27, 10);color:rgb(160,160,160) ; text color@@|
+|foregroundtextcolor_emphasis_white: |white;|@@background:rgb(25, 27, 10);color:white ; text color@@|
+|tab_background: |rgb(44,	51,	0)	;|@@background:rgb(44,	51,	0);color:rgb(191, 191, 191) ; tab bk-color@@|
+|button_background: |rgb(117,	136,	0)	;|@@background:rgb(117,	136,	0);color:rgb(191, 191, 191) ; btn bk-color@@|
+|badge_color: |rgb(161,	7,	0)	;|@@background:rgb(15, 17, 0));color:rgb(161,	7,	0) ; badge color@@|
+|table_header_background: |rgb(55,	57,	43)	;|@@background:rgb(15, 17, 0);color:rgb(191, 191, 191) ; tbl header bk-color@@|
+|dynamictable_highlight: |rgb(44,	52,	0)	;|@@background:rgb(44,	52,	0);color:rgb(191, 191, 191) ; dynamic tbl highlight bk@@|
+|50% gray|rgb(128, 128, 128); |@@background:rgb(128, 128, 128); color:white ; .... bk-sample --@@|
+|60% gray|rgb(102, 102, 102); |@@background:rgb(102, 102, 102); color:white ; .... bk-sample --@@|
+|70% gray|rgb(77, 77, 77); |@@background:rgb(77, 77, 77); color:white ; .... bk-sample --@@|
+|80% gray|rgb(51, 51, 51); |@@background:rgb(51, 51, 51); color:white ; .... bk-sample --@@|
+|90% gray|rgb(26, 26, 26); |@@background:rgb(26, 26, 26); color:white ; .... bk-sample --@@|

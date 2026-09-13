@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "004",
+        "tags": "[[MBTN » § 06]]",
+        "text": "वीक्ष्यैव तां निपतितामथ रामदेव: सोऽङ्गष्ठमात्रचलनादतिलीलयैव ।<br> सम्प्रास्य योजनशतेऽथ तयैव चोवीं सी विदार्य दितिजानहन रसास्थान् ॥६.४ ॥",
+        "title": "MBTN » § 06 » 004"
+    }
+]

@@ -1,0 +1,8 @@
+created: 20250131153954075
+creator: KeshavP
+modified: 20250323153514322
+modifier: KeshavP
+tags: $:/tags/SideBar
+title: शब्दाः
+
+<<table-dynamic filter:"[tag[शब्दरूपाणि]tag[v2]!tag[सूत्र]]" fields:"tbl-expand anta linga title group variety sutra" stateTiddler:"शब्दाः" class:"table-hover-olive" caption:"''शब्दाः''">>

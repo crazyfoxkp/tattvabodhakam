@@ -1,0 +1,23 @@
+created: 20240609185238855
+creator: KeshavP
+modified: 20240609185324052
+modifier: KeshavP
+tags: $:/tags/Macro
+title: try-macro-slide for transclusion
+
+\define slider(tid)
+<$vars state=<<qualify "$:/state/slider/$tid$">>>
+<$list filter="[<state>is[missing]]" variable="show_contents">
+   <$button class="tc-btn-invisible" style="text-align:left;">
+      <$transclude tiddler="$tid$" mode="block"/>
+      <$action-setfield $tiddler=<<state>> text="hide"/>
+   </$button>
+</$list>
+<$list filter="[<state>is[tiddler]]" variable="show_title">
+   <$button class="tc-btn-invisible" style="text-align:left;">
+     <$text text="$tid$"/> {{$:/core/images/chevron-right}}
+      <$action-deletetiddler $tiddler=<<state>>/>
+   </$button>
+</$list>
+</$vars>
+\end

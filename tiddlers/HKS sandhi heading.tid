@@ -1,0 +1,10 @@
+caption: Add HKS Sandhi heading
+created: 20200906024543003
+creator: KeshavP
+modified: 20200906024656317
+modifier: KeshavP
+tags: $:/tags/TextEditor/Snippet
+title: HKS sandhi heading
+
+! ಶ್ರೀ ಹರಿಕಥಾಮೃತಸಾರ
+!! ಸಂಧಿ – <$view field='caption'/><br/>

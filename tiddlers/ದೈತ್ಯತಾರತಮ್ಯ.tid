@@ -1,0 +1,10 @@
+aliases: 
+caption: 30 - ಶ್ರೀ ದೈತ್ಯತಾರತಮ್ಯ ಸಂಧಿ
+created: 20200901000000000
+creator: KeshavP
+modified: 20200906200955542
+modifier: KeshavP
+tags: HKS ಹರಿಕಥಾಮೃತಸಾರ
+title: ದೈತ್ಯತಾರತಮ್ಯ
+
+<table><$list filter="[tag[HKS30 ದೈತ್ಯತಾರತಮ್ಯ]sortan[title]]"><tr><th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>notes</$link></th><td/><td><$transclude mode="block"/></td></tr></$list></table>

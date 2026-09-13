@@ -1,0 +1,25 @@
+caption: श्लोके
+created: 20250628170902366
+creator: KeshavP
+modified: 20250628170902366
+modifier: KeshavP
+opt-checked: [all[]]
+opt-unchecked: [!is[system]]
+search-set: [!is[system]]
+search-sort: [sort[title]limit[250]]
+tags: $:/tags/SearchResults
+title: $:/config/field-search/tab/श्लोके
+type: text/vnd.tiddlywiki
+
+\define searchTerm() [search:$(field)$<userInput>]
+\define openConfig() 
+<$button>
+  <$action-setfield $tiddler="$:/state/tab-1749438307" text="$:/plugins/wikilabs/field-search/CP/Settings/field-search"/>
+  <$action-navigate $to="$:/ControlPanel"/>
+- configuration needed -
+</$button>
+\end
+
+<$list filter="[[$:/config/field-search/data/श्लोके]indexes[]sortby{$:/config/field-search/sortby}]" variable=field emptyMessage="<<openConfig>>">
+{{||$:/plugins/wikilabs/field-search/templates/Results}}
+</$list>

@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "026",
+        "tags": "[[MBTN » § 06]]",
+        "text": "स एवमुक्तवा हरिराजसन्निधौ द्वीपेषु सप्तस्वपि वानरान् प्रति ।<br> सम्मळनायाऽ शुगतीन् स्म वानरान् प्रस्थापयामास समस्तशः प्रभुः ॥६.२६ ॥",
+        "title": "MBTN » § 06 » 026"
+    }
+]

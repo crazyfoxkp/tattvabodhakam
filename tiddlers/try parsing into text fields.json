@@ -1,0 +1,16 @@
+[
+    {
+        "created": "20240602193930575",
+        "creator": "KeshavP",
+        "text": "pada\n\n<$set name='inputstr' value=' पदच्छछेदः =  अनाकुलं गोकुलमुल्ललास यत्पालितं #\n            अन्वयः = अनाकुलं गोकुलमुल्ललास यत्पालितं नित्यमनाविलात्म #\n            अर्थः = \n1. अनाकुलं = \n\n2. गोकुलमुल्ललास = \n\n3. यत्पालितं = \n\n4. नित्यमनाविलात्म = \n #\n            तात्पपर्यः =  #\n            व्याकर्ण विशेषः = #'>\n\n{$:/temp/my-text} = <inputstr>\n\n\n<$list filter=\"[<inputstr>splitregexp[#]]\" variable=\"line\">\n  <$set name=\"fieldName\" value={{{ [<line>splitregexp[=]first[]trim[]addprefix[kp_]] }}}>\n    <$set name=\"fieldValue\" value={{{ [<line>split[=]rest[]join[= <br>]] }}}>\n<$text text=<<fieldValue>>/><br><br>\n</$set></$set>\n</$list>\n\n<hr>\n<$edit-text tiddler=\"$:/temp/my-text\" class=\"tc-edit-texteditor\" placeholder=\"paste here...\"/>\n\n<$button actions=\"\"\"\n\t<$action-setmultiplefields\n\t\t$tiddler=<<currentTiddler>>\n\t\t$fields={{{ [{$:/temp/my-text}splitregexp[#]count[]] :map[range[1],<currentTiddler>addprefix[kp_]join[ ]] }}}\n\t\t$values={{{ [{$:/temp/my-text}splitregexp[\\n]format:titlelist[]join[ ]] }}}\n\t/>\n\"\"\">create xx fields</$button>\n\n\n\n",
+        "tags": "",
+        "title": "try parsing into text fields",
+        "modified": "20241008162309006",
+        "modifier": "KeshavP",
+        "kp_पदच्छछेदः": "अनाकुलं गोकुलमुल्ललास यत्पालितं",
+        "kp_अन्वयः": "अनाकुलं गोकुलमुल्ललास यत्पालितं नित्यमनाविलात्म",
+        "kp_अर्थः": "1. अनाकुलं = \n\n2. गोकुलमुल्ललास = \n\n3. यत्पालितं = \n\n4. नित्यमनाविलात्म =",
+        "kp_तात्पपर्यः": "",
+        "kp_व्याकर्ण विशेषः": ""
+    }
+]

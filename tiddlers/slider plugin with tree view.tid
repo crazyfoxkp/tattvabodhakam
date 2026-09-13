@@ -1,0 +1,35 @@
+created: 20240610170517073
+creator: KeshavP
+modified: 20240610170926941
+modifier: KeshavP
+tags: internet
+title: slider plugin with tree view
+
+Ref to https://www.youtube.com/watch?v=zEQWc-alBMQ
+
+The tree view is tidgraph,
+ https://ihm4u.github.io/tw5plugs/ 
+and the slider is a bit of custom wikitext:
+
+
+```
+Depth: {{$:/Range 4}}
+
+
+ <$range tiddler="$:/Range 4" min="1" max="5" default="1" increment="1"/>
+<$set name="depth" value={{$:/Range 4}}>
+<$tidgraph start="tiddlername" maxdepth=<<depth>> />
+</$set>
+```
+
+So Range 4 is the name of a background tiddler/ card, you could put any name there, the ``{{}}`` transcludes the value of that tiddler into the text.
+
+```
+ <$range tiddler="$:/Range 4" min="1" max="5" default="1" increment="1"/> creates the slider.
+
+<$set name="depth" value={{$:/Range 4}}> sets the depth value in the tid graph to the value of Range 4
+
+<$tidgraph start="name at top tree" maxdepth=<<depth>> /> is the call to tidgraph to the tiddler it starts building the tree from.
+```
+
+All created by one of the lovely people in the tiddlywiki gouggle group.

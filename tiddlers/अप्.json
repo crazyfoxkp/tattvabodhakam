@@ -1,0 +1,18 @@
+[
+    {
+        "created": "20250201171047536",
+        "creator": "KeshavP",
+        "text": "{{!!notes}}\n\n\n@@.dblock.अप्\nप-कारान्तः १<br>स्त्रीलिङ्गः<br>अप्¦एक¦द्वि¦बहु\n१¦  ¦ ¦ आपः\n२¦  ¦ ¦ अपः\n३¦  ¦ ¦ अद्भिः\n४¦  ¦ ¦ अद्भ्यः\n५¦  ¦ ¦ अद्भ्यः\n६¦  ¦ ¦ अपाम्\n७¦  ¦ ¦ अप्सु\n@@\n\n<<table-csv tidName:\"\" delimiter:\"¦\"  class:\"table-hover-olive\" header:\"yes\"  id:\"अप्\">>\n  ",
+        "anta": "प",
+        "variety": " ",
+        "notes": "नित्य बहुवचनम्",
+        "linga": "स्त्री",
+        "group": "⟣",
+        "sutra": "",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "अप्",
+        "modified": "20250627155908683",
+        "modifier": "KeshavP"
+    }
+]

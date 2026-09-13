@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "050",
+        "tags": "[[MBTN » § 06]]",
+        "text": "स दग्धपक्ष: सवितृप्रतापाच्छ्रुत्वैव रामस्य कथां सपक्ष: ।<br> भूत्वा पुनथापि मृतिं जटायुषः शुश्राव पृष्ट्वा पुनरेव सम्यक् ॥६.५०॥",
+        "title": "MBTN » § 06 » 050"
+    }
+]

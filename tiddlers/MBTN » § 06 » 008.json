@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "008",
+        "tags": "[[MBTN » § 06]]",
+        "text": "श्रुत्वाऽस्य वाक्यमवमृश्य दिते: सुतांस्तान धातुर्वरादखिलपम्भिरभेद्य रूपान् ।<br> ब्रह्मत्वमातुमचलं तपसि प्रवृत्तानेकेषुणा सपदि तान् प्रविभेद रामः ॥६.८॥",
+        "title": "MBTN » § 06 » 008"
+    }
+]

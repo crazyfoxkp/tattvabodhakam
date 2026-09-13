@@ -1,0 +1,15 @@
+[
+    {
+        "anta": "त",
+        "variety": " ४",
+        "notes": "पुल्लिङ्गः / -वत् -मत् अन्त",
+        "linga": "पु॰",
+        "group": "",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.भगवत्·सूत्र\nत-कारान्तः ४<br>पुल्लिङ्गः<br>भगवत्·सूत्र¦एक¦द्वि¦बहु\n१¦त् ∆➝ आन्¦त् ∆➝ न् + तौ¦त् ∆➝ न् + तः\n२¦त् ∆➝ न् + तम्¦त् ∆➝ न् + तौ¦ः\n३¦आ¦त् ∆➝द् + भ्याम्¦त् ∆➝द् + भिः\n४¦ए¦त् ∆➝द् + भ्याम्¦त् ∆➝द् + भ्यः\n५¦ः¦त् ∆➝द् + भ्याम्¦त् ∆➝द् + भ्यः\n६¦ः¦ओ:¦आम्\n७¦इ¦ओ:¦सु\n@@\n@@.dblock.notes\nहलन्त=¦mostly स्त्री and पु same <br>general rule: if 3/3 variation exists, apply same + sutra to 4-5/3 and 3-4-5/2 <br>३˚/१➝७˚/१  आ ए ः ः इ <br>२˚/३ from ५˚/१, ६˚/१ except in नपुं\nत-कारान्त¦१˚/१  ∆ -त् +अन्<br>२˚/१ add म्  <br>३˚/३ त ∆➝द + सूत्र; follow ३˚/३ variation general rule\n¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"भगवत्·सूत्र\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि सूत्र v2",
+        "title": "भगवत्·सूत्र",
+        "modified": "20250131164746287",
+        "modifier": "KeshavP"
+    }
+]

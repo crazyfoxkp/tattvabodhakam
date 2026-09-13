@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "द",
+        "variety": "",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "सर्वनाम",
+        "sutra": "[[यद्·पु·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.यद्·पु\nद-कारान्तः<br>पुल्लिङ्गः ║सर्वनाम<br>यद्·पु¦एक¦द्वि¦बहु\n१¦यः¦यौ¦ये\n२¦यम्¦यौ¦यान्\n३¦येन¦याभ्याम्¦यैः\n४¦यस्मै¦याभ्याम्¦येभ्यः\n५¦यस्मात्¦याभ्याम्¦येभ्यः\n६¦यस्य¦ययोः¦येषाम्\n७¦यस्मिन्¦ययोः¦येषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see यद्·पु·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"यद्·पु\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "यद्·पु",
+        "modified": "20250131164746354",
+        "modifier": "KeshavP"
+    }
+]

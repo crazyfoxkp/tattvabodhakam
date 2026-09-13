@@ -1,0 +1,92 @@
+caption: More
+created: 20151205115034144
+modified: 20231121043810430
+title: TiddlyTools/Macros/more/Info
+
+\define program() [prefix[TiddlyTools/Macros/more]sort[]]
+
+\define import(type)
+<$set name="tids" filter="[all[tiddlers+shadows]!plugin-type[plugin]subfilter<$type$>]">
+<$let count={{{ [enlist<tids>] +[count[]] }}} label={{{ [[There are]] [<count>] [[$type$]] [[tiddlers]] +[join[ ]] }}}>
+<$macrocall $name="get" type="$type$" tids=<<tids>> label=<<label>>/>
+\end
+
+\define get(type:"required",tids,label)
+\define show()		<$list filter="[enlist<tids>]"> <nobr><$link/>''<$text text={{{ [enlist<tids>last[]!match<currentTiddler>then[,]] }}}/>''</nobr> </$list>
+\define save()		<$action-sendmessage $message="tm-download-file" $param=<<format>> exportFilter=<<tids>> filename={{{ [<popid>get[target]] ~[[tiddlers]] +[addsuffix[.json]] }}} />
+\define format()	$:/core/templates/exporters/JsonFile
+<$set name="tids" filter="[subfilter<__tids__>]">
+<$let count={{{ [enlist<tids>] +[count[]] }}}
+	  class={{{ [<__label__>!match[]then[tc-btn-invisible tc-tiddlylink]else[tc-button tt-button]] }}}
+	  style={{{ [<__label__>!match[]else[font-size:90%;line-height:1em;margin-top:2px;]] }}}
+	  label={{{ [<__label__>!match[]else[$type$]sentencecase[]] }}}
+		tip={{{ [<count>] [[$type$ tiddlers:]] [[CLICK to download or DRAG AND DROP to install]] +[join[ ]] }}}>
+<$transclude tiddler="TiddlyTools/Catalog/Download">
+<div style=<<style>>>
+	<$button class=<<class>> style=<<style>> dragFilter=<<tids>> tooltip=<<tip>>><$text text=<<label>>/> {{$:/core/images/download-button}}<<save>></$button>
+	<$list filter="[<__label__>match[]]"><<show>></$list>
+</div>
+\end
+
+\define top()             <a class="resize" style="float:right;fill:gray;" href="##top" title="go to Table of Contents">{{$:/core/images/chevron-up}}</a>
+\define id(name)          <a id="#$name$">$name$</a>
+\define anchor(name)      <a class="tc-tiddlylink" href="##$name$">''<$text text="$name$"/>''</a>
+
+<style>
+.tt_info .contents          { font-size:80%;line-height:1.2em;border:1px solid;padding:1em;border-radius:1em;background:<<colour background>>;box-shadow: 0.3em 0.3em 0.6em rgba(0,0,0,0.5); }
+.tt_info .contents a::after { display:block; content: ""; }
+.tt_info h1                 { border-bottom:1px solid;    }
+.tt_info .resize svg        { height:1em; width:1em; }
+</style>
+<span class="tt_info">
+
+|  author|''[ext[Eric Shulman|mailto:elsdesign@gmail.com]]''|
+|  source|''https://TiddlyTools.com'' ([[license|https://TiddlyTools.com/#TiddlyTools%2FCatalog%2FLegal]])|
+| updated|''<$view field="modified" format="date" template="DDD, MMM DDth YYYY at 0hh12:0mm:0ssam"/>''|
+
+<<import program>>
+
+!! Summary
+<<<
+The ``<<more>>`` macro applies a filter and then displays the first "N" items from the resulting list followed by a link to view "N" more items, until the entire list content is shown.
+<<<
+
+!! Parameters
+<<<
+|Parameter | Default       |Description|h
+|filter    | //required//  |Generates the list of items to display.|
+|size      | `10`          |Number of items to show per 'page'.|
+|template  | `more-bullet` |Layout for displaying one item.  See Notes below.|
+|id        | //none//      |If multiple uses of ``<<more>>`` are embedded //in the same tiddler//, you can provide a unique id value for each instance so that they are handled separately.|
+<<<
+!! Notes
+<<<
+!! template
+Specifies the layout for showing one item.<br>You can use a pre-defined keyword or specify a tiddler title or macro name for custom output.
+
+Available keywords:
+
+* ''more-text'' - one plain text item per line<br><code><$text text=<<more-text>>/></code><br>
+* ''more-link'' - one linked item per line<br><code><$text text=<<more-link>>/></code><br>
+* ''more-bullet'' - one linked item per bullet line<br><code><$text text=<<more-bullet>>/></code><br>
+* ''more-comma'' - comma separated linked items<br><code><$text text=<<more-comma>>/></code><br>
+* ''more-transclude'' - transclude item content<br><code><$text text=<<more-transclude>>/></code><br>
+<<<
+
+!! Examples
+
+!! plain text
+<<<
+`<<more "[all[tiddlers]]" template:more-text id:2>>`<br>
+<<more "[all[tiddlers]]" template:more-text id:2>>
+<<<
+!! numbered links
+<<<
+`<ol><<more "[all[tiddlers]]">></ol>`<br>
+<ol><<more "[all[tiddlers]]">></ol>
+<<<
+!! comma-separated links
+<<<
+`<<more "[all[tiddlers]]" template:more-comma id:1>>`<br>
+<<more "[all[tiddlers]]" template:more-comma id:1>>
+<<<

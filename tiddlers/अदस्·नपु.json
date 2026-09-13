@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "स",
+        "variety": "",
+        "notes": "",
+        "linga": "नपुं॰",
+        "group": "सर्वनाम",
+        "sutra": "[[अदस्·नपु·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.अदस्·नपु\nस-कारान्तः<br>नपुंसकलिङ्गः ║सर्वनाम<br>अदस्·नपु¦एक¦द्वि¦बहु\n१¦अदः¦अमू¦अमूनि\n२¦अदः¦अमू¦अमूनि\n३¦अमुना¦अमूभ्याम्¦अमीभिः\n४¦अमुष्मै¦अमूभ्याम्¦अमीभ्यः\n५¦अमुष्मात्¦अमूभ्याम्¦अमीभ्यः\n६¦अमुष्य¦अमुयोः¦अमीषाम्\n७¦अमुष्मिन्¦अमुयोः¦अमीषु\n@@\n@@.dblock.notes\n¦\n¦\n¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"अदस्·नपु\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "अदस्·नपु",
+        "modified": "20250131164746037",
+        "modifier": "KeshavP"
+    }
+]

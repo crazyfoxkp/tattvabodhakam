@@ -1,0 +1,16 @@
+[
+    {
+        "text": "विमतं कारणं न स्या दसत्वान्न यदीदृशम्। <br>नेदृशं तद् यथा कुम्भ कर्तेत्यत्रानुमीयते ॥ १५.२८ ॥",
+        "sarga": "15",
+        "audio": "./TW_Audio_files/SMV/sarga15/shloka15.028.mp3",
+        "applicationtype": "ex1contextmenu",
+        "title": "SMV » § 15 » 028",
+        "grantha": "श्रीसुमध्वविजयः",
+        "tags": "[[SMV » § 15]] SMV-book",
+        "caption": "<span>{{!!shloka#}} <$list filter=\"[<currentTiddler>get[Proofreading_Done]match[Yes]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "shloka#": "028",
+        "Proofreading_Done": "",
+        "modified": "20260227165621088",
+        "modifier": "केशवकृपा"
+    }
+]

@@ -1,0 +1,14 @@
+author: Mohammad Rahmani
+core-version: >=5.3.6
+created: 20250901052140017
+description: Smart, seamless, and customizable printing for TiddlyWiki
+list: readme license history
+modified: 20250901053131144
+name: Printify
+packaged-by: Gatha on 4th September 2025, 21:20:49
+plugin-type: plugin
+source: https://github.com/kookma/TW-Printify
+stability: STABILITY_1_EXPERIMENTAL
+title: $:/plugins/kookma/printify
+type: application/json
+version: 0.9.0

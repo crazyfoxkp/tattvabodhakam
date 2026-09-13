@@ -1,0 +1,28 @@
+created: 20250723162221620
+creator: KeshavP
+modified: 20250726173320023
+modifier: KeshavP
+tags: maintenance
+title: kp show-fields-template backup
+
+!!@@add $:/tags/ViewTemplate @@ when returning to original !!
+
+
+```
+<table class = "showfields">
+    <$list filter="[<currentTiddler>fields[]prefix[kp_]]" variable=fieldname>
+        <$list filter="[<currentTiddler>get<fieldname>]" variable=field-value>
+            <tr><td class=dots><$text text={{{ [<fieldname>removeprefix[kp_]] }}} /></td>
+            <td class=data>
+                <$list filter="[<fieldname>match[kp_व्याकर्ण_विशेषः]] :then[<field-value>search-replace:gim:regexp[\n⬩],[<br/>⬩]search-replace:gim:regexp[\n],[<br/>⎯]search-replace:gim:regexp[<br/>⎯}],[<br/>}]]  " variable=field_contents><<field_contents>></$list> 
+                <$list filter="[<fieldname>match[kp_अर्थः]] :then[<field-value>search-replace:gim:regexp[\n⟣],[<br/>⟣]]  " variable=field_contents2><<field_contents2>></$list>        
+
+                    <$list filter="[<fieldname>match[kp_अर्थः]] :then[<field-value>search-replace:gim:regexp[^.*?=(.*)\n*],[$1,]search-replace:gim:regexp<squarebracketpattern>,[]] +[removesuffix[,]addsuffix[.]]"  variable=sentence>
+                    <br><br><<sentence>><br><br>
+                    </$list>
+                <$list filter="[<fieldname>!search::regexp[kp_अर्थः|kp_व्याकर्ण_विशेषः]] :then[<field-value>]  " variable=sentence2><<sentence2>><br/></$list> 
+            </td></tr>
+        </$list>
+    </$list>
+</table>
+```

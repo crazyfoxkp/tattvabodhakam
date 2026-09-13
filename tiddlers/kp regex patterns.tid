@@ -1,0 +1,30 @@
+created: 20241121011710773
+creator: KeshavP
+modified: 20260622175452904
+modifier: केशवकृपा
+tags: $:/tags/Macro $:/tags/Global kp-showHideBrackets
+title: kp regex patterns
+
+\function lbr() [charcode[10]]
+\define squarebracketpattern( ) \[.*?\]
+\define linestartswithdashpattern() ^[^- ]
+\define vocabSplitPattern() [=|¦|\/]
+\define bracketContentsPattern() \{\{.*?\}\}|\{.*?\}[ ]*
+\define hideBracketsAndShowThisPattern()  🂋 
+\define findBracketsPattern() \{([^{}]+)\}
+\define showBracketsWithTicksPattern() `{$1}`
+
+\define dbl-L-BracketToCurlyPatternSearch() \[\[
+\define dbl-L-BracketToCurlyTempReplace() ««
+\define dbl-R-BracketToCurlyPatternSearch() \]\]
+\define dbl-R-BracketToCurlyTempReplace() »»
+\define bracketToCurlySearchPattern() \[([^\[\]]+)\]
+\define bracketToCurlyReplace() {$1}
+\define tempReplaceToDbl-L-Bracket() [[
+\define tempReplaceToDbl-R-Bracket() ]]
+
+\define viewTemplatePattern() ^[,.]+$
+\define viewTemplateDeDupCommas() (^\s*,\s*|,\s*,+|\s*,\s*)+
+
+
+

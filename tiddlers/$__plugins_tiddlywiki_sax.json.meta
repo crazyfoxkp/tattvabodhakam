@@ -1,0 +1,10 @@
+author: Isaac Z. Schlueter
+dependents: 
+description: sax.js library
+list: readme license
+name: sax js
+plugin-type: plugin
+stability: STABILITY_2_STABLE
+title: $:/plugins/tiddlywiki/sax
+type: application/json
+version: 5.3.6

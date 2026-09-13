@@ -1,0 +1,35 @@
+caption: {{kp-viewtoolbarbutton/cloneToSKS/Icon}} {{kp-viewtoolbarbutton/cloneToSKS/Caption}}
+created: 20260227180115087
+creator: केशवकृपा
+description: {{kp-viewtoolbarbutton/cloneToSKS/Hint}}
+list-before: $:/_sq/Stories/divertTiddlerMacro
+modified: 20260304012616639
+modifier: केशवकृपा
+tags: $:/tags/ViewToolbar kp-cloneToSKS
+title: kp-viewtoolbarbutton/cloneToSKS
+
+\whitespace trim
+<$list filter="[all[current]tag[SMV-book]]" variable="ignore">
+<$let newTitle={{{ [<currentTiddler>addsuffix[ SKS]] }}}
+      cleanTags={{{ [<currentTiddler>get[tags]enlist-input[]remove[SMV-book]append[SKS-SMV]format:titlelist[]join[ ]] }}}
+      shlokaSKS={{{ [<currentTiddler>get[shloka#]addsuffix[-SKS]] }}}>
+  <$button tooltip="Clone to SKS" aria-label="clone to SKS" class=<<tv-config-toolbar-class>>>
+    {{kp-viewtoolbarbutton/cloneToSKS/Icon}}
+    <$list filter="[<tv-config-toolbar-text>match[yes]]">
+      <span class="tc-btn-text">Clone to SKS</span>
+    </$list>
+    <$action-createtiddler $basetitle=<<newTitle>> tags=<<cleanTags>>>
+      <$list filter="[<currentTiddler>fields[]] -title -tags -created -modified" variable="f">
+        <$action-setfield $tiddler=<<createTiddler-title>> $field=<<f>> $value={{{ [<currentTiddler>get<f>] }}} />
+      </$list>
+      <$action-setfield $tiddler=<<createTiddler-title>> shloka#=<<shlokaSKS>> />
+      <$action-setfield 
+          $tiddler=<<createTiddler-title>> 
+          created={{{ [<now YYYY0MM0DD0HH0mm0ss000>] }}}
+          modified={{{ [<now YYYY0MM0DD0HH0mm0ss000>] }}}
+      />
+      <$action-navigate $to=<<createTiddler-title>>/>
+    </$action-createtiddler>
+  </$button>
+</$let>
+</$list>

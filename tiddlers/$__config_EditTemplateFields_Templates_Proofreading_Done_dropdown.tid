@@ -1,0 +1,12 @@
+created: 20250830234322473
+creator: KeshavP
+modified: 20250830234506717
+modifier: KeshavP
+tags: kp_done_dropdown
+title: $:/config/EditTemplateFields/Templates/Proofreading_Done_dropdown
+
+<$select tiddler=<<currentTiddler>> field="Proofreading_Done" cancelPopups="yes" class="tc-edit-texteditor tc-edit-fieldeditor">
+<$list filter='[tag[Proofreading_Done]sort[title]]'>
+<option value=<<currentTiddler>>><$view field='title'/></option>
+</$list>
+</$select>

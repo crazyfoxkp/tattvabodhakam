@@ -1,0 +1,22 @@
+created: 20241109152653473
+creator: KeshavP
+modified: 20241109152713680
+modifier: KeshavP
+tags: 
+title: kp tag cloud
+
+\define tag-pill-styles()
+background-color:$(backgroundColor)$;
+fill:$(foregroundColor)$;
+color:$(foregroundColor)$;
+
+font-size:calc(1em + (0.1em * $(count)$) / 5);
+\end
+
+
+
+<$list filter="""[tags[]!is[system]sort[title]] -font-var-sett -background-effect -fonts -TableOfContents -Regular -Ωbackstage -NM-type -tb -"Font Awesome 5" """>
+<$vars count={{{ [all[current]tagging[]count[]] }}}>
+<<tag>>
+</$vars>
+</$list>

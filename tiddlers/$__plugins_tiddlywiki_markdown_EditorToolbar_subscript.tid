@@ -1,0 +1,18 @@
+caption: {{$:/language/Buttons/Subscript/Caption}} (Markdown)
+condition: [<targetTiddler>type[text/x-markdown]] [<targetTiddler>type[text/markdown]]
+created: 20260828173133642
+creator: केशवकृपा
+description: {{$:/language/Buttons/Subscript/Hint}}
+icon: $:/core/images/subscript
+modified: 20260828173133642
+modifier: केशवकृपा
+shortcuts: ((subscript))
+tags: $:/tags/EditorToolbar
+title: $:/plugins/tiddlywiki/markdown/EditorToolbar/subscript
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="wrap-selection"
+	prefix="~"
+	suffix="~"
+/>

@@ -1,0 +1,12 @@
+caption: {{$:/language/Buttons/Picture/Caption}} (Markdown)
+condition: [<targetTiddler>type[text/x-markdown]] [<targetTiddler>type[text/markdown]]
+created: 20260828173133643
+creator: केशवकृपा
+description: {{$:/language/Buttons/Picture/Hint}}
+dropdown: $:/plugins/tiddlywiki/markdown/EditorToolbar/picture-dropdown
+icon: $:/core/images/picture
+modified: 20260828173133643
+modifier: केशवकृपा
+shortcuts: ((picture))
+tags: $:/tags/EditorToolbar
+title: $:/plugins/tiddlywiki/markdown/EditorToolbar/picture

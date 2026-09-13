@@ -1,0 +1,25 @@
+created: 20240606185724918
+creator: KeshavP
+modified: 20240606212150958
+modifier: KeshavP
+tags: 
+title: try open window - long note discussion
+
+<$button>
+<$action-sendmessage $message="tm-open-window" $param="NotePrinterTemplate" 
+shownote="true"
+windowTitle="win title"
+noteTitle="note title"
+noteSubTitle="note sub title"
+noteFilter="not filder"
+width="900"
+height="900"
+/>
+Show Notes
+</$button>
+
+
+btn not working. 
+
+details here: 
+https://talk.tiddlywiki.org/t/best-practice-tiddlywiki-and-structure-of-long-note/861/29

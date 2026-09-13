@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "त",
+        "variety": " २",
+        "notes": "",
+        "linga": "नपुं॰",
+        "group": "",
+        "sutra": "[[जगत्·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.जगत्\nत-कारान्तः २<br>नपुंसकलिङ्गः<br>जगत्¦एक¦द्वि¦बहु\n१¦जगत्¦जगती¦जगन्ति\n२¦जगत्¦जगती¦जगन्ति\n३¦जगता¦जगद्भ्याम्¦जगद्भिः\n४¦जगते¦जगद्भ्याम्¦जगद्भ्यः\n५¦जगतः¦जगद्भ्याम्¦जगद्भ्यः\n६¦जगतः¦जगतोः¦जगताम्\n७¦जगति¦जगतोः¦जगत्सु\n@@\n@@.dblock.notes\nहलन्त=¦mostly स्त्री and पु same <br>general rule: if 3/3 variation exists, apply same + sutra to 4-5/3 and 3-4-5/2 <br>३˚/१➝७˚/१  आ ए ः ः इ <br>२˚/३ from ५˚/१, ६˚/१ except in नपुं\nत-कारान्त¦१˚/१no ∆ to root <br>२˚/१ add म्  <br>३˚/३ त ∆➝द + सूत्र; follow ३˚/३ variation general rule\n\n[see जगत्·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"जगत्\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "जगत्",
+        "modified": "20250131164746180",
+        "modifier": "KeshavP"
+    }
+]

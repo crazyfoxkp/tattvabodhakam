@@ -1,0 +1,20 @@
+created: 20241110163145827
+creator: KeshavP
+modified: 20250623002408392
+modifier: KeshavP
+tags: 
+title: kp show partial with tt-more
+
+@@more button at bottom doesn't work@@
+
+<<more "[tag[sarga1]sortan[]]" size:7 id:1>>
+
+
+---
+
+* TiddlyDesktop v 0.0.20 (18)
+* macOS Sonoma 14.6.1 
+* TWCore 	5.3.0
+* screen shot of TiddlyTools/Macros/more
+* get stripped version of TW with only sarga1, kp show partial with tt-more
+* try at https://kptko-156.tiddlyhost.com

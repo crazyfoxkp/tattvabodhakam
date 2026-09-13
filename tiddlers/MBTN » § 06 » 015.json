@@ -1,0 +1,13 @@
+[
+    {
+        "adhyaya": "06",
+        "adhyaya_name": "समुद्रतरणनिश्चयः",
+        "applicationtype": "ex1contextmenu",
+        "caption": "<span>{{!!shloka}} <$list filter=\"[<currentTiddler>has[kp_अर्थः]]\"> <small style=\"color:#9fb52b;\">  ☑︎&nbsp;&nbsp;&nbsp;</small><br></$list></span>",
+        "grantha": "महाभारतताप्तर्यनिरणय ",
+        "shloka": "015",
+        "tags": "[[MBTN » § 06]]",
+        "text": "कोप: सहोदरजने पुनरन्तकाले प्रायो निवृत्तिमुपगच्छति तापकश्च ।<br> एकस्य भङ्ग इति नैव झटित्यपास्तदोषो निहन्तुमिह योग्य इति स्म मेने ॥६.१५ ॥",
+        "title": "MBTN » § 06 » 015"
+    }
+]

@@ -1,0 +1,39 @@
+created: 20241211181803020
+creator: KeshavP
+modified: 20260227150938201
+modifier: केशवकृपा
+tags: $:/tags/Macro
+title: kp macros
+
+\procedure renderFieldCell(fieldName, targetTiddler)
+\whitespace trim
+<$let fieldValue={{{ [<targetTiddler>get<fieldName>] }}}>
+  <$list filter="[<fieldValue>!is[blank]]">
+    
+<$list filter="[<fieldName>search[व्याकर्ण_विशेषः]]">
+       <$let result={{{ [<fieldValue>search-replace:gim:regexp[\n⬩],[<br/>⬩]search-replace:gim:regexp[\n],[<br/>⋯ ]search-replace:gim:regexp[<br/>⋯ }],[<br/>}]] }}}>
+          <$transclude $variable="result" $mode="inline"/>
+       </$let>
+    </$list>
+
+    <$list filter="[<fieldName>search[अर्थः]]">
+       <$let 
+         field_contents2={{{ [<fieldValue>search-replace:gim:regexp[\n⟣],[<br/>⟣]] }}}
+         sentence={{{ [<fieldValue>search-replace:gim:regexp[^.*?=(.*)\n*],[$1,]search-replace:gim:regexp<squarebracketpattern>,[]] +[removesuffix[,]addsuffix[.]] +[search-replace:gim:regexp<viewTemplateDeDupCommas>,[, ]search-replace:gim:regexp[^\s*,\s*],[]] }}}
+       >
+         <%if [<sentence>search::regexp<viewTemplatePattern>] %>
+            ---
+         <%else%>
+            <<field_contents2>><br><br>
+            <<sentence>>
+         <%endif%>
+       </$let>
+    </$list>
+
+    <$list filter="[<fieldName>!search[अर्थः]!search[व्याकर्ण_विशेषः]]">
+       <<fieldValue>>
+    </$list>
+
+  </$list>
+</$let>
+\end

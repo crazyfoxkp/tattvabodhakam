@@ -1,0 +1,11 @@
+created: 20260211170103284
+creator: केशवकृपा
+modified: 20260211170641495
+modifier: केशवकृपा
+tags: $:/tags/ViewTemplate/Subtitle
+title: $:/core/ui/ViewTemplate/subtitle/modified
+
+@@display:inline-block;
+Created <$view field="created" format="date" template="DD-mmm-YYYY"/> / 
+Updated <$view field="modified" format="date" template="DD-mmm-YYYY"/>
+@@

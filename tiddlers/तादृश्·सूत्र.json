@@ -1,0 +1,15 @@
+[
+    {
+        "anta": "श",
+        "variety": "",
+        "notes": "",
+        "linga": "पु॰",
+        "group": "",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.तादृश्·सूत्र\nश-कारान्तः<br>पुल्लिङ्गः<br>तादृश्·सूत्र¦एक¦द्वि¦बहु\n१¦श् ∆→ क्¦औ¦ः\n२¦म्¦औ¦ः\n३¦आ¦१˚/१ √ क् ➝ ग् + भ्याम्¦१˚/१ √ क् ➝ ग् + भिः\n४¦ए¦१˚/१ √ क् ➝ ग् + भ्याम्¦१˚/१ √ क् ➝ ग् + भ्यः\n५¦ ः¦१˚/१ √ क् ➝ ग् + भ्याम्¦१˚/१ √ क् ➝ ग् + भ्यः\n६¦ ः¦ओ:¦आम्\n७¦इ¦ओ:¦१˚/१ √ क् + सु\n@@\n@@.dblock.notes\nहलन्त=¦mostly स्त्री and पु same <br>general rule: if 3/3 variation exists, apply same + sutra to 4-5/3 and 3-4-5/2 <br>३˚/१➝७˚/१  आ ए ः ः इ <br>२˚/३ from ५˚/१, ६˚/१ except in नपुं\nश-कारान्तः¦१˚/१ श् √∆ ➝ क्  <br>३˚/३ , ७˚/३  = १˚/१ ∆ श् ➝ क्  + सूत्र (क्+भ=ग्भ जश्त्व संधि, क्‌+स → क्ष) \n¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"तादृश्·सूत्र\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि सूत्र v2",
+        "title": "तादृश्·सूत्र",
+        "modified": "20250131164746228",
+        "modifier": "KeshavP"
+    }
+]

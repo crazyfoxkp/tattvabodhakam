@@ -1,0 +1,11 @@
+created: 20251026135001918
+creator: KeshavP
+modified: 20251026141629450
+modifier: KeshavP
+tags: 
+title: दिनपाठ KM
+
+<$list filter =" [field:notes[दिनपाठ]] ">
+
+<$transclude/>
+</$list>

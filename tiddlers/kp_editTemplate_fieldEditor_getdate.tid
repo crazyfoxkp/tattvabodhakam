@@ -1,0 +1,10 @@
+created: 20260820165953485
+creator: केशवकृपा
+modified: 20260820170052257
+modifier: केशवकृपा
+tags: 
+title: kp/editTemplate/fieldEditor/getdate
+
+<$edit-text tiddler=<<currentTiddler>> field=<<currentField>> tag="input" type="date"
+   class="tc-edit-texteditor tc-edit-fieldeditor" tabindex={{$:/config/EditTabIndex}}
+   cancelPopups="yes"/>

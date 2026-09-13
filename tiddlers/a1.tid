@@ -1,0 +1,26 @@
+audio: ./TW_Audio_files/SMV/sarga1/shloka1.001.mp3
+created: 20240621173419966
+creator: KeshavP
+modified: 20241105050344905
+modifier: KeshavP
+tags: [[test tag here]]
+title: a1
+
+text for a1
+    <tr>
+      <td class="audio-container">        <audio class="audio-controls" controls>
+          <source src='{{{ [<currentTiddler>get[audio]] }}}' type='audio/mpeg'>
+          Your browser does not support the audio element.
+        </audio>
+      </td>
+    </tr>
+
+<audio controls>
+    <source src='{{{ [<currentTiddler>get[audio]] }}}' type="audio/mpeg">
+</audio>
+
+<hr>
+
+<audio src={{!!_canonical_uri}} autoplay loop controls style="width:80%; object-fit: contain"></audio>
+
+<audio src={{!!audio}}  controls style="width:80%; object-fit: contain"></audio>

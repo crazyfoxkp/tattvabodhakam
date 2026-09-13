@@ -1,0 +1,11 @@
+author: Mario Pietsch
+core-version: >=5.2.0
+dependents: 
+description: A compact wikitext syntax overview
+list: readme license history
+name: Cheatsheet TW WikiText
+plugin-type: plugin
+stability: STABILITY_2_STABLE
+title: $:/plugins/wikilabs/cheatsheet
+type: application/json
+version: 1.1.2

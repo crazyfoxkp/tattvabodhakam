@@ -1,0 +1,72 @@
+created: 20260226224004643
+creator: केशवकृपा
+modified: 20260227164700243
+modifier: केशवकृपा
+tags: $:/tags/ViewTemplate
+title: kp show SKS-SMV fields multicolumn
+
+\whitespace trim
+<%if [all[current]tag[SKS-SMV]] %>
+<$let 
+    sortlist={{SKS-SMV_view_fieldOrderList!!list}} 
+    targetTiddler=<<currentTiddler>>
+    hasKp2={{{ [all[current]fields[]prefix[kp2_]limit[1]then[1]else[0]] }}}
+    hasKp3={{{ [all[current]fields[]prefix[kp3_]limit[1]then[1]else[0]] }}}
+>
+<style>
+  .showfields { table-layout: fixed; width: 100%;  line-height: 1.5em;}
+  .showfields td { vertical-align: top; padding: 5px; overflow-wrap: break-word; }
+  .showfields .dots { width: 130px;  }
+  <!-- /* This class ensures the data cells grow to fill the table */ -->
+  .showfields .data-cell { width: auto; }
+  .o-bx { outline-color: rgb(77, 77, 77); padding: 5px; line-height: 1.8em;} 
+</style>
+
+<table class="showfields">
+  <tr style="height:0; line-height:0; visibility:hidden;">
+    <td style="width:130px; padding:0; border:0;"></td>
+    <td style="width:100%; padding:0; border:0;"></td>
+    <$list filter="[<hasKp2>match[1]]" variable="ignore"><td style="width:100%; padding:0; border:0;"></td></$list>
+    <$list filter="[<hasKp3>match[1]]" variable="ignore"><td style="width:100%; padding:0; border:0;"></td></$list>
+  </tr>
+
+  <$list filter="[enlist<sortlist>]" variable="currentBase">
+    <$list filter="[<currentBase>match[ತಾತ್ಪರ್ಯ]] [<currentBase>match[पादटिप्पणी]]" variable="singletonName">
+       <$list filter="[<targetTiddler>get<singletonName>!is[blank]]" variable="ignore">
+       <tr>
+         <td class="dots">
+           <$text text={{{ [<singletonName>] }}} />
+         </td>
+         <td colspan="10">
+            <$transclude $variable="renderFieldCell" fieldName=<<singletonName>> targetTiddler=<<targetTiddler>> />
+         </td>
+       </tr>
+       </$list>
+    </$list>
+
+    <$list filter="[<currentBase>!match[ತಾತ್ಪರ್ಯ]!match[पादटिप्पणी]]" variable="prefixBase">
+      <$let f1={{{ [[kp_]addsuffix<prefixBase>] }}} f2={{{ [[kp2_]addsuffix<prefixBase>] }}} f3={{{ [[kp3_]addsuffix<prefixBase>] }}}>
+      <$list filter="[<targetTiddler>has<f1>] [<targetTiddler>has<f2>] [<targetTiddler>has<f3>] +[limit[1]]" variable="exists">
+        <tr>
+          <td class="dots"><<prefixBase>></td>
+          <td class="data-cell">
+             <$transclude $variable="renderFieldCell" fieldName=<<f1>> targetTiddler=<<targetTiddler>> />
+          </td>
+          <$list filter="[<hasKp2>match[1]]" variable="ignore">
+            <td class="data-cell">
+               <$transclude $variable="renderFieldCell" fieldName=<<f2>> targetTiddler=<<targetTiddler>> />
+            </td>
+          </$list>
+          <$list filter="[<hasKp3>match[1]]" variable="ignore">
+            <td class="data-cell">
+               <$transclude $variable="renderFieldCell" fieldName=<<f3>> targetTiddler=<<targetTiddler>> />
+            </td>
+          </$list>
+        </tr>
+      </$list>
+      </$let>
+    </$list>
+  </$list>
+</table>
+</$let>
+<%endif%>

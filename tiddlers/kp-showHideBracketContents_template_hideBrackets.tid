@@ -1,0 +1,12 @@
+created: 20250713171045534
+creator: KeshavP
+modified: 20260817182231320
+modifier: केशवकृपा
+tags: kp-showHideBrackets
+title: kp-showHideBracketContents/template/hideBrackets
+
+\whitespace trim
+
+<$let filteredText={{{ [{!!text}search-replace:gim:regexp<findBracketsPattern>,<hideBracketsAndShowThisPattern>] }}}>
+<$transclude $variable="filteredText" $mode="block" />
+</$let> 

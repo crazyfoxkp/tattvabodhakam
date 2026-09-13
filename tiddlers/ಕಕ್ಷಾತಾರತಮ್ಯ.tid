@@ -1,0 +1,10 @@
+aliases: 
+caption: 32 - ಶ್ರೀ ಕಕ್ಷಾತಾರತಮ್ಯ ಸಂಧಿ
+created: 20200901000000000
+creator: KeshavP
+modified: 20200906200959606
+modifier: KeshavP
+tags: HKS ಹರಿಕಥಾಮೃತಸಾರ
+title: ಕಕ್ಷಾತಾರತಮ್ಯ
+
+<table><$list filter="[tag[HKS32 ಕಕ್ಷಾತಾರತಮ್ಯ]sortan[title]]"><tr><th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>notes</$link></th><td/><td><$transclude mode="block"/></td></tr></$list></table>

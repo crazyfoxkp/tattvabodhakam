@@ -1,0 +1,16 @@
+[
+    {
+        "anta": "इ",
+        "variety": "",
+        "notes": "",
+        "linga": "नपुं॰",
+        "group": "",
+        "sutra": "[[वारि·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "text": "@@.dblock.वारि\nइ-कारान्तः<br>नपुंसकलिङ्गः<br>वारि¦एक¦द्वि¦बहु\n१¦वारि¦वारिणी¦वारीणि\n२¦वारि¦वारिणी¦वारीणि\n३¦वारिणा¦वारिभ्याम्¦वारिभिः\n४¦वारिणे¦वारिभ्याम्¦वारिभिः\n५¦वारिणः¦वारिभ्याम्¦वारिभ्यः\n६¦वारिणः¦वारिणोः¦वारीणाम्\n७¦वारिणि¦वारिणोः¦वारिषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see वारि·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"वारि\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "वारि",
+        "modified": "20250131164746468",
+        "modifier": "KeshavP"
+    }
+]
