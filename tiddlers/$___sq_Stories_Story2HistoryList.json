@@ -637,112 +637,14 @@
         "title": "$:/plugins/sq/Stories/changelog"
     },
     {
-        "title": "kp-showhide-brackets-test",
+        "title": "2026 / 09 / 09 / मङ्गलाचरणं साक्षात् कुतः न स्वीकार्यते",
         "fromPageRect": {
-            "top": 1461.234375,
-            "left": 1533.203125,
+            "top": 1187.734375,
+            "left": 962.953125,
             "width": 26,
-            "right": 1559.203125,
-            "bottom": 1492.421875,
+            "right": 988.953125,
+            "bottom": 1218.921875,
             "height": 31.1875
         }
-    },
-    {
-        "title": "Draft of 'kp-showhide-brackets-test' by केशवकृपा"
-    },
-    {
-        "title": "kp-showhide-brackets-test"
-    },
-    {
-        "title": "Draft of 'kp-showhide-brackets-test' by केशवकृपा"
-    },
-    {
-        "title": "kp-showhide-brackets-test"
-    },
-    {
-        "title": "Draft of 'kp-showhide-brackets-test' by केशवकृपा"
-    },
-    {
-        "title": "kp-showhide-brackets-test"
-    },
-    {
-        "title": "Draft of 'kp-showhide-brackets-test' by केशवकृपा"
-    },
-    {
-        "title": "kp-showhide-brackets-test"
-    },
-    {
-        "title": "2026 / 09 / 02 / पाठः",
-        "fromPageRect": {
-            "top": 3,
-            "left": 1533.203125,
-            "width": 26,
-            "right": 1559.203125,
-            "bottom": 34.1875,
-            "height": 31.1875
-        }
-    },
-    {
-        "title": "2026 / 09 / 05 / पाठः",
-        "fromPageRect": {
-            "top": 1651.25,
-            "left": 820.625,
-            "width": 26,
-            "right": 846.625,
-            "bottom": 1682.4375,
-            "height": 31.1875
-        }
-    },
-    {
-        "title": "Draft of '2026 / 09 / 05 / पाठः' by केशवकृपा"
-    },
-    {
-        "title": "2026 / 09 / 05 / पाठः"
-    },
-    {
-        "title": "TS - 004",
-        "fromPageRect": {
-            "top": 1246.65625,
-            "left": 820.625,
-            "width": 26,
-            "right": 846.625,
-            "bottom": 1277.84375,
-            "height": 31.1875
-        }
-    },
-    {
-        "title": "Draft of 'TS - 004' by केशवकृपा"
-    },
-    {
-        "title": "TS - 004"
-    },
-    {
-        "title": "Draft of 'TS - 004' by केशवकृपा"
-    },
-    {
-        "title": "TS - 004"
-    },
-    {
-        "title": "Draft of 'TS - 004' by केशवकृपा"
-    },
-    {
-        "title": "TS - 004"
-    },
-    {
-        "title": "2026 / 09 / 09 / विमर्शः",
-        "fromPageRect": {
-            "top": 732.28125,
-            "left": 820.625,
-            "width": 26,
-            "right": 846.625,
-            "bottom": 763.46875,
-            "height": 31.1875
-        }
-    },
-    {
-        "title": "Draft of '2026 / 09 / 09 / विमर्शः' by केशवकृपा"
-    },
-    {
-        "title": "2026 / 09 / 09 / विमर्शः"
     }
 ]
