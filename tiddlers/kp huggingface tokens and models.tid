@@ -1,53 +1,6 @@
 created: 20250210175212331
 creator: KeshavP
-modified: 20260916154709043
+modified: 20260916163136682
 modifier: केशवकृपा
 tags: 
 title: kp huggingface tokens and models
-
-git macos access PAT: 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
-
-gemini api key: free 5/19/2026: AIzaSyA1BsqLwar8Okpq7grbgARFf2VMZrJWwqg
-
-hf_readonly token:
-Linux_Box
-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
-
-kan_llama token: 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
-
-whisperfinetune: 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
-
-openai: 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
-
-pwd codling assemblyai jeqCaq-sazpu8-zuhpif
-
-assemblyai api key 193635713b7c4b0b98a03147c080fc1a
-
-Kan-LLaMA-7B-SFT-v0.1-sharded-Q5_K_M.gguf 
-
-anythingLLM apikey 1R6R8FX-VPW4P36-NS3X2ME-RD3SAQY
-
-google youtube api v3 
-209247193703-ouv48deoo23fhes768tlh6nnhrkkb9q0.apps.googleusercontent.com
-
-groq /token for whisper test/ api-token
-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
-
-
-sanskrit faster-whisper in pinokio-whisper-webui model: Bidwill--faster-whisper-small-sanskrit
-
->this is converted from original whisper model: Bidwill/whisper-small-sanskrit
-
-sanskrit faster-whisper fine-tune: SSrikanthr2/whisper-small-sanskasr-370000-V3) 
-
->(not as good as bidwill)
-
-| LOCAL macOS |<|
-|spokenly|maybe|
-|macwhisper|freemium|
-|superwhisper|costly|
-|voiceink|no local models|
-|speechpulse|x|
-
-| LAN based |<|
-|pinokio-gradio|√ not easily extensible|
