@@ -1,0 +1,29 @@
+caption: {{$:/core/images/book}} {{$:/kp/studyMode/button/Caption}}
+created: 20260918164440845
+creator: केशवकृपा
+description: {{$:/kp/studyMode/button/Hint}}
+modified: 20260918165406196
+modifier: केशवकृपा
+tags: $:/tags/ViewToolbar
+title: $:/kp/studyMode/button
+
+\whitespace trim
+\define studyModeToggle()
+<$let stateTiddler={{{ [<currentTiddler>addprefix[$:/state/studyMode/]] }}}>
+<$button class=<<tv-config-toolbar-class>>>
+  <$action-listops $tiddler=<<stateTiddler>> $field="text" $subfilter="+[toggle[study],[raw]]" />
+  
+  <$list filter="[<tv-config-toolbar-icons>match[yes]]">
+    <$transclude tiddler={{{ [<<stateTiddler>>get[text]match[study]then[$:/core/images/book]else[$:/core/images/file]] }}}/>
+  </$list>
+  
+  <$list filter="[<tv-config-toolbar-text>match[yes]]">
+    <span class="tc-btn-text"><$text text="Study Mode"/></span>
+  </$list>
+</$button>
+</$let>
+\end
+
+<% if [all[current]tag[Journal]] %>
+<<studyModeToggle>>
+<% endif %>

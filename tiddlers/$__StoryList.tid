@@ -1,2 +1,6 @@
-list: $:/kp/ViewTemplate/StudyMode $:/kp/filters/StudyBodyFilter $:/kp/ui/Buttons/StudyToggle [[SMV » § 01 » 001 SKS]] [[2026 / 09 / 09 / कोटिक्रमः]]
+created: 20260918161343497
+creator: केशवकृपा
+list: $:/kp/studyMode/button $:/kp/studyMode/button/Hint $:/kp/studyMode/button/Caption $:/kp/studyMode/template $:/kp/studyMode/filter [[SMV » § 01 » 001 SKS]] [[2026 / 09 / 09 / कोटिक्रमः]]
+modified: 20260918163407730
+modifier: केशवकृपा
 title: $:/StoryList
