@@ -1,19 +1,415 @@
 created: 20260918164256851
 creator: केशवकृपा
-modified: 20260918164330659
+modified: 20260918183245228
 modifier: केशवकृपा
 tags: 
 title: $:/kp/studyMode/template
 
 \whitespace trim
-<div class="shloka-study-container" style="border: 2px solid #0066cc; padding: 18px; border-radius: 6px; background-color: #f8fbfd;">
-  <div style="font-size: 0.85em; font-weight: bold; letter-spacing: 1px; color: #0066cc; margin-bottom: 12px; text-transform: uppercase;">
-    📖 Study Mode — <$text text=<<currentTiddler>>/>
-  </div>
+<$let 
+  c_title=<<currentTiddler>>
+  c_text={{!!text}}
+  c_pada={{!!kp_पदच्छछेदः}}
+  c_anvaya={{!!kp_अन्वयः}}
+  c_artha={{!!kp_अर्थः}}
+  c_vyakarana={{!!kp_व्याकर्ण_विशेषः}}
+>
+<iframe class="shloka-viewer-frame" style="width:100%; height:82vh; border:1px solid #e2d9cd; border-radius:8px; background:#fdfbf7;" srcdoc="
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <style>
+    :root {
+      --primary-color: #8b0000;
+      --bg-color: #fdfbf7;
+      --card-bg: #ffffff;
+      --text-color: #2c2c2c;
+      --border-color: #e2d9cd;
+      --highlight-color: #fff3cd;
+      --accent-color: #b8860b;
+      --sandhi-line-color: #d97706;
+      --muted-gray: #6c757d;
+    }
+    body {
+      font-family: 'Georgia', 'Noto Sans Devanagari', 'Noto Sans Kannada', serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .main-content {
+      flex: 1;
+      padding: 1.5rem;
+      overflow-y: auto;
+    }
+    .verse-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .verse-header {
+      padding: 1.2rem;
+      font-size: 1.3rem;
+      line-height: 1.8;
+      text-align: center;
+      font-weight: 600;
+      color: var(--primary-color);
+      border-bottom: 1px dashed var(--border-color);
+    }
+    .verse-details {
+      padding: 1.5rem;
+      background-color: #faf8f5;
+    }
+    .section-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent-color);
+      margin-top: 1.2rem;
+      margin-bottom: 0.75rem;
+      font-weight: bold;
+    }
+    .section-title:first-child { margin-top: 0; }
+    .padaccheda-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      gap: 0.8rem;
+      row-gap: 2.2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .sandhi-pair-container {
+      display: inline-flex;
+      align-items: flex-end;
+      gap: 0.8rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .word-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+    .word-chip {
+      background-color: #f0ebe1;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    .word-chip:hover, .word-chip.active {
+      background-color: var(--highlight-color);
+      border-color: var(--accent-color);
+      color: var(--primary-color);
+    }
+    .sandhi-bridge {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      width: calc(100% + 0.8rem);
+      height: 16px;
+      border-top: 2px solid var(--sandhi-line-color);
+      border-left: 2px solid var(--sandhi-line-color);
+      border-right: 2px solid var(--sandhi-line-color);
+      border-radius: 4px 4px 0 0;
+      cursor: pointer;
+      z-index: 2;
+    }
+    .sandhi-node {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #fff;
+      border: 1.5px solid var(--sandhi-line-color);
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .sandhi-bridge:hover .sandhi-node, .sandhi-bridge.active .sandhi-node {
+      background-color: var(--sandhi-line-color);
+      transform: translateX(-50%) scale(1.25);
+    }
+    .anvaya-container, .artha-sentence-container {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #444;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 4px;
+      border-left: 3px solid var(--accent-color);
+    }
+    .artha-sentence-container {
+      border-left-color: var(--primary-color);
+      background: #fdfbf7;
+    }
+    .sidebar {
+      width: 360px;
+      background: var(--card-bg);
+      border-left: 1px solid var(--border-color);
+      box-shadow: -2px 0 8px rgba(0, 0, 0, 0.05);
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar.open { transform: translateX(0); }
+    .sidebar-header {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--bg-color);
+    }
+    .sidebar-title { font-weight: bold; color: var(--primary-color); }
+    .close-btn { background: none; border: none; font-size: 1.2rem; cursor: pointer; }
+    .sidebar-body { padding: 1.2rem; overflow-y: auto; flex: 1; font-size: 0.95rem; line-height: 1.6; }
+    .word-meaning-subtext {
+      color: var(--muted-gray);
+      font-size: 1.05rem;
+      margin-top: -0.2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .meaning-line { margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px dashed #eee; }
+    .meaning-line:last-child { border-bottom: none; }
+    .sandhi-block {
+      background: #fff8e7;
+      border-left: 3px solid var(--sandhi-line-color);
+      padding: 0.6rem 0.8rem;
+      margin-top: 0.5rem;
+      border-radius: 0 4px 4px 0;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <main class='main-content'>
+    <div id='shloka-container'></div>
+  </main>
 
-  <div class="shloka-content-body" style="font-size: 1.2em; line-height: 1.8;">
-    <$let rawContent={{!!text}}>
-      <$transclude $variable="rawContent" $mode="block" />
-    </$let>
-  </div>
-</div>
+  <aside class='sidebar' id='sidebar'>
+    <div class='sidebar-header'>
+      <span class='sidebar-title' id='sidebar-title'>व्याकरणविशेषः</span>
+      <button class='close-btn' onclick='closeSidebar()'>&times;</button>
+    </div>
+    <div class='sidebar-body' id='sidebar-body'>
+      <p style='color: #888;'>Click on any word in the Padaccheda section to inspect detailed grammar analysis.</p>
+    </div>
+  </aside>
+
+  <script>
+    const currentItem = {
+      title: `<$text text=<<c_title>>/>`,
+      text: `<$text text=<<c_text>>/>`,
+      kp_पदच्छछेदः: `<$text text=<<c_pada>>/>`,
+      kp_अन्वयः: `<$text text=<<c_anvaya>>/>`,
+      kp_अर्थः: `<$text text=<<c_artha>>/>`,
+      kp_व्याकर्ण_विशेषः: `<$text text=<<c_vyakarana>>/>`
+    };
+
+    function parsePadaccheda(rawHtml) {
+      if (!rawHtml) return [];
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = rawHtml;
+      const elements = tempDiv.querySelectorAll('span, wrd');
+      const tokens = [];
+
+      if (elements.length > 0) {
+        elements.forEach(el => {
+          const cleanText = el.textContent.replace(/,,\d+(,\d+)*,,/g, '').trim();
+          if (cleanText) tokens.push(cleanText);
+        });
+      } else {
+        const cleanText = tempDiv.textContent.replace(/,,\d+(,\d+)*,,/g, '').trim();
+        cleanText.split(/\s+/).forEach(t => { if(t) tokens.push(t); });
+      }
+      return tokens;
+    }
+
+    function parseMeaningString(meaningString) {
+      const meaningMap = {};
+      if (!meaningString) return meaningMap;
+      const regex = /⟣\s*([^=]+)=\s*(.+)/g;
+      let match;
+      while ((match = regex.exec(meaningString)) !== null) {
+        meaningMap[match[1].trim()] = match[2].trim();
+      }
+      return meaningMap;
+    }
+
+    function buildSequentialArthaSentence(meaningString) {
+      if (!meaningString) return '';
+      const meaningsList = [];
+      const regex = /⟣\s*([^=]+)=\s*(.+)/g;
+      let match;
+      while ((match = regex.exec(meaningString)) !== null) {
+        const meaning = match[2].trim();
+        if (meaning) meaningsList.push(meaning);
+      }
+      return meaningsList.join(' ');
+    }
+
+    function parseGrammarAndSandhi(grammarString) {
+      const grammarMap = {};
+      const sandhiMap = {};
+      if (!grammarString) return { grammarMap, sandhiMap };
+
+      const regex = /⬩\s*''([^'']+)''\s*=\s*([\s\S]*?)(?=(⬩\s*''|$))/g;
+      let match;
+
+      while ((match = regex.exec(grammarString)) !== null) {
+        const wordKey = match[1].trim();
+        let fullText = match[2].trim();
+        const sandhiIndex = fullText.search(/\n\s*\}/);
+
+        if (sandhiIndex !== -1) {
+          grammarMap[wordKey] = fullText.substring(0, sandhiIndex).trim();
+          sandhiMap[wordKey] = fullText.substring(sandhiIndex).replace(/\n\s*\}/, '').trim();
+        } else {
+          grammarMap[wordKey] = fullText;
+        }
+      }
+      return { grammarMap, sandhiMap };
+    }
+
+    function renderViewer() {
+      const container = document.getElementById('shloka-container');
+      const padacchedaWords = parsePadaccheda(currentItem['kp_पदच्छछेदः']);
+      const { sandhiMap } = parseGrammarAndSandhi(currentItem['kp_व्याकर्ण_विशेषः']);
+      const fullMeaningSentence = buildSequentialArthaSentence(currentItem['kp_अर्थः']);
+
+      let padacchedaHtml = '';
+      let i = 0;
+
+      while (i < padacchedaWords.length) {
+        const word = padacchedaWords[i];
+        const hasSandhiWithNext = (sandhiMap[word] && i < padacchedaWords.length - 1);
+
+        if (hasSandhiWithNext) {
+          let chainHtml = '';
+          while (i < padacchedaWords.length) {
+            const currentWord = padacchedaWords[i];
+            const hasBridge = (sandhiMap[currentWord] && i < padacchedaWords.length - 1);
+
+            chainHtml += `
+              <div class='word-wrapper'>
+                <span class='word-chip' onclick='showWordGrammar(\`${currentWord}\`, event)'>
+                  ${currentWord}
+                </span>
+                ${hasBridge ? `
+                  <div class='sandhi-bridge' title='Sandhi Detail' onclick='showSandhiDetails(\`${currentWord}\`, event)'>
+                    <div class='sandhi-node'>⚡</div>
+                  </div>
+                ` : ''}
+              </div>
+            `;
+            i++;
+            if (!hasBridge) break;
+          }
+          padacchedaHtml += `<div class='sandhi-pair-container'>${chainHtml}</div>`;
+        } else {
+          padacchedaHtml += `
+            <div class='word-wrapper'>
+              <span class='word-chip' onclick='showWordGrammar(\`${word}\`, event)'>
+                ${word}
+              </span>
+            </div>
+          `;
+          i++;
+        }
+      }
+
+      container.innerHTML = `
+        <div class='verse-card'>
+          <div class='verse-header'>
+            <div>${currentItem.text}</div>
+          </div>
+          <div class='verse-details'>
+            ${padacchedaHtml ? `<div class='section-title'>पदच्छेदः</div><div class='padaccheda-list'>${padacchedaHtml}</div>` : ''}
+            ${currentItem['kp_अन्वयः'] ? `<div class='section-title'>अन्वयः</div><div class='anvaya-container'>${currentItem['kp_अन्वयः']}</div>` : ''}
+            ${fullMeaningSentence ? `<div class='section-title'>अर्थः (ಸಾರಾಂಶಃ)</div><div class='artha-sentence-container'>${fullMeaningSentence}</div>` : ''}
+          </div>
+        </div>
+      `;
+    }
+
+    function showWordGrammar(word, event) {
+      event.stopPropagation();
+      const { grammarMap, sandhiMap } = parseGrammarAndSandhi(currentItem['kp_व्याकर्ण_विशेषः']);
+      const wordMeaningMap = parseMeaningString(currentItem['kp_अर्थः']);
+      
+      const sidebar = document.getElementById('sidebar');
+      const sidebarBody = document.getElementById('sidebar-body');
+
+      document.querySelectorAll('.word-chip, .sandhi-bridge').forEach(el => el.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+
+      const rawText = grammarMap[word] || 'No grammar details available for this word.';
+      const kannadaMeaning = wordMeaningMap[word] || '';
+
+      const formattedGrammar = rawText
+        .split('\n')
+        .map(line => `<div class='meaning-line'>${line.trim()}</div>`)
+        .join('');
+
+      let sandhiHtml = '';
+      if (sandhiMap[word]) {
+        sandhiHtml = `<div class='sandhi-block'><strong>सन्धि-नियमः:</strong> ${sandhiMap[word]}</div>`;
+      }
+
+      document.getElementById('sidebar-title').innerText = 'व्याकरणविशेषः';
+      sidebarBody.innerHTML = `
+        <h2 style='margin-top:0; margin-bottom: 0.5rem; color: var(--primary-color);'>${word}</h2>
+        ${kannadaMeaning ? `<div class='word-meaning-subtext'>${kannadaMeaning}</div>` : ''}
+        <div>${formattedGrammar}</div>
+        ${sandhiHtml}
+      `;
+
+      sidebar.classList.add('open');
+    }
+
+    function showSandhiDetails(word, event) {
+      event.stopPropagation();
+      const { sandhiMap } = parseGrammarAndSandhi(currentItem['kp_व्याकर्ण_विशेषः']);
+      const sidebar = document.getElementById('sidebar');
+      const sidebarBody = document.getElementById('sidebar-body');
+
+      document.querySelectorAll('.word-chip, .sandhi-bridge').forEach(el => el.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+
+      document.getElementById('sidebar-title').innerText = 'सन्धि-नियमः';
+      sidebarBody.innerHTML = `
+        <h2 style='margin-top:0; color: var(--primary-color);'>सन्धिः (${word})</h2>
+        <div class='sandhi-block'>${sandhiMap[word]}</div>
+      `;
+
+      sidebar.classList.add('open');
+    }
+
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('open');
+      document.querySelectorAll('.word-chip, .sandhi-bridge').forEach(el => el.classList.remove('active'));
+    }
+
+    renderViewer();
+  </script>
+</body>
+</html>
+"></iframe>
+</$let>
