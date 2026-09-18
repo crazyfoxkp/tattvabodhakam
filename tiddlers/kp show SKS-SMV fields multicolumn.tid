@@ -1,12 +1,12 @@
 created: 20260226224004643
 creator: केशवकृपा
-modified: 20260227164700243
+modified: 20260918175849694
 modifier: केशवकृपा
 tags: $:/tags/ViewTemplate
 title: kp show SKS-SMV fields multicolumn
 
 \whitespace trim
-<%if [all[current]tag[SKS-SMV]] %>
+<%if [all[current]tag[SKS-SMV]] :filter[<currentTiddler>addprefix[$:/state/studyMode/]get[text]else[raw]match[raw]]%>
 <$let 
     sortlist={{SKS-SMV_view_fieldOrderList!!list}} 
     targetTiddler=<<currentTiddler>>

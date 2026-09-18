@@ -1,6 +1,6 @@
 created: 20260918161343497
 creator: केशवकृपा
-list: $:/kp/studyMode/button $:/kp/studyMode/button/Hint $:/kp/studyMode/button/Caption $:/kp/studyMode/template $:/kp/studyMode/filter [[SMV » § 01 » 001 SKS]] [[2026 / 09 / 09 / कोटिक्रमः]]
-modified: 20260918170923165
+list: [[kp show SKS-SMV fields multicolumn]] [[kp show SMV प्रस्तावना field]] [[kp show SKS fields template]] $:/kp/studyMode/button $:/kp/studyMode/button/Hint $:/kp/studyMode/button/Caption $:/kp/studyMode/template $:/kp/studyMode/filter [[$:/state/studyMode/SMV » § 01 » 001 SKS]] [[SMV » § 01 » 001 SKS]] [[2026 / 09 / 09 / कोटिक्रमः]]
+modified: 20260918175823550
 modifier: केशवकृपा
 title: $:/StoryList

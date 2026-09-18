@@ -1,11 +1,11 @@
 created: 20240602190635411
 creator: KeshavP
-modified: 20260226165558142
+modified: 20260918175904607
 modifier: केशवकृपा
 tags: $:/tags/ViewTemplate
 title: kp show SKS fields template
 
-<% if [all[current]tag[SR]] %>
+<% if [all[current]tag[SR]] :filter[<currentTiddler>addprefix[$:/state/studyMode/]get[text]else[raw]match[raw]]%>
 <table class = "showfields">
     <$list filter="[<currentTiddler>fields[]prefix[kp_]]" variable=fieldname>
         <$list filter="[<currentTiddler>get<fieldname>]" variable=field-value>

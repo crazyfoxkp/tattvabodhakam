@@ -1,11 +1,11 @@
 created: 20251005201113992
 creator: KeshavP
-modified: 20251005202203079
-modifier: KeshavP
+modified: 20260918175758869
+modifier: केशवकृपा
 tags: $:/tags/ViewTemplate
 title: kp show SMV प्रस्तावना field
 
-<%if [all[current]search:tags:[SMV » §]]%>
+<%if [all[current]search:tags:[SMV » §]] :filter[<currentTiddler>addprefix[$:/state/studyMode/]get[text]else[raw]match[raw]] %>
  <table class = "showfields"> 
 <$list filter="[<currentTiddler>fields:include[प्रस्तावना]]" variable=field-name>
         <$list filter="[<currentTiddler>get<field-name>]" variable=field-value>
