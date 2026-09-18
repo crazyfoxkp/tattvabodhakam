@@ -1,9 +1,8 @@
 created: 20200127144249151
 creator: KeshavP
-list: kp-viewtoolbarbutton/showHideBracketContents $:/_sq/Stories/divertTiddlerMacro $:/core/ui/Buttons/fold $:/core/ui/Buttons/more-tiddler-actions $:/.giffmex/ViewToolbar/new-note-here $:/.giffmex/ViewToolbar/new-note-here-datetime $:/plugins/kookma/utility/ui/Buttons/draggable-link $:/core/ui/Buttons/info $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/new-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/edit $:/core/ui/Buttons/delete $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/core/ui/Buttons/open-window $:/core/ui/Buttons/close-others $:/core/ui/Buttons/close $:/core/ui/Buttons/fold-others $:/bj/viewclipbutton $:/core/ui/Buttons/fold-bar $:/plugins/jerojasro/copyhtml/copybutton [[Draft of 'kp-viewtoolbarbutton/showHideBracketContents' by KeshavP]]
-modified: 20250823155738291
-modifier: KeshavP
-revision: 0
+list: $:/kp/studyMode/button kp-viewtoolbarbutton/showHideBracketContents kp-viewtoolbarbutton/cloneToSKS $:/_sq/Stories/divertTiddlerMacro $:/core/ui/Buttons/fold $:/core/ui/Buttons/more-tiddler-actions $:/.giffmex/ViewToolbar/new-note-here $:/.giffmex/ViewToolbar/new-note-here-datetime $:/plugins/kookma/utility/ui/Buttons/draggable-link $:/core/ui/Buttons/info $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/new-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/edit $:/core/ui/Buttons/delete $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/core/ui/Buttons/open-window $:/core/ui/Buttons/close-others $:/core/ui/Buttons/close $:/core/ui/Buttons/fold-others $:/bj/viewclipbutton $:/core/ui/Buttons/fold-bar $:/plugins/jerojasro/copyhtml/copybutton
+modified: 20260918170050172
+modifier: केशवकृपा
 tags: $:/giffmex/stroll
 title: $:/tags/ViewToolbar
 type: text/vnd.tiddlywiki

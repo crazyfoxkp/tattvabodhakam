@@ -1,10 +1,9 @@
 created: 20260918164126227
 creator: केशवकृपा
-modified: 20260918164252932
+modified: 20260918170435194
 modifier: केशवकृपा
 tags: $:/tags/ViewTemplateBodyFilter
 title: $:/kp/studyMode/filter
 
-[<..currentTiddler>addprefix[$:/state/studyMode/]get[text]match[study]]
+[<..currentTiddler>!tag[Journal]addprefix[$:/state/studyMode/]get[text]match[study]]
 :then[[$:/kp/studyMode/template]]
-:filter[<..currentTiddler>tag[Journal]]

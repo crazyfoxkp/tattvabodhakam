@@ -2,8 +2,7 @@ caption: {{kp-viewtoolbarbutton/cloneToSKS/Icon}} {{kp-viewtoolbarbutton/cloneTo
 created: 20260227180115087
 creator: केशवकृपा
 description: {{kp-viewtoolbarbutton/cloneToSKS/Hint}}
-list-before: $:/_sq/Stories/divertTiddlerMacro
-modified: 20260304012616639
+modified: 20260918170050171
 modifier: केशवकृपा
 tags: $:/tags/ViewToolbar kp-cloneToSKS
 title: kp-viewtoolbarbutton/cloneToSKS
