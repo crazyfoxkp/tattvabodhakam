@@ -2,7 +2,7 @@ caption: {{$:/core/images/book}} {{$:/kp/studyMode/button/Caption}}
 created: 20260918164440845
 creator: केशवकृपा
 description: {{$:/kp/studyMode/button/Hint}}
-modified: 20260918171242579
+modified: 20260918175948078
 modifier: केशवकृपा
 tags: $:/tags/ViewToolbar
 title: $:/kp/studyMode/button
@@ -15,11 +15,11 @@ title: $:/kp/studyMode/button
   
   <$list filter="[<tv-config-toolbar-icons>match[yes]]">
     <$list filter="[<stateTiddler>get[text]match[study]]" emptyb="show-file-emoji">
-      📖
+      📄
     </$list>
     <span id="show-file-emoji">
       <$list filter="[<stateTiddler>get[text]else[raw]match[raw]]">
-        📄
+        📖
       </$list>
     </span>
   </$list>  <$list filter="[<tv-config-toolbar-text>match[yes]]">
