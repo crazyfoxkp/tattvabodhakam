@@ -1,0 +1,21 @@
+created: 20260918152220690
+creator: केशवकृपा
+modified: 20260918154136459
+modifier: केशवकृपा
+tags: 
+title: $:/kp/ViewTemplate/StudyMode
+
+\whitespace trim
+<div class="shloka-study-container" style="border: 2px solid #0066cc; padding: 18px; border-radius: 6px; background-color: #f8fbfd;">
+  <div style="font-size: 0.85em; font-weight: bold; letter-spacing: 1px; color: #0066cc; margin-bottom: 12px; text-transform: uppercase;">
+    📖 Study Mode View — <$text text=<<currentTiddler>>/>
+  </div>
+
+  <div class="shloka-content-body" style="font-size: 1.2em; line-height: 1.8;">
+    <$let rawText={{!!text}}>
+      <$wikify name="studyContent" text=<<rawText>> mode="block">
+        <<studyContent>>
+      </$wikify>
+    </$let>
+  </div>
+</div>

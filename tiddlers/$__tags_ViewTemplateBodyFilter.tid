@@ -1,6 +1,6 @@
 created: 20250713171743382
 creator: KeshavP
-list: $:/config/ViewTemplateBodyFilters/testcase $:/config/ViewTemplateBodyFilters/hide-body $:/config/ViewTemplateBodyFilters/code-body $:/config/ViewTemplateBodyFilters/stylesheet $:/config/ViewTemplateBodyFilters/core-ui-tags $:/config/ViewTemplateBodyFilters/import $:/config/ViewTemplateBodyFilters/plugin $:/bj/example/view/cascade $:/config/ViewTemplateBodyFilters/system $:/config/ViewTemplateBodyFilters/default kp-showHideBracketContents/filter
-modified: 20250713171855424
-modifier: KeshavP
+list: $:/config/ViewTemplateBodyFilters/testcase $:/config/ViewTemplateBodyFilters/hide-body $:/config/ViewTemplateBodyFilters/code-body $:/config/ViewTemplateBodyFilters/stylesheet $:/config/ViewTemplateBodyFilters/core-ui-tags $:/config/ViewTemplateBodyFilters/import $:/config/ViewTemplateBodyFilters/plugin $:/bj/example/view/cascade $:/config/ViewTemplateBodyFilters/system $:/kp/filters/StudyBodyFilter kp-showHideBracketContents/filter $:/config/ViewTemplateBodyFilters/default $:/config/ViewTemplateBodyFilters/html
+modified: 20260918152746573
+modifier: केशवकृपा
 title: $:/tags/ViewTemplateBodyFilter

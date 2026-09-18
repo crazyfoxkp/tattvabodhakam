@@ -1,0 +1,9 @@
+created: 20260918152037401
+creator: केशवकृपा
+list-before: 
+modified: 20260918154258453
+modifier: केशवकृपा
+tags: $:/tags/ViewTemplateBodyFilter
+title: $:/kp/filters/StudyBodyFilter
+
+[<currentTiddler>addprefix[$:/state/study-mode/]get[text]match[study]then[$:/my/ViewTemplate/StudyMode]]

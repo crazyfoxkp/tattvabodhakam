@@ -1,0 +1,25 @@
+caption: Study Mode
+created: 20260918151705984
+creator: केशवकृपा
+description: Toggle between Raw and Study views
+list-before: 
+modified: 20260918152600665
+modifier: केशवकृपा
+tags: $:/tags/ViewToolbar
+title: $:/kp/ui/Buttons/StudyToggle
+
+\whitespace trim
+<$let stateTiddler={{{ [<currentTiddler>addprefix[$:/state/study-mode/]] }}}
+      currentState={{{ [<stateTiddler>get[text]else[raw]] }}}>
+<$button tooltip="Toggle Study / Raw View" 
+         aria-label="Toggle Study View" 
+         class={{{ [<currentState>match[study]then[tc-btn-invisible tc-btn-selected]else[tc-btn-invisible]] }}}>
+  <% if [<currentState>match[study]] %>
+    <$action-setfield $tiddler=<<stateTiddler>> text="raw"/>
+    {{$:/core/images/book}}
+  <% else %>
+    <$action-setfield $tiddler=<<stateTiddler>> text="study"/>
+    {{$:/core/images/file}}
+  <% endif %>
+</$button>
+</$let>
