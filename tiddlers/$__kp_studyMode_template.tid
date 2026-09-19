@@ -1,35 +1,38 @@
 created: 20260918164256851
 creator: केशवकृपा
-modified: 20260918183245228
+modified: 20260919162925170
 modifier: केशवकृपा
 tags: 
 title: $:/kp/studyMode/template
 
 \whitespace trim
-<$let 
-  c_title=<<currentTiddler>>
-  c_text={{!!text}}
-  c_pada={{!!kp_पदच्छछेदः}}
-  c_anvaya={{!!kp_अन्वयः}}
-  c_artha={{!!kp_अर्थः}}
-  c_vyakarana={{!!kp_व्याकर्ण_विशेषः}}
+<$let
+  c_title={{{ [<currentTiddler>encodeuricomponent[]] }}}
+  c_text={{{ [<currentTiddler>get[text]encodeuricomponent[]] }}}
+  c_pada={{{ [<currentTiddler>get[kp_पदच्छछेदः]encodeuricomponent[]] }}}
+  c_anvaya={{{ [<currentTiddler>get[kp_अन्वयः]encodeuricomponent[]] }}}
+  c_artha={{{ [<currentTiddler>get[kp_अर्थः]encodeuricomponent[]] }}}
+  c_vyakarana={{{ [<currentTiddler>get[kp_व्याकर्ण_विशेषः]encodeuricomponent[]] }}}
 >
-<iframe class="shloka-viewer-frame" style="width:100%; height:82vh; border:1px solid #e2d9cd; border-radius:8px; background:#fdfbf7;" srcdoc="
+<iframe class="shloka-viewer-frame" style="width:100%; height:82vh; border:1px solid #4c4c4c; border-radius:8px; background:#252716;" srcdoc="
 <!DOCTYPE html>
 <html lang='en'>
 <head>
   <meta charset='UTF-8'>
   <style>
     :root {
-      --primary-color: #8b0000;
-      --bg-color: #fdfbf7;
-      --card-bg: #ffffff;
-      --text-color: #2c2c2c;
-      --border-color: #e2d9cd;
-      --highlight-color: #fff3cd;
-      --accent-color: #b8860b;
-      --sandhi-line-color: #d97706;
-      --muted-gray: #6c757d;
+      --bg-color: #0d0f00;
+      --card-bg: #252716;
+      --text-color: #c6c6c6;
+      --primary-color: #86b03b;
+      --accent-color: #859900;
+      --border-color: #4c4c4c;
+      --chip-bg: #303222;
+      --chip-hover: #3f4900;
+      --highlight-color: #ff8b69;
+      --sandhi-line-color: #b58900;
+      --muted-gray: #ababab;
+      --sidebar-bg: #1b1b20;
     }
     body {
       font-family: 'Georgia', 'Noto Sans Devanagari', 'Noto Sans Kannada', serif;
@@ -50,7 +53,7 @@ title: $:/kp/studyMode/template
       background: var(--card-bg);
       border: 1px solid var(--border-color);
       border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
     }
     .verse-header {
       padding: 1.2rem;
@@ -63,7 +66,7 @@ title: $:/kp/studyMode/template
     }
     .verse-details {
       padding: 1.5rem;
-      background-color: #faf8f5;
+      background-color: var(--card-bg);
     }
     .section-title {
       font-size: 0.85rem;
@@ -97,18 +100,19 @@ title: $:/kp/studyMode/template
       align-items: center;
     }
     .word-chip {
-      background-color: #f0ebe1;
+      background-color: var(--chip-bg);
+      color: var(--text-color);
       padding: 0.4rem 0.8rem;
       border-radius: 4px;
       font-size: 1.1rem;
       cursor: pointer;
-      border: 1px solid transparent;
+      border: 1px solid var(--border-color);
       transition: all 0.2s;
     }
     .word-chip:hover, .word-chip.active {
-      background-color: var(--highlight-color);
+      background-color: var(--chip-hover);
       border-color: var(--accent-color);
-      color: var(--primary-color);
+      color: #ffffff;
     }
     .sandhi-bridge {
       position: absolute;
@@ -128,7 +132,8 @@ title: $:/kp/studyMode/template
       top: -10px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: #fff;
+      background-color: var(--bg-color);
+      color: var(--highlight-color);
       border: 1.5px solid var(--sandhi-line-color);
       border-radius: 50%;
       width: 18px;
@@ -137,30 +142,29 @@ title: $:/kp/studyMode/template
       align-items: center;
       justify-content: center;
       font-size: 0.65rem;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
     .sandhi-bridge:hover .sandhi-node, .sandhi-bridge.active .sandhi-node {
       background-color: var(--sandhi-line-color);
+      color: #ffffff;
       transform: translateX(-50%) scale(1.25);
     }
     .anvaya-container, .artha-sentence-container {
       font-size: 1.1rem;
       line-height: 1.6;
-      color: #444;
-      background: #fff;
+      color: var(--text-color);
+      background: var(--bg-color);
       padding: 1rem;
       border-radius: 4px;
       border-left: 3px solid var(--accent-color);
     }
     .artha-sentence-container {
       border-left-color: var(--primary-color);
-      background: #fdfbf7;
     }
     .sidebar {
       width: 360px;
-      background: var(--card-bg);
+      background: var(--sidebar-bg);
       border-left: 1px solid var(--border-color);
-      box-shadow: -2px 0 8px rgba(0, 0, 0, 0.05);
+      box-shadow: -2px 0 8px rgba(0,0,0,0.5);
       transform: translateX(100%);
       transition: transform 0.3s ease-in-out;
       display: flex;
@@ -173,28 +177,28 @@ title: $:/kp/studyMode/template
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: var(--bg-color);
+      background-color: var(--card-bg);
     }
     .sidebar-title { font-weight: bold; color: var(--primary-color); }
-    .close-btn { background: none; border: none; font-size: 1.2rem; cursor: pointer; }
+    .close-btn { background: none; border: none; font-size: 1.2rem; color: var(--text-color); cursor: pointer; }
     .sidebar-body { padding: 1.2rem; overflow-y: auto; flex: 1; font-size: 0.95rem; line-height: 1.6; }
     .word-meaning-subtext {
-      color: var(--muted-gray);
+      color: var(--highlight-color);
       font-size: 1.05rem;
       margin-top: -0.2rem;
       margin-bottom: 1rem;
       padding-bottom: 0.5rem;
       border-bottom: 1px solid var(--border-color);
     }
-    .meaning-line { margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px dashed #eee; }
+    .meaning-line { margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px dashed var(--border-color); }
     .meaning-line:last-child { border-bottom: none; }
     .sandhi-block {
-      background: #fff8e7;
+      background: var(--chip-bg);
       border-left: 3px solid var(--sandhi-line-color);
       padding: 0.6rem 0.8rem;
       margin-top: 0.5rem;
       border-radius: 0 4px 4px 0;
-      font-weight: 500;
+      color: var(--text-color);
     }
   </style>
 </head>
@@ -209,18 +213,22 @@ title: $:/kp/studyMode/template
       <button class='close-btn' onclick='closeSidebar()'>&times;</button>
     </div>
     <div class='sidebar-body' id='sidebar-body'>
-      <p style='color: #888;'>Click on any word in the Padaccheda section to inspect detailed grammar analysis.</p>
+      <p style='color: var(--muted-gray);'>Click on any word in Padaccheda to view detailed analysis.</p>
     </div>
   </aside>
 
   <script>
+    function safeDecode(encodedStr) {
+      try { return decodeURIComponent(encodedStr || ''); } catch(e) { return encodedStr || ''; }
+    }
+
     const currentItem = {
-      title: `<$text text=<<c_title>>/>`,
-      text: `<$text text=<<c_text>>/>`,
-      kp_पदच्छछेदः: `<$text text=<<c_pada>>/>`,
-      kp_अन्वयः: `<$text text=<<c_anvaya>>/>`,
-      kp_अर्थः: `<$text text=<<c_artha>>/>`,
-      kp_व्याकर्ण_विशेषः: `<$text text=<<c_vyakarana>>/>`
+      title: safeDecode('<$text text=<<c_title>>/>'),
+      text: safeDecode('<$text text=<<c_text>>/>'),
+      kp_पदच्छछेदः: safeDecode('<$text text=<<c_pada>>/>'),
+      kp_अन्वयः: safeDecode('<$text text=<<c_anvaya>>/>'),
+      kp_अर्थः: safeDecode('<$text text=<<c_artha>>/>'),
+      kp_व्याकर्ण_विशेषः: safeDecode('<$text text=<<c_vyakarana>>/>')
     };
 
     function parsePadaccheda(rawHtml) {
@@ -338,7 +346,7 @@ title: $:/kp/studyMode/template
       container.innerHTML = `
         <div class='verse-card'>
           <div class='verse-header'>
-            <div>${currentItem.text}</div>
+            <div>${currentItem.text || currentItem.title}</div>
           </div>
           <div class='verse-details'>
             ${padacchedaHtml ? `<div class='section-title'>पदच्छेदः</div><div class='padaccheda-list'>${padacchedaHtml}</div>` : ''}
