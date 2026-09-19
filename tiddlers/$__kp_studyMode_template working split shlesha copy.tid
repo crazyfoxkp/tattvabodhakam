@@ -1,9 +1,9 @@
-created: 20260918164256851
+created: 20260919180652411
 creator: केशवकृपा
-modified: 20260919181232290
+modified: 20260919180704454
 modifier: केशवकृपा
 tags: 
-title: $:/kp/studyMode/template
+title: $:/kp/studyMode/template working split shlesha copy
 
 \whitespace trim
 \define get-shloka-viewer-html(title, text, pada1, anvaya1, artha1, vyakarana1, tatparya1, pada2, anvaya2, artha2, vyakarana2, tatparya2, pada3, anvaya3, artha3, vyakarana3, tatparya3)
@@ -366,53 +366,23 @@ title: $:/kp/studyMode/template
     function parseMeaningString(meaningString) {
       const meaningMap = {};
       if (!meaningString) return meaningMap;
-      
-      let currentHeader = '';
-      const lines = meaningString.split('\n');
-
-      lines.forEach(line => {
-        const trimmed = line.trim();
-        if (!trimmed) return;
-
-        if (trimmed.startsWith('⟣')) {
-          const match = trimmed.match(/⟣\s*''?([^''=]+)''?\s*=\s*(.*)/);
-          if (match) {
-            currentHeader = match[1].trim();
-            const val = match[2].trim();
-            if (val) meaningMap[currentHeader] = val;
-          } else {
-            const headMatch = trimmed.match(/⟣\s*''?([^'']+)''?/);
-            if (headMatch) currentHeader = headMatch[1].trim();
-          }
-        } else if (trimmed.includes('=')) {
-          const parts = trimmed.split('=');
-          const val = parts[1].trim();
-          if (val) {
-            if (currentHeader) {
-              meaningMap[currentHeader] = (meaningMap[currentHeader] ? meaningMap[currentHeader] + ', ' : '') + val;
-            }
-          }
-        }
-      });
+      const regex = /⟣\s*([^=]+)=\s*(.+)/g;
+      let match;
+      while ((match = regex.exec(meaningString)) !== null) {
+        meaningMap[match[1].trim()] = match[2].trim();
+      }
       return meaningMap;
     }
 
     function buildSequentialArthaSentence(meaningString) {
       if (!meaningString) return '';
       const meaningsList = [];
-      const lines = meaningString.split('\n');
-
-      lines.forEach(line => {
-        const trimmed = line.trim();
-        if (!trimmed) return;
-
-        if (trimmed.includes('=')) {
-          const parts = trimmed.split('=');
-          const meaning = parts[1].trim();
-          if (meaning) meaningsList.push(meaning);
-        }
-      });
-
+      const regex = /⟣\s*([^=]+)=\s*(.+)/g;
+      let match;
+      while ((match = regex.exec(meaningString)) !== null) {
+        const meaning = match[2].trim();
+        if (meaning) meaningsList.push(meaning);
+      }
       return meaningsList.join(' ');
     }
 
