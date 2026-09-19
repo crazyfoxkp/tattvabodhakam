@@ -1,9 +1,9 @@
-created: 20260918164256851
+created: 20260919170717214
 creator: केशवकृपा
-modified: 20260919172857132
+modified: 20260919172916331
 modifier: केशवकृपा
 tags: 
-title: $:/kp/studyMode/template
+title: $:/kp/studyMode/template baseline working split copy
 
 \whitespace trim
 \define get-shloka-viewer-html(title, text, pada, anvaya, artha, vyakarana, tatparya)
