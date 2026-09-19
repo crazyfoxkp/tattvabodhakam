@@ -1,12 +1,12 @@
 created: 20260918164256851
 creator: केशवकृपा
-modified: 20260919172857132
+modified: 20260919175638231
 modifier: केशवकृपा
 tags: 
 title: $:/kp/studyMode/template
 
 \whitespace trim
-\define get-shloka-viewer-html(title, text, pada, anvaya, artha, vyakarana, tatparya)
+\define get-shloka-viewer-html(title, text, pada1, anvaya1, artha1, vyakarana1, tatparya1, pada2, anvaya2, artha2, vyakarana2, tatparya2, pada3, anvaya3, artha3, vyakarana3, tatparya3)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,35 +49,91 @@ title: $:/kp/studyMode/template
     }
     .verse-header {
       padding: 1.2rem;
-      font-size: 1.3rem;
+      font-size: 22px;
       line-height: 1.8;
-      text-align: center;
+      text-align: left;
       font-weight: 600;
-      color: var(--primary-color);
+      color: #c6c6c6;
+      background-color: #0d0f00;
+      border-radius: 8px 8px 0 0;
       border-bottom: 1px dashed var(--border-color);
     }
     .verse-details {
-      padding: 1.5rem;
+      padding: 1.2rem;
       background-color: var(--card-bg);
     }
-    .section-title {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--accent-color);
-      margin-top: 1.2rem;
-      margin-bottom: 0.75rem;
-      font-weight: bold;
+    .dots {
+      border-bottom: 1px dotted var(--accent-color);
+      display: inline-block;
+      padding-bottom: 2px;
     }
-    .section-title:first-child { margin-top: 0; }
+    
+    /* Top-level Shlesha Disclosures */
+    details.shlesha-block {
+      margin-bottom: 1.2rem;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background: var(--bg-color);
+    }
+    details.shlesha-block > summary {
+      padding: 0.8rem 1.2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: var(--primary-color);
+      cursor: pointer;
+      user-select: none;
+      background-color: #171a06;
+      border-radius: 6px;
+    }
+    details.shlesha-block[open] > summary {
+      border-bottom: 1px solid var(--border-color);
+      border-radius: 6px 6px 0 0;
+    }
+    .shlesha-content {
+      padding: 1rem;
+    }
+
+    /* Nested Inner Disclosures */
+    details.disclosure-block {
+      margin-top: 0.8rem;
+      border-radius: 4px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+    }
+    details.disclosure-block:first-child {
+      margin-top: 0;
+    }
+    details.disclosure-block summary {
+      padding: 0.65rem 0.9rem;
+      font-size: 0.9rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--accent-color);
+      cursor: pointer;
+      user-select: none;
+      outline: none;
+    }
+    details.disclosure-block[open] summary {
+      border-bottom: 1px solid var(--border-color);
+    }
+    .disclosure-content {
+      padding: 0.9rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: var(--text-color);
+      white-space: pre-wrap;
+    }
+
+    /* Padaccheda Formatting */
     .padaccheda-list {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
+      align-items: flex-end;
       gap: 0.8rem;
       row-gap: 2.2rem;
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
     }
     .padaccheda-line-break {
       flex-basis: 100%;
@@ -90,6 +146,7 @@ title: $:/kp/studyMode/template
       color: var(--accent-color);
       padding: 0 0.2rem;
       user-select: none;
+      align-self: center;
     }
     .sandhi-pair-container {
       display: inline-flex;
@@ -101,7 +158,8 @@ title: $:/kp/studyMode/template
     .word-wrapper {
       position: relative;
       display: inline-flex;
-      align-items: center;
+      align-items: flex-end;
+      height: 100%;
     }
     .word-chip {
       background-color: var(--chip-bg);
@@ -112,6 +170,10 @@ title: $:/kp/studyMode/template
       cursor: pointer;
       border: 1px solid var(--border-color);
       transition: all 0.2s;
+      box-sizing: border-box;
+      line-height: 1.2;
+      display: inline-flex;
+      align-items: center;
     }
     .word-chip:hover, .word-chip.active {
       background-color: var(--chip-hover);
@@ -152,33 +214,8 @@ title: $:/kp/studyMode/template
       color: #ffffff;
       transform: translateX(-50%) scale(1.25);
     }
-    details.disclosure-block {
-      margin-top: 1rem;
-      border-radius: 4px;
-      background: var(--bg-color);
-      border: 1px solid var(--border-color);
-    }
-    details.disclosure-block summary {
-      padding: 0.75rem 1rem;
-      font-size: 0.9rem;
-      font-weight: bold;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      cursor: pointer;
-      user-select: none;
-      outline: none;
-    }
-    details.disclosure-block[open] summary {
-      border-bottom: 1px solid var(--border-color);
-    }
-    .disclosure-content {
-      padding: 1rem;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: var(--text-color);
-      white-space: pre-wrap;
-    }
+
+    /* Sidebar */
     .sidebar {
       width: 360px;
       background: var(--sidebar-bg);
@@ -228,7 +265,7 @@ title: $:/kp/studyMode/template
 
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
-      <span class="sidebar-title" id="sidebar-title">व्याकरणविशेषः</span>
+      <span class="sidebar-title" id="sidebar-title"><span class="dots">व्याकरणविशेषः</span></span>
       <button class="close-btn" onclick="closeSidebar()">&times;</button>
     </div>
     <div class="sidebar-body" id="sidebar-body">
@@ -244,11 +281,35 @@ title: $:/kp/studyMode/template
     const currentItem = {
       title: safeDecode(`$title$`),
       text: safeDecode(`$text$`),
-      kp_पदच्छछेदः: safeDecode(`$pada$`),
-      kp_अन्वयः: safeDecode(`$anvaya$`),
-      kp_अर्थः: safeDecode(`$artha$`),
-      kp_व्याकर्ण_विशेषः: safeDecode(`$vyakarana$`),
-      kp_तात्पर्यम्: safeDecode(`$tatparya$`)
+      sets: [
+        {
+          id: 1,
+          label: 'श्लेषः १',
+          pada: safeDecode(`$pada1$`),
+          anvaya: safeDecode(`$anvaya1$`),
+          artha: safeDecode(`$artha1$`),
+          vyakarana: safeDecode(`$vyakarana1$`),
+          tatparya: safeDecode(`$tatparya1$`)
+        },
+        {
+          id: 2,
+          label: 'श्लेषः २',
+          pada: safeDecode(`$pada2$`),
+          anvaya: safeDecode(`$anvaya2$`),
+          artha: safeDecode(`$artha2$`),
+          vyakarana: safeDecode(`$vyakarana2$`),
+          tatparya: safeDecode(`$tatparya2$`)
+        },
+        {
+          id: 3,
+          label: 'श्लेषः ३',
+          pada: safeDecode(`$pada3$`),
+          anvaya: safeDecode(`$anvaya3$`),
+          artha: safeDecode(`$artha3$`),
+          vyakarana: safeDecode(`$vyakarana3$`),
+          tatparya: safeDecode(`$tatparya3$`)
+        }
+      ].filter(s => s.pada || s.anvaya || s.artha || s.vyakarana || s.tatparya)
     };
 
     function parsePadaccheda(rawHtml) {
@@ -341,12 +402,9 @@ title: $:/kp/studyMode/template
       return { grammarMap, sandhiMap };
     }
 
-    function renderViewer() {
-      const container = document.getElementById('shloka-container');
-      const padacchedaWords = parsePadaccheda(currentItem['kp_पदच्छछेदः']);
-      const { sandhiMap } = parseGrammarAndSandhi(currentItem['kp_व्याकर्ण_विशेषः']);
-      const fullMeaningSentence = buildSequentialArthaSentence(currentItem['kp_अर्थः']);
-      
+    function renderPadacchedaHtml(setObj) {
+      const padacchedaWords = parsePadaccheda(setObj.pada);
+      const { sandhiMap } = parseGrammarAndSandhi(setObj.vyakarana);
       const breakIndex = findBreakIndex(currentItem.text, padacchedaWords);
 
       let padacchedaHtml = '';
@@ -370,11 +428,11 @@ title: $:/kp/studyMode/template
 
             chainHtml += `
               <div class="word-wrapper">
-                <span class="word-chip" onclick="showWordGrammar('${currentWord}', event)">
+                <span class="word-chip" onclick="showWordGrammar(${setObj.id}, '${currentWord}', event)">
                   ${currentWord}
                 </span>
                 ${hasBridge ? `
-                  <div class="sandhi-bridge" title="Sandhi Detail" onclick="showSandhiDetails('${currentWord}', event)">
+                  <div class="sandhi-bridge" title="Sandhi Detail" onclick="showSandhiDetails(${setObj.id}, '${currentWord}', event)">
                     <div class="sandhi-node">⚡</div>
                   </div>
                 ` : ''}
@@ -387,7 +445,7 @@ title: $:/kp/studyMode/template
         } else {
           padacchedaHtml += `
             <div class="word-wrapper">
-              <span class="word-chip" onclick="showWordGrammar('${word}', event)">
+              <span class="word-chip" onclick="showWordGrammar(${setObj.id}, '${word}', event)">
                 ${word}
               </span>
             </div>
@@ -400,43 +458,81 @@ title: $:/kp/studyMode/template
         padacchedaHtml += `<span class="danda-mark">॥</span>`;
       }
 
+      return padacchedaHtml;
+    }
+
+    function renderSetContent(setObj) {
+      const padacchedaHtml = renderPadacchedaHtml(setObj);
+      const fullMeaningSentence = buildSequentialArthaSentence(setObj.artha);
+
+      return `
+        ${padacchedaHtml ? `
+          <details class="disclosure-block" open>
+            <summary><span class="dots">पदच्छेदः</span></summary>
+            <div class="disclosure-content">
+              <div class="padaccheda-list">${padacchedaHtml}</div>
+            </div>
+          </details>
+        ` : ''}
+        
+        ${setObj.anvaya ? `
+          <details class="disclosure-block">
+            <summary><span class="dots">अन्वयः</span></summary>
+            <div class="disclosure-content">${setObj.anvaya}</div>
+          </details>
+        ` : ''}
+
+        ${fullMeaningSentence ? `
+          <details class="disclosure-block">
+            <summary><span class="dots">अर्थः (ಸಾರಾಂಶಃ)</span></summary>
+            <div class="disclosure-content">${fullMeaningSentence}</div>
+          </details>
+        ` : ''}
+
+        ${setObj.tatparya ? `
+          <details class="disclosure-block">
+            <summary><span class="dots">तात्पर्यम्</span></summary>
+            <div class="disclosure-content">${setObj.tatparya}</div>
+          </details>
+        ` : ''}
+      `;
+    }
+
+    function renderViewer() {
+      const container = document.getElementById('shloka-container');
+      let setsHtml = '';
+
+      currentItem.sets.forEach((setObj, index) => {
+        const isOpen = index === 0 ? 'open' : '';
+        setsHtml += `
+          <details class="shlesha-block" ${isOpen}>
+            <summary><span class="dots">${setObj.label}</span></summary>
+            <div class="shlesha-content">
+              ${renderSetContent(setObj)}
+            </div>
+          </details>
+        `;
+      });
+
       container.innerHTML = `
         <div class="verse-card">
           <div class="verse-header">
             <div>${currentItem.text || currentItem.title}</div>
           </div>
           <div class="verse-details">
-            ${padacchedaHtml ? `<div class="section-title">पदच्छेदः</div><div class="padaccheda-list">${padacchedaHtml}</div>` : ''}
-            
-            ${currentItem['kp_अन्वयः'] ? `
-              <details class="disclosure-block" open>
-                <summary>अन्वयः</summary>
-                <div class="disclosure-content">${currentItem['kp_अन्वयः']}</div>
-              </details>
-            ` : ''}
-
-            ${fullMeaningSentence ? `
-              <details class="disclosure-block" open>
-                <summary>अर्थः (ಸಾರಾಂಶಃ)</summary>
-                <div class="disclosure-content">${fullMeaningSentence}</div>
-              </details>
-            ` : ''}
-
-            ${currentItem['kp_तात्पर्यम्'] ? `
-              <details class="disclosure-block" open>
-                <summary>तात्पर्यम्</summary>
-                <div class="disclosure-content">${currentItem['kp_तात्पर्यम्']}</div>
-              </details>
-            ` : ''}
+            ${setsHtml}
           </div>
         </div>
       `;
     }
 
-    function showWordGrammar(word, event) {
+    function showWordGrammar(setId, word, event) {
       event.stopPropagation();
-      const { grammarMap, sandhiMap } = parseGrammarAndSandhi(currentItem['kp_व्याकर्ण_विशेषः']);
-      const wordMeaningMap = parseMeaningString(currentItem['kp_अर्थः']);
+      const setObj = currentItem.sets.find(s => s.id === setId);
+      if (!setObj) return;
+
+      const { grammarMap, sandhiMap } = parseGrammarAndSandhi(setObj.vyakarana);
+      const wordMeaningMap = parseMeaningString(setObj.artha);
       
       const sidebar = document.getElementById('sidebar');
       const sidebarBody = document.getElementById('sidebar-body');
@@ -457,7 +553,7 @@ title: $:/kp/studyMode/template
         sandhiHtml = `<div class="sandhi-block"><strong>सन्धि-नियमः:</strong> ${sandhiMap[word]}</div>`;
       }
 
-      document.getElementById('sidebar-title').innerText = 'व्याकरणविशेषः';
+      document.getElementById('sidebar-title').innerHTML = '<span class="dots">व्याकरणविशेषः (' + setObj.label + ')</span>';
       sidebarBody.innerHTML = `
         <h2 style="margin-top:0; margin-bottom: 0.5rem; color: var(--primary-color);">${word}</h2>
         ${kannadaMeaning ? `<div class="word-meaning-subtext">${kannadaMeaning}</div>` : ''}
@@ -468,16 +564,19 @@ title: $:/kp/studyMode/template
       sidebar.classList.add('open');
     }
 
-    function showSandhiDetails(word, event) {
+    function showSandhiDetails(setId, word, event) {
       event.stopPropagation();
-      const { sandhiMap } = parseGrammarAndSandhi(currentItem['kp_व्याकर्ण_विशेषः']);
+      const setObj = currentItem.sets.find(s => s.id === setId);
+      if (!setObj) return;
+
+      const { sandhiMap } = parseGrammarAndSandhi(setObj.vyakarana);
       const sidebar = document.getElementById('sidebar');
       const sidebarBody = document.getElementById('sidebar-body');
 
       document.querySelectorAll('.word-chip, .sandhi-bridge').forEach(el => el.classList.remove('active'));
       event.currentTarget.classList.add('active');
 
-      document.getElementById('sidebar-title').innerText = 'सन्धि-नियमः';
+      document.getElementById('sidebar-title').innerHTML = '<span class="dots">सन्धि-नियमः (' + setObj.label + ')</span>';
       sidebarBody.innerHTML = `
         <h2 style="margin-top:0; color: var(--primary-color);">सन्धिः (${word})</h2>
         <div class="sandhi-block">${sandhiMap[word]}</div>
@@ -500,11 +599,24 @@ title: $:/kp/studyMode/template
 <$let
   c_title={{{ [<currentTiddler>encodeuricomponent[]] }}}
   c_text={{{ [<currentTiddler>get[text]encodeuricomponent[]] }}}
-  c_pada={{{ [<currentTiddler>get[kp_पदच्छछेदः]encodeuricomponent[]] }}}
-  c_anvaya={{{ [<currentTiddler>get[kp_अन्वयः]encodeuricomponent[]] }}}
-  c_artha={{{ [<currentTiddler>get[kp_अर्थः]encodeuricomponent[]] }}}
-  c_vyakarana={{{ [<currentTiddler>get[kp_व्याकर्ण_विशेषः]encodeuricomponent[]] }}}
-  c_tatparya={{{ [<currentTiddler>get[kp_तात्पर्यम्]encodeuricomponent[]] }}}
+  
+  c_pada1={{{ [<currentTiddler>get[kp_पदच्छछेदः]encodeuricomponent[]] }}}
+  c_anvaya1={{{ [<currentTiddler>get[kp_अन्वयः]encodeuricomponent[]] }}}
+  c_artha1={{{ [<currentTiddler>get[kp_अर्थः]encodeuricomponent[]] }}}
+  c_vyakarana1={{{ [<currentTiddler>get[kp_व्याकर्ण_विशेषः]encodeuricomponent[]] }}}
+  c_tatparya1={{{ [<currentTiddler>get[kp_तात्पर्यम्]encodeuricomponent[]] }}}
+
+  c_pada2={{{ [<currentTiddler>get[kp2_पदच्छछेदः]encodeuricomponent[]] }}}
+  c_anvaya2={{{ [<currentTiddler>get[kp2_अन्वयः]encodeuricomponent[]] }}}
+  c_artha2={{{ [<currentTiddler>get[kp2_अर्थः]encodeuricomponent[]] }}}
+  c_vyakarana2={{{ [<currentTiddler>get[kp2_व्याकर्ण_विशेषः]encodeuricomponent[]] }}}
+  c_tatparya2={{{ [<currentTiddler>get[kp2_तात्पर्यम्]encodeuricomponent[]] }}}
+
+  c_pada3={{{ [<currentTiddler>get[kp3_पदच्छछेदः]encodeuricomponent[]] }}}
+  c_anvaya3={{{ [<currentTiddler>get[kp3_अन्वयः]encodeuricomponent[]] }}}
+  c_artha3={{{ [<currentTiddler>get[kp3_अर्थः]encodeuricomponent[]] }}}
+  c_vyakarana3={{{ [<currentTiddler>get[kp3_व्याकर्ण_विशेषः]encodeuricomponent[]] }}}
+  c_tatparya3={{{ [<currentTiddler>get[kp3_तात्पर्यम्]encodeuricomponent[]] }}}
 >
-<iframe class="shloka-viewer-frame" style="width:100%; height:82vh; border:1px solid #4c4c4c; border-radius:8px; background:#252716;" srcdoc=<<get-shloka-viewer-html title:"$(c_title)$" text:"$(c_text)$" pada:"$(c_pada)$" anvaya:"$(c_anvaya)$" artha:"$(c_artha)$" vyakarana:"$(c_vyakarana)$" tatparya:"$(c_tatparya)$">> ></iframe>
+<iframe class="shloka-viewer-frame" style="width:100%; height:82vh; border:1px solid #4c4c4c; border-radius:8px; background:#252716;" srcdoc=<<get-shloka-viewer-html title:"$(c_title)$" text:"$(c_text)$" pada1:"$(c_pada1)$" anvaya1:"$(c_anvaya1)$" artha1:"$(c_artha1)$" vyakarana1:"$(c_vyakarana1)$" tatparya1:"$(c_tatparya1)$" pada2:"$(c_pada2)$" anvaya2:"$(c_anvaya2)$" artha2:"$(c_artha2)$" vyakarana2:"$(c_vyakarana2)$" tatparya2:"$(c_tatparya2)$" pada3:"$(c_pada3)$" anvaya3:"$(c_anvaya3)$" artha3:"$(c_artha3)$" vyakarana3:"$(c_vyakarana3)$" tatparya3:"$(c_tatparya3)$">> ></iframe>
 </$let>
