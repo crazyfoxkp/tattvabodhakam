@@ -38,7 +38,7 @@ title: $:/kp/studyMode/template working split shlesha copy
     }
     .main-content {
       flex: 1;
-      padding: 1.5rem;
+      padding: .1rem;
       overflow-y: auto;
     }
     .verse-card {
@@ -52,18 +52,18 @@ title: $:/kp/studyMode/template working split shlesha copy
       font-size: 22px;
       line-height: 1.8;
       text-align: left;
-      font-weight: 600;
+      /*font-weight: 600; */
       color: #c6c6c6;
-      background-color: #0d0f00;
+      background-color: #252716;
       border-radius: 8px 8px 0 0;
       border-bottom: 1px dashed var(--border-color);
     }
     .verse-details {
-      padding: 1.2rem;
+      /*padding: .1rem; */
       background-color: var(--card-bg);
     }
     .dots {
-      border-bottom: 1px dotted var(--accent-color);
+      /*border-bottom: 1px dotted var(--accent-color); */
       display: inline-block;
       padding-bottom: 2px;
     }
@@ -77,9 +77,9 @@ title: $:/kp/studyMode/template working split shlesha copy
     }
     details.shlesha-block > summary {
       padding: 0.8rem 1.2rem;
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: var(--primary-color);
+      font-size: 1.2rem;
+      /*font-weight: bold; */
+      color: #d2dd7d;
       cursor: pointer;
       user-select: none;
       background-color: #171a06;
@@ -106,10 +106,10 @@ title: $:/kp/studyMode/template working split shlesha copy
     details.disclosure-block summary {
       padding: 0.65rem 0.9rem;
       font-size: 0.9rem;
-      font-weight: bold;
+      /*font-weight: bold; */
       letter-spacing: 1px;
       text-transform: uppercase;
-      color: var(--accent-color);
+      color: #d2dd7d;
       cursor: pointer;
       user-select: none;
       outline: none;
@@ -122,7 +122,7 @@ title: $:/kp/studyMode/template working split shlesha copy
       font-size: 1.1rem;
       line-height: 1.6;
       color: var(--text-color);
-      white-space: pre-wrap;
+      /*white-space: pre-wrap; */
     }
 
     /* Padaccheda Formatting */
@@ -142,9 +142,9 @@ title: $:/kp/studyMode/template working split shlesha copy
     }
     .danda-mark {
       font-size: 1.2rem;
-      font-weight: bold;
-      color: var(--accent-color);
-      padding: 0 0.2rem;
+      /*font-weight: bold; */
+      color: var(--text-color);
+      padding: 0 0 0 0.2rem;
       user-select: none;
       align-self: center;
     }
@@ -224,7 +224,7 @@ title: $:/kp/studyMode/template working split shlesha copy
 
     /* Sidebar */
     .sidebar {
-      width: 360px;
+      width: 560px;
       background: var(--sidebar-bg);
       border-left: 1px solid var(--border-color);
       box-shadow: -2px 0 8px rgba(0,0,0,0.5);
@@ -242,7 +242,7 @@ title: $:/kp/studyMode/template working split shlesha copy
       align-items: center;
       background-color: var(--card-bg);
     }
-    .sidebar-title { font-weight: bold; color: var(--primary-color); }
+    .sidebar-title { color: var(--primary-color); }
     .close-btn { background: none; border: none; font-size: 1.2rem; color: var(--text-color); cursor: pointer; }
     .sidebar-body { padding: 1.2rem; overflow-y: auto; flex: 1; font-size: 0.95rem; line-height: 1.6; }
     .word-meaning-subtext {
