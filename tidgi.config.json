@@ -4,5 +4,7 @@
   "id": "ua0li1wFlJCUgIo7PsZlV",
   "name": "तत्त्वबोधकम्",
   "userName": "केशवकृपा",
-  "gitUrl": ""
+  "gitUrl": "",
+  "enableFileSystemWatch": true,
+  "syncOnInterval": true
 }

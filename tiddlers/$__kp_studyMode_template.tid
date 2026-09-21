@@ -1,6 +1,6 @@
 created: 20260918164256851
 creator: केशवकृपा
-modified: 20260919181232290
+modified: 20260921171215001
 modifier: केशवकृपा
 tags: 
 title: $:/kp/studyMode/template
@@ -38,7 +38,7 @@ title: $:/kp/studyMode/template
     }
     .main-content {
       flex: 1;
-      padding: 1.5rem;
+      padding: .1rem;
       overflow-y: auto;
     }
     .verse-card {
@@ -52,18 +52,18 @@ title: $:/kp/studyMode/template
       font-size: 22px;
       line-height: 1.8;
       text-align: left;
-      font-weight: 600;
+      /*font-weight: 600; */
       color: #c6c6c6;
-      background-color: #0d0f00;
+      background-color: #252716;
       border-radius: 8px 8px 0 0;
       border-bottom: 1px dashed var(--border-color);
     }
     .verse-details {
-      padding: 1.2rem;
+      /*padding: .1rem; */
       background-color: var(--card-bg);
     }
     .dots {
-      border-bottom: 1px dotted var(--accent-color);
+      /*border-bottom: 1px dotted var(--accent-color); */
       display: inline-block;
       padding-bottom: 2px;
     }
@@ -77,9 +77,9 @@ title: $:/kp/studyMode/template
     }
     details.shlesha-block > summary {
       padding: 0.8rem 1.2rem;
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: var(--primary-color);
+      font-size: 1.2rem;
+      /*font-weight: bold; */
+      color: #d2dd7d;
       cursor: pointer;
       user-select: none;
       background-color: #171a06;
@@ -106,10 +106,10 @@ title: $:/kp/studyMode/template
     details.disclosure-block summary {
       padding: 0.65rem 0.9rem;
       font-size: 0.9rem;
-      font-weight: bold;
+      /*font-weight: bold; */
       letter-spacing: 1px;
       text-transform: uppercase;
-      color: var(--accent-color);
+      color: #d2dd7d;
       cursor: pointer;
       user-select: none;
       outline: none;
@@ -122,7 +122,7 @@ title: $:/kp/studyMode/template
       font-size: 1.1rem;
       line-height: 1.6;
       color: var(--text-color);
-      white-space: pre-wrap;
+      /*white-space: pre-wrap; */
     }
 
     /* Padaccheda Formatting */
@@ -142,9 +142,9 @@ title: $:/kp/studyMode/template
     }
     .danda-mark {
       font-size: 1.2rem;
-      font-weight: bold;
-      color: var(--accent-color);
-      padding: 0 0.2rem;
+      /*font-weight: bold; */
+      color: var(--text-color);
+      padding: 0 0 0 0.2rem;
       user-select: none;
       align-self: center;
     }
@@ -224,7 +224,7 @@ title: $:/kp/studyMode/template
 
     /* Sidebar */
     .sidebar {
-      width: 360px;
+      width: 560px;
       background: var(--sidebar-bg);
       border-left: 1px solid var(--border-color);
       box-shadow: -2px 0 8px rgba(0,0,0,0.5);
@@ -242,7 +242,7 @@ title: $:/kp/studyMode/template
       align-items: center;
       background-color: var(--card-bg);
     }
-    .sidebar-title { font-weight: bold; color: var(--primary-color); }
+    .sidebar-title { color: var(--primary-color); }
     .close-btn { background: none; border: none; font-size: 1.2rem; color: var(--text-color); cursor: pointer; }
     .sidebar-body { padding: 1.2rem; overflow-y: auto; flex: 1; font-size: 0.95rem; line-height: 1.6; }
     .word-meaning-subtext {
@@ -366,53 +366,23 @@ title: $:/kp/studyMode/template
     function parseMeaningString(meaningString) {
       const meaningMap = {};
       if (!meaningString) return meaningMap;
-      
-      let currentHeader = '';
-      const lines = meaningString.split('\n');
-
-      lines.forEach(line => {
-        const trimmed = line.trim();
-        if (!trimmed) return;
-
-        if (trimmed.startsWith('⟣')) {
-          const match = trimmed.match(/⟣\s*''?([^''=]+)''?\s*=\s*(.*)/);
-          if (match) {
-            currentHeader = match[1].trim();
-            const val = match[2].trim();
-            if (val) meaningMap[currentHeader] = val;
-          } else {
-            const headMatch = trimmed.match(/⟣\s*''?([^'']+)''?/);
-            if (headMatch) currentHeader = headMatch[1].trim();
-          }
-        } else if (trimmed.includes('=')) {
-          const parts = trimmed.split('=');
-          const val = parts[1].trim();
-          if (val) {
-            if (currentHeader) {
-              meaningMap[currentHeader] = (meaningMap[currentHeader] ? meaningMap[currentHeader] + ', ' : '') + val;
-            }
-          }
-        }
-      });
+      const regex = /⟣\s*([^=]+)=\s*(.+)/g;
+      let match;
+      while ((match = regex.exec(meaningString)) !== null) {
+        meaningMap[match[1].trim()] = match[2].trim();
+      }
       return meaningMap;
     }
 
     function buildSequentialArthaSentence(meaningString) {
       if (!meaningString) return '';
       const meaningsList = [];
-      const lines = meaningString.split('\n');
-
-      lines.forEach(line => {
-        const trimmed = line.trim();
-        if (!trimmed) return;
-
-        if (trimmed.includes('=')) {
-          const parts = trimmed.split('=');
-          const meaning = parts[1].trim();
-          if (meaning) meaningsList.push(meaning);
-        }
-      });
-
+      const regex = /⟣\s*([^=]+)=\s*(.+)/g;
+      let match;
+      while ((match = regex.exec(meaningString)) !== null) {
+        const meaning = match[2].trim();
+        if (meaning) meaningsList.push(meaning);
+      }
       return meaningsList.join(' ');
     }
 
@@ -462,6 +432,7 @@ title: $:/kp/studyMode/template
 
             const currentWord = padacchedaWords[i];
             const hasBridge = (sandhiMap[currentWord] && i < padacchedaWords.length - 1);
+            const nextWord = padacchedaWords[i + 1] || '';
 
             chainHtml += `
               <div class="word-wrapper">
@@ -469,7 +440,7 @@ title: $:/kp/studyMode/template
                   ${currentWord}
                 </span>
                 ${hasBridge ? `
-                  <div class="sandhi-bridge" title="Sandhi Detail" onclick="showSandhiDetails(${setObj.id}, '${currentWord}', event)">
+                  <div class="sandhi-bridge" title="Sandhi Detail" onclick="showSandhiDetails(${setObj.id}, '${currentWord}', '${nextWord}', event)">
                     <div class="sandhi-node">⚡</div>
                   </div>
                 ` : ''}
@@ -601,7 +572,7 @@ title: $:/kp/studyMode/template
       sidebar.classList.add('open');
     }
 
-    function showSandhiDetails(setId, word, event) {
+    function showSandhiDetails(setId, word, nextWord, event) {
       event.stopPropagation();
       const setObj = currentItem.sets.find(s => s.id === setId);
       if (!setObj) return;
@@ -613,9 +584,11 @@ title: $:/kp/studyMode/template
       document.querySelectorAll('.word-chip, .sandhi-bridge').forEach(el => el.classList.remove('active'));
       event.currentTarget.classList.add('active');
 
+      const sandhiPairTitle = nextWord ? `${word} + ${nextWord}` : word;
+
       document.getElementById('sidebar-title').innerHTML = '<span class="dots">सन्धि-नियमः (' + setObj.label + ')</span>';
       sidebarBody.innerHTML = `
-        <h2 style="margin-top:0; color: var(--primary-color);">सन्धिः (${word})</h2>
+        <h2 style="margin-top:0; color: var(--primary-color);">सन्धिः (${sandhiPairTitle})</h2>
         <div class="sandhi-block">${sandhiMap[word]}</div>
       `;
 

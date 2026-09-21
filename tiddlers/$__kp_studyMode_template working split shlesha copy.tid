@@ -432,6 +432,7 @@ title: $:/kp/studyMode/template working split shlesha copy
 
             const currentWord = padacchedaWords[i];
             const hasBridge = (sandhiMap[currentWord] && i < padacchedaWords.length - 1);
+            const nextWord = padacchedaWords[i + 1] || '';
 
             chainHtml += `
               <div class="word-wrapper">
@@ -439,7 +440,7 @@ title: $:/kp/studyMode/template working split shlesha copy
                   ${currentWord}
                 </span>
                 ${hasBridge ? `
-                  <div class="sandhi-bridge" title="Sandhi Detail" onclick="showSandhiDetails(${setObj.id}, '${currentWord}', event)">
+                  <div class="sandhi-bridge" title="Sandhi Detail" onclick="showSandhiDetails(${setObj.id}, '${currentWord}', '${nextWord}', event)">
                     <div class="sandhi-node">⚡</div>
                   </div>
                 ` : ''}
@@ -571,7 +572,7 @@ title: $:/kp/studyMode/template working split shlesha copy
       sidebar.classList.add('open');
     }
 
-    function showSandhiDetails(setId, word, event) {
+    function showSandhiDetails(setId, word, nextWord, event) {
       event.stopPropagation();
       const setObj = currentItem.sets.find(s => s.id === setId);
       if (!setObj) return;
@@ -583,9 +584,11 @@ title: $:/kp/studyMode/template working split shlesha copy
       document.querySelectorAll('.word-chip, .sandhi-bridge').forEach(el => el.classList.remove('active'));
       event.currentTarget.classList.add('active');
 
+      const sandhiPairTitle = nextWord ? `${word} + ${nextWord}` : word;
+
       document.getElementById('sidebar-title').innerHTML = '<span class="dots">सन्धि-नियमः (' + setObj.label + ')</span>';
       sidebarBody.innerHTML = `
-        <h2 style="margin-top:0; color: var(--primary-color);">सन्धिः (${word})</h2>
+        <h2 style="margin-top:0; color: var(--primary-color);">सन्धिः (${sandhiPairTitle})</h2>
         <div class="sandhi-block">${sandhiMap[word]}</div>
       `;
 
