@@ -2,13 +2,14 @@ caption: {{$:/core/images/book}} {{$:/kp/studyMode/button/Caption}}
 created: 20260918164440845
 creator: केशवकृपा
 description: {{$:/kp/studyMode/button/Hint}}
-modified: 20260921151546647
+modified: 20260921155658505
 modifier: केशवकृपा
 tags: $:/tags/ViewToolbar
 title: $:/kp/studyMode/button
 
 \whitespace trim
 \define studyModeToggle()
+<$list filter="[<currentTiddler>!tag[Journal]!tag[Contents]]" variable="ignore">
 <$let stateTiddler={{{ [<currentTiddler>addprefix[$:/state/studyMode/]] }}}>
 <$button class=<<tv-config-toolbar-class>>>
   <$action-listops $tiddler=<<stateTiddler>> $field="text" $subfilter="+[toggle[study],[raw]]" />
@@ -28,7 +29,7 @@ title: $:/kp/studyMode/button
   </$list>
 </$button>
 </$let>
-
-<$list filter="[<currentTiddler>!tag[Journal]!tag[Contents]]" variable="showButton">
-<<studyModeToggle>>
 </$list>
+\end
+
+<<studyModeToggle>>
