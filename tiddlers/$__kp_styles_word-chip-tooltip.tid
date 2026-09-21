@@ -1,0 +1,113 @@
+created: 20260921172840674
+creator: केशवकृपा
+modified: 20260921175936121
+modifier: केशवकृपा
+tags: $:/tags/Stylesheet
+title: $:/kp/styles/word-chip-tooltip
+
+/* style sheet to create a word button to show/hide curly brackets  
+title: $:/kp/styles/word-chip-tooltip
+tags: $:/tags/Stylesheet */
+
+.word-chip-tooltip {
+  position: relative;
+  display: inline-block;
+  background-color: #12130b;
+  color: #dfdfdf;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #4c4c4c;
+  /*font-size: 0.95rem;*/
+  cursor: pointer;
+  margin: 0 0.15rem;
+  transition: all 0.2s ease-in-out;
+  line-height: 1.2;
+  outline: none;
+}
+
+.word-chip-tooltip:hover,
+.word-chip-tooltip:focus {
+  background-color: #3f4900;
+  border-color: #859900;
+  color: #ffffff;
+}
+
+/* Base Tooltip Box */
+.word-chip-tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1b1b20;
+  color: #ff8b69;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #b58900;
+  
+  max-height: 200px;
+  overflow-y: auto;
+  white-space: normal;
+  word-wrap: break-word;
+  
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out, width 0.15s ease-in-out;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+/* Tooltip Arrow */
+.word-chip-tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #b58900 transparent transparent transparent;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 101;
+}
+
+/* Reveal on Hover or Focus */
+.word-chip-tooltip:hover::after,
+.word-chip-tooltip:hover::before,
+.word-chip-tooltip:focus::after,
+.word-chip-tooltip:focus::before {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* HOVER STATE: Dynamic width based on content length */
+.word-chip-tooltip:hover::after {
+  width: max-content;
+  min-width: 160px;
+  max-width: 380px;
+}
+
+/* CLICKED / FOCUS STATE: Locked at 500px width */
+.word-chip-tooltip:focus::after {
+  width: 500px !important;
+  max-width: 80vw;
+}
+
+/* Custom Scrollbar */
+.word-chip-tooltip::after::-webkit-scrollbar {
+  width: 5px;
+}
+.word-chip-tooltip::after::-webkit-scrollbar-thumb {
+  background: #b58900;
+  border-radius: 3px;
+}
+.word-chip-tooltip::after::-webkit-scrollbar-track {
+  background: #121215;
+}

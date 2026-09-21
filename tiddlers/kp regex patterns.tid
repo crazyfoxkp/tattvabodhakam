@@ -1,6 +1,6 @@
 created: 20241121011710773
 creator: KeshavP
-modified: 20260622175452904
+modified: 20260921175746890
 modifier: केशवकृपा
 tags: $:/tags/Macro $:/tags/Global kp-showHideBrackets
 title: kp regex patterns
@@ -10,13 +10,12 @@ title: kp regex patterns
 \define linestartswithdashpattern() ^[^- ]
 \define vocabSplitPattern() [=|¦|\/]
 \define bracketContentsPattern() \{\{.*?\}\}|\{.*?\}[ ]*
-\define hideBracketsAndShowThisPattern()  🂋 
-\define findBracketsPattern() \{([^{}]+)\}
-\define showBracketsWithTicksPattern() `{$1}`
+\define hideBracketsAndShowThisPattern() 🂋 
+\define findBracketsPattern() ([^\s{}]+)\s*\{([^{}]+)\}
+\define wordChipTooltipPattern() <span class="word-chip-tooltip" tabindex="0" data-tooltip="$2">$1</span>
+\define showBracketsPattern() $1 `{$2}`
 
-\define dbl-L-BracketToCurlyPatternSearch() \[\[
-\define dbl-L-BracketToCurlyTempReplace() ««
-\define dbl-R-BracketToCurlyPatternSearch() \]\]
+\define dbl-L-BracketToCurlyPatternSearch() \[\[ \define dbl-L-BracketToCurlyTempReplace() «« \define dbl-R-BracketToCurlyPatternSearch() \]\]
 \define dbl-R-BracketToCurlyTempReplace() »»
 \define bracketToCurlySearchPattern() \[([^\[\]]+)\]
 \define bracketToCurlyReplace() {$1}
@@ -25,6 +24,3 @@ title: kp regex patterns
 
 \define viewTemplatePattern() ^[,.]+$
 \define viewTemplateDeDupCommas() (^\s*,\s*|,\s*,+|\s*,\s*)+
-
-
-
