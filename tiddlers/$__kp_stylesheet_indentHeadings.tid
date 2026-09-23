@@ -1,0 +1,66 @@
+created: 20260923155630569
+creator: केशवकृपा
+modified: 20260923162836178
+modifier: केशवकृपा
+tags: $:/tags/Stylesheet
+title: $:/kp/stylesheet/indentHeadings
+
+/*  title: $:/kp/styles/indented-headings
+tags: $:/tags/Stylesheet
+
+Base paragraph resets */
+.tc-tiddler-frame .tc-tiddler-body p {
+  transition: margin-left 0.15s ease;
+}
+
+/* H1 */
+.tc-tiddler-frame .tc-tiddler-body h1,
+.tc-tiddler-frame .tc-tiddler-body h1 ~ p:not(h2 ~ p, h3 ~ p, h4 ~ p, h5 ~ p, h6 ~ p) {
+  margin-inline-start: 0;
+  margin-left: 0;
+}
+
+/* H2 */
+.tc-tiddler-frame .tc-tiddler-body h2,
+.tc-tiddler-frame .tc-tiddler-body h2 ~ p:not(h3 ~ p, h4 ~ p, h5 ~ p, h6 ~ p) {
+  margin-inline-start: 1.5rem;
+  margin-left: 1.5rem;
+  border-left: 2px solid #859900;
+  padding-left: 0.6rem;
+}
+
+/* H3 */
+.tc-tiddler-frame .tc-tiddler-body h3,
+.tc-tiddler-frame .tc-tiddler-body h3 ~ p:not(h4 ~ p, h5 ~ p, h6 ~ p) {
+  margin-inline-start: 3.0rem;
+  margin-left: 3.0rem;
+  border-left: 2px solid #b58900;
+  padding-left: 0.6rem;
+}
+
+/* H4 */
+.tc-tiddler-frame .tc-tiddler-body h4,
+.tc-tiddler-frame .tc-tiddler-body h4 ~ p:not(h5 ~ p, h6 ~ p) {
+  margin-inline-start: 4.5rem;
+  margin-left: 4.5rem;
+  border-left: 2px solid #cb4b16;
+  padding-left: 0.6rem;
+}
+
+/* H5 */
+.tc-tiddler-frame .tc-tiddler-body h5,
+.tc-tiddler-frame .tc-tiddler-body h5 ~ p:not(h6 ~ p) {
+  margin-inline-start: 6.0rem;
+  margin-left: 6.0rem;
+  border-left: 2px solid #268bd2;
+  padding-left: 0.6rem;
+}
+
+/* H6 */
+.tc-tiddler-frame .tc-tiddler-body h6,
+.tc-tiddler-frame .tc-tiddler-body h6 ~ p {
+  margin-inline-start: 7.5rem;
+  margin-left: 7.5rem;
+  border-left: 2px solid #6c71c4;
+  padding-left: 0.6rem;
+}

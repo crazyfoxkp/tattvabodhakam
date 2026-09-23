@@ -1,0 +1,36 @@
+created: 20260923160107601
+creator: केशवकृपा
+modified: 20260923161233602
+modifier: केशवकृपा
+tags: Journal
+title: kp indent heading test
+
+! H1: Root Section (Journal Entry)
+Lorem ipsum dolor sit amet, consectetur {adapter|आदप्तेर} adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat {molestie|मोलेस्तिए} vehicula.
+
+!! H2: Major Category
+Sed ut perspiciatis unde omnis iste natus {error|एरोर्} sit voluptatem accusantium doloremque laudantium, totam rem {aperiam|अपेडियम}.
+
+!!! H3: Detailed Subtopic
+At vero eos et accusamus et iusto odio {dignissimos|दिग्निस्सिमोस्} ducimus qui blanditiis praesentium voluptatum deleniti atque {corrupti|कोर्ुरुप्ति} quos dolores.
+
+Sed ut perspiciatis unde omnis iste natus {error|एरोर्} sit voluptatem accusantium doloremque laudantium, totam rem {aperiam|अपेडियम}.
+
+!!!! H4: Specific Note
+Nam libero tempore, cum soluta nobis est {eligendi|एलिगेन्दि} optio cumque nihil impedit quo minus id quod maxime {placeat|प्लाचेअत्} facere possimus.
+
+Sed ut perspiciatis unde omnis iste natus {error|एरोर्} sit voluptatem accusantium doloremque laudantium, totam rem {aperiam|अपेडियम}.
+
+!!!!! H5: Granular Details
+Temporibus autem quibusdam et aut {officiis|ओफ्फिचिएस्} debitis aut rerum necessitatibus saepe eveniet ut et {voluptates|वोलुप्ततेस्} repudiandae sint.
+
+Sed ut perspiciatis unde omnis iste natus {error|एरोर्} sit voluptatem accusantium doloremque laudantium, totam rem {aperiam|अपेडियम}.
+
+!!!!!! H6: Deepest Nested Note
+Itaque earum rerum hic tenetur a sapiente {delectus|देलेक्तुस्}, ut aut reiciendis voluptatibus maiores alias {consequatur|कोन्सेकुअतुर्} aut perferendis doloribus asperiores repellat.
+
+Sed ut perspiciatis unde omnis iste natus {error|एरोर्} sit voluptatem accusantium doloremque laudantium, totam rem {aperiam|अपेडियम}.
+
+!! H2: Second Category
+
+Ut enim ad minima veniam, quis nostrum {exercitationem|एक्सेर्चिततिोनेम्} ullam corporis suscipit laboriosam, nisi ut aliquid ex ea {commodi|कोम्मोदि} consequatur?
