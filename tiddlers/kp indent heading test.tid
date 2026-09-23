@@ -1,36 +1,69 @@
 created: 20260923160107601
 creator: केशवकृपा
-modified: 20260923161233602
+modified: 20260923173418539
 modifier: केशवकृपा
 tags: Journal
 title: kp indent heading test
 
-! H1: Root Section (Journal Entry)
-Lorem ipsum dolor sit amet, consectetur {adapter|आदप्तेर} adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat {molestie|मोलेस्तिए} vehicula.
 
-!! H2: Major Category
-Sed ut perspiciatis unde omnis iste natus {error|एरोर्} sit voluptatem accusantium doloremque laudantium, totam rem {aperiam|अपेडियम}.
 
-!!! H3: Detailed Subtopic
-At vero eos et accusamus et iusto odio {dignissimos|दिग्निस्सिमोस्} ducimus qui blanditiis praesentium voluptatum deleniti atque {corrupti|कोर्ुरुप्ति} quos dolores.
+! H1: Top-Level Heading
+This is a standard paragraph under H1. It should have a grey accent line and 0rem left margin.
 
-Sed ut perspiciatis unde omnis iste natus {error|एरोर्} sit voluptatem accusantium doloremque laudantium, totam rem {aperiam|अपेडियम}.
+* H1 Bullet Item 1
+* H1 Bullet Item 2
+# H1 Ordered Item 1
+# H1 Ordered Item 2
 
-!!!! H4: Specific Note
-Nam libero tempore, cum soluta nobis est {eligendi|एलिगेन्दि} optio cumque nihil impedit quo minus id quod maxime {placeat|प्लाचेअत्} facere possimus.
+; H1 Definition Term
+: H1 Definition description text. Should be indented +1 level (1.5rem) with NO guide line.
 
-Sed ut perspiciatis unde omnis iste natus {error|एरोर्} sit voluptatem accusantium doloremque laudantium, totam rem {aperiam|अपेडियम}.
+# H1 List Following DL Item 1
+# H1 List Following DL Item 2
 
-!!!!! H5: Granular Details
-Temporibus autem quibusdam et aut {officiis|ओफ्फिचिएस्} debitis aut rerum necessitatibus saepe eveniet ut et {voluptates|वोलुप्ततेस्} repudiandae sint.
+!! H2: Second-Level Section
+This is a paragraph under H2. It should be indented 1.5rem with a green accent line.
 
-Sed ut perspiciatis unde omnis iste natus {error|एरोर्} sit voluptatem accusantium doloremque laudantium, totam rem {aperiam|अपेडियम}.
+; H2 Definition Term
+: H2 Definition description. Indented +1 level past H2 (3.0rem) with NO guide line.
 
-!!!!!! H6: Deepest Nested Note
-Itaque earum rerum hic tenetur a sapiente {delectus|देलेक्तुस्}, ut aut reiciendis voluptatibus maiores alias {consequatur|कोन्सेकुअतुर्} aut perferendis doloribus asperiores repellat.
+# H2 List Following DL Item 1
+# H2 List Following DL Item 2
 
-Sed ut perspiciatis unde omnis iste natus {error|एरोर्} sit voluptatem accusantium doloremque laudantium, totam rem {aperiam|अपेडियम}.
+!!! H3: Third-Level Section
+Paragraph under H3 (3.0rem indent, yellow accent line).
 
-!! H2: Second Category
+; H3 Definition Term
+: H3 Definition description (4.5rem indent).
 
-Ut enim ad minima veniam, quis nostrum {exercitationem|एक्सेर्चिततिोनेम्} ullam corporis suscipit laboriosam, nisi ut aliquid ex ea {commodi|कोम्मोदि} consequatur?
+# H3 List Following DL Item 1
+
+!!!! H4: Fourth-Level Section
+Paragraph under H4 (4.5rem indent, orange accent line).
+
+!!!!! H5: Fifth-Level Section
+Paragraph under H5 (6.0rem indent, blue accent line).
+
+!!!!!! H6: Deepest Level Heading
+Paragraph under H6 (7.5rem indent, purple accent line).
+
+; H6 Definition Term
+: H6 Definition description (9.0rem indent).
+
+# H6 List Following DL Item 1
+# H6 List Following DL Item 2
+
+!! H2: Step-Up Reset Test (H6 → H2)
+This paragraph follows H2 immediately after an H6 section. It should reset back to 1.5rem indent with a green accent line (NOT 7.5rem purple).
+
+; H2 Reset DL Term
+: H2 Reset DL description (3.0rem indent).
+
+# H2 Reset List Item 1
+# H2 Reset List Item 2
+
+! H1: Step-Up Reset Test (H2 → H1)
+This paragraph follows H1 immediately after an H2 section. It should reset back to 0rem indent with a grey accent line.
+
+* H1 Final Bullet Item
+# H1 Final Ordered Item

@@ -1,10 +1,9 @@
 created: 20260923155630569
 creator: केशवकृपा
-modified: 20260923172656085
+modified: 20260923173748903
 modifier: केशवकृपा
 tags: $:/tags/Stylesheet
 title: $:/kp/stylesheet/indentHeadings
-
 
 
 /* ==========================================
@@ -38,11 +37,14 @@ title: $:/kp/stylesheet/indentHeadings
   padding-left: 0 !important;
 }
 
+.tc-tiddler-frame .tc-tiddler-body dl dd {
+  margin-left: 1.5rem !important;
+}
+
 /* ==========================================
-   3. BASE BLOCK ELEMENTS (p, ol, ul)
+   3. PARAGRAPHS (p)
    ========================================== */
 
-/* Paragraphs with Accent Lines */
 .tc-tiddler-frame .tc-tiddler-body h1 ~ p { margin-left: 0rem; border-left: 2px solid #586e75; padding-left: 0.6rem; }
 .tc-tiddler-frame .tc-tiddler-body h2 ~ p { margin-left: 1.5rem; border-left: 2px solid #859900; padding-left: 0.6rem; }
 .tc-tiddler-frame .tc-tiddler-body h3 ~ p { margin-left: 3.0rem; border-left: 2px solid #b58900; padding-left: 0.6rem; }
@@ -50,15 +52,18 @@ title: $:/kp/stylesheet/indentHeadings
 .tc-tiddler-frame .tc-tiddler-body h5 ~ p { margin-left: 6.0rem; border-left: 2px solid #268bd2; padding-left: 0.6rem; }
 .tc-tiddler-frame .tc-tiddler-body h6 ~ p { margin-left: 7.5rem; border-left: 2px solid #6c71c4; padding-left: 0.6rem; }
 
-/* Lists (ol, ul) - NO Accent Lines */
-.tc-tiddler-frame .tc-tiddler-body h1 ~ :is(ol, ul) { margin-left: 0rem; }
-.tc-tiddler-frame .tc-tiddler-body h2 ~ :is(ol, ul) { margin-left: 1.5rem; }
-.tc-tiddler-frame .tc-tiddler-body h3 ~ :is(ol, ul) { margin-left: 3.0rem; }
-.tc-tiddler-frame .tc-tiddler-body h4 ~ :is(ol, ul) { margin-left: 4.5rem; }
-.tc-tiddler-frame .tc-tiddler-body h5 ~ :is(ol, ul) { margin-left: 6.0rem; }
-.tc-tiddler-frame .tc-tiddler-body h6 ~ :is(ol, ul) { margin-left: 7.5rem; }
+/* ==========================================
+   4. ALL LISTS (ol, ul) - INDENTED, NO ACCENT LINES
+   ========================================== */
 
-/* Lists (ol, ul) Following DL */
+.tc-tiddler-frame .tc-tiddler-body h1 ~ :is(ol, ul) { margin-left: 1.5rem; }
+.tc-tiddler-frame .tc-tiddler-body h2 ~ :is(ol, ul) { margin-left: 3.0rem; }
+.tc-tiddler-frame .tc-tiddler-body h3 ~ :is(ol, ul) { margin-left: 4.5rem; }
+.tc-tiddler-frame .tc-tiddler-body h4 ~ :is(ol, ul) { margin-left: 6.0rem; }
+.tc-tiddler-frame .tc-tiddler-body h5 ~ :is(ol, ul) { margin-left: 7.5rem; }
+.tc-tiddler-frame .tc-tiddler-body h6 ~ :is(ol, ul) { margin-left: 9.0rem; }
+
+/* Lists (ol, ul) Following DL (+1 level past DL / +2 past Hn) */
 .tc-tiddler-frame .tc-tiddler-body dl ~ :is(ol, ul) { margin-left: 3.0rem !important; }
 .tc-tiddler-frame .tc-tiddler-body h1 ~ dl ~ :is(ol, ul) { margin-left: 3.0rem !important; }
 .tc-tiddler-frame .tc-tiddler-body h2 ~ dl ~ :is(ol, ul) { margin-left: 4.5rem !important; }
@@ -67,6 +72,7 @@ title: $:/kp/stylesheet/indentHeadings
 .tc-tiddler-frame .tc-tiddler-body h5 ~ dl ~ :is(ol, ul) { margin-left: 9.0rem !important; }
 .tc-tiddler-frame .tc-tiddler-body h6 ~ dl ~ :is(ol, ul) { margin-left: 10.5rem !important; }
 
+/* Strict removal of guide lines and border styling for ALL lists and list items */
 .tc-tiddler-frame .tc-tiddler-body :is(ol, ul),
 .tc-tiddler-frame .tc-tiddler-body :is(ol, ul) li {
   border-left: none !important;
@@ -75,72 +81,80 @@ title: $:/kp/stylesheet/indentHeadings
 }
 
 /* ==========================================
-   4. STEP-UP RESETS (P, OL, UL, DL)
-   Strictly overrides sibling cascade when going back up the heading tree
+   5. ABSOLUTE STEP-UP RESETS (HARD OVERRIDES)
    ========================================== */
 
-/* Step back to H1 from H2-H6 */
+/* Return to H1 (overrides any preceding H2, H3, H4, H5, H6) */
 .tc-tiddler-frame .tc-tiddler-body h2 ~ h1 ~ p,
 .tc-tiddler-frame .tc-tiddler-body h3 ~ h1 ~ p,
 .tc-tiddler-frame .tc-tiddler-body h4 ~ h1 ~ p,
 .tc-tiddler-frame .tc-tiddler-body h5 ~ h1 ~ p,
-.tc-tiddler-frame .tc-tiddler-body h6 ~ h1 ~ p { margin-left: 0rem !important; border-left: 2px solid #586e75 !important; }
+.tc-tiddler-frame .tc-tiddler-body h6 ~ h1 ~ p {
+  margin-left: 0rem !important;
+  border-left: 2px solid #586e75 !important;
+}
 
 .tc-tiddler-frame .tc-tiddler-body h2 ~ h1 ~ :is(ol, ul),
 .tc-tiddler-frame .tc-tiddler-body h3 ~ h1 ~ :is(ol, ul),
 .tc-tiddler-frame .tc-tiddler-body h4 ~ h1 ~ :is(ol, ul),
 .tc-tiddler-frame .tc-tiddler-body h5 ~ h1 ~ :is(ol, ul),
-.tc-tiddler-frame .tc-tiddler-body h6 ~ h1 ~ :is(ol, ul) { margin-left: 0rem !important; }
+.tc-tiddler-frame .tc-tiddler-body h6 ~ h1 ~ :is(ol, ul) {
+  margin-left: 1.5rem !important;
+  border-left: none !important;
+}
 
 .tc-tiddler-frame .tc-tiddler-body h2 ~ h1 ~ dl,
 .tc-tiddler-frame .tc-tiddler-body h3 ~ h1 ~ dl,
 .tc-tiddler-frame .tc-tiddler-body h4 ~ h1 ~ dl,
 .tc-tiddler-frame .tc-tiddler-body h5 ~ h1 ~ dl,
-.tc-tiddler-frame .tc-tiddler-body h6 ~ h1 ~ dl { margin-left: 1.5rem !important; }
+.tc-tiddler-frame .tc-tiddler-body h6 ~ h1 ~ dl {
+  margin-left: 1.5rem !important;
+}
 
-/* Step back to H2 from H3-H6 */
+/* Return to H2 (overrides any preceding H3, H4, H5, H6) */
 .tc-tiddler-frame .tc-tiddler-body h3 ~ h2 ~ p,
 .tc-tiddler-frame .tc-tiddler-body h4 ~ h2 ~ p,
 .tc-tiddler-frame .tc-tiddler-body h5 ~ h2 ~ p,
-.tc-tiddler-frame .tc-tiddler-body h6 ~ h2 ~ p { margin-left: 1.5rem !important; border-left: 2px solid #859900 !important; }
+.tc-tiddler-frame .tc-tiddler-body h6 ~ h2 ~ p {
+  margin-left: 1.5rem !important;
+  border-left: 2px solid #859900 !important;
+}
 
 .tc-tiddler-frame .tc-tiddler-body h3 ~ h2 ~ :is(ol, ul),
 .tc-tiddler-frame .tc-tiddler-body h4 ~ h2 ~ :is(ol, ul),
 .tc-tiddler-frame .tc-tiddler-body h5 ~ h2 ~ :is(ol, ul),
-.tc-tiddler-frame .tc-tiddler-body h6 ~ h2 ~ :is(ol, ul) { margin-left: 1.5rem !important; }
+.tc-tiddler-frame .tc-tiddler-body h6 ~ h2 ~ :is(ol, ul) {
+  margin-left: 3.0rem !important;
+  border-left: none !important;
+}
 
 .tc-tiddler-frame .tc-tiddler-body h3 ~ h2 ~ dl,
 .tc-tiddler-frame .tc-tiddler-body h4 ~ h2 ~ dl,
 .tc-tiddler-frame .tc-tiddler-body h5 ~ h2 ~ dl,
-.tc-tiddler-frame .tc-tiddler-body h6 ~ h2 ~ dl { margin-left: 3.0rem !important; }
+.tc-tiddler-frame .tc-tiddler-body h6 ~ h2 ~ dl {
+  margin-left: 3.0rem !important;
+}
 
-/* Step back to H3 from H4-H6 */
+/* Return to H3 (overrides any preceding H4, H5, H6) */
 .tc-tiddler-frame .tc-tiddler-body h4 ~ h3 ~ p,
 .tc-tiddler-frame .tc-tiddler-body h5 ~ h3 ~ p,
-.tc-tiddler-frame .tc-tiddler-body h6 ~ h3 ~ p { margin-left: 3.0rem !important; border-left: 2px solid #b58900 !important; }
+.tc-tiddler-frame .tc-tiddler-body h6 ~ h3 ~ p {
+  margin-left: 3.0rem !important;
+  border-left: 2px solid #b58900 !important;
+}
 
 .tc-tiddler-frame .tc-tiddler-body h4 ~ h3 ~ :is(ol, ul),
 .tc-tiddler-frame .tc-tiddler-body h5 ~ h3 ~ :is(ol, ul),
-.tc-tiddler-frame .tc-tiddler-body h6 ~ h3 ~ :is(ol, ul) { margin-left: 3.0rem !important; }
+.tc-tiddler-frame .tc-tiddler-body h6 ~ h3 ~ :is(ol, ul) {
+  margin-left: 4.5rem !important;
+  border-left: none !important;
+}
 
 .tc-tiddler-frame .tc-tiddler-body h4 ~ h3 ~ dl,
 .tc-tiddler-frame .tc-tiddler-body h5 ~ h3 ~ dl,
-.tc-tiddler-frame .tc-tiddler-body h6 ~ h3 ~ dl { margin-left: 4.5rem !important; }
-
-/* Step back to H4 from H5-H6 */
-.tc-tiddler-frame .tc-tiddler-body h5 ~ h4 ~ p,
-.tc-tiddler-frame .tc-tiddler-body h6 ~ h4 ~ p { margin-left: 4.5rem !important; border-left: 2px solid #cb4b16 !important; }
-
-.tc-tiddler-frame .tc-tiddler-body h5 ~ h4 ~ :is(ol, ul),
-.tc-tiddler-frame .tc-tiddler-body h6 ~ h4 ~ :is(ol, ul) { margin-left: 4.5rem !important; }
-
-.tc-tiddler-frame .tc-tiddler-body h5 ~ h4 ~ dl,
-.tc-tiddler-frame .tc-tiddler-body h6 ~ h4 ~ dl { margin-left: 6.0rem !important; }
-
-/* Step back to H5 from H6 */
-.tc-tiddler-frame .tc-tiddler-body h6 ~ h5 ~ p { margin-left: 6.0rem !important; border-left: 2px solid #268bd2 !important; }
-.tc-tiddler-frame .tc-tiddler-body h6 ~ h5 ~ :is(ol, ul) { margin-left: 6.0rem !important; }
-.tc-tiddler-frame .tc-tiddler-body h6 ~ h5 ~ dl { margin-left: 7.5rem !important; }
+.tc-tiddler-frame .tc-tiddler-body h6 ~ h3 ~ dl {
+  margin-left: 4.5rem !important;
+}
 
 /* Sub-list nesting override */
 .tc-tiddler-frame .tc-tiddler-body :is(ol, ul) :is(ol, ul) {
