@@ -10,6 +10,7 @@ type: text/vnd.tiddlywiki
 \whitespace trim
 
 \define h1OnlyPattern() ^![^!].*$
+\define h1SplitPattern() \n!(?![!])
 
 \define renderSectionContent()
 \whitespace trim
@@ -21,10 +22,9 @@ type: text/vnd.tiddlywiki
   <$list filter="[{!!text}splitregexp[\n]trim[]regexp<h1OnlyPattern>]" variable="h1Line">
     <$list filter="[<h1Line>removeprefix[!]trim[]match<activeTab>]" variable="matchedTab">
       <$let 
-        headingWithSpace={{{ [[! ]addsuffix<activeTab>] }}}
-        headingWithoutSpace={{{ [[!]addsuffix<activeTab>] }}}
-        afterActiveH1={{{ [{!!text}split<headingWithSpace>last[]] :else[{!!text}split<headingWithoutSpace>last[]]} }}}
-        extractedSection={{{ [<afterActiveH1>splitregexp[\n\!]first[]] }}}
+        prefixToStrip={{{ [{!!text}splitbefore<h1Line>] }}}
+        afterActiveH1={{{ [{!!text}removeprefix<prefixToStrip>] }}}
+        extractedSection={{{ [<afterActiveH1>splitregexp<h1SplitPattern>first[]] }}}
         chipSection={{{ [[$:/state/kp-showHideBracketContents/view]text[show]then<extractedSection>search-replace:gim:regexp<findBracketsPattern>,<showBracketsPattern>] :else[<extractedSection>search-replace:gim:regexp<findBracketsPattern>,<wordChipTooltipPattern>] }}}
       >
         <$transclude $variable="chipSection" $mode="block"/>
@@ -46,21 +46,27 @@ type: text/vnd.tiddlywiki
 <%else%>
 
   <$list filter="[{!!text}splitregexp[\n]trim[]regexp<h1OnlyPattern>] +[removeprefix[!]trim[]first[]]" variable="hasHeadings">
-    <div class="tc-tab-set tc-sidebar-header">
-      <div class="tc-tab-buttons">
-        <$list filter="[{!!text}splitregexp[\n]trim[]regexp<h1OnlyPattern>] +[removeprefix[!]trim[]]" variable="headingTitle">
-          <$let stateTiddler={{{ [[$:/state/tab/h1-sections/]addsuffix<currentTiddler>] }}}>
-            <$button set=<<stateTiddler>> setTo=<<headingTitle>> selectedClass="tc-tab-selected">
-              <$text text=<<headingTitle>>/>
-            </$button>
-          </$let>
-        </$list>
-      </div>
+    <$let 
+      stateTiddler={{{ [[$:/state/tab/h1-sections/]addsuffix<currentTiddler>] }}}
+      defaultTab={{{ [{!!text}splitregexp[\n]trim[]regexp<h1OnlyPattern>] +[removeprefix[!]trim[]first[]] }}}
+      activeTab={{{ [<stateTiddler>get[text]] :else[<defaultTab>] }}}
+    >
+      <div class="tc-tab-set tc-sidebar-header">
+        <div class="tc-tab-buttons">
+          <$list filter="[{!!text}splitregexp[\n]trim[]regexp<h1OnlyPattern>] +[removeprefix[!]trim[]]" variable="headingTitle">
+            <$let selectedStyle={{{ [<headingTitle>match<activeTab>then[tc-tab-selected]] }}}>
+              <$button set=<<stateTiddler>> setTo=<<headingTitle>> class=<<selectedStyle>>>
+                <$text text=<<headingTitle>>/>
+              </$button>
+            </$let>
+          </$list>
+        </div>
 
-      <div class="tc-tab-content" style="margin-top: 10px;">
-        <<renderSectionContent>>
+        <div class="tc-tab-content" style="margin-top: 10px;">
+          <<renderSectionContent>>
+        </div>
       </div>
-    </div>
+    </$let>
   </$list>
 
   <$list filter="[{!!text}splitregexp[\n]trim[]regexp<h1OnlyPattern>] +[removeprefix[!]trim[]count[]match[0]]" variable="noHeadings">
