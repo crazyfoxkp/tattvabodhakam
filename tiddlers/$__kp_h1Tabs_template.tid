@@ -7,6 +7,7 @@ title: $:/kp/h1Tabs/template
 type: text/vnd.tiddlywiki
 
 
+
 \whitespace trim
 
 \define h1OnlyPattern() ^![^!].*$
@@ -18,6 +19,7 @@ type: text/vnd.tiddlywiki
   stateTiddler={{{ [[$:/state/tab/h1-sections/]addsuffix<currentTiddler>] }}}
   defaultTab={{{ [{!!text}splitregexp[\n]trim[]regexp<h1OnlyPattern>] +[removeprefix[!]trim[]first[]] }}}
   activeTab={{{ [<stateTiddler>get[text]] :else[<defaultTab>] }}}
+  doubleQuote={{{ [charcode[34]] }}}
 >
   <$list filter="[{!!text}splitregexp[\n]trim[]regexp<h1OnlyPattern>]" variable="h1Line">
     <$list filter="[<h1Line>removeprefix[!]trim[]match<activeTab>]" variable="matchedTab">
@@ -25,7 +27,8 @@ type: text/vnd.tiddlywiki
         prefixToStrip={{{ [{!!text}splitbefore<h1Line>] }}}
         afterActiveH1={{{ [{!!text}removeprefix<prefixToStrip>] }}}
         extractedSection={{{ [<afterActiveH1>splitregexp<h1SplitPattern>first[]] }}}
-        chipSection={{{ [[$:/state/kp-showHideBracketContents/view]text[show]then<extractedSection>search-replace:gim:regexp<findBracketsPattern>,<showBracketsPattern>] :else[<extractedSection>search-replace:gim:regexp<findBracketsPattern>,<wordChipTooltipPattern>] }}}
+        cleanSection={{{ [<extractedSection>search-replace:gim<doubleQuote>,[&quot;]] }}}
+        chipSection={{{ [[$:/state/kp-showHideBracketContents/view]text[show]then<extractedSection>search-replace:gim:regexp<findBracketsPattern>,<showBracketsPattern>] :else[<cleanSection>search-replace:gim:regexp<findBracketsPattern>,<wordChipTooltipPattern>] }}}
       >
         <$transclude $variable="chipSection" $mode="block"/>
       </$let>
@@ -36,7 +39,11 @@ type: text/vnd.tiddlywiki
 
 \define renderFullTextContent()
 \whitespace trim
-<$let fullText={{{ [[$:/state/kp-showHideBracketContents/view]text[show]then<currentTiddler>get[text]search-replace:gim:regexp<findBracketsPattern>,<showBracketsPattern>] :else[{!!text}search-replace:gim:regexp<findBracketsPattern>,<wordChipTooltipPattern>] }}}>
+<$let 
+  doubleQuote={{{ [charcode[34]] }}}
+  cleanFullText={{{ [{!!text}search-replace:gim<doubleQuote>,[&quot;]] }}}
+  fullText={{{ [[$:/state/kp-showHideBracketContents/view]text[show]then{!!text}search-replace:gim:regexp<findBracketsPattern>,<showBracketsPattern>] :else[<cleanFullText>search-replace:gim:regexp<findBracketsPattern>,<wordChipTooltipPattern>] }}}
+>
   <$transclude $variable="fullText" $mode="block"/>
 </$let>
 \end
