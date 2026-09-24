@@ -1,21 +1,37 @@
 created: 20260923155630569
 creator: केशवकृपा
-modified: 20260923173748903
+modified: 20260924153131326
 modifier: केशवकृपा
 tags: $:/tags/Stylesheet
 title: $:/kp/stylesheet/indentHeadings
 
+/* Ensure continuous left borders across adjacent paragraphs */
+.tc-tiddler-frame .tc-tiddler-body p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
 
+/* Maintain proper spacing before a new heading starts */
+.tc-tiddler-frame .tc-tiddler-body :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: 1.2rem;
+}
+
+/* Universal padding for any paragraph carrying a left accent line */
+.tc-tiddler-frame .tc-tiddler-body p {
+  padding-left: 0.6rem;
+}
 /* ==========================================
    1. HEADINGS (H1 - H6)
    ========================================== */
 
 .tc-tiddler-frame .tc-tiddler-body h1 { margin-inline-start: 0; margin-left: 0; }
-.tc-tiddler-frame .tc-tiddler-body h2 { margin-inline-start: 1.5rem; margin-left: 1.5rem; }
-.tc-tiddler-frame .tc-tiddler-body h3 { margin-inline-start: 3.0rem; margin-left: 3.0rem; }
-.tc-tiddler-frame .tc-tiddler-body h4 { margin-inline-start: 4.5rem; margin-left: 4.5rem; }
-.tc-tiddler-frame .tc-tiddler-body h5 { margin-inline-start: 6.0rem; margin-left: 6.0rem; }
-.tc-tiddler-frame .tc-tiddler-body h6 { margin-inline-start: 7.5rem; margin-left: 7.5rem; }
+.tc-tiddler-frame .tc-tiddler-body h2 { margin-inline-start: 1.5rem; margin-left: 0.5rem; }
+.tc-tiddler-frame .tc-tiddler-body h3 { margin-inline-start: 3.0rem; margin-left: 2.0rem; }
+.tc-tiddler-frame .tc-tiddler-body h4 { margin-inline-start: 4.5rem; margin-left: 3.5rem; }
+.tc-tiddler-frame .tc-tiddler-body h5 { margin-inline-start: 6.0rem; margin-left: 5.0rem; }
+.tc-tiddler-frame .tc-tiddler-body h6 { margin-inline-start: 7.5rem; margin-left: 6.5rem; }
 
 /* ==========================================
    2. DEFINITION LISTS (dl, dt, dd)
@@ -51,6 +67,19 @@ title: $:/kp/stylesheet/indentHeadings
 .tc-tiddler-frame .tc-tiddler-body h4 ~ p { margin-left: 4.5rem; border-left: 2px solid #cb4b16; padding-left: 0.6rem; }
 .tc-tiddler-frame .tc-tiddler-body h5 ~ p { margin-left: 6.0rem; border-left: 2px solid #268bd2; padding-left: 0.6rem; }
 .tc-tiddler-frame .tc-tiddler-body h6 ~ p { margin-left: 7.5rem; border-left: 2px solid #6c71c4; padding-left: 0.6rem; }
+
+/* ==========================================
+   PARAGRAPHS (p) FOLLOWING DEFINITION LISTS (dl ~ p)
+   ========================================== */
+
+/* Base DL ~ P rules (+1 level past DL / +2 levels past Hn) */
+.tc-tiddler-frame .tc-tiddler-body dl ~ p { margin-left: 3.0rem !important; border-left: 2px solid #859900 !important; }
+.tc-tiddler-frame .tc-tiddler-body h1 ~ dl ~ p { margin-left: 3.0rem !important; border-left: 2px solid #586e75 !important; }
+.tc-tiddler-frame .tc-tiddler-body h2 ~ dl ~ p { margin-left: 4.5rem !important; border-left: 2px solid #859900 !important; }
+.tc-tiddler-frame .tc-tiddler-body h3 ~ dl ~ p { margin-left: 6.0rem !important; border-left: 2px solid #b58900 !important; }
+.tc-tiddler-frame .tc-tiddler-body h4 ~ dl ~ p { margin-left: 7.5rem !important; border-left: 2px solid #cb4b16 !important; }
+.tc-tiddler-frame .tc-tiddler-body h5 ~ dl ~ p { margin-left: 9.0rem !important; border-left: 2px solid #268bd2 !important; }
+.tc-tiddler-frame .tc-tiddler-body h6 ~ dl ~ p { margin-left: 10.5rem !important; border-left: 2px solid #6c71c4 !important; }
 
 /* ==========================================
    4. ALL LISTS (ol, ul) - INDENTED, NO ACCENT LINES
