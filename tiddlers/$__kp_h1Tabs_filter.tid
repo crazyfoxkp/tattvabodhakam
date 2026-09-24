@@ -1,8 +1,8 @@
 created: 20260924162938293
 creator: केशवकृपा
-modified: 20260924164642834
+modified: 20260924170200778
 modifier: केशवकृपा
 tags: $:/tags/ViewTemplateBodyFilter kp-h1tabs
 title: $:/kp/h1Tabs/filter
 
-[<currentTiddler>tag[Journal]then[$:/kp/h1Tabs/template]]
+[<currentTiddler>then[$:/kp/h1Tabs/template]]

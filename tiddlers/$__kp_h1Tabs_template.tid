@@ -1,57 +1,37 @@
 created: 20260924162841679
 creator: केशवकृपा
-modified: 20260924165853190
+modified: 20260924172509580
 modifier: केशवकृपा
 tags: kp-h1tabs
 title: $:/kp/h1Tabs/template
+type: text/vnd.tiddlywiki
 
-\define currentSectionTab() $:/state/tab/h1-sections/$(currentTiddler)$
+
 \whitespace trim
+
+<div style="background: #1e1e1e; color: #00ffc8; padding: 12px; border: 2px solid #00ffc8; font-family: monospace; border-radius: 4px; margin-bottom: 16px;">
+  <div style="font-weight: bold; border-bottom: 1px solid #00ffc8; padding-bottom: 4px; margin-bottom: 8px;">
+    [KP DIAGNOSTIC MODULE - STEP 6]
+  </div>
+  
+  <strong>1. Raw Tiddler Title:</strong> <<currentTiddler>><br/>
+
+  <strong>2. Plain Splitting Test:</strong> 
+  <code>{{{ [{!!text}splitregexp[\n]first[5]join[ /// ]] }}}</code><br/>
+
+  <strong>3. Prefix Extraction:</strong> 
+  <$let rawLines={{{ [{!!text}splitregexp[\n]] }}}>
+    <code><$list filter="[enlist<rawLines>prefix[!]]"><$text text=<<currentTiddler>>/> | </$list></code>
+  </$let><br/>
+
+  <strong>4. Trimmed Heading Extraction:</strong>
+  <$let rawLines={{{ [{!!text}splitregexp[\n]] }}}>
+    <code><$list filter="[enlist<rawLines>prefix[!]]" variable="line"><$text text={{{ [<line>removeprefix[!]trim[]] }}}/> | </$list></code>
+  </$let>
+</div>
 
 <%if [<currentTiddler>is[system]]%>
   <$transclude $field="text" $mode="block"/>
 <%else%>
-
-  <!-- Step 1: Extract all H1 heading titles from the text -->
-  <$let h1Titles={{{ [{!!text}search-replace:gim:regexp[(^|\n)!\s*],[§!§]] split[§!§] removefirst[] map[splitregexp[\r?\n]first[]trim[]] }}}>
-
-  <%if [<h1Titles>length[]gt[0]]%>
-
-    <!-- Render Tab Buttons -->
-    <div class="tc-tab-set tc-sidebar-header">
-      <div class="tc-tab-buttons">
-        <$list filter="[enlist<h1Titles>]" variable="headingTitle">
-          <$button set=<<currentSectionTab>> setTo=<<headingTitle>> selectedClass="tc-tab-selected">
-            <$text text=<<headingTitle>>/>
-          </$button>
-        </$list>
-      </div>
-
-      <!-- Step 2: Determine Active Tab (Defaults to 1st heading) -->
-      <$let activeTab={{{ [<currentSectionTab>get[text]] :else[enlist<h1Titles>first[]] }}}>
-        <div class="tc-tab-content">
-          
-          <!-- Step 3: Extract & Process active section inline -->
-          <$let 
-            escapedTab={{{ [<activeTab>search-replace:gim:regexp[[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]],[\$&]] }}}
-            pattern={{{ [[(?m)^!\s*]addsuffix<escapedTab>addsuffix[(\r?\n[\s\S]*?)(?=(^!\s*|\z))]] }}}
-            rawSection={{{ [{!!text}search-replace:gim:regexp<pattern>,[$1]] }}}
-            chipSection={{{ [[$:/state/kp-showHideBracketContents/view]text[show]then<rawSection>search-replace:gim:regexp<findBracketsPattern>,<showBracketsPattern>] :else[<rawSection>search-replace:gim:regexp<findBracketsPattern>,<wordChipTooltipPattern>] }}}
-          >
-            <$transclude $variable="chipSection" $mode="block"/>
-          </$let>
-
-        </div>
-      </$let>
-    </div>
-
-  <%else%>
-    <!-- Fallback if no ! headings are present in the tiddler -->
-    <$let fullText={{{ [[$:/state/kp-showHideBracketContents/view]text[show]then<currentTiddler>get[text]search-replace:gim:regexp<findBracketsPattern>,<showBracketsPattern>] :else[{!!text}search-replace:gim:regexp<findBracketsPattern>,<wordChipTooltipPattern>] }}}>
-      <$transclude $variable="fullText" $mode="block"/>
-    </$let>
-  <%endif%>
-
-  </$let>
-
+  <$transclude $field="text" $mode="block"/>
 <%endif%>
