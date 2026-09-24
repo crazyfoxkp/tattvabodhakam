@@ -9,29 +9,62 @@ type: text/vnd.tiddlywiki
 
 \whitespace trim
 
-<div style="background: #1e1e1e; color: #00ffc8; padding: 12px; border: 2px solid #00ffc8; font-family: monospace; border-radius: 4px; margin-bottom: 16px;">
-  <div style="font-weight: bold; border-bottom: 1px solid #00ffc8; padding-bottom: 4px; margin-bottom: 8px;">
-    [KP DIAGNOSTIC MODULE - STEP 6]
-  </div>
-  
-  <strong>1. Raw Tiddler Title:</strong> <<currentTiddler>><br/>
+\define h1OnlyPattern() ^![^!].*$
 
-  <strong>2. Plain Splitting Test:</strong> 
-  <code>{{{ [{!!text}splitregexp[\n]first[5]join[ /// ]] }}}</code><br/>
+\define renderSectionContent()
+\whitespace trim
+<$let 
+  stateTiddler={{{ [[$:/state/tab/h1-sections/]addsuffix<currentTiddler>] }}}
+  defaultTab={{{ [{!!text}splitregexp[\n]trim[]regexp<h1OnlyPattern>] +[removeprefix[!]trim[]first[]] }}}
+  activeTab={{{ [<stateTiddler>get[text]] :else[<defaultTab>] }}}
+>
+  <$list filter="[{!!text}splitregexp[\n]trim[]regexp<h1OnlyPattern>]" variable="h1Line">
+    <$list filter="[<h1Line>removeprefix[!]trim[]match<activeTab>]" variable="matchedTab">
+      <$let 
+        headingWithSpace={{{ [[! ]addsuffix<activeTab>] }}}
+        headingWithoutSpace={{{ [[!]addsuffix<activeTab>] }}}
+        afterActiveH1={{{ [{!!text}split<headingWithSpace>last[]] :else[{!!text}split<headingWithoutSpace>last[]]} }}}
+        extractedSection={{{ [<afterActiveH1>splitregexp[\n\!]first[]] }}}
+        chipSection={{{ [[$:/state/kp-showHideBracketContents/view]text[show]then<extractedSection>search-replace:gim:regexp<findBracketsPattern>,<showBracketsPattern>] :else[<extractedSection>search-replace:gim:regexp<findBracketsPattern>,<wordChipTooltipPattern>] }}}
+      >
+        <$transclude $variable="chipSection" $mode="block"/>
+      </$let>
+    </$list>
+  </$list>
+</$let>
+\end
 
-  <strong>3. Prefix Extraction:</strong> 
-  <$let rawLines={{{ [{!!text}splitregexp[\n]] }}}>
-    <code><$list filter="[enlist<rawLines>prefix[!]]"><$text text=<<currentTiddler>>/> | </$list></code>
-  </$let><br/>
-
-  <strong>4. Trimmed Heading Extraction:</strong>
-  <$let rawLines={{{ [{!!text}splitregexp[\n]] }}}>
-    <code><$list filter="[enlist<rawLines>prefix[!]]" variable="line"><$text text={{{ [<line>removeprefix[!]trim[]] }}}/> | </$list></code>
-  </$let>
-</div>
+\define renderFullTextContent()
+\whitespace trim
+<$let fullText={{{ [[$:/state/kp-showHideBracketContents/view]text[show]then<currentTiddler>get[text]search-replace:gim:regexp<findBracketsPattern>,<showBracketsPattern>] :else[{!!text}search-replace:gim:regexp<findBracketsPattern>,<wordChipTooltipPattern>] }}}>
+  <$transclude $variable="fullText" $mode="block"/>
+</$let>
+\end
 
 <%if [<currentTiddler>is[system]]%>
   <$transclude $field="text" $mode="block"/>
 <%else%>
-  <$transclude $field="text" $mode="block"/>
+
+  <$list filter="[{!!text}splitregexp[\n]trim[]regexp<h1OnlyPattern>] +[removeprefix[!]trim[]first[]]" variable="hasHeadings">
+    <div class="tc-tab-set tc-sidebar-header">
+      <div class="tc-tab-buttons">
+        <$list filter="[{!!text}splitregexp[\n]trim[]regexp<h1OnlyPattern>] +[removeprefix[!]trim[]]" variable="headingTitle">
+          <$let stateTiddler={{{ [[$:/state/tab/h1-sections/]addsuffix<currentTiddler>] }}}>
+            <$button set=<<stateTiddler>> setTo=<<headingTitle>> selectedClass="tc-tab-selected">
+              <$text text=<<headingTitle>>/>
+            </$button>
+          </$let>
+        </$list>
+      </div>
+
+      <div class="tc-tab-content" style="margin-top: 10px;">
+        <<renderSectionContent>>
+      </div>
+    </div>
+  </$list>
+
+  <$list filter="[{!!text}splitregexp[\n]trim[]regexp<h1OnlyPattern>] +[removeprefix[!]trim[]count[]match[0]]" variable="noHeadings">
+    <<renderFullTextContent>>
+  </$list>
+
 <%endif%>
