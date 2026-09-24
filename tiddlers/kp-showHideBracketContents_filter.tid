@@ -1,8 +1,8 @@
 created: 20250712234918146
 creator: KeshavP
-modified: 20260918152746572
+modified: 20260924165524862
 modifier: केशवकृपा
-tags: $:/tags/ViewTemplateBodyFilter kp-showHideBrackets
+tags: kp-showHideBrackets
 title: kp-showHideBracketContents/filter
 
 [[$:/state/kp-showHideBracketContents/view]text[show]] 

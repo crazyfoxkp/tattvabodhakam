@@ -1,42 +1,57 @@
 created: 20260924162841679
 creator: केशवकृपा
-modified: 20260924162919211
+modified: 20260924165853190
 modifier: केशवकृपा
 tags: kp-h1tabs
 title: $:/kp/h1Tabs/template
 
+\define currentSectionTab() $:/state/tab/h1-sections/$(currentTiddler)$
 \whitespace trim
 
-\define currentSectionTab() $:/state/tab/h1-sections/$(currentTiddler)$
+<%if [<currentTiddler>is[system]]%>
+  <$transclude $field="text" $mode="block"/>
+<%else%>
 
-<!-- Extract all H1 heading titles from the current tiddler -->
-<$let h1Titles={{{ [{!!text}splitregexp[\n!]removefirst[]map[splitregexp[\n]first[]trim[]]] }}}>
+  <!-- Step 1: Extract all H1 heading titles from the text -->
+  <$let h1Titles={{{ [{!!text}search-replace:gim:regexp[(^|\n)!\s*],[§!§]] split[§!§] removefirst[] map[splitregexp[\r?\n]first[]trim[]] }}}>
 
-<!-- If H1 headings exist, display the tab navigation -->
-<%if [<h1Titles>length[]gt[0]]%>
+  <%if [<h1Titles>length[]gt[0]]%>
 
-  <div class="tc-tab-set tc-sidebar-header">
-    <div class="tc-tab-buttons">
-      <$list filter="[enlist<h1Titles>]" variable="headingTitle">
-        <$button set=<<currentSectionTab>> setTo=<<headingTitle>> selectedClass="tc-tab-selected">
-          <$text text=<<headingTitle>>/>
-        </$button>
-      </$list>
+    <!-- Render Tab Buttons -->
+    <div class="tc-tab-set tc-sidebar-header">
+      <div class="tc-tab-buttons">
+        <$list filter="[enlist<h1Titles>]" variable="headingTitle">
+          <$button set=<<currentSectionTab>> setTo=<<headingTitle>> selectedClass="tc-tab-selected">
+            <$text text=<<headingTitle>>/>
+          </$button>
+        </$list>
+      </div>
+
+      <!-- Step 2: Determine Active Tab (Defaults to 1st heading) -->
+      <$let activeTab={{{ [<currentSectionTab>get[text]] :else[enlist<h1Titles>first[]] }}}>
+        <div class="tc-tab-content">
+          
+          <!-- Step 3: Extract & Process active section inline -->
+          <$let 
+            escapedTab={{{ [<activeTab>search-replace:gim:regexp[[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]],[\$&]] }}}
+            pattern={{{ [[(?m)^!\s*]addsuffix<escapedTab>addsuffix[(\r?\n[\s\S]*?)(?=(^!\s*|\z))]] }}}
+            rawSection={{{ [{!!text}search-replace:gim:regexp<pattern>,[$1]] }}}
+            chipSection={{{ [[$:/state/kp-showHideBracketContents/view]text[show]then<rawSection>search-replace:gim:regexp<findBracketsPattern>,<showBracketsPattern>] :else[<rawSection>search-replace:gim:regexp<findBracketsPattern>,<wordChipTooltipPattern>] }}}
+          >
+            <$transclude $variable="chipSection" $mode="block"/>
+          </$let>
+
+        </div>
+      </$let>
     </div>
 
-    <!-- Default to the first section if no tab is selected yet -->
-    <$let activeTab={{{ [<currentSectionTab>get[text]] :else[enlist<h1Titles>first[]] }}}>
-      <div class="tc-tab-content">
-        <$transclude $variable="renderedSection" $mode="block"/>
-      </div>
+  <%else%>
+    <!-- Fallback if no ! headings are present in the tiddler -->
+    <$let fullText={{{ [[$:/state/kp-showHideBracketContents/view]text[show]then<currentTiddler>get[text]search-replace:gim:regexp<findBracketsPattern>,<showBracketsPattern>] :else[{!!text}search-replace:gim:regexp<findBracketsPattern>,<wordChipTooltipPattern>] }}}>
+      <$transclude $variable="fullText" $mode="block"/>
     </$let>
-  </div>
+  <%endif%>
 
-<%else%>
-  <!-- Fallback for tiddlers without ! headings: render text with word-chip parsing -->
-  <$let fullText={{{ [[$:/state/kp-showHideBracketContents/view]text[show]then<currentTiddler>get[text]search-replace:gim:regexp<findBracketsPattern>,<showBracketsPattern>] :else[{!!text}search-replace:gim:regexp<findBracketsPattern>,<wordChipTooltipPattern>] }}}>
-    <$transclude $variable="fullText" $mode="block"/>
   </$let>
-<%endif%>
 
-</$let>
+<%endif%>
