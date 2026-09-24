@@ -1,9 +1,9 @@
-created: 20260918164256851
+created: 20260924160340675
 creator: केशवकृपा
-modified: 20260924160449135
+modified: 20260924160418147
 modifier: केशवकृपा
 tags: 
-title: $:/kp/studyMode/template
+title: $:/kp/studyMode/template working split shlesha iframefix copy
 
 \whitespace trim
 \define get-shloka-viewer-html(title, text, pada1, anvaya1, artha1, vyakarana1, tatparya1, pada2, anvaya2, artha2, vyakarana2, tatparya2, pada3, anvaya3, artha3, vyakarana3, tatparya3)

@@ -637,13 +637,13 @@
         "title": "$:/plugins/sq/Stories/changelog"
     },
     {
-        "title": "2026 / 09 / 09 / मङ्गलाचरणं साक्षात् कुतः न स्वीकार्यते",
+        "title": "kp regex patterns",
         "fromPageRect": {
-            "top": 1187.734375,
-            "left": 962.953125,
+            "top": 1094.578125,
+            "left": 1353.953125,
             "width": 26,
-            "right": 988.953125,
-            "bottom": 1218.921875,
+            "right": 1379.953125,
+            "bottom": 1125.765625,
             "height": 31.1875
         }
     }
