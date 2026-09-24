@@ -1,0 +1,20 @@
+created: 20260924162655543
+creator: केशवकृपा
+modified: 20260924162831408
+modifier: केशवकृपा
+tags: $:/tags/Macro kp-h1tabs
+title: $:/kp/h1Tabs/macro
+
+\define renderedSection()
+\whitespace trim
+<!-- Extract the text belonging to the active tab -->
+<$let 
+  pattern={{{ [[(?m)^!\s*]addsuffix<activeTab>addsuffix[(\r?\n[\s\S]*?)(?=(^!\s*|\z))]] }}}
+  rawSection={{{ [{!!text}search-replace:gim:regexp<pattern>,[$1]] }}}
+>
+<!-- Read state from the toolbar toggle button -->
+<$let chipSection={{{ [[$:/state/kp-showHideBracketContents/view]text[show]then<rawSection>search-replace:gim:regexp<findBracketsPattern>,<showBracketsPattern>] :else[<rawSection>search-replace:gim:regexp<findBracketsPattern>,<wordChipTooltipPattern>] }}}>
+  <$transclude $variable="chipSection" $mode="block"/>
+</$let>
+</$let>
+\end
