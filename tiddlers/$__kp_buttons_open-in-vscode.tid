@@ -2,11 +2,13 @@ caption: Open in VS Code
 created: 20260929162758029
 creator: केशवकृपा
 description: Open this tiddler file in VS Code
-modified: 20261002161628499
+modified: 20261002165826311
 modifier: केशवकृपा
-tags: $:/tags/ViewToolbar
+tags: 
 title: $:/kp/buttons/open-in-vscode
 type: text/vnd.tiddlywiki
+
+replaced by tiddlyedit-tw-livebridge
 
 \define folder-uri() vscode://file/Volumes/External_SSD/swiperfox/Documents/Sanskara/Tiddlywiki%20Content/तत्त्वबोधकम्/tiddlers/
 
