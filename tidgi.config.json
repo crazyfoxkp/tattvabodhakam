@@ -6,5 +6,6 @@
   "userName": "केशवकृपा",
   "gitUrl": "",
   "enableFileSystemWatch": true,
-  "syncOnInterval": true
+  "syncOnInterval": true,
+  "enableHTTPAPI": true
 }
