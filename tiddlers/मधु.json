@@ -1,5 +1,8 @@
 [
     {
+        "created": "20261010221232232",
+        "creator": "केशवकृपा",
+        "text": "@@.dblock.मधु\nउ-कारान्तः<br>नपुंसकलिङ्गः<br>मधु¦एक¦द्वि¦बहु\n१¦मधु¦मधुनी¦मधूनि\n२¦मधु¦मधुनी¦मधूनि\n३¦मधुना¦मधुभ्याम्¦मधुभिः\n४¦मधुने¦मधुभ्याम्¦मधुभ्यः\n५¦मधुनः¦मधुभ्याम्¦मधुभ्यः\n६¦मधुनः¦मधुनोः¦मधूनाम्\n७¦मधुनि¦मधुनोः¦मधुषु\n@@\n\n@@.dblock.notes\n¦\n¦\n\n[see मधु·सूत्र]¦\n@@\n\n<<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"मधु\">>\n<<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
         "anta": "उ",
         "variety": "",
         "notes": "",
@@ -7,10 +10,10 @@
         "group": "",
         "sutra": "[[मधु·सूत्र]]",
         "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
-        "text": "@@.dblock.मधु\nउ-कारान्तः<br>नपुंसकलिङ्गः<br>मधु¦एक¦द्वि¦बहु\n१¦मधु¦मधुनी¦मधूनि\n२¦मधु¦मधुनी¦मधूनि\n३¦मधुना¦मधुभ्याम्¦मधुभिः\n४¦मधुने¦मधुभ्याम्¦मधुभ्यः\n५¦मधुनः¦मधुभ्याम्¦मधुभ्यः\n६¦मधुनः¦मधुनोः¦मधूनाम्\n७¦मधुनि¦मधुनोः¦मधुषु\n@@\n@@.dblock.notes\n¦\n¦\n\n[see मधु·सूत्र]¦\n@@\n  <<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"मधु\">>\n  <<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
         "tags": "SKS शब्दरूपाणि v2",
         "title": "मधु",
-        "modified": "20250131164746309",
-        "modifier": "KeshavP"
+        "modified": "20261010223441831",
+        "modifier": "केशवकृपा",
+        "type": "text/vnd.tiddlywiki"
     }
 ]

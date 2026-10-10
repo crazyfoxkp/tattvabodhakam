@@ -1,0 +1,19 @@
+[
+    {
+        "created": "20261010223446130",
+        "creator": "केशवकृपा",
+        "text": "<<table-csv tidName:\"test-table-shiraz\" delimiter:\"¦\"  header:\"yes\">>\n",
+        "anta": "उ",
+        "variety": "",
+        "notes": "",
+        "linga": "नपुं॰",
+        "group": "",
+        "sutra": "[[मधु·सूत्र]]",
+        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+        "tags": "SKS शब्दरूपाणि v2",
+        "title": "मधु test clone",
+        "modified": "20261010223802817",
+        "modifier": "केशवकृपा",
+        "type": "text/vnd.tiddlywiki"
+    }
+]

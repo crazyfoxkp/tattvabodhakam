@@ -191,3 +191,51 @@ title: $:/kp/stylesheet/indentHeadings
   border-left: none !important;
   padding-left: 1.2rem !important;
 }
+
+/* ==========================================
+   6. UTILITY CODE & CAPTION (.kk-utility-code-caption, .kk-utility-code)
+   ========================================== */
+
+/* Utility blocks without headings (Standalone default) */
+.tc-tiddler-frame .tc-tiddler-body :is(.kk-utility-code-caption, .kk-utility-code) {
+  margin-left: 0rem;
+}
+
+/* Base rules for elements under Heading levels (H1 - H6) */ 
+.tc-tiddler-frame .tc-tiddler-body h1 ~ :is(.kk-utility-code-caption, .kk-utility-code) { margin-left: 1.0rem; }
+.tc-tiddler-frame .tc-tiddler-body h2 ~ :is(.kk-utility-code-caption, .kk-utility-code) { margin-left: 2.5rem; }
+.tc-tiddler-frame .tc-tiddler-body h3 ~ :is(.kk-utility-code-caption, .kk-utility-code) { margin-left: 4.0rem; }
+.tc-tiddler-frame .tc-tiddler-body h4 ~ :is(.kk-utility-code-caption, .kk-utility-code) { margin-left: 5.5rem; }
+.tc-tiddler-frame .tc-tiddler-body h5 ~ :is(.kk-utility-code-caption, .kk-utility-code) { margin-left: 7.0rem; }
+.tc-tiddler-frame .tc-tiddler-body h6 ~ :is(.kk-utility-code-caption, .kk-utility-code) { margin-left: 8.5rem; }
+
+/* Rules when following Definition Lists (dl ~ .kk-utility-code*) */ +3
+.tc-tiddler-frame .tc-tiddler-body dl ~ :is(.kk-utility-code-caption, .kk-utility-code) { margin-left: 3.0rem !important; }
+.tc-tiddler-frame .tc-tiddler-body h1 ~ dl ~ :is(.kk-utility-code-caption, .kk-utility-code) { margin-left: 6.0rem !important; }
+.tc-tiddler-frame .tc-tiddler-body h2 ~ dl ~ :is(.kk-utility-code-caption, .kk-utility-code) { margin-left: 7.5rem !important; }
+.tc-tiddler-frame .tc-tiddler-body h3 ~ dl ~ :is(.kk-utility-code-caption, .kk-utility-code) { margin-left: 9.0rem !important; }
+.tc-tiddler-frame .tc-tiddler-body h4 ~ dl ~ :is(.kk-utility-code-caption, .kk-utility-code) { margin-left: 10.5rem !important; }
+.tc-tiddler-frame .tc-tiddler-body h5 ~ dl ~ :is(.kk-utility-code-caption, .kk-utility-code) { margin-left: 12.0rem !important; }
+.tc-tiddler-frame .tc-tiddler-body h6 ~ dl ~ :is(.kk-utility-code-caption, .kk-utility-code) { margin-left: 13.5rem !important; }
+
+/* Hard Step-Up Overrides (Returning to a higher heading level) */
+.tc-tiddler-frame .tc-tiddler-body h2 ~ h1 ~ :is(.kk-utility-code-caption, .kk-utility-code),
+.tc-tiddler-frame .tc-tiddler-body h3 ~ h1 ~ :is(.kk-utility-code-caption, .kk-utility-code),
+.tc-tiddler-frame .tc-tiddler-body h4 ~ h1 ~ :is(.kk-utility-code-caption, .kk-utility-code),
+.tc-tiddler-frame .tc-tiddler-body h5 ~ h1 ~ :is(.kk-utility-code-caption, .kk-utility-code),
+.tc-tiddler-frame .tc-tiddler-body h6 ~ h1 ~ :is(.kk-utility-code-caption, .kk-utility-code) {
+  margin-left: 0.0rem !important;
+}
+
+.tc-tiddler-frame .tc-tiddler-body h3 ~ h2 ~ :is(.kk-utility-code-caption, .kk-utility-code),
+.tc-tiddler-frame .tc-tiddler-body h4 ~ h2 ~ :is(.kk-utility-code-caption, .kk-utility-code),
+.tc-tiddler-frame .tc-tiddler-body h5 ~ h2 ~ :is(.kk-utility-code-caption, .kk-utility-code),
+.tc-tiddler-frame .tc-tiddler-body h6 ~ h2 ~ :is(.kk-utility-code-caption, .kk-utility-code) {
+  margin-left: 1.5rem !important;
+}
+
+.tc-tiddler-frame .tc-tiddler-body h4 ~ h3 ~ :is(.kk-utility-code-caption, .kk-utility-code),
+.tc-tiddler-frame .tc-tiddler-body h5 ~ h3 ~ :is(.kk-utility-code-caption, .kk-utility-code),
+.tc-tiddler-frame .tc-tiddler-body h6 ~ h3 ~ :is(.kk-utility-code-caption, .kk-utility-code) {
+  margin-left: 3.0rem !important;
+}

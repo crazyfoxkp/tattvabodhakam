@@ -1,3 +1,3 @@
 {
-    "lmstudioCode.minContextLength": 16384
+    "lmstudioCode.minContextLength": 32768
 }
