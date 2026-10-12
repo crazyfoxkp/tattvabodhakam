@@ -4,7 +4,7 @@
     {
       "label": "Unload LM Studio Model",
       "type": "shell",
-      "command": "curl -X POST http://192.168.254.4:1234/api/v0/model/unload -H \"Content-Type: application/json\" -d \"{}\"",
+      "command": "ssh lightpop@192.168.254.4 \"pkill -f lmstudio || lsof -ti:1234 | xargs kill -9\"",
       "problemMatcher": []
     }
   ]
