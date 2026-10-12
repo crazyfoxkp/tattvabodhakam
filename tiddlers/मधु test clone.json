@@ -1,19 +1,19 @@
 [
-    {
-        "created": "20261010223446130",
-        "creator": "केशवकृपा",
-        "text": "@@.dblock.मधु\nउ-कारान्तः<br>नपुंसकलिङ्गः<br>मधु¦एक¦द्वि¦बहु\n१¦मधु¦मधुनी¦मधूनि\n२¦मधु¦मधुनी¦मधूनि\n३¦मधुना¦मधुभ्याम्¦मधुभिः\n४¦मधुने¦मधुभ्याम्¦मधुभ्यः\n५¦मधुनः¦मधुभ्याम्¦मधुभ्यः\n६¦मधुनः¦मधुनोः¦मधूनाम्\n७¦मधुनि¦मधुनोः¦मधुषु\n@@\n\n@@.dblock.notes\n¦\n¦\n\n[see मधु·सूत्र]¦\n@@\n\n<<table-csv tidName:\"\" delimiter:\"¦\"  header:\"yes\"  id:\"मधु\">>\n<<table-csv tidName:\"\" delimiter:\"¦\" header:\"no\" stateTiddler:\"\" id:\"notes\">>",
-        "anta": "उ",
-        "variety": "",
-        "notes": "",
-        "linga": "नपुं॰",
-        "group": "",
-        "sutra": "[[मधु·सूत्र]]",
-        "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
-        "tags": "SKS शब्दरूपाणि v2",
-        "title": "मधु test clone",
-        "modified": "20261012153252816",
-        "modifier": "केशवकृपा",
-        "type": "text/vnd.tiddlywiki"
-    }
+  {
+    "created": "20261010223446130",
+    "creator": "केशवकृपा",
+    "text": "|उ-कारान्तः<br>नपुंसकलिङ्गः<br>मधु|एक|द्वि|बहु|h\n|१|मधु|मधुनी|मधूनि|\n|२|मधु|मधुनी|मधूनि|\n|३|मधुना|मधुभ्याम्|मधुभिः|\n|४|मधुने|मधुभ्याम्|मधुभ्यः|\n|५|मधुनः|मधुभ्याम्|मधुभ्यः|\n|६|मधुनः|मधुनोः|मधूनाम्|\n|७|मधुनि|मधुनोः|मधुषु|\n\n\n[see मधु·सूत्र]",
+    "anta": "उ",
+    "variety": "",
+    "notes": "",
+    "linga": "नपुं॰",
+    "group": "",
+    "sutra": "[[मधु·सूत्र]]",
+    "caption": "<span>{{!!title}} {{!!linga}}{{!!variety}}\n",
+    "tags": "SKS शब्दरूपाणि v2",
+    "title": "मधु test clone",
+    "modified": "20261012153252816",
+    "modifier": "केशवकृपा",
+    "type": "text/vnd.tiddlywiki"
+  }
 ]

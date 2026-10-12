@@ -32,10 +32,10 @@ function transformText(text) {
 function hasTargetTag(tiddler) {
     if (!tiddler || !tiddler.tags) return false;
     if (Array.isArray(tiddler.tags)) {
-        return tiddler.tags.includes('SKS शब्दरूपाणि v2');
+        return tiddler.tags.includes('SKS शब्दरूपाणि सूत्र v2');
     }
     if (typeof tiddler.tags === 'string') {
-        return tiddler.tags.includes('SKS शब्दरूपाणि v2');
+        return tiddler.tags.includes('SKS शब्दरूपाणि सूत्र v2');
     }
     return false;
 }
