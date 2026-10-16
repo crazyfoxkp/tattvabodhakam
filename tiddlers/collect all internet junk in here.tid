@@ -1,11 +1,23 @@
 created: 20240612211434472
 creator: KeshavP
-modified: 20260908175150545
+modified: 20261016170248048
 modifier: केशवकृपा
 tags: internet
 title: collect all internet junk in here
 
-!! @@ adapt a CSS Stylesheet for WikiText blockquote @@
+!! @@   I need help to adapt a CSS Stylesheet for WikiText blockquote @@
+
+setup css to show block quote and a reference
+
+https://talk.tiddlywiki.org/t/i-need-help-to-adapt-a-css-stylesheet-for-wikitext-blockquote/14287/2?u=kptko
+
+
+---
+
+
+
+
+!!@@adapt a CSS Stylesheet for WikiText blockquote@@
 
 https://talk.tiddlywiki.org/t/i-need-help-to-adapt-a-css-stylesheet-for-wikitext-blockquote/14287/2?u=kptko
 
@@ -16,21 +28,21 @@ https://talk.tiddlywiki.org/t/i-need-help-to-adapt-a-css-stylesheet-for-wikitext
 
 
 
-!! @@ Sharing wikis without allowing others to edit? @@
+!!@@Sharing wikis without allowing others to edit?@@
 
 https://talk.tiddlywiki.org/t/sharing-wikis-without-allowing-others-to-edit/7502/10
 
 ---
 
 
-!! @@ Order of Fields in Edit Mode @@
+!!@@Order of Fields in Edit Mode@@
 
 https://talk.tiddlywiki.org/t/the-order-of-fields-in-edit-mode/5856/2
 
 ---
 
 
-!! @@ Continue order list numbering after code block? @@
+!!@@Continue order list numbering after code block?@@
 
 A general solution has long ago been documented here:
     https://tiddlywiki.com/#Lists%20in%20WikiText 
@@ -45,15 +57,15 @@ https://groups.google.com/g/tiddlywiki/c/JnASh-miSQU/m/cKrzYelJBQAJ
 ---
 
 
-!! @@ multiline-field-editor-plugin @@
+!!@@multiline-field-editor-plugin@@
 
 https://talk.tiddlywiki.org/t/intro-multiline-field-editor-plugin/1580
 
 ---
 
 
-!! @@ Create a EditorToolbar button that copies the full “text” field to the clipboard
- @@
+!!@@Create a EditorToolbar button that copies the full “text” field to the clipboard
+@@
 
 https://talk.tiddlywiki.org/t/create-a-editortoolbar-button-that-copies-the-full-text-field-to-the-clipboard/6030/11
 
@@ -63,16 +75,16 @@ use to copy vyakarna+tatparya to clipboard in 1 button
 ---
 
 
-!! @@ change created-modified fields for a tiddler  @@
+!!@@change created-modified fields for a tiddler @@
 
 change created-modified fields for a tiddler
 
 
-<<<
+
 To change a created date:
 
 
- <<<
+<<<
 *Edit the desired tiddler
 *In the “add new field, field name” input, enter “created” (even though that field clearly already exists!)
 *In the “add new field, field value” input, enter the new datetime stamp using a UTC value with format YYYYMMDDhhmmssXXX
@@ -82,7 +94,7 @@ To change a created date:
 To change a modified date:
 
 
- <<<
+<<<
 *From the Sidebar Tools tab, turn off “Timestamps” (This is needed so that modifying the tiddler’s modification date doesn’t get overwritten when the tiddler edit is completed!)
 *Edit the desired tiddler
 *In the “add new field, field name” input, enter “modified” (even though that field clearly already exists!)
@@ -90,7 +102,7 @@ To change a modified date:
 *Press “done” to complete the tiddler changes
 <<<
 
-<<<
+
 
 
 https://talk.tiddlywiki.org/t/editing-a-tiddlers-created-field/5041/4
@@ -103,7 +115,7 @@ batch-change -- use tiddler commander
 
 
 
-!! @@ change tiddler subtitle @@
+!!@@change tiddler subtitle@@
 
 change tiddler subtitle to look like this
 
@@ -129,7 +141,7 @@ https://talk.tiddlywiki.org/t/how-to-add-a-created-and-modified-dates-on-tiddler
 
 
 
-!! @@ macro that enables inline javascript in tiddlers @@
+!!@@macro that enables inline javascript in tiddlers@@
 
 http://tobibeer.github.io/tw/enable-js/#script
 
@@ -137,7 +149,7 @@ http://tobibeer.github.io/tw/enable-js/#script
 
 
 
-!! @@ edit-toolbar btn to search-replace in selection @@
+!!@@edit-toolbar btn to search-replace in selection@@
 
 * I started out by cloning `$:/core/ui/EditorToolbar/list-bullet`, which I found via the `$:/tags/EditorToolbar` tag.
 * The editor toolbar buttons use variants on `<$action-sendmessage $message="tm-edit-text-operation" ...`, as laid out [[here|https://tiddlywiki.com/#WidgetMessage%3A%20tm-edit-text-operation]] 
@@ -181,7 +193,7 @@ https://talk.tiddlywiki.org/t/is-there-a-way-to-make-an-append-to-line-text-oper
 ---
 
 
-!! @@ Action on 'text-selection'  @@
+!!@@Action on 'text-selection' @@
 
 
 I dont know if it helps but what I did to avoid issues when manipulating text like this is to use filtered transclusion on the attributes of the tm-edit-text-operation widgets, e.g to comment some code :
@@ -210,7 +222,7 @@ https://talk.tiddlywiki.org/t/can-we-access-the-selection-in-the-widgetmessage-t
 ---
 
 
-!! @@ change text of filtered tiddlers @@
+!!@@change text of filtered tiddlers@@
 
 
 ```
@@ -235,7 +247,7 @@ https://talk.tiddlywiki.org/t/change-text-of-filtered-tiddlers/565/2?u=kptko
 ---
 
 
-!! @@ showHideBrackets toggle @@
+!!@@showHideBrackets toggle@@
 
 toggles state tiddler which changes viewtemplate with a filter to remove bracket contents, and toggles icons.
 
@@ -248,7 +260,7 @@ see group of tids under tag kp-showHideBrackets
 
 ---
 
-@@How to create a Switchable view-template and edit-template for History-Monthly-View  @@
+@@How to create a Switchable view-template and edit-template for History-Monthly-View @@
 
 
 ```
@@ -276,14 +288,14 @@ https://talk.tiddlywiki.org/t/how-to-create-a-switchable-view-template-and-edit-
 ---
 
 
-!! @@ Toggle Button example @@
+!!@@Toggle Button example@@
 
 https://talk.tiddlywiki.org/t/togglebutton-example/6166/5?u=kptko
 
 ---
 
 
-!! @@ Additional notes about using CSS to style your content:@@
+!!@@Additional notes about using CSS to style your content:@@
 
 
 With ``@@`` syntax, you can specify direct CSS attributes, like this:
@@ -293,7 +305,7 @@ With ``@@`` syntax, you can specify direct CSS attributes, like this:
 @@font-size:200%;background-color:#dfffbf; test@@
 ```
 
-➝ @@font-size:200%;background-color:#dfffbf; test@@
+➝@@font-size:200%;background-color:#dfffbf; test@@
 
 
 or even a combination of CSS attributes and classes:
@@ -302,7 +314,7 @@ or even a combination of CSS attributes and classes:
 ```
 @@font-size:200%;.hlg test@@
 ```
-➝ @@font-size:200%;.hlg test@@
+➝@@font-size:200%;.hlg test@@
 
 
 where the CSS name:value; pairs come first, followed by .classname. Also note that there must be at least one whitespace character (space, tab, or newline) following the classname to separate it from the actual text to display.
@@ -315,7 +327,7 @@ https://talk.tiddlywiki.org/t/tiddler-template-applied-via-tag/10369/17?u=kptko
 
 
 
-!! @@ function - define - differencess @@
+!!@@function - define - differencess@@
 
 <img src="https://talk.tiddlywiki.org/uploads/default/original/2X/d/d174fca9ee28e8ed490a25303b657a8bdd5fc0c3.png" />
 
@@ -327,14 +339,14 @@ https://talk.tiddlywiki.org/t/what-is-the-best-way-to-take-the-fields-of-a-tiddl
 
 ---
 
- @@ dropdown list in tiddler field @@
+@@dropdown list in tiddler field@@
 
 https://talk.tiddlywiki.org/t/how-to-have-a-dropdown-list-in-tiddler-field/4913/11?u=kptko
 
 ---
 
 
-!! @@ iterate on dictionary from json data tiddler multi-level @@
+!!@@iterate on dictionary from json data tiddler multi-level@@
 
 https://talk.tiddlywiki.org/t/how-to-iterate-on-a-dictionary-and-an-array-from-a-json-data-tiddler/5662/4?u=kptko
 
@@ -343,7 +355,7 @@ https://talk.tiddlywiki.org/t/how-to-iterate-on-a-dictionary-and-an-array-from-a
 
 
 
-!! @@ append to line text operation @@
+!!@@append to line text operation@@
 
 create temp tid
 
@@ -364,7 +376,7 @@ https://talk.tiddlywiki.org/t/is-there-a-way-to-make-an-append-to-line-text-oper
 
 
 
-!! @@ Brackets @@
+!!@@Brackets@@
 
 The brackets in filter syntax are not just syntactic delimiters around filter operands… they indicate how each filter operand should be processed.
 
@@ -389,7 +401,7 @@ https://talk.tiddlywiki.org/t/could-you-please-stop-joking-around-on-the-setwidg
 
 ---
 
-!! @@ Parsing plain text @@
+!!@@Parsing plain text@@
 
 
 ```
@@ -411,14 +423,14 @@ https://talk.tiddlywiki.org/t/parsing-plain-text/5878/8?u=kptko
 ---
 
 
-!! @@ Displaying within search results not just tiddlers titles, but snippets of relevant text @@
+!!@@Displaying within search results not just tiddlers titles, but snippets of relevant text@@
 
 https://talk.tiddlywiki.org/t/displaying-within-search-results-not-just-tiddlers-titles-but-snippets-of-relevant-text/8336/3?u=kptko
 
 ---
 
 
-!! @@  search:* syntax to search across multiple fields @@
+!!@@ search:* syntax to search across multiple fields@@
 
 https://talk.tiddlywiki.org/t/quering-for-information-inside-a-plugin-data-tiddler/1769/7?u=kptko
 
@@ -444,7 +456,7 @@ Search: <$edit-text tiddler="temp/search" tag=input/>
 ---
 
 
-!! @@ Edit-text widget popup text area question @@
+!!@@Edit-text widget popup text area question@@
 
 https://talk.tiddlywiki.org/t/edit-text-widget-popup-text-area-question/5363/14
 ---
@@ -452,14 +464,14 @@ https://talk.tiddlywiki.org/t/edit-text-widget-popup-text-area-question/5363/14
 
 
 
-!! @@ create DETAILS html tag with dynamic open parameter @@
+!!@@create DETAILS html tag with dynamic open parameter@@
 
 https://talk.tiddlywiki.org/t/the-genesiswidget-and-html5-input-tag/5503/12?u=kptko
 
 ---
 
 
-!! @@ pass value of field or text into a macro @@
+!!@@pass value of field or text into a macro@@
 
 https://talk.tiddlywiki.org/t/how-can-i-pass-the-value-of-the-a-field-or-text-into-a-macro/3027/10?u=kptko
 
@@ -484,14 +496,14 @@ In a similar vein I think it important to consider that tiddlywiki already handl
 ---
 
 
-!! @@ button directly on toc using tiddlytools @@
+!!@@button directly on toc using tiddlytools@@
 
 https://talk.tiddlywiki.org/t/button-directly-on-toc/7993/7
 
 ---
 
 
-!! @@ tables @@
+!!@@tables@@
 
 https://www.tablesgenerator.com/html_tables
 
@@ -499,7 +511,7 @@ https://www.tablesgenerator.com/html_tables
 ---
 
 
-!! @@ Variables @@
+!!@@Variables@@
 
 
 
@@ -514,7 +526,7 @@ https://www.tablesgenerator.com/html_tables
 ---
 
 
-!! @@ personal knowledge manager @@
+!!@@personal knowledge manager@@
 
 https://talk.tiddlywiki.org/t/mehregan-edition-first-public-beta-release/1597/57
 
@@ -524,7 +536,7 @@ https://talk.tiddlywiki.org/t/mehregan-edition-first-public-beta-release/1597/57
 ---
 
 
-!! @@ dynamic background tid color change @@
+!!@@dynamic background tid color change@@
 
 /* change background of tid with mouse hover. 50 is alpha transparency */
 
@@ -537,13 +549,13 @@ https://talk.tiddlywiki.org/t/use-color-macro-to-change-dynamically-the-backgrou
 
 ---
 
-!! @@ DetailsWidget / Styling tiddlers @@
+!!@@DetailsWidget / Styling tiddlers@@
 
 http://tid.li/tw5/plugins.html#DetailsWidget
 
 ---
 
-!! @@ Pastel Colors @@
+!!@@Pastel Colors@@
 
 image with pastel colors
 
@@ -552,7 +564,7 @@ image with pastel colors
 https://i.etsystatic.com/27701696/r/il/7bc069/3154762903/il_fullxfull.3154762903_64nl.jpg
 
 ---
-!! @@Wizard navigation plugin@@
+!!@@Wizard navigation plugin@@
 
 modified: 
 
@@ -561,14 +573,14 @@ https://talk.tiddlywiki.org/t/wizard-navigation-plugin/5231/13?u=kptko
 ---
 
 
-!! @@Hover effect to TOC items: build your own@@
+!!@@Hover effect to TOC items: build your own@@
 
 https://talk.tiddlywiki.org/t/hover-effect-to-toc-items/3659/13?u=kptko
 
 ---
 
 
-!! @@Change background color on one single cell easily@@
+!!@@Change background color on one single cell easily@@
 
 ```
 <style>
@@ -587,21 +599,22 @@ https://talk.tiddlywiki.org/t/hover-effect-to-toc-items/3659/13?u=kptko
 ```
 https://talk.tiddlywiki.org/t/change-the-background-color-of-one-single-cell-easily/9751/19?u=kptko
 
-<hr>
+---
 
+```
 !!Audio control/ playback
 <audio controls>
     <source src="filename.path" type="audio/mpeg">
 </audio>
 
 can add prelo
-<hr>
+---
 
 <audio src={{!!_canonical_uri}} autoplay loop controls style="width:80%; object-fit: contain"></audio>
 
 <audio src={{!!audio}}  controls style="width:80%; object-fit: contain"></audio>
 
-```
+
 <audio controls>
     <source src="filename.path"  type="audio/mpeg">
 </audio>
@@ -611,7 +624,7 @@ See this topic: Transclusion of filter expressions in filtered transclusions
 https://talk.tiddlywiki.org/t/transclusion-of-filter-expressions-in-filtered-transclusions/8372
 
 
-<hr/>
+---
 
 !!!Show fields in tiddler view
 
@@ -620,7 +633,7 @@ Create a tiddler, tagged with ``$:/tags/ViewTemplate``, containing:
 ``<$list filter="[<currentTiddler>has[sourceUrl]]">source: {{!!sourceUrl}}</$list>``
 
 
-<hr/>
+---
 
 !!!Investigating use of emptyMessage ... 
 
@@ -635,7 +648,7 @@ Create a tiddler, tagged with ``$:/tags/ViewTemplate``, containing:
 ```
 
 
-<hr/>
+---
 
 !!!List filter for tags containing string
 [[link here | https://talk.tiddlywiki.org/t/create-a-list-filter-using-tags-that-begin-with-end-with-contain-a-certain-string/6369/3?u=kptko]]
@@ -651,7 +664,7 @@ Try this, which should give you all tiddlers tagged with a tag beginning with �
 What’s happening here:
 
 all[tags] sets the initial filter domain to tags (the default is all[tiddlers]. Many (but not all) tags are also tiddlers, but we want to catch the ones that aren’t, and we don’t care about non-tag tiddlers that start with “opt”.
-!is[system] will remove anything beginning with $:/, the system prefix; these tags/tiddlers are mostly used for layout and other UI structure. You can omit this if you do want to include system tags (and if you’re filtering by prefix, system tags will be removed by the next step anyway, but I’ve included it for potential filters using suffix / search instead.)
+-- !is[system] will remove anything beginning with $:/, the system prefix; these tags/tiddlers are mostly used for layout and other UI structure. You can omit this if you do want to include system tags (and if you’re filtering by prefix, system tags will be removed by the next step anyway, but I’ve included it for potential filters using suffix / search instead.)
 Next, we add the prefix step (or suffix, or search to find the string anywhere in the tag). prefix and suffix are case-sensitive by default, so prefix[opt] would find “option” but not “Option”. search 1 is case-insensitive by default, so you can use search:title[opt] to find “option” or “Option”, or search:title:casesensitive[op] to find “option” only. (Note that “title” refers to the unmodified output of the previous step; even though we’re looking for tags, it’s the title (name) of the tag that we’re concerned with, not, for example, its text or list field.)
 You could stop at this point if you only wanted a list of the tags themselves, but if what you’re looking for is the tiddlers that have these tags, you’ll want to add tagging[], which finds all tiddlers tagged with any its input values - in this case, any tag beginning with “opt”.
 You should be able to switch out the prefix operator for suffix or search depending on your needs; the general principal will be the same.
