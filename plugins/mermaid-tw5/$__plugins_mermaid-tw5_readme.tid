@@ -1,0 +1,21 @@
+title: $:/plugins/orange/mermaid-tw5/readme
+
+This is a TiddlyWiki plugin for using [[mermaid.js|https://github.com/mermaid-js/mermaid]]. It is completely self-contained and doesn't need an Internet connection to work. It works both in the browser and under Node.js. It is currently based on [[mermaid.js 11.14.0|https://github.com/mermaid-js/mermaid/releases/tag/v11.14.0]].
+
+Mermaid is lazy-loaded: the library only initialises when a page actually contains a diagram, so pages without diagrams pay no loading cost.
+
+!Installation
+
+You can drag the plugin link into your TiddlyWiki to install, from https://asophila.github.io/mermaid-tw5
+
+!Info
+
+The Mermaid TW5 Plugin is based on:
+
+* https://github.com/asophila/mermaid-tw5
+* http://github.com/gt6796c/mermaid-tw5
+* http://github.com/jasonmhoule/tw5-mermaid
+* http://github.com/cedarvera/mermaid-tw5
+* http://github.com/jceb/mermaid-tw5
+* https://github.com/mermaid-js/mermaid
+* and others

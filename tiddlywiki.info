@@ -1,1 +1,8 @@
-{}
+{
+    "plugins": [
+        "tiddlywiki/tiddlyweb",
+        "tiddlywiki/filesystem",
+        "tiddlywiki/highlight",
+        "mermaid-tw5"
+    ]
+}
