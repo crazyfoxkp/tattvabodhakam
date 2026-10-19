@@ -1,0 +1,42 @@
+/* Reliable blockquote code container override */
+blockquote.kk-utility-code {
+  background-color: var(--tpc-tiddler-editor-background, #121212) !important;
+  border-left: 1px solid var(--tpc-tiddler-editor-border, #4c4c4c) !important;
+  border-radius: 3px !important;
+  padding: 8px 12px 8px 20px !important;
+  font-family: var(--tp-code-font-family, Shobhika, ui-monospace, "SFMono-Regular", monospace) !important;
+  
+  /* Flexbox reorders children visually without changing HTML markup */
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Citation formatting (Positioned at top) */
+blockquote.kk-utility-code cite,
+blockquote.kk-utility-code small {
+  order: -1 !important; /* Moves source to the top above the quote body */
+  display: block !important;
+  text-align: center !important;
+  font-family: var(--tp-font-family, sans-serif) !important;
+  font-size: 0.95em !important;
+  font-style: normal !important;
+  color: var(--tpc-muted-foreground, #ababab) !important;
+  
+  /* Divider line below the source */
+  border-bottom: 1px dashed var(--tpc-tiddler-editor-border, #4c4c4c) !important;
+  margin-bottom: 8px !important;
+  padding-bottom: 6px !important;
+  
+  /* Clears top margins/borders from previous setup */
+  border-top: none !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+blockquote.kk-utility-code cite::before {
+  content: "— " !important;
+}
+
+blockquote.kk-utility-code cite::after {
+  content: " —" !important;
+}
