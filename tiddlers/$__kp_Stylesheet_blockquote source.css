@@ -9,6 +9,14 @@ blockquote.kk-utility-code {
   /* Flexbox reorders children visually without changing HTML markup */
   display: flex !important;
   flex-direction: column !important;
+
+/* Sizing and Horizontal Centering */
+  width: 80% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 0.5em !important;
+  margin-bottom: 1em !important;
+  box-sizing: border-box !important;
 }
 
 /* Citation formatting (Positioned at top) */
