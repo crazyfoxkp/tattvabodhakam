@@ -1,7 +1,7 @@
 created: 20241011033043868
 creator: KeshavP
-modified: 20251221172747935
-modifier: KeshavP
+modified: 20261023160752776
+modifier: केशवकृपा
 title: $:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel
 
-hide
+show
