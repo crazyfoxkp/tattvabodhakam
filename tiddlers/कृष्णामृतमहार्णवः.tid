@@ -9,7 +9,7 @@ title: कृष्णामृतमहार्णवः
 <table>
 <$list filter="[tag[KM]sortan[title]]">
 <tr>
-<th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>notes</$link></th><td/>
+<th style="vertical-align: bottom; font-size:80%; padding:20px";><$link>open</$link></th><td/>
 <td><$transclude mode="block"/></td>
 </tr>
 </$list>
